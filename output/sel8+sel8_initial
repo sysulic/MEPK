@@ -1,0 +1,865 @@
+------------ print all atoms ----------------
+1 : at a 1
+2 : at a 2
+3 : at a 3
+4 : at a 4
+5 : at a 5
+6 : at a 6
+7 : at a 7
+8 : at a 8
+9 : at b 6
+10 : at c 8
+11 : q
+-------- end print all atoms ----------------
+
+------------ print all agents ---------------
+1 : a
+2 : b
+3 : c
+-------- end print all agents ---------------
+
+---------------- init -------------------
+ACDFTerm 1:
+  PropDNF: ( (¬at a 1 & ¬at a 2 & ¬at a 3 & at a 4 & ¬at a 5 & ¬at a 6 & ¬at a 7 & ¬at a 8 & q) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at a 1 & ¬at a 2 & ¬at a 3 & at a 4 & ¬at a 5 & ¬at a 6 & ¬at a 7 & ¬at a 8 & q) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (¬at a 1 & ¬at a 2 & ¬at a 3 & at a 4 & ¬at a 5 & ¬at a 6 & ¬at a 7 & ¬at a 8 & ¬q) )
+    ACDF 3:
+      ACDFTerm 1:
+        PropDNF: ( (¬at a 1 & ¬at a 2 & ¬at a 3 & at a 4 & ¬at a 5 & ¬at a 6 & ¬at a 7 & ¬at a 8) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (at b 6 & q) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (at b 6 & ¬q) )
+    ACDF 3:
+      ACDFTerm 1:
+        PropDNF: ( (at b 6) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (at c 8 & q) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (at c 8 & ¬q) )
+    ACDF 3:
+      ACDFTerm 1:
+        PropDNF: ( (at c 8) )
+ACDFTerm 2:
+  PropDNF: ( (¬at a 1 & ¬at a 2 & ¬at a 3 & at a 4 & ¬at a 5 & ¬at a 6 & ¬at a 7 & ¬at a 8 & ¬q) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at a 1 & ¬at a 2 & ¬at a 3 & at a 4 & ¬at a 5 & ¬at a 6 & ¬at a 7 & ¬at a 8 & q) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (¬at a 1 & ¬at a 2 & ¬at a 3 & at a 4 & ¬at a 5 & ¬at a 6 & ¬at a 7 & ¬at a 8 & ¬q) )
+    ACDF 3:
+      ACDFTerm 1:
+        PropDNF: ( (¬at a 1 & ¬at a 2 & ¬at a 3 & at a 4 & ¬at a 5 & ¬at a 6 & ¬at a 7 & ¬at a 8) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (at b 6 & q) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (at b 6 & ¬q) )
+    ACDF 3:
+      ACDFTerm 1:
+        PropDNF: ( (at b 6) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (at c 8 & q) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (at c 8 & ¬q) )
+    ACDF 3:
+      ACDFTerm 1:
+        PropDNF: ( (at c 8) )
+---------------- done -------------------
+
+---------------- constraint -------------------
+PropDNF: ( (at a 1 & ¬at a 2 & ¬at a 3 & ¬at a 4 & ¬at a 5 & ¬at a 6 & ¬at a 7 & ¬at a 8) | (¬at a 1 & at a 2 & ¬at a 3 & ¬at a 4 & ¬at a 5 & ¬at a 6 & ¬at a 7 & ¬at a 8) | (¬at a 1 & ¬at a 2 & at a 3 & ¬at a 4 & ¬at a 5 & ¬at a 6 & ¬at a 7 & ¬at a 8) | (¬at a 1 & ¬at a 2 & ¬at a 3 & at a 4 & ¬at a 5 & ¬at a 6 & ¬at a 7 & ¬at a 8) | (¬at a 1 & ¬at a 2 & ¬at a 3 & ¬at a 4 & at a 5 & ¬at a 6 & ¬at a 7 & ¬at a 8) | (¬at a 1 & ¬at a 2 & ¬at a 3 & ¬at a 4 & ¬at a 5 & at a 6 & ¬at a 7 & ¬at a 8) | (¬at a 1 & ¬at a 2 & ¬at a 3 & ¬at a 4 & ¬at a 5 & ¬at a 6 & at a 7 & ¬at a 8) | (¬at a 1 & ¬at a 2 & ¬at a 3 & ¬at a 4 & ¬at a 5 & ¬at a 6 & ¬at a 7 & at a 8) )
+---------------- done -------------------
+
+---------------- goal -------------------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬q) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (q) )
+    ACDF 3:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (q) )
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬q) )
+---------------- done -------------------
+
+---------------- Epis Actions -------------------
+:action-1 sense --------------
+:category --------------
+3
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at a 2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:observe -------------------
+ACDFTerm 1:
+  PropDNF: ( (q) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (q) )
+:neg observe ---------------
+ACDFTerm 1:
+  PropDNF: ( (¬q) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬q) )
+-------------------- done -----------------------
+
+---------------- Ontic Actions -------------------
+:action-1 tell --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬q) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (q) )
+    ACDF 3:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a 8) )
+ACDFTerm 2:
+  PropDNF: ( (at a 1) )
+ACDFTerm 3:
+  PropDNF: ( (at a 2) )
+ACDFTerm 4:
+  PropDNF: ( (at a 3) )
+ACDFTerm 5:
+  PropDNF: ( (at a 4) )
+ACDFTerm 6:
+  PropDNF: ( (at a 5) )
+ACDFTerm 7:
+  PropDNF: ( (at a 6) )
+ACDFTerm 8:
+  PropDNF: ( (at a 7) )
+ACDFTerm 9:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (q) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬q) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a 7) )
+ACDFTerm 2:
+  PropDNF: ( (at a 1) )
+ACDFTerm 3:
+  PropDNF: ( (at a 2) )
+ACDFTerm 4:
+  PropDNF: ( (at a 3) )
+ACDFTerm 5:
+  PropDNF: ( (at a 4) )
+ACDFTerm 6:
+  PropDNF: ( (at a 5) )
+ACDFTerm 7:
+  PropDNF: ( (at a 6) )
+ACDFTerm 8:
+  PropDNF: ( (at a 8) )
+ACDFTerm 9:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (q) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬q) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬q) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a 6) )
+ACDFTerm 2:
+  PropDNF: ( (at a 1) )
+ACDFTerm 3:
+  PropDNF: ( (at a 2) )
+ACDFTerm 4:
+  PropDNF: ( (at a 3) )
+ACDFTerm 5:
+  PropDNF: ( (at a 4) )
+ACDFTerm 6:
+  PropDNF: ( (at a 5) )
+ACDFTerm 7:
+  PropDNF: ( (at a 7) )
+ACDFTerm 8:
+  PropDNF: ( (at a 8) )
+ACDFTerm 9:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (q) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬q) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a 5) )
+ACDFTerm 2:
+  PropDNF: ( (at a 1) )
+ACDFTerm 3:
+  PropDNF: ( (at a 2) )
+ACDFTerm 4:
+  PropDNF: ( (at a 3) )
+ACDFTerm 5:
+  PropDNF: ( (at a 4) )
+ACDFTerm 6:
+  PropDNF: ( (at a 6) )
+ACDFTerm 7:
+  PropDNF: ( (at a 7) )
+ACDFTerm 8:
+  PropDNF: ( (at a 8) )
+ACDFTerm 9:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (q) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬q) )
+
+effect 5 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a 4) )
+ACDFTerm 2:
+  PropDNF: ( (at a 1) )
+ACDFTerm 3:
+  PropDNF: ( (at a 2) )
+ACDFTerm 4:
+  PropDNF: ( (at a 3) )
+ACDFTerm 5:
+  PropDNF: ( (at a 5) )
+ACDFTerm 6:
+  PropDNF: ( (at a 6) )
+ACDFTerm 7:
+  PropDNF: ( (at a 7) )
+ACDFTerm 8:
+  PropDNF: ( (at a 8) )
+ACDFTerm 9:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (q) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬q) )
+
+effect 6 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a 3) )
+ACDFTerm 2:
+  PropDNF: ( (at a 1) )
+ACDFTerm 3:
+  PropDNF: ( (at a 2) )
+ACDFTerm 4:
+  PropDNF: ( (at a 4) )
+ACDFTerm 5:
+  PropDNF: ( (at a 5) )
+ACDFTerm 6:
+  PropDNF: ( (at a 6) )
+ACDFTerm 7:
+  PropDNF: ( (at a 7) )
+ACDFTerm 8:
+  PropDNF: ( (at a 8) )
+ACDFTerm 9:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (q) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬q) )
+
+effect 7 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a 2) )
+ACDFTerm 2:
+  PropDNF: ( (at a 1) )
+ACDFTerm 3:
+  PropDNF: ( (at a 3) )
+ACDFTerm 4:
+  PropDNF: ( (at a 4) )
+ACDFTerm 5:
+  PropDNF: ( (at a 5) )
+ACDFTerm 6:
+  PropDNF: ( (at a 6) )
+ACDFTerm 7:
+  PropDNF: ( (at a 7) )
+ACDFTerm 8:
+  PropDNF: ( (at a 8) )
+ACDFTerm 9:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (q) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬q) )
+
+effect 8 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a 1) )
+ACDFTerm 2:
+  PropDNF: ( (at a 2) )
+ACDFTerm 3:
+  PropDNF: ( (at a 3) )
+ACDFTerm 4:
+  PropDNF: ( (at a 4) )
+ACDFTerm 5:
+  PropDNF: ( (at a 5) )
+ACDFTerm 6:
+  PropDNF: ( (at a 6) )
+ACDFTerm 7:
+  PropDNF: ( (at a 7) )
+ACDFTerm 8:
+  PropDNF: ( (at a 8) )
+ACDFTerm 9:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (q) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬q) )
+
+effect 9 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a 8) )
+ACDFTerm 2:
+  PropDNF: ( (at a 1) )
+ACDFTerm 3:
+  PropDNF: ( (at a 2) )
+ACDFTerm 4:
+  PropDNF: ( (at a 3) )
+ACDFTerm 5:
+  PropDNF: ( (at a 4) )
+ACDFTerm 6:
+  PropDNF: ( (at a 5) )
+ACDFTerm 7:
+  PropDNF: ( (at a 6) )
+ACDFTerm 8:
+  PropDNF: ( (at a 7) )
+ACDFTerm 9:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬q) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (q) )
+
+effect 10 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a 7) )
+ACDFTerm 2:
+  PropDNF: ( (at a 1) )
+ACDFTerm 3:
+  PropDNF: ( (at a 2) )
+ACDFTerm 4:
+  PropDNF: ( (at a 3) )
+ACDFTerm 5:
+  PropDNF: ( (at a 4) )
+ACDFTerm 6:
+  PropDNF: ( (at a 5) )
+ACDFTerm 7:
+  PropDNF: ( (at a 6) )
+ACDFTerm 8:
+  PropDNF: ( (at a 8) )
+ACDFTerm 9:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬q) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (q) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (q) )
+
+effect 11 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a 6) )
+ACDFTerm 2:
+  PropDNF: ( (at a 1) )
+ACDFTerm 3:
+  PropDNF: ( (at a 2) )
+ACDFTerm 4:
+  PropDNF: ( (at a 3) )
+ACDFTerm 5:
+  PropDNF: ( (at a 4) )
+ACDFTerm 6:
+  PropDNF: ( (at a 5) )
+ACDFTerm 7:
+  PropDNF: ( (at a 7) )
+ACDFTerm 8:
+  PropDNF: ( (at a 8) )
+ACDFTerm 9:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬q) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (q) )
+
+effect 12 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a 5) )
+ACDFTerm 2:
+  PropDNF: ( (at a 1) )
+ACDFTerm 3:
+  PropDNF: ( (at a 2) )
+ACDFTerm 4:
+  PropDNF: ( (at a 3) )
+ACDFTerm 5:
+  PropDNF: ( (at a 4) )
+ACDFTerm 6:
+  PropDNF: ( (at a 6) )
+ACDFTerm 7:
+  PropDNF: ( (at a 7) )
+ACDFTerm 8:
+  PropDNF: ( (at a 8) )
+ACDFTerm 9:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬q) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (q) )
+
+effect 13 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a 4) )
+ACDFTerm 2:
+  PropDNF: ( (at a 1) )
+ACDFTerm 3:
+  PropDNF: ( (at a 2) )
+ACDFTerm 4:
+  PropDNF: ( (at a 3) )
+ACDFTerm 5:
+  PropDNF: ( (at a 5) )
+ACDFTerm 6:
+  PropDNF: ( (at a 6) )
+ACDFTerm 7:
+  PropDNF: ( (at a 7) )
+ACDFTerm 8:
+  PropDNF: ( (at a 8) )
+ACDFTerm 9:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬q) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (q) )
+
+effect 14 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a 3) )
+ACDFTerm 2:
+  PropDNF: ( (at a 1) )
+ACDFTerm 3:
+  PropDNF: ( (at a 2) )
+ACDFTerm 4:
+  PropDNF: ( (at a 4) )
+ACDFTerm 5:
+  PropDNF: ( (at a 5) )
+ACDFTerm 6:
+  PropDNF: ( (at a 6) )
+ACDFTerm 7:
+  PropDNF: ( (at a 7) )
+ACDFTerm 8:
+  PropDNF: ( (at a 8) )
+ACDFTerm 9:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬q) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (q) )
+
+effect 15 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a 2) )
+ACDFTerm 2:
+  PropDNF: ( (at a 1) )
+ACDFTerm 3:
+  PropDNF: ( (at a 3) )
+ACDFTerm 4:
+  PropDNF: ( (at a 4) )
+ACDFTerm 5:
+  PropDNF: ( (at a 5) )
+ACDFTerm 6:
+  PropDNF: ( (at a 6) )
+ACDFTerm 7:
+  PropDNF: ( (at a 7) )
+ACDFTerm 8:
+  PropDNF: ( (at a 8) )
+ACDFTerm 9:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬q) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (q) )
+
+effect 16 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a 1) )
+ACDFTerm 2:
+  PropDNF: ( (at a 2) )
+ACDFTerm 3:
+  PropDNF: ( (at a 3) )
+ACDFTerm 4:
+  PropDNF: ( (at a 4) )
+ACDFTerm 5:
+  PropDNF: ( (at a 5) )
+ACDFTerm 6:
+  PropDNF: ( (at a 6) )
+ACDFTerm 7:
+  PropDNF: ( (at a 7) )
+ACDFTerm 8:
+  PropDNF: ( (at a 8) )
+ACDFTerm 9:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬q) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (q) )
+
+******************************************
+:action-2 right --------------
+:category --------------
+0
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (at a 8) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a 7) | (at a 1) | (at a 2) | (at a 3) | (at a 4) | (at a 5) | (at a 6) | (at a 8) )
+
+ACDFTerm 1:
+  PropDNF: ( (at a 8) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (at a 8) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a 6) | (at a 1) | (at a 2) | (at a 3) | (at a 4) | (at a 5) | (at a 7) | (at a 8) )
+
+ACDFTerm 1:
+  PropDNF: ( (at a 7) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (at a 7) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a 5) | (at a 1) | (at a 2) | (at a 3) | (at a 4) | (at a 6) | (at a 7) | (at a 8) )
+
+ACDFTerm 1:
+  PropDNF: ( (at a 6) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (at a 6) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a 4) | (at a 1) | (at a 2) | (at a 3) | (at a 5) | (at a 6) | (at a 7) | (at a 8) )
+
+ACDFTerm 1:
+  PropDNF: ( (at a 5) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (at a 5) )
+
+effect 5 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a 3) | (at a 1) | (at a 2) | (at a 4) | (at a 5) | (at a 6) | (at a 7) | (at a 8) )
+
+ACDFTerm 1:
+  PropDNF: ( (at a 4) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (at a 4) )
+
+effect 6 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a 2) | (at a 1) | (at a 3) | (at a 4) | (at a 5) | (at a 6) | (at a 7) | (at a 8) )
+
+ACDFTerm 1:
+  PropDNF: ( (at a 3) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (at a 3) )
+
+effect 7 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a 1) | (at a 2) | (at a 3) | (at a 4) | (at a 5) | (at a 6) | (at a 7) | (at a 8) )
+
+ACDFTerm 1:
+  PropDNF: ( (at a 2) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (at a 2) )
+
+******************************************
+:action-3 left --------------
+:category --------------
+0
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (at a 1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a 2) | (at a 8) | (at a 7) | (at a 6) | (at a 5) | (at a 4) | (at a 3) | (at a 1) )
+
+ACDFTerm 1:
+  PropDNF: ( (at a 1) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (at a 1) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a 3) | (at a 8) | (at a 7) | (at a 6) | (at a 5) | (at a 4) | (at a 2) | (at a 1) )
+
+ACDFTerm 1:
+  PropDNF: ( (at a 2) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (at a 2) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a 4) | (at a 8) | (at a 7) | (at a 6) | (at a 5) | (at a 3) | (at a 2) | (at a 1) )
+
+ACDFTerm 1:
+  PropDNF: ( (at a 3) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (at a 3) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a 5) | (at a 8) | (at a 7) | (at a 6) | (at a 4) | (at a 3) | (at a 2) | (at a 1) )
+
+ACDFTerm 1:
+  PropDNF: ( (at a 4) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (at a 4) )
+
+effect 5 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a 6) | (at a 8) | (at a 7) | (at a 5) | (at a 4) | (at a 3) | (at a 2) | (at a 1) )
+
+ACDFTerm 1:
+  PropDNF: ( (at a 5) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (at a 5) )
+
+effect 6 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a 7) | (at a 8) | (at a 6) | (at a 5) | (at a 4) | (at a 3) | (at a 2) | (at a 1) )
+
+ACDFTerm 1:
+  PropDNF: ( (at a 6) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (at a 6) )
+
+effect 7 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a 8) | (at a 7) | (at a 6) | (at a 5) | (at a 4) | (at a 3) | (at a 2) | (at a 1) )
+
+ACDFTerm 1:
+  PropDNF: ( (at a 7) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (at a 7) )
+
+-------------------- done -----------------------
+

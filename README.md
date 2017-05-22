@@ -1,2 +1,4 @@
-# MEPK
-Multi-agent epistemic planner
+# MultiAgentPlanner
+multi-agent epistemic planner
+
+# Going on...

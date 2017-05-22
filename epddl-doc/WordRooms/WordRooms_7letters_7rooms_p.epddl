@@ -1,0 +1,83 @@
+(define (problem wd7)
+
+    (:domain wd7)
+    
+    (:objects
+        b1
+        b2
+        b3
+        b4
+        b5
+        b6
+        b7 - block
+
+        p1
+        p2
+        p3
+        p4
+        p5
+        p6
+        p7 - room
+    )
+    
+    (:agents
+        a
+        b
+    )
+    
+    (:init (and (not (at a p1))
+                (at a p2)
+                (not (at a p3))
+                (not (at a p4))
+                (not (at a p5))
+                (not (at a p6))
+                (not (at a p7))
+
+                (not (at b p1))
+                (at b p2)
+                (not (at b p3))
+                (not (at b p4))
+                (not (at b p5))
+                (not (at b p6))
+                (not (at b p7))
+               
+                (K_a (and (not (at a p1))
+                (at a p2)
+                (not (at a p3))
+                (not (at a p4))
+                (not (at a p5))
+                (not (at a p6))
+                (not (at a p7))
+                        
+                     )
+                )
+
+                (K_b (and  (not (at b p1))
+                (at b p2)
+                (not (at b p3))
+                (not (at b p4))
+                (not (at b p5))
+                (not (at b p6))
+                (not (at b p7))
+                         
+                     )
+                )
+           )
+    )
+
+    (:constraint ( True
+                 )
+    )
+    
+    (:goal (and  (K_a  (and     (in b1 p1)                                 
+                                               (in b3 p1)                                           
+                                  )
+                         )  
+                          (K_b (and  (in b2 p2)
+                                             (in b4 p4)
+
+                                  )
+                           )
+                )                
+    )
+)

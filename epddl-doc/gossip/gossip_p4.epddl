@@ -1,0 +1,92 @@
+(define (problem gossi4)
+
+	(:domain gossi)
+
+	(:objects
+		a
+		b
+		c
+		d - secret
+	)
+
+	(:agents
+		a
+		b
+		c
+    d
+	)
+
+	(:init (and (the a)
+                (the b)
+                (the c)
+                (the d)
+                (K_a (the a))
+                (K_b (the b))
+                (K_c (the c))
+                (K_d (the d))
+                (not (K_a (the b)) )
+                (not (K_a (the c)) )
+                (not (K_a (the d)) )
+                (not (K_b (the a)) )
+                (not (K_b (the c)) )
+                (not (K_b (the d)) )
+                (not (K_c (the b)) )
+                (not (K_c (the a)) )
+                (not (K_c (the d)) )
+                (not (K_d (the a)) )
+                (not (K_d (the b)) )
+                (not (K_d (the c)) )
+                (K_a (and (not (K_b (the a)) )
+                          (not (K_c (the a)) )
+                          (not (K_d (the a)) )
+                     )
+                )
+                (K_b (and (not (K_a (the b)) )
+                          (not (K_c (the b)) ) 
+                          (not (K_d (the b)) ) 
+                     )
+                )
+                (K_c (and (not (K_b (the c)) )
+                          (not (K_a (the c)) )
+                          (not (K_d (the c)) )  
+                     )
+                )
+                (K_d (and (not (K_a (the d)) )
+                          (not (K_b (the d)) )
+                          (not (K_c (the d)) )  
+                     )
+                )
+		   )
+	)
+
+	(:constraint (True)
+	)
+
+	(:goal (and   (K_a (and (the a)
+                          (the b)
+                          (the c)
+                          (the d)
+                     )
+                )
+                (K_b (and (the a)
+                          (the b)
+                          (the c)
+                          (the d)
+                     )
+                )
+                (K_c (and (the a)
+                          (the b)
+                          (the c)
+                          (the d)
+                     )
+                )
+                (K_d (and (the a)
+                          (the b)
+                          (the c)
+                          (the d)
+                     )
+                )
+		     )
+		
+	)
+)

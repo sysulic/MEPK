@@ -1,0 +1,59 @@
+(define (problem gossi4)
+
+	(:domain gossi)
+
+	(:objects
+		a
+		b
+		c - secret
+	)
+
+	(:agents
+		a
+		b
+		c
+	)
+
+	(:init (and (the a)
+                (the b)
+                (the c)
+                (K_a (the a))
+                (K_b (the b))
+                (K_c (the c))
+                (not (K_a (the b)) )
+                (not (K_a (the c)) )
+                (not (K_b (the a)) )
+                (not (K_b (the c)) )
+                (not (K_c (the b)) )
+                (not (K_c (the a)) )
+                (K_a (and (not (K_b (the a)) )
+                          (not (K_c (the a)) ) ))
+                (K_b (and (not (K_a (the b)) )
+                          (not (K_c (the b)) ) ))
+                (K_c (and (not (K_b (the c)) )
+                          (not (K_a (the c)) ) ))
+		   )
+	)
+
+	(:constraint (True)
+	)
+
+	(:goal (and (K_a (and (the a)
+                          (the b)
+                          (the c)
+                     )
+                )
+                (K_b (and (the a)
+                          (the b)
+                          (the c)
+                     )
+                )
+                (K_c (and (the a)
+                          (the b)
+                          (the c)
+                     )
+                )
+		     )
+		
+	)
+)

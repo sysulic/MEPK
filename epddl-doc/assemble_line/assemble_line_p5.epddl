@@ -1,0 +1,26 @@
+(define (problem assemble_line5)
+
+	(:domain assemble_line5)
+
+	(:objects
+	)
+
+	(:agents
+		a
+		b
+	)
+
+	(:init (and (not (assemble)) (not (restart))
+				(not (K_a (qulifiedA))) (not (K_a(not (qulifiedA)))) 
+				(not (K_b (qulifiedB))) (not (K_b(not (qulifiedB))))
+		   )
+	)
+
+	(:constraint (not (and (assemble) (restart))
+				 )
+	)
+
+	(:goal (or (assemble) (restart)
+			)
+	)
+)

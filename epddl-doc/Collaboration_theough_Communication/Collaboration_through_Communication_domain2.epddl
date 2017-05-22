@@ -1,0 +1,62 @@
+(define (domain ctc2)
+
+  (:types)
+  (:predicates  (at ?ag - agent ?p - room)
+                (in ?b - block p - room)
+  )
+   
+  (:action left
+   :category (ontic)
+   :parameters (?ag - agent)
+   :precondition (K_?ag (not(at ?ag p1)) )
+   :effect (<{and (at ?ag p2) (not (at ?ag p1)) (not (at ?ag p3))}
+             {and (at ?ag p1) (not (at ?ag p2)) (not (at ?ag p3))
+                  (K_?ag (and (at ?ag p1) (not (at ?ag p2)) (not (at ?ag p3))))} >
+            <{and (at ?ag p3) (not (at ?ag p1)) (not (at ?ag p2)) }
+             {and (at ?ag p2) (not (at ?ag p1)) (not (at ?ag p3)) 
+                  (K_?ag (and (at ?ag p2) (not (at ?ag p1)) (not (at ?ag p3)) ))} >
+    )
+  )
+  
+  (:action right
+   :category (ontic)
+   :parameters (?ag - agent)
+   :precondition (K_?ag (not(at ?ag p3)) )
+   :effect (<{and (at ?ag p1) (not (at ?ag p2)) (not (at ?ag p3)) }
+             {and (at ?ag p2) (not (at ?ag p1)) (not (at ?ag p3))
+                  (K_?ag (and (at ?ag p2) (not (at ?ag p1)) (not (at ?ag p3)) ))} >
+            <{and (at ?ag p2) (not (at ?ag p1)) (not (at ?ag p3))}
+             {and (at ?ag p3) (not (at ?ag p1)) (not (at ?ag p2))
+                  (K_?ag (and (at ?ag p3) (not (at ?ag p1)) (not (at ?ag p2)) ))} >
+    )
+  )
+
+  (:action find_room1
+   :category (sensing)
+   :parameters (?ag - agent ?b1 - block)
+   :precondition (K_?ag (at ?ag p1)
+                 )
+   :observe_pos (and (in ?b1 p1) (K_?ag (in ?b1 p1)) )
+   :observe_neg (and (not (in ?b1 p1)) (K_?ag (not(in ?b1 p1))) )
+  )
+
+  (:action find_room3
+   :category (sensing)
+   :parameters (?ag - agent ?b1 - block)
+   :precondition (K_?ag (at ?ag p3)
+                 )
+   :observe_pos (and (in ?b1 p3) (K_?ag (in ?b1 p3)) )
+   :observe_neg (and (not (in ?b1 p3)) (K_?ag (not(in ?b1 p3))) )
+  )
+
+  (:action tell
+   :category (ontic)
+   :parameters (?ag1 - agent ?ag2 - agent ?b - block ?r - room)
+   :precondition (or (K_?ag1 (in ?b ?r))
+                     (K_?ag1 (not(in ?b ?r)))
+                 )
+   :effect (<{K_?ag1 (in ?b ?r)} {K_?ag2 (in ?b ?r)}>
+            <{K_?ag1 (not(in ?b ?r))} {K_?ag2 (not(in ?b ?r))}>
+           ) 
+  )
+)

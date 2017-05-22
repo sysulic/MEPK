@@ -1,0 +1,563 @@
+------------ print all atoms ----------------
+1 : assemble
+2 : qulifiedA
+3 : qulifiedB
+4 : restart
+-------- end print all atoms ----------------
+
+------------ print all agents ---------------
+1 : a
+2 : b
+-------- end print all agents ---------------
+
+---------------- init -------------------
+ACDFTerm 1:
+  PropDNF: ( (¬assemble & ¬restart) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬qulifiedA) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (qulifiedA) )
+    ACDF 3:
+      ACDFTerm 1:
+        True Term
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬qulifiedB) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (qulifiedB) )
+    ACDF 3:
+      ACDFTerm 1:
+        True Term
+---------------- done -------------------
+
+---------------- constraint -------------------
+PropDNF: ( (¬assemble) | (¬restart) )
+---------------- done -------------------
+
+---------------- goal -------------------
+ACDFTerm 1:
+  PropDNF: ( (¬assemble & ¬restart) )
+---------------- done -------------------
+
+---------------- Epis Actions -------------------
+:action-1 processB --------------
+:category --------------
+3
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (qulifiedB) )
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬qulifiedB) )
+:observe -------------------
+ACDFTerm 1:
+  PropDNF: ( (qulifiedB) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (qulifiedB) )
+:neg observe ---------------
+ACDFTerm 1:
+  PropDNF: ( (¬qulifiedB) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬qulifiedB) )
+******************************************
+:action-2 processA --------------
+:category --------------
+3
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (qulifiedA) )
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬qulifiedA) )
+:observe -------------------
+ACDFTerm 1:
+  PropDNF: ( (qulifiedA) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (qulifiedA) )
+:neg observe ---------------
+ACDFTerm 1:
+  PropDNF: ( (¬qulifiedA) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬qulifiedA) )
+-------------------- done -----------------------
+
+---------------- Ontic Actions -------------------
+:action-1 restart --------------
+:category --------------
+0
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              a :
+                ACDF 1:
+                  ACDFTerm 1:
+                    b :
+                      ACDF 1:
+                        ACDFTerm 1:
+                          a :
+                            ACDF 1:
+                              ACDFTerm 1:
+                                b :
+                                  ACDF 1:
+                                    ACDFTerm 1:
+                                      a :
+                                        ACDF 1:
+                                          ACDFTerm 1:
+                                            PropDNF: ( (qulifiedA) )
+                                        ACDF 2:
+                                          ACDFTerm 1:
+                                            True Term
+                                  ACDF 2:
+                                    ACDFTerm 1:
+                                      True Term
+                            ACDF 2:
+                              ACDFTerm 1:
+                                True Term
+                      ACDF 2:
+                        ACDFTerm 1:
+                          True Term
+                ACDF 2:
+                  ACDFTerm 1:
+                    True Term
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              b :
+                ACDF 1:
+                  ACDFTerm 1:
+                    a :
+                      ACDF 1:
+                        ACDFTerm 1:
+                          b :
+                            ACDF 1:
+                              ACDFTerm 1:
+                                a :
+                                  ACDF 1:
+                                    ACDFTerm 1:
+                                      b :
+                                        ACDF 1:
+                                          ACDFTerm 1:
+                                            PropDNF: ( (qulifiedB) )
+                                        ACDF 2:
+                                          ACDFTerm 1:
+                                            True Term
+                                  ACDF 2:
+                                    ACDFTerm 1:
+                                      True Term
+                            ACDF 2:
+                              ACDFTerm 1:
+                                True Term
+                      ACDF 2:
+                        ACDFTerm 1:
+                          True Term
+                ACDF 2:
+                  ACDFTerm 1:
+                    True Term
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (qulifiedA & qulifiedB) )
+
+ACDFTerm 1:
+  PropDNF: ( (restart) )
+
+******************************************
+:action-2 assemble --------------
+:category --------------
+0
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              a :
+                ACDF 1:
+                  ACDFTerm 1:
+                    b :
+                      ACDF 1:
+                        ACDFTerm 1:
+                          a :
+                            ACDF 1:
+                              ACDFTerm 1:
+                                b :
+                                  ACDF 1:
+                                    ACDFTerm 1:
+                                      a :
+                                        ACDF 1:
+                                          ACDFTerm 1:
+                                            PropDNF: ( (¬qulifiedA) )
+                                        ACDF 2:
+                                          ACDFTerm 1:
+                                            True Term
+                                  ACDF 2:
+                                    ACDFTerm 1:
+                                      True Term
+                            ACDF 2:
+                              ACDFTerm 1:
+                                True Term
+                      ACDF 2:
+                        ACDFTerm 1:
+                          True Term
+                ACDF 2:
+                  ACDFTerm 1:
+                    True Term
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              b :
+                ACDF 1:
+                  ACDFTerm 1:
+                    a :
+                      ACDF 1:
+                        ACDFTerm 1:
+                          b :
+                            ACDF 1:
+                              ACDFTerm 1:
+                                a :
+                                  ACDF 1:
+                                    ACDFTerm 1:
+                                      b :
+                                        ACDF 1:
+                                          ACDFTerm 1:
+                                            PropDNF: ( (¬qulifiedB) )
+                                        ACDF 2:
+                                          ACDFTerm 1:
+                                            True Term
+                                  ACDF 2:
+                                    ACDFTerm 1:
+                                      True Term
+                            ACDF 2:
+                              ACDFTerm 1:
+                                True Term
+                      ACDF 2:
+                        ACDFTerm 1:
+                          True Term
+                ACDF 2:
+                  ACDFTerm 1:
+                    True Term
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (¬qulifiedA) | (¬qulifiedB) )
+
+ACDFTerm 1:
+  PropDNF: ( (assemble) )
+
+******************************************
+:action-3 tell_beta --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬qulifiedA) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (qulifiedA) )
+    ACDF 3:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (qulifiedA) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              a :
+                ACDF 1:
+                  ACDFTerm 1:
+                    b :
+                      ACDF 1:
+                        ACDFTerm 1:
+                          a :
+                            ACDF 1:
+                              ACDFTerm 1:
+                                b :
+                                  ACDF 1:
+                                    ACDFTerm 1:
+                                      a :
+                                        ACDF 1:
+                                          ACDFTerm 1:
+                                            PropDNF: ( (¬qulifiedA) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬qulifiedA) )
+              b :
+                ACDF 1:
+                  ACDFTerm 1:
+                    a :
+                      ACDF 1:
+                        ACDFTerm 1:
+                          PropDNF: ( (¬qulifiedA) )
+                          b :
+                            ACDF 1:
+                              ACDFTerm 1:
+                                a :
+                                  ACDF 1:
+                                    ACDFTerm 1:
+                                      PropDNF: ( (¬qulifiedA) )
+
+effect 2 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬qulifiedA) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              a :
+                ACDF 1:
+                  ACDFTerm 1:
+                    b :
+                      ACDF 1:
+                        ACDFTerm 1:
+                          a :
+                            ACDF 1:
+                              ACDFTerm 1:
+                                b :
+                                  ACDF 1:
+                                    ACDFTerm 1:
+                                      a :
+                                        ACDF 1:
+                                          ACDFTerm 1:
+                                            PropDNF: ( (qulifiedA) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (qulifiedA) )
+              b :
+                ACDF 1:
+                  ACDFTerm 1:
+                    a :
+                      ACDF 1:
+                        ACDFTerm 1:
+                          PropDNF: ( (qulifiedA) )
+                          b :
+                            ACDF 1:
+                              ACDFTerm 1:
+                                a :
+                                  ACDF 1:
+                                    ACDFTerm 1:
+                                      PropDNF: ( (qulifiedA) )
+
+******************************************
+:action-4 tell_alpha --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬qulifiedB) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (qulifiedB) )
+    ACDF 3:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (qulifiedB) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬qulifiedB) )
+              a :
+                ACDF 1:
+                  ACDFTerm 1:
+                    b :
+                      ACDF 1:
+                        ACDFTerm 1:
+                          PropDNF: ( (¬qulifiedB) )
+                          a :
+                            ACDF 1:
+                              ACDFTerm 1:
+                                b :
+                                  ACDF 1:
+                                    ACDFTerm 1:
+                                      PropDNF: ( (¬qulifiedB) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              b :
+                ACDF 1:
+                  ACDFTerm 1:
+                    a :
+                      ACDF 1:
+                        ACDFTerm 1:
+                          b :
+                            ACDF 1:
+                              ACDFTerm 1:
+                                a :
+                                  ACDF 1:
+                                    ACDFTerm 1:
+                                      b :
+                                        ACDF 1:
+                                          ACDFTerm 1:
+                                            PropDNF: ( (¬qulifiedB) )
+
+effect 2 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬qulifiedB) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (qulifiedB) )
+              a :
+                ACDF 1:
+                  ACDFTerm 1:
+                    b :
+                      ACDF 1:
+                        ACDFTerm 1:
+                          PropDNF: ( (qulifiedB) )
+                          a :
+                            ACDF 1:
+                              ACDFTerm 1:
+                                b :
+                                  ACDF 1:
+                                    ACDFTerm 1:
+                                      PropDNF: ( (qulifiedB) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              b :
+                ACDF 1:
+                  ACDFTerm 1:
+                    a :
+                      ACDF 1:
+                        ACDFTerm 1:
+                          b :
+                            ACDF 1:
+                              ACDFTerm 1:
+                                a :
+                                  ACDF 1:
+                                    ACDFTerm 1:
+                                      b :
+                                        ACDF 1:
+                                          ACDFTerm 1:
+                                            PropDNF: ( (qulifiedB) )
+
+-------------------- done -----------------------
+

@@ -1,0 +1,1372 @@
+------------ print all atoms ----------------
+1 : at a p1
+2 : at a p2
+3 : at a p3
+4 : at a p4
+5 : at b p1
+6 : at b p2
+7 : at b p3
+8 : at b p4
+9 : in b1 p1
+10 : in b1 p3
+11 : in b1 p4
+12 : in b2 p1
+13 : in b2 p3
+14 : in b2 p4
+15 : in b1 p2
+16 : in b2 p2
+-------- end print all atoms ----------------
+
+------------ print all agents ---------------
+1 : a
+2 : b
+-------- end print all agents ---------------
+
+---------------- init -------------------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p1 & at a p2 & ¬at a p3 & ¬at a p4 & ¬at b p1 & at b p2 & ¬at b p3 & ¬at b p4) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at a p1 & at a p2) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (at b p2 & ¬at b p4) )
+---------------- done -------------------
+
+---------------- constraint -------------------
+PropDNF: ( (in b1 p1 & ¬in b1 p3 & ¬in b1 p4 & in b2 p1 & ¬in b2 p3 & ¬in b2 p4) | (in b1 p1 & ¬in b1 p3 & ¬in b1 p4 & ¬in b2 p1 & in b2 p3 & ¬in b2 p4) | (in b1 p1 & ¬in b1 p3 & ¬in b1 p4 & ¬in b2 p1 & ¬in b2 p3 & in b2 p4) | (¬in b1 p1 & in b1 p3 & ¬in b1 p4 & in b2 p1 & ¬in b2 p3 & ¬in b2 p4) | (¬in b1 p1 & in b1 p3 & ¬in b1 p4 & ¬in b2 p1 & in b2 p3 & ¬in b2 p4) | (¬in b1 p1 & in b1 p3 & ¬in b1 p4 & ¬in b2 p1 & ¬in b2 p3 & in b2 p4) )
+---------------- done -------------------
+
+---------------- goal -------------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b1 p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b1 p3) )
+    ACDF 3:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b1 p4) )
+    ACDF 4:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b2 p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b2 p3) )
+    ACDF 3:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b2 p4) )
+    ACDF 4:
+      ACDFTerm 1:
+        True Term
+---------------- done -------------------
+
+---------------- Epis Actions -------------------
+:action-1 find_room4 (a, b1) --------------
+:category --------------
+3
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at a p4) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:observe -------------------
+ACDFTerm 1:
+  PropDNF: ( (in b1 p4) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b1 p4) )
+:neg observe ---------------
+ACDFTerm 1:
+  PropDNF: ( (¬in b1 p4) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b1 p4) )
+******************************************
+:action-2 find_room4 (a, b2) --------------
+:category --------------
+3
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at a p4) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:observe -------------------
+ACDFTerm 1:
+  PropDNF: ( (in b2 p4) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b2 p4) )
+:neg observe ---------------
+ACDFTerm 1:
+  PropDNF: ( (¬in b2 p4) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b2 p4) )
+******************************************
+:action-3 find_room4 (b, b1) --------------
+:category --------------
+3
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at b p4) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:observe -------------------
+ACDFTerm 1:
+  PropDNF: ( (in b1 p4) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b1 p4) )
+:neg observe ---------------
+ACDFTerm 1:
+  PropDNF: ( (¬in b1 p4) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b1 p4) )
+******************************************
+:action-4 find_room4 (b, b2) --------------
+:category --------------
+3
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at b p4) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:observe -------------------
+ACDFTerm 1:
+  PropDNF: ( (in b2 p4) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b2 p4) )
+:neg observe ---------------
+ACDFTerm 1:
+  PropDNF: ( (¬in b2 p4) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b2 p4) )
+******************************************
+:action-5 find_room3 (a, b1) --------------
+:category --------------
+3
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at a p3) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:observe -------------------
+ACDFTerm 1:
+  PropDNF: ( (in b1 p3) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b1 p3) )
+:neg observe ---------------
+ACDFTerm 1:
+  PropDNF: ( (¬in b1 p3) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b1 p3) )
+******************************************
+:action-6 find_room3 (a, b2) --------------
+:category --------------
+3
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at a p3) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:observe -------------------
+ACDFTerm 1:
+  PropDNF: ( (in b2 p3) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b2 p3) )
+:neg observe ---------------
+ACDFTerm 1:
+  PropDNF: ( (¬in b2 p3) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b2 p3) )
+******************************************
+:action-7 find_room3 (b, b1) --------------
+:category --------------
+3
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at b p3) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:observe -------------------
+ACDFTerm 1:
+  PropDNF: ( (in b1 p3) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b1 p3) )
+:neg observe ---------------
+ACDFTerm 1:
+  PropDNF: ( (¬in b1 p3) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b1 p3) )
+******************************************
+:action-8 find_room3 (b, b2) --------------
+:category --------------
+3
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at b p3) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:observe -------------------
+ACDFTerm 1:
+  PropDNF: ( (in b2 p3) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b2 p3) )
+:neg observe ---------------
+ACDFTerm 1:
+  PropDNF: ( (¬in b2 p3) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b2 p3) )
+******************************************
+:action-9 find_room1 (a, b1) --------------
+:category --------------
+3
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at a p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:observe -------------------
+ACDFTerm 1:
+  PropDNF: ( (in b1 p1) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b1 p1) )
+:neg observe ---------------
+ACDFTerm 1:
+  PropDNF: ( (¬in b1 p1) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b1 p1) )
+******************************************
+:action-10 find_room1 (a, b2) --------------
+:category --------------
+3
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at a p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:observe -------------------
+ACDFTerm 1:
+  PropDNF: ( (in b2 p1) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b2 p1) )
+:neg observe ---------------
+ACDFTerm 1:
+  PropDNF: ( (¬in b2 p1) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b2 p1) )
+******************************************
+:action-11 find_room1 (b, b1) --------------
+:category --------------
+3
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at b p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:observe -------------------
+ACDFTerm 1:
+  PropDNF: ( (in b1 p1) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b1 p1) )
+:neg observe ---------------
+ACDFTerm 1:
+  PropDNF: ( (¬in b1 p1) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b1 p1) )
+******************************************
+:action-12 find_room1 (b, b2) --------------
+:category --------------
+3
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at b p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:observe -------------------
+ACDFTerm 1:
+  PropDNF: ( (in b2 p1) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b2 p1) )
+:neg observe ---------------
+ACDFTerm 1:
+  PropDNF: ( (¬in b2 p1) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b2 p1) )
+-------------------- done -----------------------
+
+---------------- Ontic Actions -------------------
+:action-1 tell (a, b, b1, p1) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b1 p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (in b1 p1) )
+    ACDF 3:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b1 p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b1 p1) )
+
+effect 2 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b1 p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b1 p1) )
+
+******************************************
+:action-2 tell (a, b, b1, p2) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b1 p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (in b1 p2) )
+    ACDF 3:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b1 p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b1 p2) )
+
+effect 2 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b1 p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b1 p2) )
+
+******************************************
+:action-3 tell (a, b, b1, p3) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b1 p3) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (in b1 p3) )
+    ACDF 3:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b1 p3) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b1 p3) )
+
+effect 2 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b1 p3) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b1 p3) )
+
+******************************************
+:action-4 tell (a, b, b1, p4) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b1 p4) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (in b1 p4) )
+    ACDF 3:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b1 p4) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b1 p4) )
+
+effect 2 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b1 p4) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b1 p4) )
+
+******************************************
+:action-5 tell (a, b, b2, p1) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b2 p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (in b2 p1) )
+    ACDF 3:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b2 p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b2 p1) )
+
+effect 2 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b2 p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b2 p1) )
+
+******************************************
+:action-6 tell (a, b, b2, p2) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b2 p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (in b2 p2) )
+    ACDF 3:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b2 p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b2 p2) )
+
+effect 2 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b2 p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b2 p2) )
+
+******************************************
+:action-7 tell (a, b, b2, p3) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b2 p3) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (in b2 p3) )
+    ACDF 3:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b2 p3) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b2 p3) )
+
+effect 2 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b2 p3) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b2 p3) )
+
+******************************************
+:action-8 tell (a, b, b2, p4) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b2 p4) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (in b2 p4) )
+    ACDF 3:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b2 p4) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b2 p4) )
+
+effect 2 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b2 p4) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b2 p4) )
+
+******************************************
+:action-9 tell (b, a, b1, p1) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b1 p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (in b1 p1) )
+    ACDF 3:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b1 p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b1 p1) )
+
+effect 2 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b1 p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b1 p1) )
+
+******************************************
+:action-10 tell (b, a, b1, p2) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b1 p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (in b1 p2) )
+    ACDF 3:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b1 p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b1 p2) )
+
+effect 2 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b1 p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b1 p2) )
+
+******************************************
+:action-11 tell (b, a, b1, p3) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b1 p3) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (in b1 p3) )
+    ACDF 3:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b1 p3) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b1 p3) )
+
+effect 2 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b1 p3) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b1 p3) )
+
+******************************************
+:action-12 tell (b, a, b1, p4) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b1 p4) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (in b1 p4) )
+    ACDF 3:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b1 p4) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b1 p4) )
+
+effect 2 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b1 p4) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b1 p4) )
+
+******************************************
+:action-13 tell (b, a, b2, p1) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b2 p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (in b2 p1) )
+    ACDF 3:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b2 p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b2 p1) )
+
+effect 2 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b2 p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b2 p1) )
+
+******************************************
+:action-14 tell (b, a, b2, p2) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b2 p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (in b2 p2) )
+    ACDF 3:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b2 p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b2 p2) )
+
+effect 2 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b2 p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b2 p2) )
+
+******************************************
+:action-15 tell (b, a, b2, p3) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b2 p3) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (in b2 p3) )
+    ACDF 3:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b2 p3) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b2 p3) )
+
+effect 2 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b2 p3) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b2 p3) )
+
+******************************************
+:action-16 tell (b, a, b2, p4) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b2 p4) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (in b2 p4) )
+    ACDF 3:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b2 p4) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b2 p4) )
+
+effect 2 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬in b2 p4) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (in b2 p4) )
+
+******************************************
+:action-17 right (a) --------------
+:category --------------
+0
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (at a p3) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p3) )
+
+ACDFTerm 1:
+  PropDNF: ( (¬at a p1 & ¬at a p2 & ¬at a p3 & at a p4) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at a p1 & ¬at a p2 & ¬at a p3 & at a p4) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p2) )
+
+ACDFTerm 1:
+  PropDNF: ( (¬at a p1 & ¬at a p2 & at a p3 & ¬at a p4) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at a p1 & ¬at a p2 & at a p3 & ¬at a p4) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p1) )
+
+ACDFTerm 1:
+  PropDNF: ( (¬at a p1 & at a p2 & ¬at a p3 & ¬at a p4) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at a p1 & at a p2 & ¬at a p3 & ¬at a p4) )
+
+******************************************
+:action-18 right (b) --------------
+:category --------------
+0
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (at b p3) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p3) )
+
+ACDFTerm 1:
+  PropDNF: ( (¬at b p1 & ¬at b p2 & ¬at b p3 & at b p4) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at b p1 & ¬at b p2 & ¬at b p3 & at b p4) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p2) )
+
+ACDFTerm 1:
+  PropDNF: ( (¬at b p1 & ¬at b p2 & at b p3 & ¬at b p4) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at b p1 & ¬at b p2 & at b p3 & ¬at b p4) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p1) )
+
+ACDFTerm 1:
+  PropDNF: ( (¬at b p1 & at b p2 & ¬at b p3 & ¬at b p4) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at b p1 & at b p2 & ¬at b p3 & ¬at b p4) )
+
+******************************************
+:action-19 left (a) --------------
+:category --------------
+0
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (at a p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p4) )
+
+ACDFTerm 1:
+  PropDNF: ( (¬at a p1 & ¬at a p2 & at a p3 & ¬at a p4) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at a p1 & ¬at a p2 & at a p3 & ¬at a p4) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p3) )
+
+ACDFTerm 1:
+  PropDNF: ( (¬at a p1 & at a p2 & ¬at a p3 & ¬at a p4) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at a p1 & at a p2 & ¬at a p3 & ¬at a p4) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p2) )
+
+ACDFTerm 1:
+  PropDNF: ( (at a p1 & ¬at a p2 & ¬at a p3 & ¬at a p4) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (at a p1 & ¬at a p2 & ¬at a p3 & ¬at a p4) )
+
+******************************************
+:action-20 left (b) --------------
+:category --------------
+0
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (at b p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p4) )
+
+ACDFTerm 1:
+  PropDNF: ( (¬at b p1 & ¬at b p2 & at b p3 & ¬at b p4) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at b p1 & ¬at b p2 & at b p3 & ¬at b p4) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p3) )
+
+ACDFTerm 1:
+  PropDNF: ( (¬at b p1 & at b p2 & ¬at b p3 & ¬at b p4) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at b p1 & at b p2 & ¬at b p3 & ¬at b p4) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p2) )
+
+ACDFTerm 1:
+  PropDNF: ( (at b p1 & ¬at b p2 & ¬at b p3 & ¬at b p4) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (at b p1 & ¬at b p2 & ¬at b p3 & ¬at b p4) )
+
+-------------------- done -----------------------
+

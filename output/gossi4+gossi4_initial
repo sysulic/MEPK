@@ -1,0 +1,10111 @@
+------------ print all atoms ----------------
+1 : the a
+2 : the b
+3 : the c
+4 : the d
+-------- end print all atoms ----------------
+
+------------ print all agents ---------------
+1 : a
+2 : b
+3 : c
+4 : d
+-------- end print all agents ---------------
+
+---------------- init -------------------
+ACDFTerm 1:
+  PropDNF: ( (the a & the b & the c & the d) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & ¬the b) )
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the a) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the a) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the a) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (the a & ¬the c) )
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the a) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the a) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the a) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+    ACDF 3:
+      ACDFTerm 1:
+        PropDNF: ( (the a & ¬the d) )
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the a) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the a) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the a) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+    ACDF 4:
+      ACDFTerm 1:
+        PropDNF: ( (the a & ¬the b) )
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the a) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the a) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the a) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+      ACDFTerm 2:
+        PropDNF: ( (the a & ¬the c) )
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the a) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the a) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the a) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+      ACDFTerm 3:
+        PropDNF: ( (the a & ¬the d) )
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the a) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the a) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the a) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+      ACDFTerm 4:
+        PropDNF: ( (the a) )
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the a) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the a) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the a) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a & the b) )
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the b) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the b) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the b) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (the b & ¬the c) )
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the b) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the b) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the b) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+    ACDF 3:
+      ACDFTerm 1:
+        PropDNF: ( (the b & ¬the d) )
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the b) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the b) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the b) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+    ACDF 4:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a & the b) )
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the b) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the b) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the b) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+      ACDFTerm 2:
+        PropDNF: ( (the b & ¬the c) )
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the b) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the b) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the b) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+      ACDFTerm 3:
+        PropDNF: ( (the b & ¬the d) )
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the b) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the b) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the b) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+      ACDFTerm 4:
+        PropDNF: ( (the b) )
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the b) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the b) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the b) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b & the c) )
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the c) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the c) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the c) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a & the c) )
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the c) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the c) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the c) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+    ACDF 3:
+      ACDFTerm 1:
+        PropDNF: ( (the c & ¬the d) )
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the c) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the c) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the c) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+    ACDF 4:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b & the c) )
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the c) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the c) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the c) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+      ACDFTerm 2:
+        PropDNF: ( (¬the a & the c) )
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the c) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the c) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the c) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+      ACDFTerm 3:
+        PropDNF: ( (the c & ¬the d) )
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the c) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the c) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the c) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+      ACDFTerm 4:
+        PropDNF: ( (the c) )
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the c) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the c) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the c) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a & the d) )
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the d) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the d) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the d) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b & the d) )
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the d) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the d) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the d) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+    ACDF 3:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c & the d) )
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the d) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the d) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the d) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+    ACDF 4:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a & the d) )
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the d) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the d) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the d) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+      ACDFTerm 2:
+        PropDNF: ( (¬the b & the d) )
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the d) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the d) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the d) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+      ACDFTerm 3:
+        PropDNF: ( (¬the c & the d) )
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the d) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the d) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the d) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+      ACDFTerm 4:
+        PropDNF: ( (the d) )
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the d) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the d) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (¬the d) )
+          ACDF 2:
+            ACDFTerm 1:
+              True Term
+---------------- done -------------------
+
+---------------- constraint -------------------
+PropDNF: (  )
+---------------- done -------------------
+
+---------------- goal -------------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) | (¬the b) | (¬the c) | (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) | (¬the b) | (¬the c) | (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) | (¬the b) | (¬the c) | (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) | (¬the b) | (¬the c) | (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+---------------- done -------------------
+
+---------------- Epis Actions -------------------
+-------------------- done -----------------------
+
+---------------- Ontic Actions -------------------
+:action-1 call (a, b, c, d) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+      ACDFTerm 2:
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+      ACDFTerm 2:
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the c) )
+    ACDF 3:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+      ACDFTerm 2:
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the d) )
+    ACDF 4:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the c) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the d) )
+
+effect 2 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the d) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the c) )
+
+effect 3 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 4 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the d) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 5 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the d) )
+
+effect 6 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 7 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 8 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the c) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 9 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the c) )
+
+effect 10 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+******************************************
+:action-2 call (a, b, d, c) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+      ACDFTerm 2:
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+      ACDFTerm 2:
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the d) )
+    ACDF 3:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+      ACDFTerm 2:
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the c) )
+    ACDF 4:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the d) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the c) )
+
+effect 2 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the c) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the d) )
+
+effect 3 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 4 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the c) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 5 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the c) )
+
+effect 6 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 7 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 8 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the d) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 9 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the d) )
+
+effect 10 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+******************************************
+:action-3 call (a, c, b, d) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+      ACDFTerm 2:
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+      ACDFTerm 2:
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the b) )
+    ACDF 3:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+      ACDFTerm 2:
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the d) )
+    ACDF 4:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the d) )
+
+effect 2 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c & the d) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the b) )
+
+effect 3 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 4 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c & the d) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 5 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the d) )
+
+effect 6 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 7 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 8 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 9 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the b) )
+
+effect 10 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+******************************************
+:action-4 call (a, c, d, b) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+      ACDFTerm 2:
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+      ACDFTerm 2:
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the d) )
+    ACDF 3:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+      ACDFTerm 2:
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the b) )
+    ACDF 4:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c & the d) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the b) )
+
+effect 2 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the d) )
+
+effect 3 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 4 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 5 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the b) )
+
+effect 6 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 7 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 8 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c & the d) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 9 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the d) )
+
+effect 10 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+******************************************
+:action-5 call (a, d, b, c) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+      ACDFTerm 2:
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+      ACDFTerm 2:
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the b) )
+    ACDF 3:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+      ACDFTerm 2:
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the c) )
+    ACDF 4:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the c) )
+
+effect 2 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the b) )
+
+effect 3 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 4 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 5 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the c) )
+
+effect 6 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 7 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 8 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 9 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the b) )
+
+effect 10 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+******************************************
+:action-6 call (a, d, c, b) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+      ACDFTerm 2:
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+      ACDFTerm 2:
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the c) )
+    ACDF 3:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+      ACDFTerm 2:
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the b) )
+    ACDF 4:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the b) )
+
+effect 2 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the c) )
+
+effect 3 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 4 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 5 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the b) )
+
+effect 6 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 7 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 8 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 9 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the c) )
+
+effect 10 --------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 3:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+******************************************
+:action-7 call (b, a, c, d) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+      ACDFTerm 2:
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+      ACDFTerm 2:
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the c) )
+    ACDF 3:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+      ACDFTerm 2:
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the d) )
+    ACDF 4:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the d) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the c) )
+
+effect 2 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the c) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the d) )
+
+effect 3 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 4 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the d) )
+
+effect 5 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the d) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 6 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 7 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 8 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the c) )
+
+effect 9 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the c) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 10 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+******************************************
+:action-8 call (b, a, d, c) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+      ACDFTerm 2:
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+      ACDFTerm 2:
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the d) )
+    ACDF 3:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+      ACDFTerm 2:
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the c) )
+    ACDF 4:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the c) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the d) )
+
+effect 2 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the d) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the c) )
+
+effect 3 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 4 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the c) )
+
+effect 5 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the c) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 6 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 7 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 8 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the d) )
+
+effect 9 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the d) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 10 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+******************************************
+:action-9 call (b, c, a, d) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+      ACDFTerm 2:
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+      ACDFTerm 2:
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the a) )
+    ACDF 3:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+      ACDFTerm 2:
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the d) )
+    ACDF 4:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the d) )
+
+effect 2 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c & the d) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the b) )
+
+effect 3 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 4 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c & the d) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 5 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the d) )
+
+effect 6 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 7 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 8 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 9 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the b) )
+
+effect 10 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+******************************************
+:action-10 call (b, c, d, a) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+      ACDFTerm 2:
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+      ACDFTerm 2:
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the d) )
+    ACDF 3:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+      ACDFTerm 2:
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the a) )
+    ACDF 4:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c & the d) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the b) )
+
+effect 2 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the d) )
+
+effect 3 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 4 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 5 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the b) )
+
+effect 6 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 7 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 8 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c & the d) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 9 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the d) )
+
+effect 10 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+******************************************
+:action-11 call (b, d, a, c) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+      ACDFTerm 2:
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+      ACDFTerm 2:
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the a) )
+    ACDF 3:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+      ACDFTerm 2:
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the c) )
+    ACDF 4:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the c) )
+
+effect 2 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the b) )
+
+effect 3 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 4 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 5 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the c) )
+
+effect 6 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 7 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 8 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 9 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the b) )
+
+effect 10 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+******************************************
+:action-12 call (b, d, c, a) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+      ACDFTerm 2:
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+      ACDFTerm 2:
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the c) )
+    ACDF 3:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+      ACDFTerm 2:
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the a) )
+    ACDF 4:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the b) )
+
+effect 2 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the c) )
+
+effect 3 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 4 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 5 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the b) )
+
+effect 6 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 7 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 8 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 9 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the c) )
+
+effect 10 --------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 3:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+******************************************
+:action-13 call (c, a, b, d) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+      ACDFTerm 2:
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+      ACDFTerm 2:
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the b) )
+    ACDF 3:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+      ACDFTerm 2:
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the d) )
+    ACDF 4:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c & the d) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the b) )
+
+effect 2 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the d) )
+
+effect 3 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 4 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the d) )
+
+effect 5 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c & the d) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 6 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 7 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 8 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the b) )
+
+effect 9 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 10 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+******************************************
+:action-14 call (c, a, d, b) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+      ACDFTerm 2:
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+      ACDFTerm 2:
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the d) )
+    ACDF 3:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+      ACDFTerm 2:
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the b) )
+    ACDF 4:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the d) )
+
+effect 2 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c & the d) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the b) )
+
+effect 3 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 4 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the b) )
+
+effect 5 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 6 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 7 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 8 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the d) )
+
+effect 9 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c & the d) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 10 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+******************************************
+:action-15 call (c, b, a, d) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+      ACDFTerm 2:
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+      ACDFTerm 2:
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the a) )
+    ACDF 3:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+      ACDFTerm 2:
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the d) )
+    ACDF 4:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c & the d) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the b) )
+
+effect 2 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the d) )
+
+effect 3 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 4 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the d) )
+
+effect 5 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c & the d) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 6 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 7 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 8 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the b) )
+
+effect 9 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 10 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+******************************************
+:action-16 call (c, b, d, a) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+      ACDFTerm 2:
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+      ACDFTerm 2:
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the d) )
+    ACDF 3:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+      ACDFTerm 2:
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the a) )
+    ACDF 4:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the d) )
+
+effect 2 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c & the d) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the b) )
+
+effect 3 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 4 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the b) )
+
+effect 5 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 6 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 7 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 8 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the d) )
+
+effect 9 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c & the d) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 10 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+******************************************
+:action-17 call (c, d, a, b) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+      ACDFTerm 2:
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+      ACDFTerm 2:
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the a) )
+    ACDF 3:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+      ACDFTerm 2:
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the b) )
+    ACDF 4:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the c) )
+
+effect 2 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the c) )
+
+effect 3 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 4 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 5 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the c) )
+
+effect 6 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 7 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 8 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 9 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the c) )
+
+effect 10 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+******************************************
+:action-18 call (c, d, b, a) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+      ACDFTerm 2:
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+      ACDFTerm 2:
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the b) )
+    ACDF 3:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+      ACDFTerm 2:
+        d :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the a) )
+    ACDF 4:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the c) )
+
+effect 2 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the c) )
+
+effect 3 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 4 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 5 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the c) )
+
+effect 6 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 7 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 8 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 9 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the c) )
+
+effect 10 --------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 3:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+******************************************
+:action-19 call (d, a, b, c) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+      ACDFTerm 2:
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+      ACDFTerm 2:
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the b) )
+    ACDF 3:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+      ACDFTerm 2:
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the c) )
+    ACDF 4:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the b) )
+
+effect 2 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the c) )
+
+effect 3 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 4 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the c) )
+
+effect 5 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 6 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 7 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 8 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the b) )
+
+effect 9 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 10 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+******************************************
+:action-20 call (d, a, c, b) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+      ACDFTerm 2:
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+      ACDFTerm 2:
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the c) )
+    ACDF 3:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+      ACDFTerm 2:
+        a :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the b) )
+    ACDF 4:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the c) )
+
+effect 2 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the b) )
+
+effect 3 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 4 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the b) )
+
+effect 5 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 6 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 7 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 8 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the c) )
+
+effect 9 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 10 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+******************************************
+:action-21 call (d, b, a, c) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+      ACDFTerm 2:
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+      ACDFTerm 2:
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the a) )
+    ACDF 3:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+      ACDFTerm 2:
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the c) )
+    ACDF 4:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the b) )
+
+effect 2 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the c) )
+
+effect 3 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 4 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the c) )
+
+effect 5 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 6 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 7 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 8 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the b) )
+
+effect 9 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 10 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+******************************************
+:action-22 call (d, b, c, a) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+      ACDFTerm 2:
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+      ACDFTerm 2:
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the c) )
+    ACDF 3:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+      ACDFTerm 2:
+        b :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the a) )
+    ACDF 4:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the c) )
+
+effect 2 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the b) )
+
+effect 3 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 4 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the b) )
+
+effect 5 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 6 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 7 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 8 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the c) )
+
+effect 9 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 10 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+******************************************
+:action-23 call (d, c, a, b) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+      ACDFTerm 2:
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+      ACDFTerm 2:
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the a) )
+    ACDF 3:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+      ACDFTerm 2:
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the b) )
+    ACDF 4:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the c) )
+
+effect 2 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the c) )
+
+effect 3 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 4 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the c) )
+
+effect 5 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 6 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 7 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 8 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the c) )
+
+effect 9 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 10 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+******************************************
+:action-24 call (d, c, b, a) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+      ACDFTerm 2:
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+      ACDFTerm 2:
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the b) )
+    ACDF 3:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+      ACDFTerm 2:
+        c :
+          ACDF 1:
+            ACDFTerm 1:
+              PropDNF: ( (the a) )
+    ACDF 4:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the c) )
+
+effect 2 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the c) )
+
+effect 3 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 4 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the c) )
+
+effect 5 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 6 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 7 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 8 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the c) )
+
+effect 9 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b & the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 10 --------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 4:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+-------------------- done -----------------------
+

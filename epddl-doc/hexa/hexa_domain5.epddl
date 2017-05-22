@@ -1,0 +1,52 @@
+(define (domain hexa5)
+  (:types agent)
+  (:predicates (own ?ag - agent ?c - card)
+  )
+   
+  (:action ask_red
+   :category (sensing)
+   :parameters (?x - agent ?y - agent)
+   :precondition (K_?x (or (own ?x white) (own ?x blue) (own ?x pink) (own ?x yellow))
+                 )
+   :observe_pos (K_?x(own ?y red) )
+   :observe_neg (K_?x(not(own ?y red)) )
+  )
+
+  (:action ask_white
+   :category (sensing)
+   :parameters (?x - agent ?y - agent)
+   :precondition (K_?x (or (own ?x red) (own ?x blue) (own ?x pink) (own ?x yellow))
+                 )
+   :observe_pos (K_?x(own ?y white) )
+   :observe_neg (K_?x(not(own ?y white)) )
+  )
+
+  (:action ask_blue
+   :category (sensing)
+   :parameters (?x - agent ?y - agent)
+   :precondition (K_?x (or (own ?x white) (own ?x red) (own ?x pink) (own ?x yellow))
+                 )
+   :observe_pos (K_?x(own ?y blue) )
+   :observe_neg (K_?x(not(own ?y blue)) )
+  )
+
+  (:action ask_pink
+   :category (sensing)
+   :parameters (?x - agent ?y - agent)
+   :precondition (K_?x (or (own ?x white) (own ?x red) (own ?x blue) (own ?x yellow))
+                 )
+   :observe_pos (K_?x(own ?y pink) )
+   :observe_neg (K_?x(not(own ?y pink)) )
+  )
+
+  (:action ask_yellow
+   :category (sensing)
+   :parameters (?x - agent ?y - agent)
+   :precondition (K_?x (or (own ?x white) (own ?x red) (own ?x blue) (own ?x pink))
+                 )
+   :observe_pos (K_?x(own ?y yellow) )
+   :observe_neg (K_?x(not(own ?y yellow)) )
+  )
+
+
+)

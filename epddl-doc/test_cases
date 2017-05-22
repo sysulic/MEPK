@@ -1,0 +1,36 @@
+../epddl-doc/selective_communication/selective_communication_domain.epddl ../epddl-doc/selective_communication/selective_communication_p.epddl 2
+../epddl-doc/selective_communication/selective_communication_domain_7agents.epddl ../epddl-doc/selective_communication/selective_communication_p_7agents.epddl 2
+../epddl-doc/selective_communication/selective_communication_domain_8-rooms.epddl ../epddl-doc/selective_communication/selective_communication_p_8-rooms.epddl 2
+../epddl-doc/selective_communication/selective_communication_domain_depth-of-order-3.epddl ../epddl-doc/selective_communication/selective_communication_p_depth-of-order-3.epddl 2
+../epddl-doc/selective_communication/selective_communication_domain_depth-of-order-4.epddl ../epddl-doc/selective_communication/selective_communication_p_depth-of-order-4.epddl 2
+
+../epddl-doc/Collaboration_theough_Communication/Collaboration_through_Communication_domain2.epddl ../epddl-doc/Collaboration_theough_Communication/Collaboration_through_Communication_p2.epddl 2
+../epddl-doc/Collaboration_theough_Communication/Collaboration_through_Communication_domain4.epddl ../epddl-doc/Collaboration_theough_Communication/Collaboration_through_Communication_p4.epddl 2
+../epddl-doc/Collaboration_theough_Communication/Collaboration_through_Communication_domain3Agents2boxes.epddl ../epddl-doc/Collaboration_theough_Communication/Collaboration_through_Communication_p3Agents2Boxes.epddl 2
+../epddl-doc/Collaboration_theough_Communication/Collaboration_through_Communication_domain_2boxes.epddl ../epddl-doc/Collaboration_theough_Communication/Collaboration_through_Communication_p_2boxes.epddl 2
+../epddl-doc/Collaboration_theough_Communication/Collaboration_through_Communication_domain_3boxes.epddl ../epddl-doc/Collaboration_theough_Communication/Collaboration_through_Communication_p_3boxes.epddl 2
+../epddl-doc/Collaboration_theough_Communication/Collaboration_through_Communication_domain_4boxes.epddl ../epddl-doc/Collaboration_theough_Communication/Collaboration_through_Communication_p_3boxes.epddl 2
+
+../epddl-doc/grapevine/grapevine_domain.epddl ../epddl-doc/grapevine/grapevine_p.epddl 2
+../epddl-doc/grapevine/grapevine_domain3.epddl ../epddl-doc/grapevine/grapevine_p3.epddl 2
+../epddl-doc/grapevine/grapevine_domain_3_agents.epddl ../epddl-doc/grapevine/grapevine_p_3_agents.epddl 2
+../epddl-doc/grapevine/grapevine_domain_depth_of_order_2.epddl ../epddl-doc/grapevine/grapevine_p_depth_of_order_2.epddl 2
+../epddl-doc/grapevine/grapevine_domain_depth_of_order_3.epddl ../epddl-doc/grapevine/grapevine_p_depth_of_order_3.epddl 2
+../epddl-doc/grapevine/grapevine_domain_depth_of_order_4.epddl ../epddl-doc/grapevine/grapevine_p_depth_of_order_4.epddl 2
+
+../epddl-doc/hexa/hexa_domain3.epddl ../epddl-doc/hexa/hexa_p3.epddl 2
+../epddl-doc/hexa/hexa_domain4.epddl ../epddl-doc/hexa/hexa_p4.epddl 2
+../epddl-doc/hexa/hexa_domain5.epddl ../epddl-doc/hexa/hexa_p5.epddl 2
+
+../epddl-doc/assemble_line/assemble_line_domain2.epddl ../epddl-doc/assemble_line/assemble_line_p2.epddl 2
+../epddl-doc/assemble_line/assemble_line_domain3.epddl ../epddl-doc/assemble_line/assemble_line_p3.epddl 2
+../epddl-doc/assemble_line/assemble_line_domain4.epddl ../epddl-doc/assemble_line/assemble_line_p4.epddl 2
+../epddl-doc/assemble_line/assemble_line_domain5.epddl ../epddl-doc/assemble_line/assemble_line_p5.epddl 2
+../epddl-doc/assemble_line/assemble_line_domain7.epddl ../epddl-doc/assemble_line/assemble_line_p7.epddl 2
+
+../epddl-doc/gossip/gossip_domain3.epddl ../epddl-doc/gossip/gossip_p3.epddl 2
+../epddl-doc/gossip/gossip_domain4.epddl ../epddl-doc/gossip/gossip_p4.epddl 2
+../epddl-doc/gossip/gossip_domain5.epddl ../epddl-doc/gossip/gossip_p5.epddl 2
+
+../epddl-doc/WordRooms/WordRooms_5letters_5rooms_domain.epddl ../epddl-doc/WordRooms/WordRooms_5letters_5rooms_p.epddl 2
+../epddl-doc/WordRooms/WordRooms_7letters_7rooms_domain.epddl ../epddl-doc/WordRooms/WordRooms_7letters_7rooms_p.epddl 2

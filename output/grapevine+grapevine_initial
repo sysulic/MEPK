@@ -1,0 +1,3821 @@
+------------ print all atoms ----------------
+1 : at a p1
+2 : at a p2
+3 : at b p1
+4 : at b p2
+5 : at c p1
+6 : at c p2
+7 : at d p1
+8 : at d p2
+9 : the a
+10 : the b
+11 : the c
+12 : the d
+-------- end print all atoms ----------------
+
+------------ print all agents ---------------
+1 : a
+2 : b
+3 : c
+4 : d
+-------- end print all agents ---------------
+
+---------------- init -------------------
+ACDFTerm 1:
+  PropDNF: ( (at a p1 & ¬at a p2 & at b p1 & ¬at b p2 & at c p1 & ¬at c p2 & at d p1 & ¬at d p2) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (at a p1 & ¬at a p2 & the a) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (at b p1 & ¬at b p2 & ¬the a & the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (at b p1 & ¬at b p2 & the b) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (at c p1 & ¬at c p2 & ¬the a & the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (at c p1 & ¬at c p2 & the c) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (at d p1 & ¬at d p2 & ¬the a & the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        PropDNF: ( (at d p1 & ¬at d p2 & the d) )
+---------------- done -------------------
+
+---------------- constraint -------------------
+PropDNF: (  )
+---------------- done -------------------
+
+---------------- goal -------------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+ACDFTerm 3:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+---------------- done -------------------
+
+---------------- Epis Actions -------------------
+-------------------- done -----------------------
+
+---------------- Ontic Actions -------------------
+:action-1 share (a, b, c, d, p1, p2) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at a p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at b p1) | (¬at b p2) | (at c p1) | (¬at c p2) | (at d p1) | (¬at d p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p1) | (at b p2) | (at c p1) | (¬at c p2) | (at d p1) | (¬at d p2) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p1) | (at b p2) | (¬at c p1) | (at c p2) | (at d p1) | (¬at d p2) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p1) | (at b p2) | (¬at c p1) | (at c p2) | (¬at d p1) | (at d p2) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+******************************************
+:action-2 share (a, b, c, d, p2, p1) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at a p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at b p2) | (¬at b p1) | (at c p2) | (¬at c p1) | (at d p2) | (¬at d p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p2) | (at b p1) | (at c p2) | (¬at c p1) | (at d p2) | (¬at d p1) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p2) | (at b p1) | (¬at c p2) | (at c p1) | (at d p2) | (¬at d p1) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p2) | (at b p1) | (¬at c p2) | (at c p1) | (¬at d p2) | (at d p1) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+******************************************
+:action-3 share (a, b, d, c, p1, p2) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at a p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at b p1) | (¬at b p2) | (at d p1) | (¬at d p2) | (at c p1) | (¬at c p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p1) | (at b p2) | (at d p1) | (¬at d p2) | (at c p1) | (¬at c p2) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p1) | (at b p2) | (¬at d p1) | (at d p2) | (at c p1) | (¬at c p2) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p1) | (at b p2) | (¬at d p1) | (at d p2) | (¬at c p1) | (at c p2) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+******************************************
+:action-4 share (a, b, d, c, p2, p1) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at a p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at b p2) | (¬at b p1) | (at d p2) | (¬at d p1) | (at c p2) | (¬at c p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p2) | (at b p1) | (at d p2) | (¬at d p1) | (at c p2) | (¬at c p1) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p2) | (at b p1) | (¬at d p2) | (at d p1) | (at c p2) | (¬at c p1) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p2) | (at b p1) | (¬at d p2) | (at d p1) | (¬at c p2) | (at c p1) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+******************************************
+:action-5 share (a, c, b, d, p1, p2) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at a p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at c p1) | (¬at c p2) | (at b p1) | (¬at b p2) | (at d p1) | (¬at d p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at c p1) | (at c p2) | (at b p1) | (¬at b p2) | (at d p1) | (¬at d p2) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at c p1) | (at c p2) | (¬at b p1) | (at b p2) | (at d p1) | (¬at d p2) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at c p1) | (at c p2) | (¬at b p1) | (at b p2) | (¬at d p1) | (at d p2) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+******************************************
+:action-6 share (a, c, b, d, p2, p1) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at a p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at c p2) | (¬at c p1) | (at b p2) | (¬at b p1) | (at d p2) | (¬at d p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at c p2) | (at c p1) | (at b p2) | (¬at b p1) | (at d p2) | (¬at d p1) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at c p2) | (at c p1) | (¬at b p2) | (at b p1) | (at d p2) | (¬at d p1) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at c p2) | (at c p1) | (¬at b p2) | (at b p1) | (¬at d p2) | (at d p1) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+******************************************
+:action-7 share (a, c, d, b, p1, p2) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at a p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at c p1) | (¬at c p2) | (at d p1) | (¬at d p2) | (at b p1) | (¬at b p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at c p1) | (at c p2) | (at d p1) | (¬at d p2) | (at b p1) | (¬at b p2) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at c p1) | (at c p2) | (¬at d p1) | (at d p2) | (at b p1) | (¬at b p2) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at c p1) | (at c p2) | (¬at d p1) | (at d p2) | (¬at b p1) | (at b p2) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+******************************************
+:action-8 share (a, c, d, b, p2, p1) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at a p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at c p2) | (¬at c p1) | (at d p2) | (¬at d p1) | (at b p2) | (¬at b p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at c p2) | (at c p1) | (at d p2) | (¬at d p1) | (at b p2) | (¬at b p1) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at c p2) | (at c p1) | (¬at d p2) | (at d p1) | (at b p2) | (¬at b p1) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at c p2) | (at c p1) | (¬at d p2) | (at d p1) | (¬at b p2) | (at b p1) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+******************************************
+:action-9 share (a, d, b, c, p1, p2) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at a p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at d p1) | (¬at d p2) | (at b p1) | (¬at b p2) | (at c p1) | (¬at c p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at d p1) | (at d p2) | (at b p1) | (¬at b p2) | (at c p1) | (¬at c p2) )
+
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at d p1) | (at d p2) | (¬at b p1) | (at b p2) | (at c p1) | (¬at c p2) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at d p1) | (at d p2) | (¬at b p1) | (at b p2) | (¬at c p1) | (at c p2) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+******************************************
+:action-10 share (a, d, b, c, p2, p1) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at a p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at d p2) | (¬at d p1) | (at b p2) | (¬at b p1) | (at c p2) | (¬at c p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at d p2) | (at d p1) | (at b p2) | (¬at b p1) | (at c p2) | (¬at c p1) )
+
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at d p2) | (at d p1) | (¬at b p2) | (at b p1) | (at c p2) | (¬at c p1) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at d p2) | (at d p1) | (¬at b p2) | (at b p1) | (¬at c p2) | (at c p1) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+******************************************
+:action-11 share (a, d, c, b, p1, p2) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at a p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at d p1) | (¬at d p2) | (at c p1) | (¬at c p2) | (at b p1) | (¬at b p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at d p1) | (at d p2) | (at c p1) | (¬at c p2) | (at b p1) | (¬at b p2) )
+
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at d p1) | (at d p2) | (¬at c p1) | (at c p2) | (at b p1) | (¬at b p2) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at d p1) | (at d p2) | (¬at c p1) | (at c p2) | (¬at b p1) | (at b p2) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+******************************************
+:action-12 share (a, d, c, b, p2, p1) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at a p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the a) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at d p2) | (¬at d p1) | (at c p2) | (¬at c p1) | (at b p2) | (¬at b p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at d p2) | (at d p1) | (at c p2) | (¬at c p1) | (at b p2) | (¬at b p1) )
+
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at d p2) | (at d p1) | (¬at c p2) | (at c p1) | (at b p2) | (¬at b p1) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at d p2) | (at d p1) | (¬at c p2) | (at c p1) | (¬at b p2) | (at b p1) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the a) )
+
+******************************************
+:action-13 share (b, a, c, d, p1, p2) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at b p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at a p1) | (¬at a p2) | (at c p1) | (¬at c p2) | (at d p1) | (¬at d p2) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p1) | (at a p2) | (at c p1) | (¬at c p2) | (at d p1) | (¬at d p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p1) | (at a p2) | (¬at c p1) | (at c p2) | (at d p1) | (¬at d p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p1) | (at a p2) | (¬at c p1) | (at c p2) | (¬at d p1) | (at d p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+******************************************
+:action-14 share (b, a, c, d, p2, p1) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at b p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at a p2) | (¬at a p1) | (at c p2) | (¬at c p1) | (at d p2) | (¬at d p1) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p2) | (at a p1) | (at c p2) | (¬at c p1) | (at d p2) | (¬at d p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p2) | (at a p1) | (¬at c p2) | (at c p1) | (at d p2) | (¬at d p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p2) | (at a p1) | (¬at c p2) | (at c p1) | (¬at d p2) | (at d p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+******************************************
+:action-15 share (b, a, d, c, p1, p2) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at b p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at a p1) | (¬at a p2) | (at d p1) | (¬at d p2) | (at c p1) | (¬at c p2) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p1) | (at a p2) | (at d p1) | (¬at d p2) | (at c p1) | (¬at c p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p1) | (at a p2) | (¬at d p1) | (at d p2) | (at c p1) | (¬at c p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p1) | (at a p2) | (¬at d p1) | (at d p2) | (¬at c p1) | (at c p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+******************************************
+:action-16 share (b, a, d, c, p2, p1) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at b p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at a p2) | (¬at a p1) | (at d p2) | (¬at d p1) | (at c p2) | (¬at c p1) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p2) | (at a p1) | (at d p2) | (¬at d p1) | (at c p2) | (¬at c p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p2) | (at a p1) | (¬at d p2) | (at d p1) | (at c p2) | (¬at c p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p2) | (at a p1) | (¬at d p2) | (at d p1) | (¬at c p2) | (at c p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+******************************************
+:action-17 share (b, c, a, d, p1, p2) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at b p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at c p1) | (¬at c p2) | (at a p1) | (¬at a p2) | (at d p1) | (¬at d p2) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at c p1) | (at c p2) | (at a p1) | (¬at a p2) | (at d p1) | (¬at d p2) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at c p1) | (at c p2) | (¬at a p1) | (at a p2) | (at d p1) | (¬at d p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at c p1) | (at c p2) | (¬at a p1) | (at a p2) | (¬at d p1) | (at d p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+******************************************
+:action-18 share (b, c, a, d, p2, p1) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at b p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at c p2) | (¬at c p1) | (at a p2) | (¬at a p1) | (at d p2) | (¬at d p1) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at c p2) | (at c p1) | (at a p2) | (¬at a p1) | (at d p2) | (¬at d p1) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at c p2) | (at c p1) | (¬at a p2) | (at a p1) | (at d p2) | (¬at d p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at c p2) | (at c p1) | (¬at a p2) | (at a p1) | (¬at d p2) | (at d p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+******************************************
+:action-19 share (b, c, d, a, p1, p2) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at b p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at c p1) | (¬at c p2) | (at d p1) | (¬at d p2) | (at a p1) | (¬at a p2) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at c p1) | (at c p2) | (at d p1) | (¬at d p2) | (at a p1) | (¬at a p2) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at c p1) | (at c p2) | (¬at d p1) | (at d p2) | (at a p1) | (¬at a p2) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at c p1) | (at c p2) | (¬at d p1) | (at d p2) | (¬at a p1) | (at a p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+******************************************
+:action-20 share (b, c, d, a, p2, p1) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at b p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at c p2) | (¬at c p1) | (at d p2) | (¬at d p1) | (at a p2) | (¬at a p1) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at c p2) | (at c p1) | (at d p2) | (¬at d p1) | (at a p2) | (¬at a p1) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at c p2) | (at c p1) | (¬at d p2) | (at d p1) | (at a p2) | (¬at a p1) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at c p2) | (at c p1) | (¬at d p2) | (at d p1) | (¬at a p2) | (at a p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+******************************************
+:action-21 share (b, d, a, c, p1, p2) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at b p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at d p1) | (¬at d p2) | (at a p1) | (¬at a p2) | (at c p1) | (¬at c p2) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at d p1) | (at d p2) | (at a p1) | (¬at a p2) | (at c p1) | (¬at c p2) )
+
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at d p1) | (at d p2) | (¬at a p1) | (at a p2) | (at c p1) | (¬at c p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at d p1) | (at d p2) | (¬at a p1) | (at a p2) | (¬at c p1) | (at c p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+******************************************
+:action-22 share (b, d, a, c, p2, p1) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at b p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at d p2) | (¬at d p1) | (at a p2) | (¬at a p1) | (at c p2) | (¬at c p1) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at d p2) | (at d p1) | (at a p2) | (¬at a p1) | (at c p2) | (¬at c p1) )
+
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at d p2) | (at d p1) | (¬at a p2) | (at a p1) | (at c p2) | (¬at c p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at d p2) | (at d p1) | (¬at a p2) | (at a p1) | (¬at c p2) | (at c p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+******************************************
+:action-23 share (b, d, c, a, p1, p2) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at b p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at d p1) | (¬at d p2) | (at c p1) | (¬at c p2) | (at a p1) | (¬at a p2) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at d p1) | (at d p2) | (at c p1) | (¬at c p2) | (at a p1) | (¬at a p2) )
+
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at d p1) | (at d p2) | (¬at c p1) | (at c p2) | (at a p1) | (¬at a p2) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at d p1) | (at d p2) | (¬at c p1) | (at c p2) | (¬at a p1) | (at a p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+******************************************
+:action-24 share (b, d, c, a, p2, p1) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at b p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the b) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at d p2) | (¬at d p1) | (at c p2) | (¬at c p1) | (at a p2) | (¬at a p1) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at d p2) | (at d p1) | (at c p2) | (¬at c p1) | (at a p2) | (¬at a p1) )
+
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at d p2) | (at d p1) | (¬at c p2) | (at c p1) | (at a p2) | (¬at a p1) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at d p2) | (at d p1) | (¬at c p2) | (at c p1) | (¬at a p2) | (at a p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the b) )
+
+******************************************
+:action-25 share (c, a, b, d, p1, p2) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at c p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at a p1) | (¬at a p2) | (at b p1) | (¬at b p2) | (at d p1) | (¬at d p2) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p1) | (at a p2) | (at b p1) | (¬at b p2) | (at d p1) | (¬at d p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p1) | (at a p2) | (¬at b p1) | (at b p2) | (at d p1) | (¬at d p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p1) | (at a p2) | (¬at b p1) | (at b p2) | (¬at d p1) | (at d p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+******************************************
+:action-26 share (c, a, b, d, p2, p1) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at c p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at a p2) | (¬at a p1) | (at b p2) | (¬at b p1) | (at d p2) | (¬at d p1) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p2) | (at a p1) | (at b p2) | (¬at b p1) | (at d p2) | (¬at d p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p2) | (at a p1) | (¬at b p2) | (at b p1) | (at d p2) | (¬at d p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p2) | (at a p1) | (¬at b p2) | (at b p1) | (¬at d p2) | (at d p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+******************************************
+:action-27 share (c, a, d, b, p1, p2) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at c p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at a p1) | (¬at a p2) | (at d p1) | (¬at d p2) | (at b p1) | (¬at b p2) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p1) | (at a p2) | (at d p1) | (¬at d p2) | (at b p1) | (¬at b p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p1) | (at a p2) | (¬at d p1) | (at d p2) | (at b p1) | (¬at b p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p1) | (at a p2) | (¬at d p1) | (at d p2) | (¬at b p1) | (at b p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+******************************************
+:action-28 share (c, a, d, b, p2, p1) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at c p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at a p2) | (¬at a p1) | (at d p2) | (¬at d p1) | (at b p2) | (¬at b p1) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p2) | (at a p1) | (at d p2) | (¬at d p1) | (at b p2) | (¬at b p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p2) | (at a p1) | (¬at d p2) | (at d p1) | (at b p2) | (¬at b p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p2) | (at a p1) | (¬at d p2) | (at d p1) | (¬at b p2) | (at b p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+******************************************
+:action-29 share (c, b, a, d, p1, p2) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at c p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at b p1) | (¬at b p2) | (at a p1) | (¬at a p2) | (at d p1) | (¬at d p2) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p1) | (at b p2) | (at a p1) | (¬at a p2) | (at d p1) | (¬at d p2) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p1) | (at b p2) | (¬at a p1) | (at a p2) | (at d p1) | (¬at d p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p1) | (at b p2) | (¬at a p1) | (at a p2) | (¬at d p1) | (at d p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+******************************************
+:action-30 share (c, b, a, d, p2, p1) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at c p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at b p2) | (¬at b p1) | (at a p2) | (¬at a p1) | (at d p2) | (¬at d p1) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p2) | (at b p1) | (at a p2) | (¬at a p1) | (at d p2) | (¬at d p1) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p2) | (at b p1) | (¬at a p2) | (at a p1) | (at d p2) | (¬at d p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p2) | (at b p1) | (¬at a p2) | (at a p1) | (¬at d p2) | (at d p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+******************************************
+:action-31 share (c, b, d, a, p1, p2) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at c p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at b p1) | (¬at b p2) | (at d p1) | (¬at d p2) | (at a p1) | (¬at a p2) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p1) | (at b p2) | (at d p1) | (¬at d p2) | (at a p1) | (¬at a p2) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p1) | (at b p2) | (¬at d p1) | (at d p2) | (at a p1) | (¬at a p2) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p1) | (at b p2) | (¬at d p1) | (at d p2) | (¬at a p1) | (at a p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+******************************************
+:action-32 share (c, b, d, a, p2, p1) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at c p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at b p2) | (¬at b p1) | (at d p2) | (¬at d p1) | (at a p2) | (¬at a p1) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p2) | (at b p1) | (at d p2) | (¬at d p1) | (at a p2) | (¬at a p1) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p2) | (at b p1) | (¬at d p2) | (at d p1) | (at a p2) | (¬at a p1) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p2) | (at b p1) | (¬at d p2) | (at d p1) | (¬at a p2) | (at a p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+******************************************
+:action-33 share (c, d, a, b, p1, p2) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at c p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at d p1) | (¬at d p2) | (at a p1) | (¬at a p2) | (at b p1) | (¬at b p2) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at d p1) | (at d p2) | (at a p1) | (¬at a p2) | (at b p1) | (¬at b p2) )
+
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at d p1) | (at d p2) | (¬at a p1) | (at a p2) | (at b p1) | (¬at b p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at d p1) | (at d p2) | (¬at a p1) | (at a p2) | (¬at b p1) | (at b p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+******************************************
+:action-34 share (c, d, a, b, p2, p1) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at c p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at d p2) | (¬at d p1) | (at a p2) | (¬at a p1) | (at b p2) | (¬at b p1) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at d p2) | (at d p1) | (at a p2) | (¬at a p1) | (at b p2) | (¬at b p1) )
+
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at d p2) | (at d p1) | (¬at a p2) | (at a p1) | (at b p2) | (¬at b p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at d p2) | (at d p1) | (¬at a p2) | (at a p1) | (¬at b p2) | (at b p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+******************************************
+:action-35 share (c, d, b, a, p1, p2) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at c p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at d p1) | (¬at d p2) | (at b p1) | (¬at b p2) | (at a p1) | (¬at a p2) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at d p1) | (at d p2) | (at b p1) | (¬at b p2) | (at a p1) | (¬at a p2) )
+
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at d p1) | (at d p2) | (¬at b p1) | (at b p2) | (at a p1) | (¬at a p2) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at d p1) | (at d p2) | (¬at b p1) | (at b p2) | (¬at a p1) | (at a p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+******************************************
+:action-36 share (c, d, b, a, p2, p1) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at c p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the c) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at d p2) | (¬at d p1) | (at b p2) | (¬at b p1) | (at a p2) | (¬at a p1) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at d p2) | (at d p1) | (at b p2) | (¬at b p1) | (at a p2) | (¬at a p1) )
+
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at d p2) | (at d p1) | (¬at b p2) | (at b p1) | (at a p2) | (¬at a p1) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at d p2) | (at d p1) | (¬at b p2) | (at b p1) | (¬at a p2) | (at a p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the c) )
+
+******************************************
+:action-37 share (d, a, b, c, p1, p2) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at d p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at a p1) | (¬at a p2) | (at b p1) | (¬at b p2) | (at c p1) | (¬at c p2) )
+
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p1) | (at a p2) | (at b p1) | (¬at b p2) | (at c p1) | (¬at c p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p1) | (at a p2) | (¬at b p1) | (at b p2) | (at c p1) | (¬at c p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p1) | (at a p2) | (¬at b p1) | (at b p2) | (¬at c p1) | (at c p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+******************************************
+:action-38 share (d, a, b, c, p2, p1) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at d p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at a p2) | (¬at a p1) | (at b p2) | (¬at b p1) | (at c p2) | (¬at c p1) )
+
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p2) | (at a p1) | (at b p2) | (¬at b p1) | (at c p2) | (¬at c p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p2) | (at a p1) | (¬at b p2) | (at b p1) | (at c p2) | (¬at c p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p2) | (at a p1) | (¬at b p2) | (at b p1) | (¬at c p2) | (at c p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+******************************************
+:action-39 share (d, a, c, b, p1, p2) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at d p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at a p1) | (¬at a p2) | (at c p1) | (¬at c p2) | (at b p1) | (¬at b p2) )
+
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p1) | (at a p2) | (at c p1) | (¬at c p2) | (at b p1) | (¬at b p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p1) | (at a p2) | (¬at c p1) | (at c p2) | (at b p1) | (¬at b p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p1) | (at a p2) | (¬at c p1) | (at c p2) | (¬at b p1) | (at b p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+******************************************
+:action-40 share (d, a, c, b, p2, p1) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at d p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at a p2) | (¬at a p1) | (at c p2) | (¬at c p1) | (at b p2) | (¬at b p1) )
+
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p2) | (at a p1) | (at c p2) | (¬at c p1) | (at b p2) | (¬at b p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p2) | (at a p1) | (¬at c p2) | (at c p1) | (at b p2) | (¬at b p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at a p2) | (at a p1) | (¬at c p2) | (at c p1) | (¬at b p2) | (at b p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+******************************************
+:action-41 share (d, b, a, c, p1, p2) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at d p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at b p1) | (¬at b p2) | (at a p1) | (¬at a p2) | (at c p1) | (¬at c p2) )
+
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p1) | (at b p2) | (at a p1) | (¬at a p2) | (at c p1) | (¬at c p2) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p1) | (at b p2) | (¬at a p1) | (at a p2) | (at c p1) | (¬at c p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p1) | (at b p2) | (¬at a p1) | (at a p2) | (¬at c p1) | (at c p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+******************************************
+:action-42 share (d, b, a, c, p2, p1) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at d p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at b p2) | (¬at b p1) | (at a p2) | (¬at a p1) | (at c p2) | (¬at c p1) )
+
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p2) | (at b p1) | (at a p2) | (¬at a p1) | (at c p2) | (¬at c p1) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p2) | (at b p1) | (¬at a p2) | (at a p1) | (at c p2) | (¬at c p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p2) | (at b p1) | (¬at a p2) | (at a p1) | (¬at c p2) | (at c p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+******************************************
+:action-43 share (d, b, c, a, p1, p2) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at d p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at b p1) | (¬at b p2) | (at c p1) | (¬at c p2) | (at a p1) | (¬at a p2) )
+
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p1) | (at b p2) | (at c p1) | (¬at c p2) | (at a p1) | (¬at a p2) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p1) | (at b p2) | (¬at c p1) | (at c p2) | (at a p1) | (¬at a p2) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p1) | (at b p2) | (¬at c p1) | (at c p2) | (¬at a p1) | (at a p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+******************************************
+:action-44 share (d, b, c, a, p2, p1) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at d p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at b p2) | (¬at b p1) | (at c p2) | (¬at c p1) | (at a p2) | (¬at a p1) )
+
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p2) | (at b p1) | (at c p2) | (¬at c p1) | (at a p2) | (¬at a p1) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p2) | (at b p1) | (¬at c p2) | (at c p1) | (at a p2) | (¬at a p1) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at b p2) | (at b p1) | (¬at c p2) | (at c p1) | (¬at a p2) | (at a p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+******************************************
+:action-45 share (d, c, a, b, p1, p2) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at d p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at c p1) | (¬at c p2) | (at a p1) | (¬at a p2) | (at b p1) | (¬at b p2) )
+
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at c p1) | (at c p2) | (at a p1) | (¬at a p2) | (at b p1) | (¬at b p2) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at c p1) | (at c p2) | (¬at a p1) | (at a p2) | (at b p1) | (¬at b p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at c p1) | (at c p2) | (¬at a p1) | (at a p2) | (¬at b p1) | (at b p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+******************************************
+:action-46 share (d, c, a, b, p2, p1) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at d p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at c p2) | (¬at c p1) | (at a p2) | (¬at a p1) | (at b p2) | (¬at b p1) )
+
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at c p2) | (at c p1) | (at a p2) | (¬at a p1) | (at b p2) | (¬at b p1) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at c p2) | (at c p1) | (¬at a p2) | (at a p1) | (at b p2) | (¬at b p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at c p2) | (at c p1) | (¬at a p2) | (at a p1) | (¬at b p2) | (at b p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+******************************************
+:action-47 share (d, c, b, a, p1, p2) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at d p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at c p1) | (¬at c p2) | (at b p1) | (¬at b p2) | (at a p1) | (¬at a p2) )
+
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at c p1) | (at c p2) | (at b p1) | (¬at b p2) | (at a p1) | (¬at a p2) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at c p1) | (at c p2) | (¬at b p1) | (at b p2) | (at a p1) | (¬at a p2) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at c p1) | (at c p2) | (¬at b p1) | (at b p2) | (¬at a p1) | (at a p2) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+******************************************
+:action-48 share (d, c, b, a, p2, p1) --------------
+:category --------------
+2
+:precondition --------------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at d p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+ACDFTerm 2:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬the d) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+ACDFTerm 1:
+  PropDNF: ( (at c p2) | (¬at c p1) | (at b p2) | (¬at b p1) | (at a p2) | (¬at a p1) )
+
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+effect 2 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at c p2) | (at c p1) | (at b p2) | (¬at b p1) | (at a p2) | (¬at a p1) )
+
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+effect 3 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at c p2) | (at c p1) | (¬at b p2) | (at b p1) | (at a p2) | (¬at a p1) )
+
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+effect 4 --------
+ACDFTerm 1:
+  PropDNF: ( (¬at c p2) | (at c p1) | (¬at b p2) | (at b p1) | (¬at a p2) | (at a p1) )
+
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (the d) )
+
+******************************************
+:action-49 right (a) --------------
+:category --------------
+0
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at a p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+
+ACDFTerm 1:
+  PropDNF: ( (¬at a p1 & at a p2) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at a p1 & at a p2) )
+
+******************************************
+:action-50 right (b) --------------
+:category --------------
+0
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at b p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+
+ACDFTerm 1:
+  PropDNF: ( (¬at b p1 & at b p2) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at b p1 & at b p2) )
+
+******************************************
+:action-51 right (c) --------------
+:category --------------
+0
+:precondition --------------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at c p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+
+ACDFTerm 1:
+  PropDNF: ( (¬at c p1 & at c p2) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at c p1 & at c p2) )
+
+******************************************
+:action-52 right (d) --------------
+:category --------------
+0
+:precondition --------------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at d p1) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+
+ACDFTerm 1:
+  PropDNF: ( (¬at d p1 & at d p2) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at d p1 & at d p2) )
+
+******************************************
+:action-53 left (a) --------------
+:category --------------
+0
+:precondition --------------
+ACDFTerm 1:
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at a p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+
+ACDFTerm 1:
+  PropDNF: ( (at a p1 & ¬at a p2) )
+  a :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (at a p1 & ¬at a p2) )
+
+******************************************
+:action-54 left (b) --------------
+:category --------------
+0
+:precondition --------------
+ACDFTerm 1:
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at b p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+
+ACDFTerm 1:
+  PropDNF: ( (at b p1 & ¬at b p2) )
+  b :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (at b p1 & ¬at b p2) )
+
+******************************************
+:action-55 left (c) --------------
+:category --------------
+0
+:precondition --------------
+ACDFTerm 1:
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at c p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+
+ACDFTerm 1:
+  PropDNF: ( (at c p1 & ¬at c p2) )
+  c :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (at c p1 & ¬at c p2) )
+
+******************************************
+:action-56 left (d) --------------
+:category --------------
+0
+:precondition --------------
+ACDFTerm 1:
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (¬at d p2) )
+    ACDF 2:
+      ACDFTerm 1:
+        True Term
+:effects -------------------
+effect 1 --------
+
+ACDFTerm 1:
+  PropDNF: ( (at d p1 & ¬at d p2) )
+  d :
+    ACDF 1:
+      ACDFTerm 1:
+        PropDNF: ( (at d p1 & ¬at d p2) )
+
+-------------------- done -----------------------
+

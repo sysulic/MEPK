@@ -1,0 +1,156 @@
+(define (domain wd7)
+
+  (:types)
+  (:predicates  (at ?ag - agent ?p - room)
+                (in ?b - block p - room)
+  )
+   
+  (:action MoveToRoom1
+   :category (ontic)
+   :parameters (?ag - agent)
+   :precondition (K_?ag (not(at ?ag p1)) )
+   :effect (<{True}
+             {and (at ?ag p1) (not (at ?ag p2)) (not (at ?ag p3))   (not (at ?ag p4))  (not (at ?ag p5))  (not (at ?ag p6))  (not (at ?ag p7)) 
+                  (K_?ag (and (at ?ag p1) (not (at ?ag p2)) (not (at ?ag p3))  (not (at ?ag p4))  (not (at ?ag p5)) (not (at ?ag p6))  (not (at ?ag p7))  ) )      } >
+    )
+  )
+  
+  (:action MoveToRoom2
+   :category (ontic)
+   :parameters (?ag - agent)
+   :precondition (K_?ag (not(at ?ag p2)) )
+   :effect (<{True}
+             {and (at ?ag p2) (not (at ?ag p1)) (not (at ?ag p3))   (not (at ?ag p4))  (not (at ?ag p5))  (not (at ?ag p6))  (not (at ?ag p7)) 
+                  (K_?ag (and (at ?ag p2) (not (at ?ag p1)) (not (at ?ag p3))  (not (at ?ag p4))  (not (at ?ag p5)) (not (at ?ag p6))  (not (at ?ag p7))  ) )      } >
+    )
+  )
+
+  (:action MoveToRoom3
+   :category (ontic)
+   :parameters (?ag - agent)
+   :precondition (K_?ag (not(at ?ag p3)) )
+   :effect (<{True}
+             {and (at ?ag p3) (not (at ?ag p2)) (not (at ?ag p1))   (not (at ?ag p4))  (not (at ?ag p5))  (not (at ?ag p6))  (not (at ?ag p7)) 
+                  (K_?ag (and (at ?ag p3) (not (at ?ag p2)) (not (at ?ag p1))  (not (at ?ag p4))  (not (at ?ag p5)) (not (at ?ag p6))  (not (at ?ag p7))  ) )      } >
+    )
+  )
+
+  (:action MoveToRoom4
+   :category (ontic)
+   :parameters (?ag - agent)
+   :precondition (K_?ag (not(at ?ag p4)) )
+   :effect (<{True}
+             {and (at ?ag p4) (not (at ?ag p2)) (not (at ?ag p1))   (not (at ?ag p3))  (not (at ?ag p5))  (not (at ?ag p6))  (not (at ?ag p7)) 
+                  (K_?ag (and (at ?ag p4) (not (at ?ag p2)) (not (at ?ag p1))  (not (at ?ag p3))  (not (at ?ag p5)) (not (at ?ag p6))  (not (at ?ag p7))  ) )      } >
+    )
+  )
+ 
+  (:action MoveToRoom5
+   :category (ontic)
+   :parameters (?ag - agent)
+   :precondition (K_?ag (not(at ?ag p5)) )
+   :effect (<{True}
+             {and (at ?ag p5) (not (at ?ag p2)) (not (at ?ag p1))   (not (at ?ag p3))  (not (at ?ag p4))  (not (at ?ag p6))  (not (at ?ag p7)) 
+                  (K_?ag (and (at ?ag p5) (not (at ?ag p2)) (not (at ?ag p1))  (not (at ?ag p3))  (not (at ?ag p4)) (not (at ?ag p6))  (not (at ?ag p7))  ) )      } >
+    )
+  )
+
+  (:action MoveToRoom6
+   :category (ontic)
+   :parameters (?ag - agent)
+   :precondition (K_?ag (not(at ?ag p6)) )
+   :effect (<{True}
+             {and (at ?ag p6) (not (at ?ag p2)) (not (at ?ag p1))   (not (at ?ag p3))  (not (at ?ag p4))  (not (at ?ag p5))  (not (at ?ag p7)) 
+                  (K_?ag (and (at ?ag p6) (not (at ?ag p2)) (not (at ?ag p1))  (not (at ?ag p3))  (not (at ?ag p4)) (not (at ?ag p5))  (not (at ?ag p7))  ) )      } >
+    )
+  )
+
+  (:action MoveToRoom7
+   :category (ontic)
+   :parameters (?ag - agent)
+   :precondition (K_?ag (not(at ?ag p7)) )
+   :effect (<{True}
+             {and (at ?ag p7) (not (at ?ag p2)) (not (at ?ag p1))   (not (at ?ag p3))  (not (at ?ag p4))  (not (at ?ag p5))  (not (at ?ag p6)) 
+                  (K_?ag (and (at ?ag p7) (not (at ?ag p2)) (not (at ?ag p1))  (not (at ?ag p3))  (not (at ?ag p4)) (not (at ?ag p5))  (not (at ?ag p6))  ) )      } >
+    )
+  )
+
+   (:action find_room1
+   :category (ontic)
+   :parameters (?ag - agent )
+   :precondition (K_?ag (at ?ag p1)
+                 )
+   :effect (<{ True }
+             {  and (in b1 p1)  (in b3 p1)   (K_?ag  (and (in b1 p1) (in b3 p1)  ) ) } >
+    
+    )
+  )
+
+  (:action find_room2
+   :category (ontic)
+   :parameters (?ag - agent )
+   :precondition (K_?ag (at ?ag p2)
+                 )
+   :effect (<{ True }
+             {  and (in b2 p2) (K_?ag (in b2 p2)) } >
+    
+    )
+  )
+
+  (:action find_room4
+   :category (ontic)
+   :parameters (?ag - agent )
+   :precondition (K_?ag (at ?ag p4)
+                 )
+   :effect (<{ True }
+             {  and (in b4 p4) (K_?ag (in b4 p4)) } >
+    
+    )
+  )
+
+
+
+  (:action find_room5
+   :category (ontic)
+   :parameters (?ag - agent )
+   :precondition (K_?ag (at ?ag p5)
+                 )
+   :effect (<{ True }
+             {  and (in b5 p5) (K_?ag (in b5 p5))   } >
+    
+    )
+  )
+
+  (:action find_room6
+   :category (ontic)
+   :parameters (?ag - agent )
+   :precondition (K_?ag (at ?ag p6)
+                 )
+   :effect (<{ True }
+             {  and (in b6 p6) (K_?ag (in b6 p6))   } >
+    
+    )
+  )
+
+  (:action find_room7
+   :category (ontic)
+   :parameters (?ag - agent )
+   :precondition (K_?ag (at ?ag p7)
+                 )
+   :effect (<{ True }
+             {  and (in b7 p7) (K_?ag (in b7 p7))   } >
+    
+    )
+  )
+
+  (:action tell
+   :category (communication)
+   :parameters (?ag1 - agent ?ag2 - agent ?b - block ?r - room)
+   :precondition (or (K_?ag1 (in ?b ?r))
+                     (K_?ag1 (not(in ?b ?r)))
+                 )
+   :effect (<{K_?ag1 (in ?b ?r)} {K_?ag2 (in ?b ?r)}>
+            <{K_?ag1 (not(in ?b ?r))} {K_?ag2 (not(in ?b ?r))}>
+           ) 
+  )
+)
