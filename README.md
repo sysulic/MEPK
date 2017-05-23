@@ -1,4 +1,9 @@
-# Multi-Agent epistemic Planner
-multi-agent epistemic planner
+# MEPK
+Code of IJCAI2017: "A General Multi-agent Epistemic Planner Based on Higher-order Belief Change".
 
-# Going on...
+Evaluation Results
+==========
+
+Experimental results on six domains.
+
+// todo
