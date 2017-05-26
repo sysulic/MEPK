@@ -2,13 +2,12 @@
 Code of IJCAI2017: "A General Multi-agent Epistemic Planner Based on Higher-order Belief Change".
 
 
-
 Experimental Results
 ==========
 
 Experimental results on six domains.
 
-|    Problem    | ${\cal A}$ | $ {\cal S}$  +  ${\cal D} $ | $\mathcal{P}$ | $d$  |         MEPK         |
+|    Problem    | A | \|S\|  + \|D\| | \|P\| | d  |         MEPK         |
 | :-----------: | :--------: | :-------------------------: | :-----------: | :--: | :------------------: |
 |    CC(2,4)    |     2      |           0 + 18            |      18       |  1   |  0.14 - 0.13 (3/4)   |
 |    CC(3,4)    |     2      |           0 + 18            |      20       |  1   |  1.83 - 1.81 (3/4)   |
@@ -45,7 +44,7 @@ Comparision results.
 
 
 
-|   Problems   | $ \mathcal{A} $ | $d$  |        MEPK         |        K&G         |   Muise \etc    |
+|   Problems   | \|A\| | d  |        MEPK         |        K&G         |   Muise et al.    |
 | :----------: | :-------------: | :--: | :-----------------: | :----------------: | :-------------: |
 |   CC(2,4)    |        2        | $1$  |  0.14 - 0.13 (3/4)  |  0.05 - 0.01 (8)   |       na        |
 |   CC(3,4)    |        2        | $1$  |  1.83 - 1.81 (3/4)  |  27.87 - 0.04 (8)  |       na        |
