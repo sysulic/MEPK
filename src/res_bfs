@@ -1,694 +1,0 @@
-================================================================
-domain_file(../epddl-doc/selective_communication/selective_communication_domain.epddl)
-     p_file(../epddl-doc/selective_communication/selective_communication_p.epddl)
-search_type(Bread first)
-
-Preprocessing...
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   	 												                                                             				      				    					 	    					 	    					 	    					 								 				   				   				 				  				   				 				  				     						     						     					 	     					 					    						     						     					 	     					 					    						     						     					 	     					 					    						     						     					 	     					 				 		     					    								   					    								Planning...
-
-Plan tree:
- right
-  sense +:
-   right
-    right
-     tell
-  sense -:
-   right
-    right
-     tell
-
-Statistic:
-  preprocess time: 0.0117s
-  epis progression time: 0.0055s
-  ontic progression time: 0.0242s
-  search time: 0.06s
-  total time: 0.07s
-  solution size: 10
-  solution depth: 5
-  search size: 33
-================================================================
-domain_file(../epddl-doc/selective_communication/selective_communication_domain_8-rooms.epddl)
-     p_file(../epddl-doc/selective_communication/selective_communication_p_8-rooms.epddl)
-search_type(Bread first)
-
-Preprocessing...
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             	 												     	               	               	                                                                                          				      				  					 	     	                         	                         	                                                                                                                                            					 								 				   				   				 				  				   				 				  				     						     						     					 	     					 	     						     					 	     					 	     					 					    						     						     					 	     					 	     						     						     					 	     					 					    						     						     					 	     					 	     						     					 	     					 	     					 				        						     						     					 	     					 	     						     					 	     					 	     					 					    						     						     					 	     					 	     						     					 	     					 	     					 					    						     						     					 	     					 	     						     					 	     					 	     					 					    						     						     					 	     					 	     						     					 	     					 	     					 					    						     						     					 	     					 	     						     					 	     					 	     					 				 		     					    								   					    								Planning...
-
-Plan tree:
- left
-  left
-   sense +:
-    right
-     right
-      right
-       right
-        right
-         right
-          tell
-   sense -:
-    right
-     right
-      right
-       right
-        right
-         right
-          tell
-
-Statistic:
-  preprocess time: 0.0982s
-  epis progression time: 0.0032s
-  ontic progression time: 0.0646s
-  search time: 0.12s
-  total time: 0.22s
-  solution size: 19
-  solution depth: 10
-  search size: 52
-================================================================
-domain_file(../epddl-doc/selective_communication/selective_communication_domain_depth-of-order-3.epddl)
-     p_file(../epddl-doc/selective_communication/selective_communication_p_depth-of-order-3.epddl)
-search_type(Bread first)
-
-Preprocessing...
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  Planning...
-
-Plan tree:
- right
-  sense +:
-   right
-    right
-     tell
-  sense -:
-   right
-    right
-     tell
-
-Statistic:
-  preprocess time: 0.0159s
-  epis progression time: 0.0038s
-  ontic progression time: 0.0293s
-  search time: 0.07s
-  total time: 0.09s
-  solution size: 10
-  solution depth: 5
-  search size: 33
-================================================================
-domain_file(../epddl-doc/selective_communication/selective_communication_domain_depth-of-order-4.epddl)
-     p_file(../epddl-doc/selective_communication/selective_communication_p_depth-of-order-4.epddl)
-search_type(Bread first)
-
-Preprocessing...
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 Planning...
-
-Plan tree:
- right
-  sense +:
-   right
-    right
-     tell
-  sense -:
-   right
-    right
-     tell
-
-Statistic:
-  preprocess time: 0.0421s
-  epis progression time: 0.0049s
-  ontic progression time: 0.0441s
-  search time: 0.14s
-  total time: 0.18s
-  solution size: 10
-  solution depth: 5
-  search size: 33
-================================================================
-domain_file(../epddl-doc/Collaboration_theough_Communication/Collaboration_through_Communication_domain2.epddl)
-     p_file(../epddl-doc/Collaboration_theough_Communication/Collaboration_through_Communication_p2.epddl)
-search_type(Bread first)
-
-Preprocessing...
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Planning...
-
-Plan tree:
- right (a)
-  find_room3 (a, b1) +:
-   find_room3 (a, b2) +:
-    tell (a, b, b2, p1)
-   find_room3 (a, b2) -:
-    tell (a, b, b2, p1)
-  find_room3 (a, b1) -:
-   find_room3 (a, b2) +:
-    tell (a, b, b2, p1)
-   find_room3 (a, b2) -:
-    tell (a, b, b2, p1)
-
-Statistic:
-  preprocess time: 0.0031s
-  epis progression time: 0.0261s
-  ontic progression time: 0.0332s
-  search time: 0.20s
-  total time: 0.20s
-  solution size: 12
-  solution depth: 4
-  search size: 133
-================================================================
-domain_file(../epddl-doc/Collaboration_theough_Communication/Collaboration_through_Communication_domain4.epddl)
-     p_file(../epddl-doc/Collaboration_theough_Communication/Collaboration_through_Communication_p4.epddl)
-search_type(Bread first)
-
-Preprocessing...
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Planning...
-
-Plan tree:
- left (a)
-  find_room1 (a, b1) +:
-   find_room1 (a, b2) +:
-    tell (a, b, b2, p1)
-   find_room1 (a, b2) -:
-    right (a)
-     right (a)
-      find_room3 (a, b2) +:
-       tell (a, b, b2, p3)
-      find_room3 (a, b2) -:
-       tell (a, b, b2, p4)
-  find_room1 (a, b1) -:
-   find_room1 (a, b2) +:
-    tell (a, b, b2, p1)
-   find_room1 (a, b2) -:
-    right (a)
-     right (a)
-      find_room3 (a, b2) +:
-       tell (a, b, b2, p3)
-      find_room3 (a, b2) -:
-       tell (a, b, b2, p4)
-
-Statistic:
-  preprocess time: 0.0071s
-  epis progression time: 0.1018s
-  ontic progression time: 0.3119s
-  search time: 1.94s
-  total time: 1.95s
-  solution size: 22
-  solution depth: 7
-  search size: 308
-================================================================
-domain_file(../epddl-doc/Collaboration_theough_Communication/Collaboration_through_Communication_domain_2boxes.epddl)
-     p_file(../epddl-doc/Collaboration_theough_Communication/Collaboration_through_Communication_p_2boxes.epddl)
-search_type(Bread first)
-
-Preprocessing...
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Planning...
-
-Plan tree:
- right (a)
-  find_room3 (a)
-   tell (a, b, b2, p3)
-
-Statistic:
-  preprocess time: 0.0068s
-  epis progression time: 0.0000s
-  ontic progression time: 0.1646s
-  search time: 0.26s
-  total time: 0.27s
-  solution size: 4
-  solution depth: 3
-  search size: 17
-================================================================
-domain_file(../epddl-doc/Collaboration_theough_Communication/Collaboration_through_Communication_domain_3boxes.epddl)
-     p_file(../epddl-doc/Collaboration_theough_Communication/Collaboration_through_Communication_p_3boxes.epddl)
-search_type(Bread first)
-
-Preprocessing...
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Planning...
-
-Plan tree:
- left (a)
-  find_room1 (a)
-   tell (a, b, p1)
-
-Statistic:
-  preprocess time: 0.0238s
-  epis progression time: 0.0000s
-  ontic progression time: 0.9879s
-  search time: 1.73s
-  total time: 1.75s
-  solution size: 4
-  solution depth: 3
-  search size: 9
-================================================================
-domain_file(../epddl-doc/grapevine/grapevine_domain.epddl)
-     p_file(../epddl-doc/grapevine/grapevine_p.epddl)
-search_type(Bread first)
-
-Preprocessing...
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  	 									  				  												    				   				  				   				  				   				  				   				    						      				    						      				    						      				    						      				  				  				  				  				   				   				   		   		 		                                           		     			Planning...
-
-Plan tree:
- right (c)
-  share (a, b, d, c, p1, p2)
-
-Statistic:
-  preprocess time: 0.0496s
-  epis progression time: 0.0000s
-  ontic progression time: 0.0561s
-  search time: 0.09s
-  total time: 0.14s
-  solution size: 3
-  solution depth: 2
-  search size: 43
-================================================================
-domain_file(../epddl-doc/grapevine/grapevine_domain3.epddl)
-     p_file(../epddl-doc/grapevine/grapevine_p3.epddl)
-search_type(Bread first)
-
-Preprocessing...
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            	 									  						  												    				   				   				  				   				   				  				   				   				  				   				   				    						           				    						           				    						           				    						           				  				  				  				  				   				   				   		   		 		                                           		     			Planning...
-
-Plan tree:
- left (c)
-  share (a, b, d, c, p2, p1, p3)
-
-Statistic:
-  preprocess time: 0.5658s
-  epis progression time: 0.0000s
-  ontic progression time: 0.1204s
-  search time: 0.18s
-  total time: 0.74s
-  solution size: 3
-  solution depth: 2
-  search size: 55
-================================================================
-domain_file(../epddl-doc/grapevine/grapevine_domain_3_agents.epddl)
-     p_file(../epddl-doc/grapevine/grapevine_p_3_agents.epddl)
-search_type(Bread first)
-
-Preprocessing...
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           	 							  				  										    				   				  				   				  				   								    						      				    						      				    						      							  				  				  						   				   					   		 		     	                       	                                                                                                                                       		Planning...
-
-Plan tree:
- right (c)
-  share (a, b, c, p1, p2)
-
-Statistic:
-  preprocess time: 0.0076s
-  epis progression time: 0.0000s
-  ontic progression time: 0.0157s
-  search time: 0.02s
-  total time: 0.03s
-  solution size: 3
-  solution depth: 2
-  search size: 27
-================================================================
-domain_file(../epddl-doc/grapevine/grapevine_domain_depth_of_order_2.epddl)
-     p_file(../epddl-doc/grapevine/grapevine_p_depth_of_order_2.epddl)
-search_type(Bread first)
-
-Preprocessing...
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        	 									  				  												    				   				  				   				  				   				  				   				    						      				    						      				    						      				    						      				  				  				  				  				   				   				   		   		 		     	                       	                                                                                                                                                              		     			Planning...
-
-Plan tree:
- right (c)
-  share (a, b, d, c, p1, p2)
-
-Statistic:
-  preprocess time: 0.0605s
-  epis progression time: 0.0000s
-  ontic progression time: 0.1145s
-  search time: 0.16s
-  total time: 0.22s
-  solution size: 3
-  solution depth: 2
-  search size: 43
-================================================================
-domain_file(../epddl-doc/grapevine/grapevine_domain_depth_of_order_3.epddl)
-     p_file(../epddl-doc/grapevine/grapevine_p_depth_of_order_3.epddl)
-search_type(Bread first)
-
-Preprocessing...
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             	 									  				  												    				   				  				   				  				   				  				   				    						      				    						      				    						      				    						      				  				  				  				  				   				   				   		   		 		     	                       	                                                                                                                                                                           		     			Planning...
-
-Plan tree:
- right (c)
-  share (a, b, d, c, p1, p2)
-
-Statistic:
-  preprocess time: 0.1007s
-  epis progression time: 0.0000s
-  ontic progression time: 0.2588s
-  search time: 0.36s
-  total time: 0.46s
-  solution size: 3
-  solution depth: 2
-  search size: 43
-================================================================
-domain_file(../epddl-doc/grapevine/grapevine_domain_depth_of_order_4.epddl)
-     p_file(../epddl-doc/grapevine/grapevine_p_depth_of_order_4.epddl)
-search_type(Bread first)
-
-Preprocessing...
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               	 									  				  												    				   				  				   				  				   				  				   				    						      				    						      				    						      				    						      				  				  				  				  				   				   				   		   		 		    				  				  				  				  				  				  				  				  		     			Planning...
-
-Plan tree:
- right (c)
-  share (a, b, d, c, p1, p2)
-
-Statistic:
-  preprocess time: 0.2150s
-  epis progression time: 0.0000s
-  ontic progression time: 0.5758s
-  search time: 0.76s
-  total time: 0.98s
-  solution size: 3
-  solution depth: 2
-  search size: 43
-================================================================
-domain_file(../epddl-doc/hexa/hexa_domain3.epddl)
-     p_file(../epddl-doc/hexa/hexa_p3.epddl)
-search_type(Bread first)
-
-Preprocessing...
-                                                                                                                                                                                                               	 							  										                    					                 						   		 				 		            								   			             								   		   	Planning...
-
-Plan tree:
- ask_blue (a, b) +:
- ask_blue (a, b) -:
-
-Statistic:
-  preprocess time: 0.0013s
-  epis progression time: 0.0002s
-  ontic progression time: 0.0000s
-  search time: 0.00s
-  total time: 0.00s
-  solution size: 3
-  solution depth: 1
-  search size: 3
-================================================================
-domain_file(../epddl-doc/hexa/hexa_domain4.epddl)
-     p_file(../epddl-doc/hexa/hexa_p4.epddl)
-search_type(Bread first)
-
-Preprocessing...
-                                                                                                                                                                                                                                                                                 	 									  												                 									           									           										              									           									           										              									           									           										              									           									           										              									           									           										              									           									           											   		 				 		                 			                  			                  			                  			                  			                  		   	Planning...
-
-Plan tree:
- ask_pink (a, b) +:
-  ask_blue (a, c) +:
-  ask_blue (a, c) -:
- ask_pink (a, b) -:
-  ask_pink (a, c) +:
-   ask_blue (a, b) +:
-   ask_blue (a, b) -:
-  ask_pink (a, c) -:
-   ask_blue (a, b) +:
-   ask_blue (a, b) -:
-
-Statistic:
-  preprocess time: 0.0053s
-  epis progression time: 0.0126s
-  ontic progression time: 0.0000s
-  search time: 0.03s
-  total time: 0.04s
-  solution size: 11
-  solution depth: 3
-  search size: 42
-================================================================
-domain_file(../epddl-doc/hexa/hexa_domain5.epddl)
-     p_file(../epddl-doc/hexa/hexa_p5.epddl)
-search_type(Bread first)
-
-Preprocessing...
-                                                                                                                                                                                                                                                                                                                                                               	 											  														                      	                                                				              		              			                                      										                   	                                                				              		              			                                      										                   	                                                				              		              			                                      										                   	                                                				              		              			                                      										                   	                                                				              		              			                                      										                   	                                                				              		              			                                      										                    	                                                 				              		               			                                       										                   	                                                				              		              			                                      										                   	                                                				              		              			                                      										                   	                                                				              		              			                                      										                   	                                                				              		              			                                      										                   	                                                				              		              			                                      									      				                       	                                                				              		              			                                      										                   	                                                				              		              			                                      										                   	                                                				              		              			                                      										                   	                                                				              		              			                                      										                   	                                                				              		              			                                      										                   	                                                				              		              			                                      										                   	                                                				              		              			                    	              										                   	                                                				              		              			                                      										                   	                                                				              		              			                                      										                   	                                                				              		              			                                      										                   	                                                				              		              			                                      										                   	                                                				              		              			                                      											   		 				 		                    			                     			                     			                     			                     			                                                      			                     			                     			                     			                     			                     		  	                     			                     			                     			                     			                     			                     	                             			                     			                     			                     			                     			                     		   	Planning...
-
-Plan tree:
- ask_yellow (a, e) +:
-  ask_pink (a, b) +:
-   ask_blue (a, c) +:
-   ask_blue (a, c) -:
-  ask_pink (a, b) -:
-   ask_pink (a, c) +:
-    ask_blue (a, b) +:
-    ask_blue (a, b) -:
-   ask_pink (a, c) -:
-    ask_blue (a, b) +:
-    ask_blue (a, b) -:
- ask_yellow (a, e) -:
-  ask_yellow (a, b) +:
-   ask_pink (a, c) +:
-    ask_blue (a, d) +:
-    ask_blue (a, d) -:
-   ask_pink (a, c) -:
-    ask_pink (a, d) +:
-     ask_blue (a, c) +:
-     ask_blue (a, c) -:
-    ask_pink (a, d) -:
-     ask_blue (a, c) +:
-     ask_blue (a, c) -:
-  ask_yellow (a, b) -:
-   ask_yellow (a, c) +:
-    ask_pink (a, b) +:
-     ask_blue (a, d) +:
-     ask_blue (a, d) -:
-    ask_pink (a, b) -:
-     ask_pink (a, d) +:
-      ask_blue (a, b) +:
-      ask_blue (a, b) -:
-     ask_pink (a, d) -:
-      ask_blue (a, b) +:
-      ask_blue (a, b) -:
-   ask_yellow (a, c) -:
-    ask_pink (a, b) +:
-     ask_blue (a, c) +:
-     ask_blue (a, c) -:
-    ask_pink (a, b) -:
-     ask_pink (a, c) +:
-      ask_blue (a, b) +:
-      ask_blue (a, b) -:
-     ask_pink (a, c) -:
-      ask_blue (a, b) +:
-      ask_blue (a, b) -:
-
-Statistic:
-  preprocess time: 4.5723s
-  epis progression time: 2.5135s
-  ontic progression time: 0.0000s
-  search time: 46.60s
-  total time: 51.17s
-  solution size: 47
-  solution depth: 6
-  search size: 1742
-================================================================
-domain_file(../epddl-doc/assemble_line/assemble_line_domain2.epddl)
-     p_file(../epddl-doc/assemble_line/assemble_line_p2.epddl)
-search_type(Bread first)
-
-Preprocessing...
-                                                                                                                                                                                                                                                                                                                                                                                              	 									     				      				     		   		    				 		   				Planning...
-
-Plan tree:
- processB +:
-  processA +:
-   tell_beta
-    tell_alpha
-     assemble
-  processA -:
-   tell_beta
-    restart
- processB -:
-  tell_alpha
-   restart
-
-Statistic:
-  preprocess time: 0.0013s
-  epis progression time: 0.0025s
-  ontic progression time: 0.0084s
-  search time: 0.02s
-  total time: 0.02s
-  solution size: 12
-  solution depth: 5
-  search size: 31
-================================================================
-domain_file(../epddl-doc/assemble_line/assemble_line_domain3.epddl)
-     p_file(../epddl-doc/assemble_line/assemble_line_p3.epddl)
-search_type(Bread first)
-
-Preprocessing...
-                                                                                                                                                                                                                                                                                                                                                                                                    	 									     				      				     		   		    				 		   				Planning...
-
-Plan tree:
- processB +:
-  processA +:
-   tell_beta
-    tell_alpha
-     assemble
-  processA -:
-   tell_beta
-    restart
- processB -:
-  tell_alpha
-   restart
-
-Statistic:
-  preprocess time: 0.0016s
-  epis progression time: 0.0014s
-  ontic progression time: 0.0162s
-  search time: 0.03s
-  total time: 0.03s
-  solution size: 12
-  solution depth: 5
-  search size: 31
-================================================================
-domain_file(../epddl-doc/assemble_line/assemble_line_domain4.epddl)
-     p_file(../epddl-doc/assemble_line/assemble_line_p4.epddl)
-search_type(Bread first)
-
-Preprocessing...
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       	 									     				      				     		   		    				 		   				Planning...
-
-Plan tree:
- processB +:
-  processA +:
-   tell_beta
-    tell_alpha
-     assemble
-  processA -:
-   tell_beta
-    restart
- processB -:
-  tell_alpha
-   restart
-
-Statistic:
-  preprocess time: 0.0032s
-  epis progression time: 0.0014s
-  ontic progression time: 0.0364s
-  search time: 0.05s
-  total time: 0.06s
-  solution size: 12
-  solution depth: 5
-  search size: 31
-================================================================
-domain_file(../epddl-doc/assemble_line/assemble_line_domain5.epddl)
-     p_file(../epddl-doc/assemble_line/assemble_line_p5.epddl)
-search_type(Bread first)
-
-Preprocessing...
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                	 									     				      				     		   		    				 		   				Planning...
-
-Plan tree:
- processB +:
-  processA +:
-   tell_beta
-    tell_alpha
-     assemble
-  processA -:
-   tell_beta
-    restart
- processB -:
-  tell_alpha
-   restart
-
-Statistic:
-  preprocess time: 0.0062s
-  epis progression time: 0.0015s
-  ontic progression time: 0.0533s
-  search time: 0.07s
-  total time: 0.08s
-  solution size: 12
-  solution depth: 5
-  search size: 31
-================================================================
-domain_file(../epddl-doc/assemble_line/assemble_line_domain7.epddl)
-     p_file(../epddl-doc/assemble_line/assemble_line_p7.epddl)
-search_type(Bread first)
-
-Preprocessing...
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  	 									     				      				     		   		    				 		   				Planning...
-
-Plan tree:
- processB +:
-  processA +:
-   tell_beta
-    tell_alpha
-     assemble
-  processA -:
-   tell_beta
-    restart
- processB -:
-  tell_alpha
-   restart
-
-Statistic:
-  preprocess time: 0.0260s
-  epis progression time: 0.0014s
-  ontic progression time: 0.2425s
-  search time: 0.30s
-  total time: 0.32s
-  solution size: 12
-  solution depth: 5
-  search size: 31
-================================================================
-domain_file(../epddl-doc/gossip/gossip_domain3.epddl)
-     p_file(../epddl-doc/gossip/gossip_p3.epddl)
-search_type(Bread first)
-
-Preprocessing...
-                                                                                                                                                                                                                                                                                                                                                                                                                                                        	 							  										                                                                                                                                                                                                                                                                                                                                                                                  		   		 		                                                                                                                                                                                                                                                                                                                            		     			Planning...
-
-Plan tree:
- call (a, b, c)
-  call (a, c, b)
-   call (a, b, c)
-
-Statistic:
-  preprocess time: 0.0078s
-  epis progression time: 0.0000s
-  ontic progression time: 0.0265s
-  search time: 0.04s
-  total time: 0.05s
-  solution size: 4
-  solution depth: 3
-  search size: 11
-================================================================
-domain_file(../epddl-doc/gossip/gossip_domain4.epddl)
-     p_file(../epddl-doc/gossip/gossip_p4.epddl)
-search_type(Bread first)
-
-Preprocessing...
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             	 									  								    		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                		   		 		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        		     			Planning...
-
-Plan tree:
- call (a, b, c, d)
-  call (c, d, a, b)
-   call (a, c, b, d)
-    call (b, d, a, c)
-
-Statistic:
-  preprocess time: 0.9036s
-  epis progression time: 0.0000s
-  ontic progression time: 1.7115s
-  search time: 4.50s
-  total time: 5.41s
-  solution size: 5
-  solution depth: 4
-  search size: 64
-================================================================
-domain_file(../epddl-doc/gossip/gossip_domain5.epddl)
-     p_file(../epddl-doc/gossip/gossip_p5.epddl)
-search_type(Bread first)
-
-Preprocessing...
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             	 							        		  								                		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  		   		 		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       		     			Planning...
-
-Plan tree:
- call (a, b, c, d)
-  call (c, d, a, b)
-   call (a, c, b, d)
-    call (b, d, a, c)
-
-Statistic:
-  preprocess time: 6.9862s
-  epis progression time: 0.0000s
-  ontic progression time: 2.1197s
-  search time: 12.47s
-  total time: 19.46s
-  solution size: 5
-  solution depth: 4
-  search size: 64
