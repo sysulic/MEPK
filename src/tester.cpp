@@ -178,9 +178,9 @@ void Tester::equivalent(size_t k1, size_t k2) const {
 
 void Tester::print_goal() const {
     if (kb.neg_entails(goal, constraint))
-    	cout << "Init can entail goal: ----------------------------------------------------------" << endl;
+    	cout << "Current KB can entail goal: ----------------------------------------------------------" << endl;
     else
-    	cout << "Init can't entail goal: --------------------------------------------------------" << endl;
+    	cout << "Current KB can't entail goal: --------------------------------------------------------" << endl;
     goal.print();
     cout << "----------------------------------------------------------------------------" << endl;
 }
@@ -255,7 +255,7 @@ void Tester::print_help() {
     cout << "      e+[no]+[+|-] - take epis action" << endl;
     cout <<"      (e.g. \"e3+\" means taking the third epistemic action's positive observe" << endl;
     cout <<"            \"e5-\" means taking the fifth epistemic action's negative observe)" << endl;
-    cout << "            o+[no] - take epis action" << endl;
+    cout << "            o+[no] - take ontic action" << endl;
     cout <<"      (e.g. \"o12\" means taking the twelfth ontic action)" << endl;
     cout << "----------------------------------------------------------------------------" << endl;
 }
