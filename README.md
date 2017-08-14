@@ -57,6 +57,8 @@ Comparision results.
 
 ## Dependencies
 
+[flex/bison](https://www.gnu.org/software/bison/) - for parsing epddl
+
 [boost](http://www.boost.org/) - dynamic_bitset for storing literal
 
 [expect](http://manpages.ubuntu.com/manpages/trusty/man1/expect.1.html) - for timeout of a test
