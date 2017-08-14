@@ -2,8 +2,7 @@
 Code of IJCAI2017: "A General Multi-agent Epistemic Planner Based on Higher-order Belief Change".
 
 
-Experimental Results
-==========
+## Experimental Results
 
 Experimental results on six domains.
 
@@ -56,10 +55,13 @@ Comparision results.
 | Grapevine(2) |        4        | 1  |  0.09 - 0.06 (2/3)  |         na         | 0.34 - 0.01 (9) |
 | Grapevine(2) |        4        | 2  |  0.14 - 0.10 (2/3)  |         na         | 1.82 - 0.29 (5) |
 
+## Dependencies
 
+[boost](http://www.boost.org/) - dynamic_bitset for storing literal
 
-Compile and Run
-==========
+[expect](http://manpages.ubuntu.com/manpages/trusty/man1/expect.1.html) - for timeout of a test
+
+## Compile and Run
 
 change to the directory `MEPK/src`
 
