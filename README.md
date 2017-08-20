@@ -68,6 +68,6 @@ Comparision results.
 change to the directory `MEPK/src`
 
 ```
-make
-./run.sh
+$ make
+$ ./run.sh
 ```
