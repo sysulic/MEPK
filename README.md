@@ -1,5 +1,5 @@
-# MEPK
-Code of IJCAI2017: "A General Multi-agent Epistemic Planner Based on Higher-order Belief Change".
+# Multi-agent Epistemic Planner Kit
+Code of IJCAI2017: "[A General Multi-agent Epistemic Planner Based on Higher-order Belief Change](https://www.ijcai.org/proceedings/2017/0152.pdf)".
 
 
 ## Experimental Results
@@ -71,3 +71,4 @@ change to the directory `MEPK/src`
 $ make
 $ ./run.sh
 ```
+
