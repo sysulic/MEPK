@@ -1,8 +1,8 @@
 (define (domain ctc2)
 
-  (:types)
+  (:types agent room block)
   (:predicates  (at ?ag - agent ?p - room)
-                (in ?b - block p - room)
+                (in ?b - block ?p - room)
   )
    
   (:action left
@@ -33,20 +33,11 @@
 
   (:action find_room1
    :category (sensing)
-   :parameters (?ag - agent ?b1 - block)
-   :precondition (K_?ag (at ?ag p1)
+   :parameters (?ag - agent ?b1 - block ?p - room)
+   :precondition (K_?ag (at ?ag ?p)
                  )
-   :observe_pos (and (in ?b1 p1) (K_?ag (in ?b1 p1)) )
-   :observe_neg (and (not (in ?b1 p1)) (K_?ag (not(in ?b1 p1))) )
-  )
-
-  (:action find_room3
-   :category (sensing)
-   :parameters (?ag - agent ?b1 - block)
-   :precondition (K_?ag (at ?ag p3)
-                 )
-   :observe_pos (and (in ?b1 p3) (K_?ag (in ?b1 p3)) )
-   :observe_neg (and (not (in ?b1 p3)) (K_?ag (not(in ?b1 p3))) )
+   :observe_pos (and (in ?b1 ?p) (K_?ag (in ?b1 ?p)) )
+   :observe_neg (and (not (in ?b1 ?p)) (K_?ag (not(in ?b1 ?p))) )
   )
 
   (:action tell

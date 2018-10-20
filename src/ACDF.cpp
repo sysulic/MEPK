@@ -1096,8 +1096,7 @@ bool ACDFTerm::unsatisfiable() const {
 
 bool ACDFTerm::objective() const {
     if (valid()) return false;
-    if (covers.size() != 0) return false;
-    return true;
+    return covers.size() == 0;
 }
 
 ACDFTerm& ACDFTerm::minimal(const PropDNF & cstt, bool midpro) {
@@ -1198,36 +1197,6 @@ bool ACDF::valid() const {
         set<string> one_term_atoms = term1->propDNF.get_total_literals();
         all_atoms.insert(one_term_atoms.begin(), one_term_atoms.end());
     }
-
-    // for very sepecific case: Cover{ø}, Cover{¬ø}, Cover{ø,¬ø}
-    // if (exist_cover) {
-    //     if (acdf_terms.size() == 3) {
-    //         bool is_true = true;
-    //         for (list<ACDFTerm>::const_iterator term = acdf_terms.begin();
-    //         term != acdf_terms.end(); ++term) {
-    //             if (!term->propDNF.empty()) {
-    //                 is_true = false;
-    //                 break;
-    //             }
-    //             for (map<string, ACDFList>::const_iterator cover = term->covers.begin();
-    //             cover != term->covers.end(); ++cover) {
-    //                 if (!(cover->second.acdf_terms.size() == 1) && !(cover->second.acdf_terms.size() == 2)) {
-    //                     is_true = false;
-    //                     break;
-    //                 }
-    //             }
-    //         }
-    //         if (is_true) {
-    //             // print();
-    //             // cout << "this is valid --=-=-=-=--=-=-" << endl;
-    //             return true;
-    //         }
-    //     }
-    // }
-
-    // for (set<string>::const_iterator s = all_atoms.begin(); s != all_atoms.end(); ++s)
-    //     cout << *s << " ";
-    // cout << endl;
 
     PropDNF modals;
     for (list<ACDFTerm>::const_iterator term1 = tmp_acdf.acdf_terms.begin();
@@ -1433,14 +1402,6 @@ ACDF& ACDF::minimal(const PropDNF & cstt, bool outmost_layer, bool midpro) {
         bool is_delete = false;
         for (list<ACDFTerm>::iterator term2 = acdf_terms.begin();
         term2 != acdf_terms.end(); ++term2) {
-// cout << "**********************************" << endl;
-// cout << (outmost_layer ? "outmost" : "not outmost") << endl;
-// term2->print();
-// cout << " strong entails ******************" << endl;
-// term1->print();
-            // if (term1 != term2 && ((!(outmost_layer||midpro) && term2->strong_entails(*term1, cstt))
-            // || ((outmost_layer||midpro) && term2->strong_entails(*term1, cstt) &&
-                // term1->strong_entails(*term2, cstt))) ) {
             if (term1 != term2 && ((term1->objective() && term2->objective() &&
             term1->strong_entails(*term2, empty_dnf)) || (term2->strong_entails(*term1, empty_dnf)
             && term1->strong_entails(*term2, empty_dnf))) ) {

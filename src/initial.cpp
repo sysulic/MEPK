@@ -11,9 +11,11 @@ void Initial::exec(const char* dFile, const char* pFile) {
     constraint = getPropDNFFromTree(&reader.constraint).minimal();  // must get constraint first
     // cout << "----- constraint done -----" << endl;
     init = getACDFFromTree(&reader.init, 0).involve(constraint).minimal(constraint);
+    init.print();
     // cout << "----- init done -----" << endl;
     PropDNF goal_cons;
     goal = getACDFFromTree(&reader.goal, 0, true).minimal(goal_cons);
+    goal.print();
     // cout << "----- goal done -----" << endl;
     episActionsGrounding();
     // cout << "----- episActionsGrounding done -----" << endl;
