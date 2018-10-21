@@ -1,9 +1,9 @@
 #include "plan.h"
 #include <algorithm>
 
-Plan::Plan(const char *domain, const char *p, int type) {
+Plan::Plan(int type) {
     printf("================================================================\n");
-    printf("domain_file(%s)\n     p_file(%s)\n", domain, p);
+    // printf("domain_file(%s)\n     p_file(%s)\n", domain, p);
     // if (type == 0)
     //     cout << "search_type(Heur first)\n" << endl;
     // if (type == 1)
@@ -18,19 +18,19 @@ Plan::Plan(const char *domain, const char *p, int type) {
     plan_tree_node_num = 0;
     clock_t t_start = clock();
     printf("Preprocessing...\n");
-    in.exec(domain, p);
+    in.exec();
 
     // //print actions
     // int i = 0;
     // cout << "======= epis actions : ============" << endl;
-    // for (std::vector<EpisAction>::const_iterator v = epis_actions.begin();
-    //     v != epis_actions.end(); ++v) {
+    // for (std::vector<EpisAction>::const_iterator v = in.mine_epis_actions.begin();
+    //     v != in.mine_epis_actions.end(); ++v) {
     //     cout << ++i << ": " << (*v).name << endl;
     // }
     // cout << "======= ontic actions : ===========" << endl;
     // i = 0;
-    // for (std::vector<OnticAction>::const_iterator v = ontic_actions.begin();
-    //     v != ontic_actions.end(); ++v) {
+    // for (std::vector<OnticAction>::const_iterator v = in.mine_ontic_actions.begin();
+    //     v != in.mine_ontic_actions.end(); ++v) {
     //     cout << ++i << ": " << (*v).name << endl;
     // }
     // cout << "===================================" << endl;
@@ -42,7 +42,7 @@ Plan::Plan(const char *domain, const char *p, int type) {
 // Algorithm 6
 void Plan::exec_plan() {
     printf("Planning...\n");
-    if (in.init.neg_entails(in.goal, in.constraint)) {
+    if (in.mine_init.neg_entails(in.mine_goal, in.mine_constraint)) {
         printf("init neg_entails goal!\n");
         return;
     }
@@ -51,7 +51,7 @@ void Plan::exec_plan() {
     Node init_node;
     init_node.flag = TOBEEXPLORED;
     init_node.isolated = false;
-    init_node.kb = in.init;
+    init_node.kb = in.mine_init;
     init_node.depth = 0;
     add_node(init_node);
     hert_nodes = 0; //for deep search
@@ -63,13 +63,13 @@ void Plan::exec_plan() {
     // for (vector<Transition>::const_iterator e = all_edges.begin();
     // e != all_edges.end(); ++e) {
     //     cout << e->front_state << " - "
-    //         << (e->is_observe_action ? epis_actions[e->action_number].name : ontic_actions[e->action_number].name)
+    //         << (e->is_observe_action ? in.mine_epis_actions[e->action_number].name : in.mine_ontic_actions[e->action_number].name)
     //         << " - " << e->next_state << endl;
     //     // all_nodes[e->next_state].kb.print();
     // }
     
     // for (size_t i = 0; i < all_nodes.size(); ++i) {
-    //     if (all_nodes[i].kb.equals(acdf, in.constraint))
+    //     if (all_nodes[i].kb.equals(acdf, in.mine_constraint))
     //     {
     //         cout << "------ this node can entail 13+alpha -------------" << endl;
     //         all_nodes[i].kb.print();
@@ -95,7 +95,7 @@ void Plan::exec_plan() {
     // for (vector<Transition>::const_iterator e = all_edges.begin();
     // e != all_edges.end(); ++e) {
     //     cout << e->front_state << " - "
-    //         << (e->is_observe_action ? epis_actions[e->action_number].name : ontic_actions[e->action_number].name)
+    //         << (e->is_observe_action ? in.mine_epis_actions[e->action_number].name : in.mine_ontic_actions[e->action_number].name)
     //         << " - " << e->next_state << endl;
     //     // all_nodes[e->next_state].kb.print();
     // }
@@ -114,19 +114,19 @@ void Plan::explore(int node_pos) {
 //     all_nodes[802].kb.print();
     bool execed = false;  // deep search find new node
     // 进行感知演进
-    for (size_t i = 0; i < epis_actions.size(); ++i) {
-// cout << "node " << node_pos << " to test epis action: " << epis_actions[i].name << endl;
-        if (all_nodes[node_pos].kb.neg_entails(epis_actions[i].pre_con, in.constraint)) {
+    for (size_t i = 0; i < in.mine_epis_actions.size(); ++i) {
+// cout << "node " << node_pos << " to test epis action: " << in.mine_epis_actions[i].name << endl;
+        if (all_nodes[node_pos].kb.neg_entails(in.mine_epis_actions[i].pre_con, in.mine_constraint)) {
 // if (node_pos == 802)
-//     cout <<  "node " << node_pos << "doing... epis action: " << epis_actions[i].name << endl;
+//     cout <<  "node " << node_pos << "doing... epis action: " << in.mine_epis_actions[i].name << endl;
             clock_t epis_start = clock();
-            vector<ACDF> res = all_nodes[node_pos].kb.epistemic_prog(epis_actions[i], in.constraint);
+            vector<ACDF> res = all_nodes[node_pos].kb.epistemic_prog(in.mine_epis_actions[i], in.mine_constraint);
             clock_t epis_end = clock();
             epis_progression_time += difftime(epis_end, epis_start) / 1000000.0;
 
             if (check_zero_dead(res[0]) || check_zero_dead(res[1]))
                 continue;
-            // cout << node_pos << " after action : " << epis_actions[i].name << " pos :" << endl;
+            // cout << node_pos << " after action : " << in.mine_epis_actions[i].name << " pos :" << endl;
             int res_pos = checknode(res[0]);  // find if old node; if it is old node, then return node number            
             if (res_pos == node_pos) continue;
             bool new_node = false;
@@ -145,14 +145,14 @@ void Plan::explore(int node_pos) {
             tbs.is_true = true;
             expand(tbs, true, new_node);
            
-            // cout << "from node:" << node_pos << "epis action pos done: " << epis_actions[i].name << " ================= " << endl;
+            // cout << "from node:" << node_pos << "epis action pos done: " << in.mine_epis_actions[i].name << " ================= " << endl;
             // for (size_t xx = 0; xx < all_nodes.size(); ++xx)
             // {
             //     cout <<"node " << xx << ": " << all_nodes[xx].flag << " " << (all_nodes[xx].isolated ? " isolated" : " connected") << endl;
             // }
             // cout << " ================================================================= " << endl;
 
-            // cout <<  node_pos << " after action : " << epis_actions[i].name << " neg :" << endl;
+            // cout <<  node_pos << " after action : " << in.mine_epis_actions[i].name << " neg :" << endl;
             int res_pos1 = checknode(res[1]);
             if (res_pos1 == node_pos) continue;
             new_node = false;
@@ -180,7 +180,7 @@ void Plan::explore(int node_pos) {
                 execed = true;
             }
 
-            // cout << "from node:" << node_pos << "epis action neg done: " << epis_actions[i].name << " ================= " << endl;
+            // cout << "from node:" << node_pos << "epis action neg done: " << in.mine_epis_actions[i].name << " ================= " << endl;
             // for (size_t xx = 0; xx < all_nodes.size(); ++xx)
             // {
             //     cout <<"node " << xx << ": " << all_nodes[xx].flag << " " << (all_nodes[xx].isolated ? " isolated" : " connected") << endl;
@@ -189,13 +189,13 @@ void Plan::explore(int node_pos) {
         }
     }
     // 进行物理演进
-    for (size_t i = 0; i < ontic_actions.size(); ++i) {
-// cout << "node " << node_pos << " to test ontic action: " << ontic_actions[i].name << endl;
-        if (all_nodes[node_pos].kb.neg_entails(ontic_actions[i].pre_con, in.constraint)) {
+    for (size_t i = 0; i < in.mine_ontic_actions.size(); ++i) {
+// cout << "node " << node_pos << " to test ontic action: " << in.mine_ontic_actions[i].name << endl;
+        if (all_nodes[node_pos].kb.neg_entails(in.mine_ontic_actions[i].pre_con, in.mine_constraint)) {
 // if (node_pos == 802)
-//     cout << "node " << node_pos << " doing... ontic action: " << ontic_actions[i].name << endl;
+//     cout << "node " << node_pos << " doing... ontic action: " << in.mine_ontic_actions[i].name << endl;
             clock_t ontic_start = clock();
-            ACDF res = all_nodes[node_pos].kb.ontic_prog(ontic_actions[i], in.constraint);
+            ACDF res = all_nodes[node_pos].kb.ontic_prog(in.mine_ontic_actions[i], in.mine_constraint);
             clock_t ontic_end = clock();
             ontic_progression_time += difftime(ontic_end, ontic_start) / 1000000.0;
             if (check_zero_dead(res)) continue;
@@ -232,7 +232,7 @@ void Plan::explore(int node_pos) {
                 execed = true;
             }
 
-            // cout <<  "from node:" << node_pos << "ontic action done: " << ontic_actions[i].name << " ================= " << endl;
+            // cout <<  "from node:" << node_pos << "ontic action done: " << in.mine_ontic_actions[i].name << " ================= " << endl;
             // for (size_t xx = 0; xx < all_nodes.size(); ++xx)
             // {
             //     cout <<"node " << xx << ": " << all_nodes[i].flag << " " << (all_nodes[xx].isolated ? " isolated" : " connected") << endl;
@@ -252,7 +252,7 @@ void Plan::explore(int node_pos) {
     // for (vector<Transition>::const_iterator e = all_edges.begin();
     // e != all_edges.end(); ++e) {
     //     cout << e->front_state << " - "
-    //         << (e->is_observe_action ? epis_actions[e->action_number].name : ontic_actions[e->action_number].name)
+    //         << (e->is_observe_action ? in.mine_epis_actions[e->action_number].name : in.mine_ontic_actions[e->action_number].name)
     //         << " - " << e->next_state << endl;
     //     // all_nodes[e->next_state].kb.print();
     // }
@@ -264,7 +264,7 @@ void Plan::expand(Transition ts, bool epis, bool new_node) {
 // if (ts.front_state == 802) {
 // cout << "expand..." << endl;
 // cout << ts.front_state << " - "
-//     << (ts.is_observe_action ? epis_actions[ts.action_number].name : ontic_actions[ts.action_number].name)
+//     << (ts.is_observe_action ? in.mine_epis_actions[ts.action_number].name : in.mine_ontic_actions[ts.action_number].name)
 //     << " - " << ts.next_state << endl;
 // }
     bool edge_exist = false;
@@ -278,8 +278,8 @@ void Plan::expand(Transition ts, bool epis, bool new_node) {
         reconnection_propagation(ts.next_state);
     } else {
         all_nodes[ts.next_state].isolated = false;
-        if (all_nodes[ts.next_state].kb.neg_entails(in.goal, in.constraint, true, &(all_nodes[ts.next_state].value))) {
-        // impossible case:: || (epis && !all_nodes[ts.next_state].kb.obj_consistent(all_nodes[ts.front_state].kb, in.constraint)) )
+        if (all_nodes[ts.next_state].kb.neg_entails(in.mine_goal, in.mine_constraint, true, &(all_nodes[ts.next_state].value))) {
+        // impossible case:: || (epis && !all_nodes[ts.next_state].kb.obj_consistent(all_nodes[ts.front_state].kb, in.mine_constraint)) )
             all_nodes[ts.next_state].flag = FINAL_GOAL;
         } else {
             all_nodes[ts.next_state].flag = TOBEEXPLORED;
@@ -287,7 +287,7 @@ void Plan::expand(Transition ts, bool epis, bool new_node) {
     }
     // cout << "---------------------------" << endl;
     // cout << ts.front_state << " - "
-    //     << (ts.is_observe_action ? epis_actions[ts.action_number].name : ontic_actions[ts.action_number].name)
+    //     << (ts.is_observe_action ? in.mine_epis_actions[ts.action_number].name : in.mine_ontic_actions[ts.action_number].name)
     //     << " - " << ts.next_state << endl;
     // cout << "-------------------------------------------------------" << endl << endl;
 }
@@ -468,7 +468,7 @@ bool Plan::is_exist_edge_from_node(int n) {
 int Plan::checknode(ACDF ed) {
     // return -1;
     for (size_t i = 0; i < all_nodes.size(); ++i)
-        if ( all_nodes[i].kb.equals(ed, in.constraint)) {
+        if ( all_nodes[i].kb.equals(ed, in.mine_constraint)) {
             // ed.print();
             // cout << "equals with node " << i <<  " : ------------------- " << endl;
             // all_nodes[i].kb.print();
@@ -530,15 +530,15 @@ int Plan::show_build_result(int node_num, const vector<Transition> &goal_edges, 
                 cout << " ";
             if (next_trans[i].is_observe_action) {
                 if (next_trans[i].is_true) {                   
-                    cout << epis_actions[next_trans[i].action_number].name << " +:" << endl;
+                    cout << in.mine_epis_actions[next_trans[i].action_number].name << " +:" << endl;
                     depth = max(depth, show_build_result(next_trans[i].next_state, goal_edges, tab_num, nodes, node_num) + 1);
                 } else {
-                    cout << epis_actions[next_trans[i].action_number].name << " -:" << endl;
+                    cout << in.mine_epis_actions[next_trans[i].action_number].name << " -:" << endl;
                     depth = max(depth, show_build_result(next_trans[i].next_state, goal_edges, tab_num, nodes, node_num) + 1);
                     
                 }
             } else {
-                cout << ontic_actions[next_trans[i].action_number].name << endl;
+                cout << in.mine_ontic_actions[next_trans[i].action_number].name << endl;
                 depth = max(depth, show_build_result(next_trans[i].next_state, goal_edges, tab_num, nodes, node_num) + 1);
             }   
         }
@@ -549,12 +549,12 @@ int Plan::show_build_result(int node_num, const vector<Transition> &goal_edges, 
 void Plan::add_node(const Node& node) {
     all_nodes.push_back(node);
     int node_id = all_nodes.size() - 1;
-    int heuristic_value = calculate_node_heuristic_value(all_nodes.back());
+    int heuristic_value = helper_.getHeuristicValue(all_nodes.back().kb, in.mine_pos_goal);
     heuristic_que_.push(PlanHelper(node_id, heuristic_value));
 }
 
 int Plan::calculate_node_heuristic_value(const Node& node) {
-    // assert(!in.goal.acdf_terms.empty());
+    // assert(!in.mine_goal.acdf_terms.empty());
     if (search_time > 20.0 && !reset_key_) {
         // reset heuristic queue
         cout << "runout of time" << endl;
@@ -571,7 +571,7 @@ int Plan::calculate_node_heuristic_value(const Node& node) {
         return 0;
     }
     int node_value = 0;
-    node.kb.neg_entails(in.goal, in.constraint, true, &node_value);
+    node.kb.neg_entails(in.mine_goal, in.mine_constraint, true, &node_value);
     // node_value = node.value;//a -- *search_difficulty/10;
     // node_value = node.value;//b -- *search_difficulty/10;
     // cout << node_value << endl;

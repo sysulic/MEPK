@@ -1,59 +1,52 @@
-# Makefile
+#Makefile
 
-OBJS	= main.o Formula.o reader.o lex.o parse.o initial.o ACDF.o plan.o
-OBJS_TEST	= test.o Formula.o reader.o lex.o parse.o initial.o ACDF.o tester.o
+OBJECTS = main.o epddlLexer.o epddlParser.o acdf.o adnf.o parse.o heuristicHelper.o initial.o plan.o planner.o
 
-CC	= g++
-CFLAGS	= -g -Wall -std=c++0x
 LEXER = flex
 PARSER = bison
+COMPILER = g++
+COMPILE_OPTION = -g -Wall -std=c++11
 
-start:	$(OBJS) test
-		$(CC) $(CFLAGS) $(OBJS) -o start -O2
+start: ${OBJECTS}
+	${COMPILER} ${COMPILE_OPTION} ${OBJECTS} -o start -O2
 
-test:	$(OBJS_TEST)
-		$(CC) $(CFLAGS) $(OBJS_TEST) -o test -O2
+main: main.cpp
+	${COMPILER} ${COMPILE_OPTION} -c main.cpp -o main.o -O2
 
-main.o:  main.cpp
-		$(CC) $(CFLAGS) -c main.cpp -o main.o -O2
+planner.o: planner.h planner.cpp
+	${COMPILER} ${COMPILE_OPTION} -c planner.cpp -o planner.o -O2
 
-test.o:  test.cpp
-		$(CC) $(CFLAGS) -c test.cpp -o test.o -O2
+plan.o: plan.h plan.cpp
+	${COMPILER} ${COMPILE_OPTION} -c plan.cpp -o plan.o -O2
 
-tester.o:  tester.cpp tester.h
-		$(CC) $(CFLAGS) -c tester.cpp -o tester.o -O2
+initial.o: initial.h initial.cpp
+	${COMPILER} ${COMPILE_OPTION} -c initial.cpp -o initial.o -O2
 
-plan.o:  plan.cpp plan.h
-		$(CC) $(CFLAGS) -c plan.cpp -o plan.o -O2
+heuristicHelper.o: heuristicHelper.h heuristicHelper.cpp
+	${COMPILER} ${COMPILE_OPTION} -c heuristicHelper.cpp -o heuristicHelper.o -O2
 
-initial.o:  initial.cpp initial.h
-		$(CC) $(CFLAGS) -c initial.cpp -o initial.o -O2
-	
-ACDF.o:  ACDF.cpp ACDF.h
-		$(CC) $(CFLAGS) -c ACDF.cpp -o ACDF.o -O2
+parse.o: parse.h parse.cpp
+	${COMPILER} ${COMPILE_OPTION} -c parse.cpp -o parse.o -O2
 
-reader.o:  reader.cpp reader.h
-		$(CC) $(CFLAGS) -c reader.cpp -o reader.o -O2
+Cover.o: Cover.h Cover.cpp
+	${COMPILER} ${COMPILE_OPTION} -c acdf.cpp -o acdf.o -O2
 
-Formula.o:  Formula.cpp Formula.h
-		$(CC) $(CFLAGS) -c Formula.cpp -o Formula.o -O2
+ACDF.o: ACDF.h ACDF.cpp
+	${COMPILER} ${COMPILE_OPTION} -c adnf.cpp -o adnf.o -O2
 
-lex.o:  lex.yy.c
-		$(CC) $(CFLAGS) -c lex.yy.c -o lex.o -O2
+epddlLexer.o: lex.yy.c
+	${COMPILER} ${COMPILE_OPTION} -c lex.yy.c -o epddlLexer.o -O2
 
-lex.yy.c:  lex.l parse.o
-		$(LEXER) lex.l
+lex.yy.c: epddlLexer.l epddlParser.o
+	${LEXER} epddlLexer.l
 
-parse.o:  parse.tab.c
-		$(CC) $(CFLAGS) -c parse.tab.c -o parse.o -O2
+epddlParser.o: epddlParser.tab.c
+	${COMPILER} ${COMPILE_OPTION} -c epddlParser.tab.c -o epddlParser.o -O2
 
-parse.tab.c:	parse.y
-		$(PARSER) --defines=parse.h -d parse.y
+epddlParser.tab.c: epddlParser.y
+	${PARSER} --defines=epddlParser.h -d epddlParser.y
 
-.PHONY : clean
-
-test:
-
+.PHONY: clean
 
 clean:
-	rm -f *.o *.c parse.h parse.output output_begin output_end
+	rm -r *.o *c epddlParser.h start

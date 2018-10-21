@@ -1,31 +1,39 @@
+#include "header.h"
+#include "planner.h"
 #include "plan.h"
 
-list<string> agents;
+using namespace std;
 
-map<int, string> atomsByIndex;
-map<string, int> atomsByName;
+// global variable andfor compile
+string domainName;
+vector<string> atoms;
+map<string, vector<string> > objects;
+vector<string> agents;
+map<int, string> findAtomsByIndex;
+map<string, int> findAtomsByName;
+map<string, int> findSensingActionByName;
+map<string, int> findOnticActionByName;
+vector<SensingAction> sActions;
+vector<OnticAction> oActions;
+KLDNF init;
+KLDNF posGoal;
+KLDNF goal;
+PropDNF constraint;
 
-vector<EpisAction> epis_actions;
-vector<OnticAction> ontic_actions;
+// search data
+int atomNum, solNum, expNum, solDepth;
+double preTime, searchTime;
 
-int main(int argc, char **argv) {
+int main(int argc, char** argv) {
 
-	if (argc < 3) return 0;
-    if (argc != 3 && argc != 4) {
-        printf("Usage:\n%s domain_file p_file (search_type)\n", argv[0]);
-        return 0;
-    }
-    int search_type = 0;
-    if (argc == 4) {
-        search_type = atoi(argv[3]);
-    }
-    Plan p = Plan(argv[1], argv[2], search_type);
+	if (argc < 2) return 0;
+	Planner planner(argv[1]);
 
-    // print info of problem
-    // cout << atomsByIndex.size() << " " << epis_actions.size() << " " << ontic_actions.size() << endl;
+	// Plan p(atoi(argv[2]));
+	// p.exec_plan();
+	// p.show_statistic();
 
-    p.exec_plan();
-    p.show_statistic();
+	planner.exec();
 
-    return 0;
+	return 0;
 }

@@ -1,0 +1,1211 @@
+/bin/sh -c "./start ../benchmarks/hexa/hexa_domain3.epddl"
+
+================================================================
+domain_file: ../benchmarks/hexa/hexa_domain3.epddl
+
+Preprocessing Start!
+...
+                                                                                                                                                                                                                                                                                                                                                                                                              start : ------------
+
+Processing Completed!
+
+Planning Start!
+...
+===========================Plan Tree===========================
+ask_white(a, b) +:
+  TERMINATE
+ask_white(a, b) -:
+  TERMINATE
+
+
+===========================Information===========================
+preTime = 0.003453
+totalTime = 0.005778
+searchTime = 0.002325
+heuristicTime = 0.00
+policyIterationTime = 0.00
+resDepth = 1
+resNodeNum = 3
+exploredNodeNum = 1
+
+Planning Completed!
+/bin/sh -c "./start ../benchmarks/hexa/hexa_domain4.epddl"
+
+================================================================
+domain_file: ../benchmarks/hexa/hexa_domain4.epddl
+
+Preprocessing Start!
+...
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              start : ------------
+
+Processing Completed!
+
+Planning Start!
+...
+===========================Plan Tree===========================
+ask_white(a, b) +:
+  ask_blue(a, c) +:
+    TERMINATE
+  ask_blue(a, c) -:
+    TERMINATE
+ask_white(a, b) -:
+  ask_blue(a, c) +:
+    TERMINATE
+  ask_blue(a, c) -:
+    ask_white(a, c) +:
+      ask_blue(a, b) +:
+        TERMINATE
+      ask_blue(a, b) -:
+        TERMINATE
+    ask_white(a, c) -:
+      TERMINATE
+
+
+===========================Information===========================
+preTime = 0.012274
+totalTime = 0.082122
+searchTime = 0.069848
+heuristicTime = 0.00
+policyIterationTime = 0.00
+resDepth = 4
+resNodeNum = 11
+exploredNodeNum = 5
+
+Planning Completed!
+/bin/sh -c "./start ../benchmarks/hexa/hexa_domain5.epddl"
+
+================================================================
+domain_file: ../benchmarks/hexa/hexa_domain5.epddl
+
+Preprocessing Start!
+...
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          start : ------------
+
+Processing Completed!
+
+Planning Start!
+...
+===========================Plan Tree===========================
+ask_white(a, b) +:
+  ask_blue(a, c) +:
+    ask_pink(a, d) +:
+      TERMINATE
+    ask_pink(a, d) -:
+      TERMINATE
+  ask_blue(a, c) -:
+    ask_pink(a, d) +:
+      TERMINATE
+    ask_pink(a, d) -:
+      ask_blue(a, d) +:
+        ask_pink(a, c) +:
+          TERMINATE
+        ask_pink(a, c) -:
+          TERMINATE
+      ask_blue(a, d) -:
+        TERMINATE
+ask_white(a, b) -:
+  ask_blue(a, c) +:
+    ask_pink(a, d) +:
+      TERMINATE
+    ask_pink(a, d) -:
+      ask_white(a, d) +:
+        ask_pink(a, b) +:
+          TERMINATE
+        ask_pink(a, b) -:
+          TERMINATE
+      ask_white(a, d) -:
+        TERMINATE
+  ask_blue(a, c) -:
+    ask_white(a, d) +:
+      ask_pink(a, b) +:
+        TERMINATE
+      ask_pink(a, b) -:
+        ask_blue(a, b) +:
+          ask_pink(a, c) +:
+            TERMINATE
+          ask_pink(a, c) -:
+            TERMINATE
+        ask_blue(a, b) -:
+          TERMINATE
+    ask_white(a, d) -:
+      ask_blue(a, e) +:
+        ask_pink(a, b) +:
+          TERMINATE
+        ask_pink(a, b) -:
+          TERMINATE
+      ask_blue(a, e) -:
+        ask_white(a, c) +:
+          ask_pink(a, b) +:
+            TERMINATE
+          ask_pink(a, b) -:
+            ask_blue(a, b) +:
+              ask_pink(a, d) +:
+                TERMINATE
+              ask_pink(a, d) -:
+                TERMINATE
+            ask_blue(a, b) -:
+              TERMINATE
+        ask_white(a, c) -:
+          ask_pink(a, b) +:
+            TERMINATE
+          ask_pink(a, b) -:
+            ask_blue(a, b) +:
+              ask_pink(a, c) +:
+                TERMINATE
+              ask_pink(a, c) -:
+                TERMINATE
+            ask_blue(a, b) -:
+              TERMINATE
+
+
+===========================Information===========================
+preTime = 0.163572
+totalTime = 27.595095
+searchTime = 27.431522
+heuristicTime = 0.00
+policyIterationTime = 0.01
+resDepth = 8
+resNodeNum = 47
+exploredNodeNum = 53
+
+Planning Completed!
+/bin/sh -c "./start "
+/bin/sh -c "./start ../benchmarks/Collaboration_through_Communication/CC-2_4.epddl"
+
+================================================================
+domain_file: ../benchmarks/Collaboration_through_Communication/CC-2_4.epddl
+
+Preprocessing Start!
+...
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               start : ------------
+
+Processing Completed!
+
+Planning Start!
+...
+===========================Plan Tree===========================
+left(a)
+  find_room1(a)
+    tell(a, b, p1)
+      TERMINATE
+
+
+===========================Information===========================
+preTime = 0.026666
+totalTime = 0.144486
+searchTime = 0.117820
+heuristicTime = 0.00
+policyIterationTime = 0.00
+resDepth = 3
+resNodeNum = 4
+exploredNodeNum = 3
+
+Planning Completed!
+/bin/sh -c "./start ../benchmarks/Collaboration_through_Communication/CC-3_4.epddl"
+
+================================================================
+domain_file: ../benchmarks/Collaboration_through_Communication/CC-3_4.epddl
+
+Preprocessing Start!
+...
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               start : ------------
+
+Processing Completed!
+
+Planning Start!
+...
+===========================Plan Tree===========================
+left(a)
+  find_room1(a)
+    tell(a, b, p1)
+      TERMINATE
+
+
+===========================Information===========================
+preTime = 0.143504
+totalTime = 2.825180
+searchTime = 2.681676
+heuristicTime = 0.00
+policyIterationTime = 0.00
+resDepth = 3
+resNodeNum = 4
+exploredNodeNum = 3
+
+Planning Completed!
+/bin/sh -c "./start ../benchmarks/Collaboration_through_Communication/SCC-2_3.epddl"
+
+================================================================
+domain_file: ../benchmarks/Collaboration_through_Communication/SCC-2_3.epddl
+
+Preprocessing Start!
+...
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        start : ------------
+
+Processing Completed!
+
+Planning Start!
+...
+===========================Plan Tree===========================
+left(a)
+  left(b)
+    find_room1(a, b1) +:
+      find_room1(b, b2) +:
+        TERMINATE
+      find_room1(b, b2) -:
+        TERMINATE
+    find_room1(a, b1) -:
+      find_room1(b, b2) +:
+        TERMINATE
+      find_room1(b, b2) -:
+        TERMINATE
+
+
+===========================Information===========================
+preTime = 0.018117
+totalTime = 4.633338
+searchTime = 4.615221
+heuristicTime = 0.00
+policyIterationTime = 0.00
+resDepth = 4
+resNodeNum = 9
+exploredNodeNum = 16
+
+Planning Completed!
+/bin/sh -c "./start ../benchmarks/Collaboration_through_Communication/SCC-2_3_3.epddl"
+
+================================================================
+domain_file: ../benchmarks/Collaboration_through_Communication/SCC-2_3_3.epddl
+
+Preprocessing Start!
+...
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   start : ------------
+
+Processing Completed!
+
+Planning Start!
+...
+===========================Plan Tree===========================
+left(a)
+  left(b)
+    find_room1(a, b1) +:
+      tell(a, c, b1, p3)
+        find_room1(b, b2) +:
+          TERMINATE
+        find_room1(b, b2) -:
+          TERMINATE
+    find_room1(a, b1) -:
+      tell(a, c, b1, p3)
+        find_room1(b, b2) +:
+          TERMINATE
+        find_room1(b, b2) -:
+          TERMINATE
+
+
+===========================Information===========================
+preTime = 0.022596
+totalTime = 1.556347
+searchTime = 1.533751
+heuristicTime = 0.00
+policyIterationTime = 0.00
+resDepth = 5
+resNodeNum = 11
+exploredNodeNum = 37
+
+Planning Completed!
+/bin/sh -c "./start ../benchmarks/Collaboration_through_Communication/SCC-2_4.epddl"
+
+================================================================
+domain_file: ../benchmarks/Collaboration_through_Communication/SCC-2_4.epddl
+
+Preprocessing Start!
+...
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  start : ------------
+
+Processing Completed!
+
+Planning Start!
+...
+===========================Plan Tree===========================
+left(a)
+  right(b)
+    find_room1(a, b1) +:
+      find_room3(b, b2) +:
+        TERMINATE
+      find_room3(b, b2) -:
+        right(b)
+          find_room4(b, b2) +:
+            TERMINATE
+          find_room4(b, b2) -:
+            TERMINATE
+    find_room1(a, b1) -:
+      find_room3(b, b2) +:
+        TERMINATE
+      find_room3(b, b2) -:
+        right(b)
+          find_room4(b, b2) +:
+            TERMINATE
+          find_room4(b, b2) -:
+            TERMINATE
+
+
+===========================Information===========================
+preTime = 0.014329
+totalTime = 0.729397
+searchTime = 0.715068
+heuristicTime = 0.00
+policyIterationTime = 0.00
+resDepth = 6
+resNodeNum = 15
+exploredNodeNum = 18
+
+Planning Completed!
+/bin/sh -c "./start ../benchmarks/Collaboration_through_Communication/SCC-3_3.epddl"
+
+================================================================
+domain_file: ../benchmarks/Collaboration_through_Communication/SCC-3_3.epddl
+
+Preprocessing Start!
+...
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             start : ------------
+
+Processing Completed!
+
+Planning Start!
+...
+===========================Plan Tree===========================
+left(a)
+  left(b)
+    find_room1(a, b1) +:
+      find_room1(b, b2) +:
+        tell(b, c, b2, p3)
+          TERMINATE
+      find_room1(b, b2) -:
+        tell(b, c, b2, p3)
+          TERMINATE
+    find_room1(a, b1) -:
+      find_room1(b, b2) +:
+        tell(b, c, b2, p3)
+          TERMINATE
+      find_room1(b, b2) -:
+        tell(b, c, b2, p3)
+          TERMINATE
+
+
+===========================Information===========================
+preTime = 0.037233
+totalTime = 3.064761
+searchTime = 3.027528
+heuristicTime = 0.00
+policyIterationTime = 0.00
+resDepth = 5
+resNodeNum = 13
+exploredNodeNum = 23
+
+Planning Completed!
+/bin/sh -c "./start "
+/bin/sh -c "./start ../benchmarks/grapevine/grapevine-2_3_2.epddl"
+
+================================================================
+domain_file: ../benchmarks/grapevine/grapevine-2_3_2.epddl
+
+Preprocessing Start!
+...
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           start : ------------
+
+Processing Completed!
+
+Planning Start!
+...
+===========================Plan Tree===========================
+right(c)
+  share(a, p2, p1, b, c)
+    TERMINATE
+
+
+===========================Information===========================
+preTime = 0.013481
+totalTime = 0.041884
+searchTime = 0.028403
+heuristicTime = 0.00
+policyIterationTime = 0.00
+resDepth = 2
+resNodeNum = 3
+exploredNodeNum = 4
+
+Planning Completed!
+/bin/sh -c "./start ../benchmarks/grapevine/grapevine-2_4_1.epddl"
+
+================================================================
+domain_file: ../benchmarks/grapevine/grapevine-2_4_1.epddl
+
+Preprocessing Start!
+...
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            start : ------------
+
+Processing Completed!
+
+Planning Start!
+...
+===========================Plan Tree===========================
+right(c)
+  share(a, p2, p1, b, d, c)
+    TERMINATE
+
+
+===========================Information===========================
+preTime = 0.081986
+totalTime = 0.294767
+searchTime = 0.212781
+heuristicTime = 0.00
+policyIterationTime = 0.00
+resDepth = 2
+resNodeNum = 3
+exploredNodeNum = 12
+
+Planning Completed!
+/bin/sh -c "./start ../benchmarks/grapevine/grapevine-2_4_2.epddl"
+
+================================================================
+domain_file: ../benchmarks/grapevine/grapevine-2_4_2.epddl
+
+Preprocessing Start!
+...
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   start : ------------
+
+Processing Completed!
+
+Planning Start!
+...
+===========================Plan Tree===========================
+right(c)
+  share(a, p2, p1, b, d, c)
+    TERMINATE
+
+
+===========================Information===========================
+preTime = 0.088325
+totalTime = 0.259934
+searchTime = 0.171609
+heuristicTime = 0.00
+policyIterationTime = 0.00
+resDepth = 2
+resNodeNum = 3
+exploredNodeNum = 5
+
+Planning Completed!
+/bin/sh -c "./start ../benchmarks/grapevine/grapevine-2_4_3.epddl"
+
+================================================================
+domain_file: ../benchmarks/grapevine/grapevine-2_4_3.epddl
+
+Preprocessing Start!
+...
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     start : ------------
+
+Processing Completed!
+
+Planning Start!
+...
+===========================Plan Tree===========================
+right(c)
+  share(a, p2, p1, b, d, c)
+    TERMINATE
+
+
+===========================Information===========================
+preTime = 0.132625
+totalTime = 0.336656
+searchTime = 0.204031
+heuristicTime = 0.00
+policyIterationTime = 0.00
+resDepth = 2
+resNodeNum = 3
+exploredNodeNum = 4
+
+Planning Completed!
+/bin/sh -c "./start ../benchmarks/grapevine/grapevine-2_4_4.epddl"
+
+================================================================
+domain_file: ../benchmarks/grapevine/grapevine-2_4_4.epddl
+
+Preprocessing Start!
+...
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                start : ------------
+
+Processing Completed!
+
+Planning Start!
+...
+===========================Plan Tree===========================
+right(c)
+  share(a, p2, p1, b, d, c)
+    TERMINATE
+
+
+===========================Information===========================
+preTime = 0.221132
+totalTime = 0.610888
+searchTime = 0.389756
+heuristicTime = 0.00
+policyIterationTime = 0.00
+resDepth = 2
+resNodeNum = 3
+exploredNodeNum = 4
+
+Planning Completed!
+/bin/sh -c "./start "
+/bin/sh -c "./start ../benchmarks/selective_communication/SC-4_3_1.epddl"
+
+================================================================
+domain_file: ../benchmarks/selective_communication/SC-4_3_1.epddl
+
+Preprocessing Start!
+...
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  start : ------------
+
+Processing Completed!
+
+Planning Start!
+...
+===========================Plan Tree===========================
+right
+  sense +:
+    right
+      right
+        tell
+          TERMINATE
+  sense -:
+    right
+      right
+        tell
+          TERMINATE
+
+
+===========================Information===========================
+preTime = 0.008018
+totalTime = 0.095647
+searchTime = 0.087629
+heuristicTime = 0.00
+policyIterationTime = 0.00
+resDepth = 5
+resNodeNum = 10
+exploredNodeNum = 22
+
+Planning Completed!
+/bin/sh -c "./start ../benchmarks/selective_communication/SC-4_7_1.epddl"
+
+================================================================
+domain_file: ../benchmarks/selective_communication/SC-4_7_1.epddl
+
+Preprocessing Start!
+...
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               start : ------------
+
+Processing Completed!
+
+Planning Start!
+...
+===========================Plan Tree===========================
+right
+  sense +:
+    right
+      right
+        tell
+          TERMINATE
+  sense -:
+    right
+      right
+        tell
+          TERMINATE
+
+
+===========================Information===========================
+preTime = 0.017795
+totalTime = 0.226065
+searchTime = 0.208270
+heuristicTime = 0.00
+policyIterationTime = 0.00
+resDepth = 5
+resNodeNum = 10
+exploredNodeNum = 22
+
+Planning Completed!
+/bin/sh -c "./start ../benchmarks/selective_communication/SC-4_8_1.epddl"
+
+================================================================
+domain_file: ../benchmarks/selective_communication/SC-4_8_1.epddl
+
+Preprocessing Start!
+...
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              start : ------------
+
+Processing Completed!
+
+Planning Start!
+...
+===========================Plan Tree===========================
+right
+  sense +:
+    right
+      right
+        tell
+          TERMINATE
+  sense -:
+    right
+      right
+        tell
+          TERMINATE
+
+
+===========================Information===========================
+preTime = 0.020952
+totalTime = 0.325018
+searchTime = 0.304066
+heuristicTime = 0.00
+policyIterationTime = 0.00
+resDepth = 5
+resNodeNum = 10
+exploredNodeNum = 26
+
+Planning Completed!
+/bin/sh -c "./start ../benchmarks/selective_communication/SC-4_8_1_2.epddl"
+
+================================================================
+domain_file: ../benchmarks/selective_communication/SC-4_8_1_2.epddl
+
+Preprocessing Start!
+...
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        start : ------------
+
+Processing Completed!
+
+Planning Start!
+...
+===========================Plan Tree===========================
+right
+  sense +:
+    tell
+      TERMINATE
+  sense -:
+    tell
+      TERMINATE
+
+
+===========================Information===========================
+preTime = 0.042278
+totalTime = 0.120718
+searchTime = 0.078440
+heuristicTime = 0.00
+policyIterationTime = 0.00
+resDepth = 3
+resNodeNum = 6
+exploredNodeNum = 4
+
+Planning Completed!
+/bin/sh -c "./start ../benchmarks/selective_communication/SC-4_3_3.epddl"
+
+================================================================
+domain_file: ../benchmarks/selective_communication/SC-4_3_3.epddl
+
+Preprocessing Start!
+...
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            start : ------------
+
+Processing Completed!
+
+Planning Start!
+...
+===========================Plan Tree===========================
+right
+  sense +:
+    right
+      right
+        tell
+          TERMINATE
+  sense -:
+    right
+      right
+        tell
+          TERMINATE
+
+
+===========================Information===========================
+preTime = 0.011130
+totalTime = 0.123564
+searchTime = 0.112434
+heuristicTime = 0.00
+policyIterationTime = 0.00
+resDepth = 5
+resNodeNum = 10
+exploredNodeNum = 16
+
+Planning Completed!
+/bin/sh -c "./start ../benchmarks/selective_communication/SC-4_3_4.epddl"
+
+================================================================
+domain_file: ../benchmarks/selective_communication/SC-4_3_4.epddl
+
+Preprocessing Start!
+...
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           start : ------------
+
+Processing Completed!
+
+Planning Start!
+...
+===========================Plan Tree===========================
+right
+  sense +:
+    right
+      right
+        tell
+          TERMINATE
+  sense -:
+    right
+      right
+        tell
+          TERMINATE
+
+
+===========================Information===========================
+preTime = 0.020853
+totalTime = 0.148684
+searchTime = 0.127831
+heuristicTime = 0.00
+policyIterationTime = 0.00
+resDepth = 5
+resNodeNum = 10
+exploredNodeNum = 13
+
+Planning Completed!
+/bin/sh -c "./start ../benchmarks/selective_communication/SC-8_3_1.epddl"
+
+================================================================
+domain_file: ../benchmarks/selective_communication/SC-8_3_1.epddl
+
+Preprocessing Start!
+...
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   start : ------------
+
+Processing Completed!
+
+Planning Start!
+...
+===========================Plan Tree===========================
+left
+  left
+    sense +:
+      right
+        right
+          right
+            right
+              right
+                right
+                  tell
+                    TERMINATE
+    sense -:
+      right
+        right
+          right
+            right
+              right
+                right
+                  tell
+                    TERMINATE
+
+
+===========================Information===========================
+preTime = 0.026534
+totalTime = 0.396259
+searchTime = 0.369725
+heuristicTime = 0.00
+policyIterationTime = 0.00
+resDepth = 10
+resNodeNum = 19
+exploredNodeNum = 34
+
+Planning Completed!
+/bin/sh -c "./start "
+/bin/sh -c "./start ../benchmarks/assemble_line/assemble_line2.epddl"
+
+================================================================
+domain_file: ../benchmarks/assemble_line/assemble_line2.epddl
+
+Preprocessing Start!
+...
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      start : ------------
+
+Processing Completed!
+
+Planning Start!
+...
+===========================Plan Tree===========================
+processA +:
+  processB +:
+    tellAlpha
+      tellBeta
+        assemble
+          TERMINATE
+  processB -:
+    tellAlpha
+      restart
+        TERMINATE
+processA -:
+  tellBeta
+    restart
+      TERMINATE
+
+
+===========================Information===========================
+preTime = 0.004456
+totalTime = 0.061434
+searchTime = 0.056978
+heuristicTime = 0.00
+policyIterationTime = 0.00
+resDepth = 5
+resNodeNum = 12
+exploredNodeNum = 16
+
+Planning Completed!
+/bin/sh -c "./start ../benchmarks/assemble_line/assemble_line3.epddl"
+
+================================================================
+domain_file: ../benchmarks/assemble_line/assemble_line3.epddl
+
+Preprocessing Start!
+...
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            start : ------------
+
+Processing Completed!
+
+Planning Start!
+...
+===========================Plan Tree===========================
+processA +:
+  processB +:
+    tellAlpha
+      tellBeta
+        assemble
+          TERMINATE
+  processB -:
+    tellAlpha
+      restart
+        TERMINATE
+processA -:
+  tellBeta
+    restart
+      TERMINATE
+
+
+===========================Information===========================
+preTime = 0.003518
+totalTime = 0.084265
+searchTime = 0.080747
+heuristicTime = 0.00
+policyIterationTime = 0.00
+resDepth = 5
+resNodeNum = 12
+exploredNodeNum = 16
+
+Planning Completed!
+/bin/sh -c "./start ../benchmarks/assemble_line/assemble_line4.epddl"
+
+================================================================
+domain_file: ../benchmarks/assemble_line/assemble_line4.epddl
+
+Preprocessing Start!
+...
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               start : ------------
+
+Processing Completed!
+
+Planning Start!
+...
+===========================Plan Tree===========================
+processA +:
+  processB +:
+    tellAlpha
+      tellBeta
+        assemble
+          TERMINATE
+  processB -:
+    tellAlpha
+      restart
+        TERMINATE
+processA -:
+  tellBeta
+    restart
+      TERMINATE
+
+
+===========================Information===========================
+preTime = 0.004775
+totalTime = 0.201734
+searchTime = 0.196959
+heuristicTime = 0.00
+policyIterationTime = 0.00
+resDepth = 5
+resNodeNum = 12
+exploredNodeNum = 16
+
+Planning Completed!
+/bin/sh -c "./start ../benchmarks/assemble_line/assemble_line5.epddl"
+
+================================================================
+domain_file: ../benchmarks/assemble_line/assemble_line5.epddl
+
+Preprocessing Start!
+...
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        start : ------------
+
+Processing Completed!
+
+Planning Start!
+...
+===========================Plan Tree===========================
+processA +:
+  processB +:
+    tellAlpha
+      tellBeta
+        assemble
+          TERMINATE
+  processB -:
+    tellAlpha
+      restart
+        TERMINATE
+processA -:
+  tellBeta
+    restart
+      TERMINATE
+
+
+===========================Information===========================
+preTime = 0.006668
+totalTime = 0.354103
+searchTime = 0.347435
+heuristicTime = 0.00
+policyIterationTime = 0.00
+resDepth = 5
+resNodeNum = 12
+exploredNodeNum = 16
+
+Planning Completed!
+/bin/sh -c "./start ../benchmarks/assemble_line/assemble_line7.epddl"
+
+================================================================
+domain_file: ../benchmarks/assemble_line/assemble_line7.epddl
+
+Preprocessing Start!
+...
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          start : ------------
+
+Processing Completed!
+
+Planning Start!
+...
+===========================Plan Tree===========================
+processA +:
+  processB +:
+    tellAlpha
+      tellBeta
+        assemble
+          TERMINATE
+  processB -:
+    tellAlpha
+      restart
+        TERMINATE
+processA -:
+  tellBeta
+    restart
+      TERMINATE
+
+
+===========================Information===========================
+preTime = 0.014156
+totalTime = 1.739271
+searchTime = 1.725115
+heuristicTime = 0.00
+policyIterationTime = 0.00
+resDepth = 5
+resNodeNum = 12
+exploredNodeNum = 16
+
+Planning Completed!
+/bin/sh -c "./start ../benchmarks/assemble_line/assemble_line10.epddl"
+
+================================================================
+domain_file: ../benchmarks/assemble_line/assemble_line10.epddl
+
+Preprocessing Start!
+...
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  start : ------------
+
+Processing Completed!
+
+Planning Start!
+...
+===========================Plan Tree===========================
+processA +:
+  processB +:
+    tellAlpha
+      tellBeta
+        assemble
+          TERMINATE
+  processB -:
+    tellAlpha
+      restart
+        TERMINATE
+processA -:
+  tellBeta
+    restart
+      TERMINATE
+
+
+===========================Information===========================
+preTime = 0.036942
+totalTime = 20.204128
+searchTime = 20.167187
+heuristicTime = 0.00
+policyIterationTime = 0.00
+resDepth = 5
+resNodeNum = 12
+exploredNodeNum = 16
+
+Planning Completed!
+/bin/sh -c "./start "
+/bin/sh -c "./start ../benchmarks/SimpleMuddyChildren/SMC-3.epddl"
+
+================================================================
+domain_file: ../benchmarks/SimpleMuddyChildren/SMC-3.epddl
+
+Preprocessing Start!
+...
+                                                                                                                                                                                                                                                                                                                                                                                                                        start : ------------
+
+Processing Completed!
+
+Planning Start!
+...
+===========================Plan Tree===========================
+sense(a, b) +:
+  sense(a, c) +:
+    TERMINATE
+  sense(a, c) -:
+    ask(a, b, c) +:
+      TERMINATE
+    ask(a, b, c) -:
+      TERMINATE
+sense(a, b) -:
+  sense(a, c) +:
+    ask(a, b, c) +:
+      TERMINATE
+    ask(a, b, c) -:
+      TERMINATE
+  sense(a, c) -:
+    TERMINATE
+
+
+===========================Information===========================
+preTime = 0.004865
+totalTime = 0.053413
+searchTime = 0.048548
+heuristicTime = 0.00
+policyIterationTime = 0.00
+resDepth = 3
+resNodeNum = 11
+exploredNodeNum = 5
+
+Planning Completed!
+/bin/sh -c "./start ../benchmarks/SimpleMuddyChildren/SMC-4.epddl"
+
+================================================================
+domain_file: ../benchmarks/SimpleMuddyChildren/SMC-4.epddl
+
+Preprocessing Start!
+...
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 start : ------------
+
+Processing Completed!
+
+Planning Start!
+...
+===========================Plan Tree===========================
+sense(a, b) +:
+  ask(a, b, c, d) +:
+    TERMINATE
+  ask(a, b, c, d) -:
+    sense(a, c) +:
+      sense(a, d) +:
+        TERMINATE
+      sense(a, d) -:
+        ask(a, d, b, c) +:
+          TERMINATE
+        ask(a, d, b, c) -:
+          TERMINATE
+    sense(a, c) -:
+      sense(a, d) +:
+        ask(a, c, b, d) +:
+          TERMINATE
+        ask(a, c, b, d) -:
+          TERMINATE
+      sense(a, d) -:
+        TERMINATE
+sense(a, b) -:
+  ask(a, b, c, d) +:
+    TERMINATE
+  ask(a, b, c, d) -:
+    sense(a, c) +:
+      sense(a, d) +:
+        TERMINATE
+      sense(a, d) -:
+        ask(a, c, b, d) +:
+          TERMINATE
+        ask(a, c, b, d) -:
+          TERMINATE
+    sense(a, c) -:
+      sense(a, d) +:
+        ask(a, d, b, c) +:
+          TERMINATE
+        ask(a, d, b, c) -:
+          TERMINATE
+      sense(a, d) -:
+        TERMINATE
+
+
+===========================Information===========================
+preTime = 0.040035
+totalTime = 851.319031
+searchTime = 851.278992
+heuristicTime = 0.00
+policyIterationTime = 0.00
+resDepth = 5
+resNodeNum = 27
+exploredNodeNum = 13
+
+Planning Completed!
+/bin/sh -c "./start ../benchmarks/SimpleMuddyChildren/SMC-5.epddl"
+
+================================================================
+domain_file: ../benchmarks/SimpleMuddyChildren/SMC-5.epddl
+
+Preprocessing Start!
+...
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     start : ------------
+
+Processing Completed!
+
+Planning Start!
+...
+/bin/sh -c "./start ../benchmarks/SimpleMuddyChildren/SMC-6.epddl"
+
+================================================================
+domain_file: ../benchmarks/SimpleMuddyChildren/SMC-6.epddl
+
+Preprocessing Start!
+...
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           start : ------------
+
+Processing Completed!
+
+Planning Start!
+...

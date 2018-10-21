@@ -2,12 +2,7 @@
 #define	PLAN_H
 
 #include "initial.h"
-
-extern vector<OnticAction> ontic_actions;
-extern vector<EpisAction> epis_actions;
-// extern EpisDNF ontic_prog(EpisDNF episDNF, const OnticAction &ontic_action);
-
-// extern vector<EpisDNF> epistemic_prog(EpisDNF episDNF, const EpisAction &epis_action);
+#include "heuristicHelper.h"
 
 
 // 启发式所用的优先队列存放的元素
@@ -30,7 +25,7 @@ public:
 
 class Plan{
 public:
-    Plan(const char *domain, const char *p, int type = 0);
+    Plan(int type = 2);
     void exec_plan();
     
     void explore(int);
@@ -54,7 +49,6 @@ public:
     vector<Node> all_nodes;
 private:
     Initial in;
-    int search_difficulty = ontic_actions.size() + 2*epis_actions.size();
     int explored_num;
     vector<Transition> all_edges;
     int hert_nodes;
@@ -66,6 +60,7 @@ private:
     float epis_progression_time;
     float ontic_progression_time;
     float search_time;//搜索时间
+    HeuristicHelper helper_;
     // 优先队列，启发式使用
     priority_queue<PlanHelper, vector<PlanHelper>, PlanHelperComp> heuristic_que_;
     bool reset_key_ = false;

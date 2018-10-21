@@ -1,54 +1,38 @@
 #ifndef INITIAL_H
 #define INITIAL_H
 
-#include "define2.h"
+#include "define.h"
 
-extern list<string> agents;
-
-extern map<int, string> atomsByIndex;
-extern map<string, int> atomsByName;
-
-extern vector<EpisAction> epis_actions;
-extern vector<OnticAction> ontic_actions;
-
+extern vector<SensingAction> sActions;
+extern vector<OnticAction> oActions;
+extern KLDNF init;
+extern KLDNF goal;
+extern KLDNF posGoal;
+extern PropDNF constraint;
 
 class Initial {
 public:
     Initial() {}
-    void exec(const char* dFile, const char* pFile);
+    void exec();
     ~Initial() {}
 
-    ACDF init;
-    PropDNF constraint;
-    ACDF goal;
+    ACDF mine_init;
+    PropDNF mine_constraint;
+    vector<EpisAction> mine_epis_actions;
+    vector<OntiAction> mine_ontic_actions;
+    ACDF mine_goal;
+    ACDF mine_pos_goal;
 
 public:
-    // for atoms grounding and get all agents
-    void atomsGrounding();
-    // for epistemic action grounding
-    void episActionsGrounding();
-    PreEpistemicAction episActionParamGrouding(PreEpistemicAction & epistemicAction,
-        const string param, const string obj);
-    void replaceParamWithObj(Formula* f, const string param, const string obj);
-    // for ontic action grounding
-    void onticActionsGrounding();
-    PreOnticAction onticActionParamGrouding(PreOnticAction & onticAction,
-        const string param, const string obj);
-    vector<ConEffect> getOnticEffect(EffectList effects);
 
+    ACDF kldnf_to_acdf(const KLDNF & kldnf, const PropDNF & cstt) const;
 
-    ACDF getACDFFromTree(Formula*, size_t, bool is_goal = false);
-    ACDF getACDFTermsFromTree(Formula*, size_t, bool is_goal = false);
-    PropDNF getPropDNFFromTree(Formula*);
-    PropTerm getPropTermFromTree(Formula*);
+    ACDFTerm klterm_to_acdfterm(const KLTerm & klterm, const PropDNF & cstt) const;
 
-    void printAtoms(ofstream &) const;
-    void printAgents(ofstream &) const;
-    void printInit(ofstream &) const;
-    void printConstraint(ofstream &) const;
-    void printGoal(ofstream &) const;
-    void printEpisActions(ofstream &) const;
-    void printOnticActions(ofstream &) const;
+    ACDFList kpart_to_cover(const KLDNF & kpart, const PropDNF & cstt) const;
+
+    ACDFList lterm_to_cover(const KLDNF & lterm, const PropDNF & cstt) const;
+
 };
 
 #endif

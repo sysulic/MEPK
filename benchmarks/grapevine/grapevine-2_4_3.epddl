@@ -1,0 +1,134 @@
+(define (domain grapevine_d3)
+  (:objects
+    a
+    b
+    c
+    d - secret
+
+    p1
+    p2 - room
+
+  )
+
+  (:agents
+    a
+    b
+    c
+    d
+  )
+
+  (:predicates  (at ?ag - agent ?r - room)
+                (the ?se - secret)
+  )
+   
+  (:action left
+   :category (ontic)
+   :parameters (?ag - agent)
+   :precondition (K_?ag (at ?ag p2))
+   :effect (
+            <{(True)} { (and (K_?ag(at ?ag p1)) (K_?ag(not(at ?ag p2)))
+                          (at ?ag p1) (not(at ?ag p2))) }>
+          )
+  )
+
+  (:action right
+   :category (ontic)
+   :parameters (?ag - agent)
+   :precondition (K_?ag (at ?ag p1))
+   :effect (
+            <{(True)} { (and (K_?ag(at ?ag p2)) (K_?ag(not(at ?ag p1)))
+                          (at ?ag p2) (not(at ?ag p1)))}>
+          )
+  )
+  
+  (:action share
+   :category (communication)
+   :parameters (?ag - agent ?x - agent ?y - agent ?z - agent ?rk - room ?rj - room)
+   :precondition (and (K_?ag (at ?ag ?rk)) (K_?ag (the ?ag))
+                 )
+   :effect (<{(and (at ?x ?rk)     
+                  (at ?y ?rk)       
+                  (at ?z ?rk))
+                 }
+             {(and (K_?x (the ?ag))
+                  (K_?y (the ?ag))
+                  (K_?z (the ?ag))
+                  (K_?ag (K_?x (the ?ag)))
+                  (K_?ag (K_?y (the ?ag)))
+                  (K_?ag (K_?z (the ?ag)))
+                  (K_?x (K_?ag (K_?x (the ?ag))))
+                  (K_?y (K_?ag (K_?y (the ?ag))))
+                  (K_?z (K_?ag (K_?z (the ?ag)))))
+                  } >
+            
+            <{(and (at ?x ?rk)        
+                  (at ?y ?rk)             
+                  (at ?z ?rj))}
+             {(and 
+                  (K_?x (the ?ag))
+                  (K_?ag (K_?x (the ?ag)))
+                  (K_?x (K_?ag (K_?x (the ?ag))))
+                  (K_?y (the ?ag))
+                  (K_?ag (K_?y (the ?ag)))
+                  (K_?y (K_?ag (K_?y (the ?ag)))))
+
+                  } >
+            
+            <{(and (at ?x ?rk)    
+                 (at ?y ?rj)             
+                  (at ?z ?rj))}
+             {(and 
+             (K_?x (the ?ag))
+             (K_?ag (K_?x (the ?ag)))
+             (K_?x (K_?ag (K_?x (the ?ag)))))
+             
+             } >         
+            <{(and (not (at ?x ?rk))
+                  (at ?x ?rj)  
+                  (at ?y ?rj)           
+                  (at ?z ?rj))}
+             {(K_?ag (the ?ag))} >
+          )
+  )
+
+  (:init (and (at a p1)
+        (not (at a p2))
+        (at b p1)
+        (not (at b p2))
+        (at c p1)
+        (not (at c p2))
+        (at d p1)
+        (not (at d p2))
+        (K_a (and (at a p1)
+              (not (at a p2))) )
+        (K_b (and (at b p1)
+              (not (at b p2))) )
+        (K_c (and (at c p1)
+              (not (at c p2))) )
+        (K_d (and (at d p1)
+              (not (at d p2))) )
+        (K_a (the a))
+        (K_b (the b))
+        (K_c (the c))
+        (K_d (the d))
+        (not (K_b (the a)))
+        (not (K_c (the a)))
+        (not (K_d (the a)))
+       )
+  )
+
+  (:constraint (True)
+  )
+
+  (:goal (and  (K_b (the a))
+                       (K_a(K_b (the a)))
+                       (K_b(K_a(K_b (the a))))
+                                   (not(K_c (the a)))
+                                   (K_d (the a))
+                                   (K_a(K_d (the a)))
+                                   (K_d(K_a(K_d (the a))))
+         )
+    
+  )
+
+)

@@ -1,0 +1,65 @@
+(define (domain hexa3)
+
+  (:objects
+    red
+    blue
+    white - card
+  )
+
+  (:agents
+    a
+    b
+    c
+  )
+  
+  (:predicates (own ?ag - agent ?c - card)
+  )
+   
+  (:action ask_red
+   :category (sensing)
+   :parameters (?x - agent ?y - agent)
+   :precondition (K_?x (or (own ?x white) (own ?x blue))
+                 )
+   :observe_pos (K_?x(own ?y red) )
+   :observe_neg (K_?x(not(own ?y red)) )
+  )
+
+   
+  (:action ask_white
+   :category (sensing)
+   :parameters (?x - agent ?y - agent)
+   :precondition (K_?x (or (own ?x red) (own ?x blue))
+                 )
+   :observe_pos (K_?x(own ?y white) )
+   :observe_neg (K_?x(not(own ?y white)) )
+  )
+
+   
+  (:action ask_blue
+   :category (sensing)
+   :parameters (?x - agent ?y - agent)
+   :precondition (K_?x (or (own ?x white) (own ?x red))
+                 )
+   :observe_pos (K_?x(own ?y blue) )
+   :observe_neg (K_?x(not(own ?y blue)) )
+  )
+
+  (:init (K_a (or (and (own a red) (own b white) (not (own b blue)) (own c blue) (not (own c white)))
+          (and (own a red) (own c white) (not (own c blue)) (own b blue) (not (own b white)))
+        )
+       )
+  )
+
+  (:constraint (True
+         )
+  )
+
+  (:goal (or (K_a (and (own a red) (own b white) (own c blue)
+          )
+         )
+         (K_a (and (own a red) (own b blue) (own c white)
+          )
+         )
+       )
+  )
+)

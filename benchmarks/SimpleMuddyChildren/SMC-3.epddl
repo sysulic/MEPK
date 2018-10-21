@@ -1,0 +1,55 @@
+(define (domain smc3)
+  (:objects
+    
+  )
+
+  (:agents
+    a
+    b
+    c
+  )
+
+  (:predicates
+    (mud ?ag - agent)
+  )
+
+  (:action sense
+   :category (sensing)
+   :parameters (?ag1 - agent ?ag2 - agent)
+   :precondition (True)
+   :observe_pos (K_?ag1 (mud ?ag2))
+   :observe_neg (K_?ag1 (not (mud ?ag2)))
+  )
+
+  (:action ask
+   :category (sensing)
+   :parameters (?ag1 - agent ?ag2 - agent ?ag3 - agent)
+   :precondition (or (K_?ag1 (mud ?ag2))
+                (K_?ag1 (not (mud ?ag2))))
+   :observe_pos (K_?ag1 ( or
+                (and (mud ?ag2) (not (mud ?ag1)) (not (mud ?ag3)) )
+                (and (not (mud ?ag2)) (mud ?ag1)  (mud ?ag3) )
+          ))
+   :observe_neg (K_?ag1 (or
+            (and (mud ?ag2) (not (mud ?ag1)) (mud ?ag3))
+            (and (mud ?ag2) (mud ?ag1) (not (mud ?ag3)))
+            (and (not (mud ?ag2)) (not (mud ?ag1)) (mud ?ag3))
+            (and (not (mud ?ag2)) (mud ?ag1) (not (mud ?ag3)))
+          ))
+   )
+
+   (:init  (K_a (or 
+        (and (not (mud a)) (mud b) (mud c))
+        (and (mud a) (not (mud b)) (mud c))
+        (and (mud a) (mud b) (not (mud c)))
+        (and (not (mud a)) (not (mud b)) (mud c))
+        (and (not (mud a)) (mud b) (not (mud c)))
+        (and (mud a) (not (mud b)) (not (mud c)))
+           )
+
+   ))
+
+   (:constraint (True))
+
+   (:goal (or (K_a (mud a)) (K_a (not (mud a)))))
+)

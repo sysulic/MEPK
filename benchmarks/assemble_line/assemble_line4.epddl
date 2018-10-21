@@ -1,0 +1,94 @@
+(define (domain assemble_line4)
+  (:objects
+  )
+
+  (:agents
+    a
+    b
+  )
+
+  (:predicates (assemble) (restart) (qulifiedA) (qulifiedB)
+  )
+
+  (:action processA
+   :category (sensing)
+   :parameters ()
+   :precondition (and (not (K_a (qulifiedA))) (not (K_a(not (qulifiedA)))) )             
+   :observe_pos (and (qulifiedA) (K_a(qulifiedA)) )
+   :observe_neg (and (not (qulifiedA)) (K_a (not (qulifiedA))))
+  )
+  
+  (:action processB
+   :category (sensing)
+   :parameters ()
+   :precondition (and (not (K_b (qulifiedB))) (not (K_b(not (qulifiedB)))) )
+   :observe_pos (and (qulifiedB) (K_b(qulifiedB)) )
+   :observe_neg (and (not (qulifiedB)) (K_b (not (qulifiedB))))
+  )
+
+  (:action tellAlpha
+   :category (communication)
+   :parameters ()
+   :precondition (or (K_b (qulifiedB)) (K_b(not (qulifiedB))))
+   :effect (<{(K_b (qulifiedB))}
+             {(and (K_a(K_b(qulifiedB))) 
+                       (K_b(K_a(K_b(qulifiedB))))
+                       (K_a(K_b(K_a(K_b(qulifiedB))))))
+             }>
+            <{(K_b (not (qulifiedB)))}
+             {(and (K_a(K_b(not (qulifiedB)))) 
+                      (K_b(K_a(K_b(not(qulifiedB)))))
+                      (K_a(K_b(K_a(K_b(not(qulifiedB)))))))
+                      }>
+           )
+  )
+  
+  (:action tellBeta
+   :category (communication)
+   :parameters ()
+   :precondition (or (K_a (qulifiedA)) (K_a(not (qulifiedA))))
+   :effect (<{(K_a (qulifiedA))}
+             {(and (K_b(K_a(qulifiedA))) 
+                      (K_a(K_b(K_a(qulifiedA))))
+                      (K_b(K_a(K_b(K_a(qulifiedA))))))
+              }>
+            <{(K_a (not (qulifiedA)))}
+             {(and (K_b(K_a(not (qulifiedA)))) 
+                      (K_a(K_b(K_a(not(qulifiedA)))))
+                      (K_b(K_a(K_b(K_a(not(qulifiedA)))))))
+              }>
+           )
+  )
+  
+  (:action assemble
+   :category (ontic)
+   :parameters ()
+   :precondition (and (K_b(K_a (K_b (K_a(qulifiedA))))) (K_a(K_b (K_a (K_b(qulifiedB))))) )
+   :effect (<{(and (qulifiedA) (qulifiedB))}
+             {(assemble)}>
+           )
+  )
+  
+  (:action restart
+   :category (ontic)
+   :parameters ()
+   :precondition (or (K_b(K_a (K_b (K_a(not (qulifiedA)))))) (K_a(K_b (K_a (K_b(not (qulifiedB)))))) )
+   :effect (<{(or (not (qulifiedA)) (not (qulifiedB)))}
+             {(restart)}>
+           )
+  )
+  
+  (:init (and (not (assemble)) (not (restart))
+        (not (K_a (qulifiedA))) (not (K_a(not (qulifiedA)))) 
+        (not (K_b (qulifiedB))) (not (K_b(not (qulifiedB))))
+       )
+  )
+
+  (:constraint (not (and (assemble) (restart))
+         )
+  )
+
+  (:goal (or (assemble) (restart)
+      )
+  )
+)

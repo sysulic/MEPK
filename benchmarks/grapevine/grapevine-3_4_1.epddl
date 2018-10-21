@@ -1,0 +1,144 @@
+(define (domain grapevine3)
+  (:objects
+    a
+    b
+    c
+    d - secret
+
+    p1
+    p2
+    p3 - room
+
+  )
+
+  (:agents
+    a
+    b
+    c
+    d
+  )
+
+  (:predicates  (at ?ag - agent ?r - room)
+                (the ?se - secret)
+  )
+   
+  (:action left
+   :category (ontic)
+   :parameters (?ag - agent)
+   :precondition (K_?ag (not (at ?ag p1))) 
+   :effect (
+            <{(at ?ag p2)} { (and (K_?ag(at ?ag p1 )) (K_?ag(not(at ?ag p2))) (K_?ag(not(at ?ag p3)))
+                          (at ?ag p1) (not(at ?ag p2)) (not(at ?ag p3)))}>
+            <{(at ?ag p3)} { (and (K_?ag(at ?ag p1)) (K_?ag(not(at ?ag p2))) (K_?ag(not(at ?ag p3)))
+                          (at ?ag p1) (not(at ?ag p2)) (not(at ?ag p3)))}>
+          )
+  )
+
+  (:action right
+   :category (ontic)
+   :parameters (?ag - agent)
+   :precondition (K_?ag (not (at ?ag p3)) )
+   :effect (
+            <{(at ?ag p1)} { (and (K_?ag(at ?ag p2)) (K_?ag(not(at ?ag p1))) (K_?ag(not(at ?ag p3)))
+                          (at ?ag p2) (not(at ?ag p1)) (not(at ?ag p3))) }>
+            <{(at ?ag p2)} { (and (K_?ag(at ?ag p3)) (K_?ag(not(at ?ag p2))) (K_?ag(not(at ?ag p1)))
+                          (at ?ag p3) (not(at ?ag p2)) (not(at ?ag p1))) }>
+          )
+  )
+  
+  (:action share
+   :category (communication)
+   :parameters (?ag - agent ?x - agent ?y - agent ?z - agent ?rk - room ?rj - room ?rl - room)
+   :precondition (and (K_?ag (at ?ag ?rk)) (K_?ag (the ?ag))
+                 )
+   :effect (<{(and (at ?x ?rk)
+                  (not (at ?x ?rj))
+                  (not (at ?x ?rl))
+                  (at ?y ?rk)
+                  (not (at ?y ?rj))
+                  (not (at ?y ?rl))
+                  (at ?z ?rk)
+                  (not (at ?z ?rj))              
+                  (not (at ?z ?rl)))}
+             {(and (K_?x (the ?ag))
+                  (K_?y (the ?ag))
+                  (K_?z (the ?ag)))} >
+            
+            <{(and (at ?x ?rk)
+                  (not (at ?x ?rj))
+                  (not (at ?x ?rl))
+                  (at ?y ?rk)
+                  (not (at ?y ?rj))
+                  (not (at ?y ?rl))
+                  (at ?z ?rj)
+                  (not (at ?z ?rk))
+                  (not (at ?z ?rl)))}
+             {(and (K_?x (the ?ag))
+                  (K_?y (the ?ag)))} >
+            
+            <{(and (at ?x ?rk)
+                  (not (at ?x ?rj))
+                  (not (at ?x ?rl))
+                  (at ?y ?rj)
+                  (not (at ?y ?rk))
+                  (not (at ?y ?rl))
+                  (at ?z ?rj)
+                  (not (at ?z ?rk))
+                  (not (at ?z ?rl)))
+                  }
+             {(K_?x (the ?ag))} >
+            
+            <{(and (at ?x ?rj)
+                  (not (at ?x ?rk))
+                  (not (at ?x ?rl))  
+                  (at ?y ?rj)             
+                  (not (at ?y ?rk))
+                  (not (at ?y ?rl))
+                  (at ?z ?rj)
+                  (not (at ?z ?rk))  
+                  (not (at ?z ?rl)))}              
+             {(K_?ag (the ?ag))} >
+          )
+  )
+
+  (:init (and (at a p2)
+        (not (at a p1))
+        (not (at a p3))
+        (at b p2)
+        (not (at b p1))
+        (not (at b p3))
+        (at c p2)
+        (not (at c p1))
+        (not (at c p3))
+        (at d p2)
+        (not (at d p1))
+        (not (at d p3))
+        (K_a (and (at a p2)
+              (not (at a p1)) (not (at a p3)) ) )
+        (K_b (and (at b p2)
+              (not (at b p1)) (not (at a p3)) ) )
+        (K_c (and (at c p2)
+              (not (at c p1)) (not (at a p3)) ) )
+        (K_d (and (at d p2)
+              (not (at d p1)) (not (at a p3)) ) )
+        (K_a (the a))
+        (K_b (the b))
+        (K_c (the c))
+        (K_d (the d))
+        (not (K_b (the a)))
+        (not (K_c (the a)))
+        (not (K_d (the a)))
+       )
+  )
+
+  (:constraint (True)
+  )
+
+  (:goal (and  (K_b (the a))
+                 (not(K_c (the a)))
+                 (K_d (the a))
+         )
+    
+  )
+
+)
