@@ -1,0 +1,102 @@
+(define (domain coin_in_the_box)
+
+    (:objects
+    )
+    
+    (:agents
+        a
+        b
+        c
+    )
+    
+  (:types)
+  (:predicates  (has_key ?ag - agent)
+                (looking ?ag - agent)
+  )
+   
+  (:action open_a
+   :category (ontic)
+   :parameters ()
+   :precondition (and (has_key a)
+                      (K_a (has_key a))
+                  )
+   :effect (<{True} {and (opened) (K_a (opened))}>
+            <{looking b} {and (opened) (K_a (opened))}>
+            <{looking c} {and (opened) (K_a (opened))}>
+    )
+  )
+
+  (:action peek
+   :category (ontic)
+   :parameters (?ag1 - agent ?ag2 - agent ?ag3 - agent)
+   :precondition (and (K_?ag1 (opened))
+                  )
+   :effect (<{True} {(K_?ag1 (tail))}>
+            <{looking ?ag2} {K_?ag2 (tail)}>
+            <{looking ?ag3} {K_?ag3 (tail)}>
+    )
+  )
+
+  (:action signal
+   :category (ontic)
+   :parameters (?ag1 - agent ?ag2 - agent)
+   :precondition (and (looking ?ag1)
+                      (not (looking ?ag2))
+                      (K_?ag1 (looking ?ag1))
+                      (K_?ag1 (not (looking ?ag2)))
+                  )
+   :effect (<{True} {and (looking ?ag2) (K_?ag1 (looking ?ag2)) (K_?ag2 (looking ?ag2))}>
+    )
+  )
+
+  (:action distract
+   :category (ontic)
+   :parameters (?ag1 - agent ?ag2 - agent)
+   :precondition (and (looking ?ag1)
+                      (looking ?ag2)
+                      (K_?ag1 (looking ?ag1))
+                      (K_?ag1 (looking ?ag2))
+                  )
+   :effect (<{True} {and (not (looking ?ag2)) (K_?ag1 (not (looking ?ag2))) (K_?ag2 (not (looking ?ag2)))}>
+    )
+  )
+
+  (:action shout
+   :category (communication)
+   :parameters (?ag1 - agent ?ag2 - agent ?ag3 - agent)
+   :precondition (and (tail)
+                      (looking ?ag1)
+                      (looking ?ag2)
+                      (looking ?ag3)
+                      (K_?ag1 (tail))
+                      (K_?ag1 (looking ?ag1))
+                      (K_?ag1 (looking ?ag2))
+                      (K_?ag1 (looking ?ag3))
+                  )
+   :effect (<{True} {and (K_?ag2 (tail)) (K_?ag3 (tail))}>
+    )
+  )
+
+    (:init (and (tail)
+                (has_key a)
+                (not (has_key b))
+                (not (has_key c))
+                (not (opened))
+                (looking a)
+                (looking b)
+                (looking c)
+                (not (K_a tail)) (not (K_b tail)) (not (K_c tail))
+                (K_a (has_key a)) (K_b (has_key a)) (K_c (has_key a))
+                (K_a (not (has_key b))) (K_b (not (has_key b))) (K_c (not (has_key b)))
+                (K_a (not (has_key c))) (K_b (not (has_key c))) (K_c (not (has_key c)))
+                (K_a (not (opened))) (K_b (not (opened))) (K_c (not (opened)))
+                (K_a (looking a)) (K_b (looking b)) (K_c (looking c))
+           )
+    )
+
+    (:constraint (True)
+    )
+    
+    (:goal (K_a tail)
+    )
+)
