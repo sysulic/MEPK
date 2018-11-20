@@ -25,7 +25,7 @@ public:
 
 class Plan{
 public:
-    Plan(int type = 2);
+    Plan(const char *domain, int type = 2);
     void exec_plan();
     
     void explore(int);
@@ -48,6 +48,8 @@ public:
     
     vector<Node> all_nodes;
 private:
+    Parse parser;
+    
     Initial in;
     int explored_num;
     vector<Transition> all_edges;

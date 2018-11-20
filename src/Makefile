@@ -1,6 +1,6 @@
 #Makefile
 
-OBJECTS = main.o epddlLexer.o epddlParser.o acdf.o adnf.o parse.o heuristicHelper.o initial.o plan.o planner.o
+OBJECTS = main.o epddlLexer.o epddlParser.o acdf.o adnf.o parse.o heuristicHelper.o initial.o plan.o
 
 LEXER = flex
 PARSER = bison
@@ -12,9 +12,6 @@ start: ${OBJECTS}
 
 main: main.cpp
 	${COMPILER} ${COMPILE_OPTION} -c main.cpp -o main.o -O2
-
-planner.o: planner.h planner.cpp
-	${COMPILER} ${COMPILE_OPTION} -c planner.cpp -o planner.o -O2
 
 plan.o: plan.h plan.cpp
 	${COMPILER} ${COMPILE_OPTION} -c plan.cpp -o plan.o -O2
