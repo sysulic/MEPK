@@ -37,6 +37,22 @@ cout << "start : ------------" << endl;
         }
         mine_ontic_actions.push_back(o_a);
     }
+
+    // /* for printing compiled info */
+    // string endFile = "../output/gossip3";
+    // ofstream out_end(endFile.c_str());  // 打开要写入的文本文件
+    // if(!out_end.is_open()) {
+    //     cout << "cannot open " << endFile << endl;
+    //     return;
+    // }
+    // printAtoms(out_end);
+    // printAgents(out_end);
+    // printInit(out_end);
+    // printConstraint(out_end);
+    // printGoal(out_end);
+    // printEpisActions(out_end);
+    // printOnticActions(out_end);
+    // out_end.close();
 }
 
 ACDF Initial::kldnf_to_acdf(const KLDNF & kldnf, const PropDNF & cstt) const {
@@ -70,26 +86,37 @@ ACDFTerm Initial::klterm_to_acdfterm(const KLTerm & klterm, const PropDNF & cstt
     set<string> done_agents;
     for (auto& cover: klterm.KPart) {
         done_agents.insert(cover.first);
-        acdf_term.covers[cover.first] = kpart_to_cover(cover.second, cstt);
-        if (klterm.LPart.find(cover.first) != klterm.LPart.end())
+        if (klterm.LPart.find(cover.first) != klterm.LPart.end()) {
+            // proposition 2.6 - 2
             for (auto& lterm : klterm.LPart.at(cover.first)) {
 
 // std::cout << endl << " ~~~~~---------------------------~~~~~~" << std::endl;
 // acdf_term.covers[cover.first].print();
-                ACDFList new_list = lterm_to_cover(lterm, cstt);
+                ACDFList new_list;
+                ACDF k_part_cover = kldnf_to_acdf(cover.second, cstt);
+                new_list.acdfs.push_back(k_part_cover);
+                for (auto& lterm : klterm.LPart.at(cover.first))
+                    new_list.acdfs.push_back(k_part_cover.conjunction(kldnf_to_acdf(lterm, cstt)));
 // std::cout << endl << " conjunction with  --------------~~~~~~" << std::endl;
 // new_list.print();
-                acdf_term.covers[cover.first] = acdf_term.covers[cover.first].conjunction(new_list).minimal(cstt);
+                acdf_term.covers[cover.first] = new_list;
  
 // std::cout << endl << " got ============  --------------~~~~~~" << std::endl;
 // acdf_term.print();
            }
+        } else {
+            acdf_term.covers[cover.first] = kpart_to_cover(cover.second, cstt);
+        }
     }
     for (auto& lterm : klterm.LPart)
-        if (done_agents.find(lterm.first) == done_agents.end())
-            for (auto& lacdf : klterm.LPart.at(lterm.first)) {
-                acdf_term.covers[lterm.first] = acdf_term.covers[lterm.first].conjunction(lterm_to_cover(lacdf, cstt)).minimal(cstt);
-            }
+        if (done_agents.find(lterm.first) == done_agents.end()) {
+            ACDFList cover;
+            ACDF true_acdf(true);
+            cover.acdfs.push_back(true_acdf);
+            for (auto& lacdf : klterm.LPart.at(lterm.first))
+                cover.acdfs.push_back(kldnf_to_acdf(lacdf, cstt));
+            acdf_term.covers[lterm.first] = cover;
+        }
     
 // std::cout << endl << " ~~~~~-------------------------~~~~~~" << std::endl;
 // acdf_term.print();
@@ -99,17 +126,5 @@ ACDFTerm Initial::klterm_to_acdfterm(const KLTerm & klterm, const PropDNF & cstt
 ACDFList Initial::kpart_to_cover(const KLDNF & kpart, const PropDNF & cstt) const {
     ACDFList cover;
     cover.acdfs.push_back(kldnf_to_acdf(kpart, cstt));
-    return cover;
-}
-
-ACDFList Initial::lterm_to_cover(const KLDNF & lterm, const PropDNF & cstt) const {
-// std::cout << endl << " ~~~~~++++++++++++++++++++++++++-~~~~~~" << std::endl;
-// lterm.print();
-    ACDFList cover;
-    ACDF true_acdf(true);
-    cover.acdfs.push_back(true_acdf);
-    cover.acdfs.push_back(kldnf_to_acdf(lterm, cstt));
-// std::cout << endl << " ~~~~~---------------------------~~~~~~" << std::endl;
-// cover.print();
     return cover;
 }

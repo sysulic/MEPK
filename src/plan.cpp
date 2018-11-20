@@ -1,7 +1,7 @@
 #include "plan.h"
 #include <algorithm>
 
-Plan::Plan(int type) {
+Plan::Plan(const char* domain, int type) {
     printf("================================================================\n");
     // printf("domain_file(%s)\n     p_file(%s)\n", domain, p);
     // if (type == 0)
@@ -18,6 +18,7 @@ Plan::Plan(int type) {
     plan_tree_node_num = 0;
     clock_t t_start = clock();
     printf("Preprocessing...\n");
+    parser.exec(domain, false);
     in.exec();
 
     // //print actions

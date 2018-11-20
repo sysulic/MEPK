@@ -15,10 +15,8 @@
   (:action call
    :category (communication)
    :parameters (?ag1 - agent ?ag2 - agent ?ag3 - agent ?ag4 - agent )
-   :precondition (or 
-                    (K_?ag1(and (the ?ag1) (not (K_?ag2 (the ?ag1)))))
-                    (K_?ag1(and (the ?ag3) (not (K_?ag2 (the ?ag3)))))
-                    (K_?ag1(and (the ?ag4) (not (K_?ag2 (the ?ag4)))))
+   :precondition (
+                    K_?ag1(and (the ?ag1) (not (K_?ag2 (the ?ag1))))
                  )
    :effect (<{(True)}
              {(and (K_?ag1 (the ?ag2)) (K_?ag2 (the ?ag1)))}>

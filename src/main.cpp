@@ -1,5 +1,4 @@
 #include "header.h"
-#include "planner.h"
 #include "plan.h"
 
 using namespace std;
@@ -27,13 +26,10 @@ double preTime, searchTime;
 int main(int argc, char** argv) {
 
 	if (argc < 2) return 0;
-	Planner planner(argv[1]);
 
-	// Plan p(atoi(argv[2]));
-	// p.exec_plan();
-	// p.show_statistic();
-
-	planner.exec();
+	Plan p(argv[1], atoi(argv[2]));
+	p.exec_plan();
+	p.show_statistic();
 
 	return 0;
 }

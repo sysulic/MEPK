@@ -8,7 +8,7 @@ timeout() {
 
     echo $command
 
-    expect -c "set echo \"-noecho\"; set timeout $time; spawn -noecho $command; expect timeout { exit 1 } eof { exit 0 }"    
+    expect -c "set timeout $time; spawn -noecho $command; expect timeout { exit 1 } eof { exit 0 }"    
 
     if [ $? = 1 ] ; then
         echo "Timeout after ${time} seconds"
