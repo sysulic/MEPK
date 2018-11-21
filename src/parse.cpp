@@ -45,7 +45,7 @@ void Parse::exec(const char* path, bool showCompileResult) {
 	//		oActions[i].eff[j].condition = oActions[i].eff[j].condition.negation(constraint);
 	//	}
 	//}
-
+	
 	// output the compile result
 	ofstream os("compile.output");
 	os << "================================= " << 

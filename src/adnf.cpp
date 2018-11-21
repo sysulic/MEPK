@@ -98,16 +98,16 @@ set<string> PropTerm::getTotalLiterals() const {
 }
 
 void PropTerm::print() const {
-	if (!isSatisfiable()) cout << "(False)";
+	if (!isSatisfiable()) cout << "False";
 	else {
 		bool flag = true;
 		for (int i = 0; i < len; i++) {
 			if (literal[i] == UNDEFINED) continue;
-			cout << ((flag) ? "(" : logicAnd)
+			cout << ((flag) ? "" : logicAnd)
 				<< ((literal[i] == TRUE) ? "" : logicNot) << findAtomsByIndex[i];
 			flag = false;
 		}
-		cout << ((flag) ? "(True)" : ")");
+		cout << ((flag) ? "True" : "");
 	}
 }
 

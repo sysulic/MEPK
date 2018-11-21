@@ -1,13 +1,12 @@
 #include "initial.h"
-#include "heuristicHelper.h"
 
 
 void Initial::exec() {
-cout << "start : ------------" << endl;
+// cout << "start : ------------" << endl;
     mine_constraint = constraint;
     mine_init = kldnf_to_acdf(init, mine_constraint);
     mine_goal = kldnf_to_acdf(goal, mine_constraint);
-// mine_pos_goal = kldnf_to_acdf(posGoal, mine_constraint);
+    mine_pos_goal = kldnf_to_acdf(posGoal, mine_constraint);
 // cout << "init : ------------" << endl;
 // init.print();
 // cout << "mine init : ------------" << endl;
@@ -88,22 +87,18 @@ ACDFTerm Initial::klterm_to_acdfterm(const KLTerm & klterm, const PropDNF & cstt
         done_agents.insert(cover.first);
         if (klterm.LPart.find(cover.first) != klterm.LPart.end()) {
             // proposition 2.6 - 2
-            for (auto& lterm : klterm.LPart.at(cover.first)) {
-
 // std::cout << endl << " ~~~~~---------------------------~~~~~~" << std::endl;
 // acdf_term.covers[cover.first].print();
-                ACDFList new_list;
-                ACDF k_part_cover = kldnf_to_acdf(cover.second, cstt);
-                new_list.acdfs.push_back(k_part_cover);
-                for (auto& lterm : klterm.LPart.at(cover.first))
-                    new_list.acdfs.push_back(k_part_cover.conjunction(kldnf_to_acdf(lterm, cstt)));
+            ACDFList new_list;
+            ACDF k_part_cover = kldnf_to_acdf(cover.second, cstt);
+            new_list.acdfs.push_back(k_part_cover);
+            for (auto& lterm : klterm.LPart.at(cover.first))
+                new_list.acdfs.push_back(k_part_cover.conjunction(kldnf_to_acdf(lterm, cstt)));
 // std::cout << endl << " conjunction with  --------------~~~~~~" << std::endl;
 // new_list.print();
-                acdf_term.covers[cover.first] = new_list;
- 
+            acdf_term.covers[cover.first] = new_list;
 // std::cout << endl << " got ============  --------------~~~~~~" << std::endl;
 // acdf_term.print();
-           }
         } else {
             acdf_term.covers[cover.first] = kpart_to_cover(cover.second, cstt);
         }

@@ -948,10 +948,18 @@ NegGeneralFormulaAtom
 	};
 %%
 
-int yyerror(char* s) {
-	return 0;
+int yyerror(string s)
+{
+  extern int yylineno;	// defined and maintained in lex.c
+  extern char *yytext;	// defined and maintained in lex.c
+  
+  cerr << "ERROR: " << s << " at symbol \"" << yytext;
+  cerr << "\" on line " << yylineno << endl;
+  exit(1);
+  return 0;
 }
 
-int yyerror(std::string s) {
-	return 0;
+int yyerror(char *s)  // 当yacc遇到语法错误时，会回调yyerror函数，并且把错误信息放在参数s中
+{
+	return yyerror(string(s));
 }

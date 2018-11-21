@@ -2,8 +2,7 @@
 #define	PLAN_H
 
 #include "initial.h"
-#include "heuristicHelper.h"
-
+#include "parse.h"
 
 // 启发式所用的优先队列存放的元素
 class PlanHelper {
@@ -25,11 +24,7 @@ public:
 
 class Plan{
 public:
-<<<<<<< HEAD
-    Plan(const char* domain, int type = 2);
-=======
     Plan(const char *domain, int type = 2);
->>>>>>> 35619fecf50fc0b1ec16240192f012e8275b1f03
     void exec_plan();
     
     void explore(int);
@@ -66,7 +61,6 @@ private:
     float epis_progression_time;
     float ontic_progression_time;
     float search_time;//搜索时间
-    HeuristicHelper helper_;
     // 优先队列，启发式使用
     priority_queue<PlanHelper, vector<PlanHelper>, PlanHelperComp> heuristic_que_;
     bool reset_key_ = false;

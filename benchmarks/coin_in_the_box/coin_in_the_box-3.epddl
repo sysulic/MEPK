@@ -101,6 +101,10 @@
     (:constraint (True)
     )
     
-    (:goal (K_a (tail))
+    (:goal (and (K_a (tail))
+                (K_b (and (tail)
+                          (or (K_a (tail))
+                              (K_a (not (tail))))) )
+            )
     )
 )

@@ -34,8 +34,10 @@ void ACDFTerm::print(size_t indent) const {
         cout << "True Term" << endl;
         return;
     }
-    propDNF.print(indent);
-    cout << endl;
+    if (!propDNF.dnf.empty()){
+        propDNF.print(indent);
+        cout << endl;
+    }
     for (map<string, ACDFList>::const_iterator it = covers.begin();
             it != covers.end(); ++it) {
         for (size_t i = 0; i < indent; ++i) cout << ' ';  // indent
@@ -69,10 +71,10 @@ bool ACDFTerm::neg_entails(const ACDFTerm & acdf_term, const PropDNF & cstt, boo
 
     if (!propDNF.conjunction(acdf_term.propDNF).conjunction(cstt).isSatisfiable()) {
         if (try_goal) (*value)++;
+    // cout << "success 1" << endl;
         return true;
     }
 
-    // cout << "haha 1" << endl;
     for (map<string, ACDFList>::const_iterator cover1 = covers.begin();
         cover1 != covers.end(); ++cover1) {
         if (tmp_term.covers.find(cover1->first) == tmp_term.covers.end())
@@ -92,10 +94,12 @@ bool ACDFTerm::neg_entails(const ACDFTerm & acdf_term, const PropDNF & cstt, boo
                     // (*value)++;
                 }
             }
-            if (flag) return true;
+            if (flag) {
+                // cout << "success 2" << endl;
+                return true;
+            }
         }
 
-    // cout << "haha 2" << endl;
         for (list<ACDF>::const_iterator acdf2 = acdflist_tmp.acdfs.begin();
             acdf2 != acdflist_tmp.acdfs.end(); ++acdf2) {
             bool flag = true;
@@ -108,9 +112,11 @@ bool ACDFTerm::neg_entails(const ACDFTerm & acdf_term, const PropDNF & cstt, boo
                     // (*value)++;
                 }
             }
-            if (flag) return true;
+            if (flag) {
+                // cout << "success 3" << endl;
+                return true;
+            }
         }
-    // cout << "haha 3" << endl;
     }
         // cout << "fail =====================================" << endl;
 

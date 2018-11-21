@@ -21,7 +21,6 @@ PropDNF constraint;
 
 // search data
 int atomNum, solNum, expNum, solDepth;
-double preTime, searchTime;
 
 int main(int argc, char** argv) {
 

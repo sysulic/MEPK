@@ -1,11 +1,7 @@
 #include "plan.h"
 #include <algorithm>
 
-<<<<<<< HEAD
-Plan::Plan(const char* domain, int type) {
-=======
 Plan::Plan(const char *domain, int type) {
->>>>>>> 35619fecf50fc0b1ec16240192f012e8275b1f03
     printf("================================================================\n");
     // printf("domain_file(%s)\n     p_file(%s)\n", domain, p);
     // if (type == 0)
@@ -63,31 +59,6 @@ void Plan::exec_plan() {
     while(true) {
         int node_pos = get_tobeexplored_node();//heuristic
         if (node_pos == -1) {
-
-    // print all edges
-    // for (vector<Transition>::const_iterator e = all_edges.begin();
-    // e != all_edges.end(); ++e) {
-    //     cout << e->front_state << " - "
-    //         << (e->is_observe_action ? in.mine_epis_actions[e->action_number].name : in.mine_ontic_actions[e->action_number].name)
-    //         << " - " << e->next_state << endl;
-    //     // all_nodes[e->next_state].kb.print();
-    // }
-    
-    // for (size_t i = 0; i < all_nodes.size(); ++i) {
-    //     if (all_nodes[i].kb.equals(acdf, in.mine_constraint))
-    //     {
-    //         cout << "------ this node can entail 13+alpha -------------" << endl;
-    //         all_nodes[i].kb.print();
-    //     }
-    // }
-
-    // print all nodes
-    // for (size_t xx = 0; xx < all_nodes.size(); ++xx)
-    // {
-    //     cout <<"node " << xx << ": " << all_nodes[xx].flag << " " << (all_nodes[xx].isolated ? " isolated" : " connected") << endl;
-    // }
-    // cout << " ================================================================= " << endl;
-
             return ;
         }
          
@@ -96,14 +67,6 @@ void Plan::exec_plan() {
             clock_t t_end = clock();
             search_time = difftime(t_end, t_start) / 1000000.0;
             BuildPlan();  // 之后再调用BuildPlan，原算法中的Tree
-    // print all edges
-    // for (vector<Transition>::const_iterator e = all_edges.begin();
-    // e != all_edges.end(); ++e) {
-    //     cout << e->front_state << " - "
-    //         << (e->is_observe_action ? in.mine_epis_actions[e->action_number].name : in.mine_ontic_actions[e->action_number].name)
-    //         << " - " << e->next_state << endl;
-    //     // all_nodes[e->next_state].kb.print();
-    // }
             return ;
         }
         if (all_nodes[0].flag == DEAD) {
@@ -554,7 +517,7 @@ int Plan::show_build_result(int node_num, const vector<Transition> &goal_edges, 
 void Plan::add_node(const Node& node) {
     all_nodes.push_back(node);
     int node_id = all_nodes.size() - 1;
-    int heuristic_value = helper_.getHeuristicValue(all_nodes.back().kb, in.mine_pos_goal);
+    int heuristic_value = calculate_node_heuristic_value(node);
     heuristic_que_.push(PlanHelper(node_id, heuristic_value));
 }
 
