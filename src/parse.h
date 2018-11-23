@@ -7,7 +7,7 @@
 class Parse {
 public:
 	Parse() {};
-	void exec(const char* path, bool showCompileResult = false);
+	bool exec(const char* path, bool showCompileResult = false);
 };
 
 #endif

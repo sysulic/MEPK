@@ -18,18 +18,18 @@ extern PropDNF constraint;
 
 int yyparse();
 
-void Parse::exec(const char* path, bool showCompileResult) {
+bool Parse::exec(const char* path, bool showCompileResult) {
 	FILE* df = fopen(path, "r");
 	if(df==NULL) {
 		printf("cannot open %s\n", path);
-		return;
+		return false;
 	}
 	extern FILE* yyin;
 	yyin = df;
 	yyparse();
 	fclose(df);
 
-	if(!showCompileResult) return;
+	if(!showCompileResult) return true;
 
 	// pre-processing
 	// goal = posGoal;
@@ -109,4 +109,6 @@ void Parse::exec(const char* path, bool showCompileResult) {
 	os << "sensing action number : " << sActions.size() << endl;
 	os << "ontic action number : " << oActions.size() << endl;
 	os.close();
+	
+	return true;
 }

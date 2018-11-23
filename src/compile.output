@@ -1,0 +1,743 @@
+================================= gossip5 =================================
+secret :  e  d  c  b  a
+agent : a b c d e 
+================================= atoms =================================
+0    (the e)    0
+1    (the d)    1
+2    (the c)    2
+3    (the b)    3
+4    (the a)    4
+================================= init: =================================
+((((the e) & (the d) & (the c) & (the b) & (the a))) & K_a(((((the a))) & L_b((((~(the a))))) & L_c((((~(the a))))) & L_d((((~(the a))))) & L_e((((~(the a))))))) & K_b(((((the b))) & L_a((((~(the b))))) & L_c((((~(the b))))) & L_d((((~(the b))))) & L_e((((~(the b))))))) & K_c(((((the c))) & L_a((((~(the c))))) & L_b((((~(the c))))) & L_d((((~(the c))))) & L_e((((~(the c))))))) & K_d(((((the d))) & L_a((((~(the d))))) & L_b((((~(the d))))) & L_c((((~(the d))))) & L_e((((~(the d))))))) & K_e(((((the e))) & L_a((((~(the e))))) & L_b((((~(the e))))) & L_c((((~(the e))))) & L_d((((~(the e))))))) & L_a((((~(the b))))) & L_a((((~(the c))))) & L_a((((~(the d))))) & L_a((((~(the e))))) & L_b((((~(the a))))) & L_b((((~(the c))))) & L_b((((~(the d))))) & L_b((((~(the e))))) & L_c((((~(the a))))) & L_c((((~(the b))))) & L_c((((~(the d))))) & L_c((((~(the e))))) & L_d((((~(the a))))) & L_d((((~(the b))))) & L_d((((~(the c))))) & L_d((((~(the e))))) & L_e((((~(the a))))) & L_e((((~(the b))))) & L_e((((~(the c))))) & L_e((((~(the d))))))
+================================= constraint:  =================================
+((True))
+================================= goal:  =================================
+( & L_a((((~(the a)))) | (((~(the b)))) | (((~(the c)))) | (((~(the d)))) | (((~(the e)))))) | ( & L_b((((~(the a)))) | (((~(the b)))) | (((~(the c)))) | (((~(the d)))) | (((~(the e)))))) | ( & L_c((((~(the a)))) | (((~(the b)))) | (((~(the c)))) | (((~(the d)))) | (((~(the e)))))) | ( & L_d((((~(the a)))) | (((~(the b)))) | (((~(the c)))) | (((~(the d)))) | (((~(the e)))))) | ( & L_e((((~(the a)))) | (((~(the b)))) | (((~(the c)))) | (((~(the d)))) | (((~(the e))))))
+================================= posGoal:  =================================
+( & K_a(((((the e) & (the d) & (the c) & (the b) & (the a))))) & K_b(((((the e) & (the d) & (the c) & (the b) & (the a))))) & K_c(((((the e) & (the d) & (the c) & (the b) & (the a))))) & K_d(((((the e) & (the d) & (the c) & (the b) & (the a))))) & K_e(((((the e) & (the d) & (the c) & (the b) & (the a))))))
+
+
+=================================sensing=================================
+=================================ontic=================================
+Action Name : call(a, b)
+preCon : ( & L_a((((~(the a)))) | ( & K_b(((((the a))))))))
+Result List : 
+   (((False)))
+   ( & K_a(((((the b))))) & K_b(((((the a))))))
+
+   ( & L_a((((~(the a))))))
+   ( & K_b(((((the a))))))
+
+   ( & L_a((((~(the b))))))
+   ( & K_b(((((the b))))))
+
+   ( & L_a((((~(the c))))))
+   ( & K_b(((((the c))))))
+
+   ( & L_a((((~(the d))))))
+   ( & K_b(((((the d))))))
+
+   ( & L_a((((~(the e))))))
+   ( & K_b(((((the e))))))
+
+   ( & L_b((((~(the a))))))
+   ( & K_a(((((the a))))))
+
+   ( & L_b((((~(the b))))))
+   ( & K_a(((((the b))))))
+
+   ( & L_b((((~(the c))))))
+   ( & K_a(((((the c))))))
+
+   ( & L_b((((~(the d))))))
+   ( & K_a(((((the d))))))
+
+   ( & L_b((((~(the e))))))
+   ( & K_a(((((the e))))))
+
+Action Name : call(a, c)
+preCon : ( & L_a((((~(the a)))) | ( & K_c(((((the a))))))))
+Result List : 
+   (((False)))
+   ( & K_a(((((the c))))) & K_c(((((the a))))))
+
+   ( & L_a((((~(the a))))))
+   ( & K_c(((((the a))))))
+
+   ( & L_a((((~(the b))))))
+   ( & K_c(((((the b))))))
+
+   ( & L_a((((~(the c))))))
+   ( & K_c(((((the c))))))
+
+   ( & L_a((((~(the d))))))
+   ( & K_c(((((the d))))))
+
+   ( & L_a((((~(the e))))))
+   ( & K_c(((((the e))))))
+
+   ( & L_c((((~(the a))))))
+   ( & K_a(((((the a))))))
+
+   ( & L_c((((~(the b))))))
+   ( & K_a(((((the b))))))
+
+   ( & L_c((((~(the c))))))
+   ( & K_a(((((the c))))))
+
+   ( & L_c((((~(the d))))))
+   ( & K_a(((((the d))))))
+
+   ( & L_c((((~(the e))))))
+   ( & K_a(((((the e))))))
+
+Action Name : call(a, d)
+preCon : ( & L_a((((~(the a)))) | ( & K_d(((((the a))))))))
+Result List : 
+   (((False)))
+   ( & K_a(((((the d))))) & K_d(((((the a))))))
+
+   ( & L_a((((~(the a))))))
+   ( & K_d(((((the a))))))
+
+   ( & L_a((((~(the b))))))
+   ( & K_d(((((the b))))))
+
+   ( & L_a((((~(the c))))))
+   ( & K_d(((((the c))))))
+
+   ( & L_a((((~(the d))))))
+   ( & K_d(((((the d))))))
+
+   ( & L_a((((~(the e))))))
+   ( & K_d(((((the e))))))
+
+   ( & L_d((((~(the a))))))
+   ( & K_a(((((the a))))))
+
+   ( & L_d((((~(the b))))))
+   ( & K_a(((((the b))))))
+
+   ( & L_d((((~(the c))))))
+   ( & K_a(((((the c))))))
+
+   ( & L_d((((~(the d))))))
+   ( & K_a(((((the d))))))
+
+   ( & L_d((((~(the e))))))
+   ( & K_a(((((the e))))))
+
+Action Name : call(a, e)
+preCon : ( & L_a((((~(the a)))) | ( & K_e(((((the a))))))))
+Result List : 
+   (((False)))
+   ( & K_a(((((the e))))) & K_e(((((the a))))))
+
+   ( & L_a((((~(the a))))))
+   ( & K_e(((((the a))))))
+
+   ( & L_a((((~(the b))))))
+   ( & K_e(((((the b))))))
+
+   ( & L_a((((~(the c))))))
+   ( & K_e(((((the c))))))
+
+   ( & L_a((((~(the d))))))
+   ( & K_e(((((the d))))))
+
+   ( & L_a((((~(the e))))))
+   ( & K_e(((((the e))))))
+
+   ( & L_e((((~(the a))))))
+   ( & K_a(((((the a))))))
+
+   ( & L_e((((~(the b))))))
+   ( & K_a(((((the b))))))
+
+   ( & L_e((((~(the c))))))
+   ( & K_a(((((the c))))))
+
+   ( & L_e((((~(the d))))))
+   ( & K_a(((((the d))))))
+
+   ( & L_e((((~(the e))))))
+   ( & K_a(((((the e))))))
+
+Action Name : call(b, a)
+preCon : ( & L_b((((~(the b)))) | ( & K_a(((((the b))))))))
+Result List : 
+   (((False)))
+   ( & K_a(((((the b))))) & K_b(((((the a))))))
+
+   ( & L_b((((~(the a))))))
+   ( & K_a(((((the a))))))
+
+   ( & L_b((((~(the b))))))
+   ( & K_a(((((the b))))))
+
+   ( & L_b((((~(the c))))))
+   ( & K_a(((((the c))))))
+
+   ( & L_b((((~(the d))))))
+   ( & K_a(((((the d))))))
+
+   ( & L_b((((~(the e))))))
+   ( & K_a(((((the e))))))
+
+   ( & L_a((((~(the a))))))
+   ( & K_b(((((the a))))))
+
+   ( & L_a((((~(the b))))))
+   ( & K_b(((((the b))))))
+
+   ( & L_a((((~(the c))))))
+   ( & K_b(((((the c))))))
+
+   ( & L_a((((~(the d))))))
+   ( & K_b(((((the d))))))
+
+   ( & L_a((((~(the e))))))
+   ( & K_b(((((the e))))))
+
+Action Name : call(b, c)
+preCon : ( & L_b((((~(the b)))) | ( & K_c(((((the b))))))))
+Result List : 
+   (((False)))
+   ( & K_b(((((the c))))) & K_c(((((the b))))))
+
+   ( & L_b((((~(the a))))))
+   ( & K_c(((((the a))))))
+
+   ( & L_b((((~(the b))))))
+   ( & K_c(((((the b))))))
+
+   ( & L_b((((~(the c))))))
+   ( & K_c(((((the c))))))
+
+   ( & L_b((((~(the d))))))
+   ( & K_c(((((the d))))))
+
+   ( & L_b((((~(the e))))))
+   ( & K_c(((((the e))))))
+
+   ( & L_c((((~(the a))))))
+   ( & K_b(((((the a))))))
+
+   ( & L_c((((~(the b))))))
+   ( & K_b(((((the b))))))
+
+   ( & L_c((((~(the c))))))
+   ( & K_b(((((the c))))))
+
+   ( & L_c((((~(the d))))))
+   ( & K_b(((((the d))))))
+
+   ( & L_c((((~(the e))))))
+   ( & K_b(((((the e))))))
+
+Action Name : call(b, d)
+preCon : ( & L_b((((~(the b)))) | ( & K_d(((((the b))))))))
+Result List : 
+   (((False)))
+   ( & K_b(((((the d))))) & K_d(((((the b))))))
+
+   ( & L_b((((~(the a))))))
+   ( & K_d(((((the a))))))
+
+   ( & L_b((((~(the b))))))
+   ( & K_d(((((the b))))))
+
+   ( & L_b((((~(the c))))))
+   ( & K_d(((((the c))))))
+
+   ( & L_b((((~(the d))))))
+   ( & K_d(((((the d))))))
+
+   ( & L_b((((~(the e))))))
+   ( & K_d(((((the e))))))
+
+   ( & L_d((((~(the a))))))
+   ( & K_b(((((the a))))))
+
+   ( & L_d((((~(the b))))))
+   ( & K_b(((((the b))))))
+
+   ( & L_d((((~(the c))))))
+   ( & K_b(((((the c))))))
+
+   ( & L_d((((~(the d))))))
+   ( & K_b(((((the d))))))
+
+   ( & L_d((((~(the e))))))
+   ( & K_b(((((the e))))))
+
+Action Name : call(b, e)
+preCon : ( & L_b((((~(the b)))) | ( & K_e(((((the b))))))))
+Result List : 
+   (((False)))
+   ( & K_b(((((the e))))) & K_e(((((the b))))))
+
+   ( & L_b((((~(the a))))))
+   ( & K_e(((((the a))))))
+
+   ( & L_b((((~(the b))))))
+   ( & K_e(((((the b))))))
+
+   ( & L_b((((~(the c))))))
+   ( & K_e(((((the c))))))
+
+   ( & L_b((((~(the d))))))
+   ( & K_e(((((the d))))))
+
+   ( & L_b((((~(the e))))))
+   ( & K_e(((((the e))))))
+
+   ( & L_e((((~(the a))))))
+   ( & K_b(((((the a))))))
+
+   ( & L_e((((~(the b))))))
+   ( & K_b(((((the b))))))
+
+   ( & L_e((((~(the c))))))
+   ( & K_b(((((the c))))))
+
+   ( & L_e((((~(the d))))))
+   ( & K_b(((((the d))))))
+
+   ( & L_e((((~(the e))))))
+   ( & K_b(((((the e))))))
+
+Action Name : call(c, a)
+preCon : ( & L_c((((~(the c)))) | ( & K_a(((((the c))))))))
+Result List : 
+   (((False)))
+   ( & K_a(((((the c))))) & K_c(((((the a))))))
+
+   ( & L_c((((~(the a))))))
+   ( & K_a(((((the a))))))
+
+   ( & L_c((((~(the b))))))
+   ( & K_a(((((the b))))))
+
+   ( & L_c((((~(the c))))))
+   ( & K_a(((((the c))))))
+
+   ( & L_c((((~(the d))))))
+   ( & K_a(((((the d))))))
+
+   ( & L_c((((~(the e))))))
+   ( & K_a(((((the e))))))
+
+   ( & L_a((((~(the a))))))
+   ( & K_c(((((the a))))))
+
+   ( & L_a((((~(the b))))))
+   ( & K_c(((((the b))))))
+
+   ( & L_a((((~(the c))))))
+   ( & K_c(((((the c))))))
+
+   ( & L_a((((~(the d))))))
+   ( & K_c(((((the d))))))
+
+   ( & L_a((((~(the e))))))
+   ( & K_c(((((the e))))))
+
+Action Name : call(c, b)
+preCon : ( & L_c((((~(the c)))) | ( & K_b(((((the c))))))))
+Result List : 
+   (((False)))
+   ( & K_b(((((the c))))) & K_c(((((the b))))))
+
+   ( & L_c((((~(the a))))))
+   ( & K_b(((((the a))))))
+
+   ( & L_c((((~(the b))))))
+   ( & K_b(((((the b))))))
+
+   ( & L_c((((~(the c))))))
+   ( & K_b(((((the c))))))
+
+   ( & L_c((((~(the d))))))
+   ( & K_b(((((the d))))))
+
+   ( & L_c((((~(the e))))))
+   ( & K_b(((((the e))))))
+
+   ( & L_b((((~(the a))))))
+   ( & K_c(((((the a))))))
+
+   ( & L_b((((~(the b))))))
+   ( & K_c(((((the b))))))
+
+   ( & L_b((((~(the c))))))
+   ( & K_c(((((the c))))))
+
+   ( & L_b((((~(the d))))))
+   ( & K_c(((((the d))))))
+
+   ( & L_b((((~(the e))))))
+   ( & K_c(((((the e))))))
+
+Action Name : call(c, d)
+preCon : ( & L_c((((~(the c)))) | ( & K_d(((((the c))))))))
+Result List : 
+   (((False)))
+   ( & K_c(((((the d))))) & K_d(((((the c))))))
+
+   ( & L_c((((~(the a))))))
+   ( & K_d(((((the a))))))
+
+   ( & L_c((((~(the b))))))
+   ( & K_d(((((the b))))))
+
+   ( & L_c((((~(the c))))))
+   ( & K_d(((((the c))))))
+
+   ( & L_c((((~(the d))))))
+   ( & K_d(((((the d))))))
+
+   ( & L_c((((~(the e))))))
+   ( & K_d(((((the e))))))
+
+   ( & L_d((((~(the a))))))
+   ( & K_c(((((the a))))))
+
+   ( & L_d((((~(the b))))))
+   ( & K_c(((((the b))))))
+
+   ( & L_d((((~(the c))))))
+   ( & K_c(((((the c))))))
+
+   ( & L_d((((~(the d))))))
+   ( & K_c(((((the d))))))
+
+   ( & L_d((((~(the e))))))
+   ( & K_c(((((the e))))))
+
+Action Name : call(c, e)
+preCon : ( & L_c((((~(the c)))) | ( & K_e(((((the c))))))))
+Result List : 
+   (((False)))
+   ( & K_c(((((the e))))) & K_e(((((the c))))))
+
+   ( & L_c((((~(the a))))))
+   ( & K_e(((((the a))))))
+
+   ( & L_c((((~(the b))))))
+   ( & K_e(((((the b))))))
+
+   ( & L_c((((~(the c))))))
+   ( & K_e(((((the c))))))
+
+   ( & L_c((((~(the d))))))
+   ( & K_e(((((the d))))))
+
+   ( & L_c((((~(the e))))))
+   ( & K_e(((((the e))))))
+
+   ( & L_e((((~(the a))))))
+   ( & K_c(((((the a))))))
+
+   ( & L_e((((~(the b))))))
+   ( & K_c(((((the b))))))
+
+   ( & L_e((((~(the c))))))
+   ( & K_c(((((the c))))))
+
+   ( & L_e((((~(the d))))))
+   ( & K_c(((((the d))))))
+
+   ( & L_e((((~(the e))))))
+   ( & K_c(((((the e))))))
+
+Action Name : call(d, a)
+preCon : ( & L_d((((~(the d)))) | ( & K_a(((((the d))))))))
+Result List : 
+   (((False)))
+   ( & K_a(((((the d))))) & K_d(((((the a))))))
+
+   ( & L_d((((~(the a))))))
+   ( & K_a(((((the a))))))
+
+   ( & L_d((((~(the b))))))
+   ( & K_a(((((the b))))))
+
+   ( & L_d((((~(the c))))))
+   ( & K_a(((((the c))))))
+
+   ( & L_d((((~(the d))))))
+   ( & K_a(((((the d))))))
+
+   ( & L_d((((~(the e))))))
+   ( & K_a(((((the e))))))
+
+   ( & L_a((((~(the a))))))
+   ( & K_d(((((the a))))))
+
+   ( & L_a((((~(the b))))))
+   ( & K_d(((((the b))))))
+
+   ( & L_a((((~(the c))))))
+   ( & K_d(((((the c))))))
+
+   ( & L_a((((~(the d))))))
+   ( & K_d(((((the d))))))
+
+   ( & L_a((((~(the e))))))
+   ( & K_d(((((the e))))))
+
+Action Name : call(d, b)
+preCon : ( & L_d((((~(the d)))) | ( & K_b(((((the d))))))))
+Result List : 
+   (((False)))
+   ( & K_b(((((the d))))) & K_d(((((the b))))))
+
+   ( & L_d((((~(the a))))))
+   ( & K_b(((((the a))))))
+
+   ( & L_d((((~(the b))))))
+   ( & K_b(((((the b))))))
+
+   ( & L_d((((~(the c))))))
+   ( & K_b(((((the c))))))
+
+   ( & L_d((((~(the d))))))
+   ( & K_b(((((the d))))))
+
+   ( & L_d((((~(the e))))))
+   ( & K_b(((((the e))))))
+
+   ( & L_b((((~(the a))))))
+   ( & K_d(((((the a))))))
+
+   ( & L_b((((~(the b))))))
+   ( & K_d(((((the b))))))
+
+   ( & L_b((((~(the c))))))
+   ( & K_d(((((the c))))))
+
+   ( & L_b((((~(the d))))))
+   ( & K_d(((((the d))))))
+
+   ( & L_b((((~(the e))))))
+   ( & K_d(((((the e))))))
+
+Action Name : call(d, c)
+preCon : ( & L_d((((~(the d)))) | ( & K_c(((((the d))))))))
+Result List : 
+   (((False)))
+   ( & K_c(((((the d))))) & K_d(((((the c))))))
+
+   ( & L_d((((~(the a))))))
+   ( & K_c(((((the a))))))
+
+   ( & L_d((((~(the b))))))
+   ( & K_c(((((the b))))))
+
+   ( & L_d((((~(the c))))))
+   ( & K_c(((((the c))))))
+
+   ( & L_d((((~(the d))))))
+   ( & K_c(((((the d))))))
+
+   ( & L_d((((~(the e))))))
+   ( & K_c(((((the e))))))
+
+   ( & L_c((((~(the a))))))
+   ( & K_d(((((the a))))))
+
+   ( & L_c((((~(the b))))))
+   ( & K_d(((((the b))))))
+
+   ( & L_c((((~(the c))))))
+   ( & K_d(((((the c))))))
+
+   ( & L_c((((~(the d))))))
+   ( & K_d(((((the d))))))
+
+   ( & L_c((((~(the e))))))
+   ( & K_d(((((the e))))))
+
+Action Name : call(d, e)
+preCon : ( & L_d((((~(the d)))) | ( & K_e(((((the d))))))))
+Result List : 
+   (((False)))
+   ( & K_d(((((the e))))) & K_e(((((the d))))))
+
+   ( & L_d((((~(the a))))))
+   ( & K_e(((((the a))))))
+
+   ( & L_d((((~(the b))))))
+   ( & K_e(((((the b))))))
+
+   ( & L_d((((~(the c))))))
+   ( & K_e(((((the c))))))
+
+   ( & L_d((((~(the d))))))
+   ( & K_e(((((the d))))))
+
+   ( & L_d((((~(the e))))))
+   ( & K_e(((((the e))))))
+
+   ( & L_e((((~(the a))))))
+   ( & K_d(((((the a))))))
+
+   ( & L_e((((~(the b))))))
+   ( & K_d(((((the b))))))
+
+   ( & L_e((((~(the c))))))
+   ( & K_d(((((the c))))))
+
+   ( & L_e((((~(the d))))))
+   ( & K_d(((((the d))))))
+
+   ( & L_e((((~(the e))))))
+   ( & K_d(((((the e))))))
+
+Action Name : call(e, a)
+preCon : ( & L_e((((~(the e)))) | ( & K_a(((((the e))))))))
+Result List : 
+   (((False)))
+   ( & K_a(((((the e))))) & K_e(((((the a))))))
+
+   ( & L_e((((~(the a))))))
+   ( & K_a(((((the a))))))
+
+   ( & L_e((((~(the b))))))
+   ( & K_a(((((the b))))))
+
+   ( & L_e((((~(the c))))))
+   ( & K_a(((((the c))))))
+
+   ( & L_e((((~(the d))))))
+   ( & K_a(((((the d))))))
+
+   ( & L_e((((~(the e))))))
+   ( & K_a(((((the e))))))
+
+   ( & L_a((((~(the a))))))
+   ( & K_e(((((the a))))))
+
+   ( & L_a((((~(the b))))))
+   ( & K_e(((((the b))))))
+
+   ( & L_a((((~(the c))))))
+   ( & K_e(((((the c))))))
+
+   ( & L_a((((~(the d))))))
+   ( & K_e(((((the d))))))
+
+   ( & L_a((((~(the e))))))
+   ( & K_e(((((the e))))))
+
+Action Name : call(e, b)
+preCon : ( & L_e((((~(the e)))) | ( & K_b(((((the e))))))))
+Result List : 
+   (((False)))
+   ( & K_b(((((the e))))) & K_e(((((the b))))))
+
+   ( & L_e((((~(the a))))))
+   ( & K_b(((((the a))))))
+
+   ( & L_e((((~(the b))))))
+   ( & K_b(((((the b))))))
+
+   ( & L_e((((~(the c))))))
+   ( & K_b(((((the c))))))
+
+   ( & L_e((((~(the d))))))
+   ( & K_b(((((the d))))))
+
+   ( & L_e((((~(the e))))))
+   ( & K_b(((((the e))))))
+
+   ( & L_b((((~(the a))))))
+   ( & K_e(((((the a))))))
+
+   ( & L_b((((~(the b))))))
+   ( & K_e(((((the b))))))
+
+   ( & L_b((((~(the c))))))
+   ( & K_e(((((the c))))))
+
+   ( & L_b((((~(the d))))))
+   ( & K_e(((((the d))))))
+
+   ( & L_b((((~(the e))))))
+   ( & K_e(((((the e))))))
+
+Action Name : call(e, c)
+preCon : ( & L_e((((~(the e)))) | ( & K_c(((((the e))))))))
+Result List : 
+   (((False)))
+   ( & K_c(((((the e))))) & K_e(((((the c))))))
+
+   ( & L_e((((~(the a))))))
+   ( & K_c(((((the a))))))
+
+   ( & L_e((((~(the b))))))
+   ( & K_c(((((the b))))))
+
+   ( & L_e((((~(the c))))))
+   ( & K_c(((((the c))))))
+
+   ( & L_e((((~(the d))))))
+   ( & K_c(((((the d))))))
+
+   ( & L_e((((~(the e))))))
+   ( & K_c(((((the e))))))
+
+   ( & L_c((((~(the a))))))
+   ( & K_e(((((the a))))))
+
+   ( & L_c((((~(the b))))))
+   ( & K_e(((((the b))))))
+
+   ( & L_c((((~(the c))))))
+   ( & K_e(((((the c))))))
+
+   ( & L_c((((~(the d))))))
+   ( & K_e(((((the d))))))
+
+   ( & L_c((((~(the e))))))
+   ( & K_e(((((the e))))))
+
+Action Name : call(e, d)
+preCon : ( & L_e((((~(the e)))) | ( & K_d(((((the e))))))))
+Result List : 
+   (((False)))
+   ( & K_d(((((the e))))) & K_e(((((the d))))))
+
+   ( & L_e((((~(the a))))))
+   ( & K_d(((((the a))))))
+
+   ( & L_e((((~(the b))))))
+   ( & K_d(((((the b))))))
+
+   ( & L_e((((~(the c))))))
+   ( & K_d(((((the c))))))
+
+   ( & L_e((((~(the d))))))
+   ( & K_d(((((the d))))))
+
+   ( & L_e((((~(the e))))))
+   ( & K_d(((((the e))))))
+
+   ( & L_d((((~(the a))))))
+   ( & K_e(((((the a))))))
+
+   ( & L_d((((~(the b))))))
+   ( & K_e(((((the b))))))
+
+   ( & L_d((((~(the c))))))
+   ( & K_e(((((the c))))))
+
+   ( & L_d((((~(the d))))))
+   ( & K_e(((((the d))))))
+
+   ( & L_d((((~(the e))))))
+   ( & K_e(((((the e))))))
+
+sensing action number : 0
+ontic action number : 20

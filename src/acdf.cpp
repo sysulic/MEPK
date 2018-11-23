@@ -56,7 +56,7 @@ bool ACDFTerm::neg_entails(const ACDF & acdf, const PropDNF & cstt, bool try_goa
         if (neg_entails(*post_term, cstt, try_goal, value)) {
             return false;
         } else if (try_goal) {
-            // (*value)++;
+            (*value)++;
         }
     }
     return true;
@@ -91,7 +91,7 @@ bool ACDFTerm::neg_entails(const ACDFTerm & acdf_term, const PropDNF & cstt, boo
                     flag = false;
                     break;
                 } else if (try_goal) {
-                    // (*value)++;
+                    (*value)++;
                 }
             }
             if (flag) {
@@ -109,7 +109,7 @@ bool ACDFTerm::neg_entails(const ACDFTerm & acdf_term, const PropDNF & cstt, boo
                     flag = false;
                     break;
                 } else if (try_goal) {
-                    // (*value)++;
+                    (*value)++;
                 }
             }
             if (flag) {
@@ -125,20 +125,9 @@ bool ACDFTerm::neg_entails(const ACDFTerm & acdf_term, const PropDNF & cstt, boo
 
 bool ACDFTerm::strong_entails(const ACDFTerm & acdf_term, const PropDNF & cstt) const {
     if (valid() || acdf_term.valid()) return ((valid() && acdf_term.valid()) ? true : false);
-// cout << "strong entails =====================================" << endl;
-// print();
-// cout << "=====================================" << endl;
-// acdf_term.print();
-// cout << "haha" << endl;
-// cstt.print();
+
     if (!acdf_term.propDNF.isEmpty() && !propDNF.conjunction(cstt).canEntail(acdf_term.propDNF)) return false;
-// cout << "haha0" << endl;
-// cout << "strong entails: prop_term entails =====================================" << endl;
-// propDNF.conjunction(cstt).minimal().print();
-// cout << "         ====================================" << endl;
-// acdf_term.propDNF.conjunction(cstt).minimal().print();
-    // if (!propDNF.conjunction(cstt).minimal().canEntail(tmp_term.propDNF.conjunction(cstt).minimal())) return false;
-// cout << "haha1" << endl;
+
     ACDFTerm tmp_term = acdf_term;
     for (map<string, ACDFList>::const_iterator cover = covers.begin();
         cover != covers.end(); ++cover) {
@@ -160,7 +149,6 @@ bool ACDFTerm::strong_entails(const ACDFTerm & acdf_term, const PropDNF & cstt) 
             }
             if (!found) return false;
         }
-// cout << "jump1" << endl;
 
         for (list<ACDF>::const_iterator acdf2 = acdflist_tmp.acdfs.begin();
         acdf2 != acdflist_tmp.acdfs.end(); ++acdf2) {
@@ -174,7 +162,6 @@ bool ACDFTerm::strong_entails(const ACDFTerm & acdf_term, const PropDNF & cstt) 
             }
             if (!found) return false;
         }
-// cout << "jump2" << endl;
     }
     // cout << "success =====================================" << endl;
     return true;
@@ -516,7 +503,7 @@ bool ACDF::neg_entails(const ACDF & acdf, const PropDNF & cstt, bool try_goal, i
             if (!acdf_term1->neg_entails(*acdf_term2, cstt, try_goal, value)) {
                 return false;
             } else if (try_goal) {
-                // (*value)++;
+                (*value)++;
             }
         }
     }

@@ -2,7 +2,7 @@
 #include <algorithm>
 
 Plan::Plan(const char *domain, int type) {
-    printf("================================================================\n");
+    // printf("================================================================\n");
     // printf("domain_file(%s)\n     p_file(%s)\n", domain, p);
     // if (type == 0)
     //     cout << "search_type(Heur first)\n" << endl;
@@ -18,7 +18,7 @@ Plan::Plan(const char *domain, int type) {
     plan_tree_node_num = 0;
     clock_t t_start = clock();
     printf("Preprocessing...\n");
-    parser.exec(domain, false);
+    if (!parser.exec(domain, false)) return;
     in.exec();
 
     // //print actions
@@ -87,10 +87,10 @@ void Plan::explore(int node_pos) {
         if (all_nodes[node_pos].kb.neg_entails(in.mine_epis_actions[i].pre_con, in.mine_constraint)) {
 // if (node_pos == 802)
 //     cout <<  "node " << node_pos << "doing... epis action: " << in.mine_epis_actions[i].name << endl;
-            clock_t epis_start = clock();
+            // clock_t epis_start = clock();
             vector<ACDF> res = all_nodes[node_pos].kb.epistemic_prog(in.mine_epis_actions[i], in.mine_constraint);
-            clock_t epis_end = clock();
-            epis_progression_time += difftime(epis_end, epis_start) / 1000000.0;
+            // clock_t epis_end = clock();
+            // epis_progression_time += difftime(epis_end, epis_start) / 1000000.0;
 
             if (check_zero_dead(res[0]) || check_zero_dead(res[1]))
                 continue;
@@ -162,10 +162,10 @@ void Plan::explore(int node_pos) {
         if (all_nodes[node_pos].kb.neg_entails(in.mine_ontic_actions[i].pre_con, in.mine_constraint)) {
 // if (node_pos == 802)
 //     cout << "node " << node_pos << " doing... ontic action: " << in.mine_ontic_actions[i].name << endl;
-            clock_t ontic_start = clock();
+            // clock_t ontic_start = clock();
             ACDF res = all_nodes[node_pos].kb.ontic_prog(in.mine_ontic_actions[i], in.mine_constraint);
-            clock_t ontic_end = clock();
-            ontic_progression_time += difftime(ontic_end, ontic_start) / 1000000.0;
+            // clock_t ontic_end = clock();
+            // ontic_progression_time += difftime(ontic_end, ontic_start) / 1000000.0;
             if (check_zero_dead(res)) continue;
             
             int res_pos = checknode(res);
@@ -472,11 +472,17 @@ void Plan::show_statistic() const {
     // printf("  preprocess time: %.4fs\n", preprocess_time);
     // printf("  epis progression time: %.4fs\n", epis_progression_time);
     // printf("  ontic progression time: %.4fs\n", ontic_progression_time);
-    printf("  search time: %.2fs\n", search_time);
-    printf("  total time: %.2fs\n", preprocess_time+search_time);
-    printf("  solution size: %d\n", plan_tree_node_num);
+    printf("  search time:\t  %.2fs\n", search_time);
+    printf("  total time:\t  %.2fs\n", preprocess_time+search_time);
     printf("  solution depth: %d\n", plan_tree_depth);
-    printf("  search size: %lu\n", all_nodes.size());
+    printf("  solution size:  %d\n", plan_tree_node_num);
+    printf("  search size:\t  %lu\n", all_nodes.size());
+}
+
+void Plan::latex_statistic() const {
+    printf(" & %lu & %lu+%lu & %lu & 1 & %.2f-%.2f(%d/%d/%lu) \\\\\n", agents.size(), in.mine_epis_actions.size(), \
+        in.mine_ontic_actions.size(), findAtomsByIndex.size(), preprocess_time+search_time, \
+        search_time, plan_tree_depth, plan_tree_node_num, all_nodes.size());
 }
 
 int Plan::show_build_result(int node_num, const vector<Transition> &goal_edges, int tab_num, set<int> nodes, int oldnode) {

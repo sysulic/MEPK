@@ -1,5 +1,6 @@
 #include "header.h"
 #include "plan.h"
+#include <string.h>
 
 using namespace std;
 
@@ -24,11 +25,15 @@ int atomNum, solNum, expNum, solDepth;
 
 int main(int argc, char** argv) {
 
-	if (argc < 2) return 0;
+	if (argc < 2 || strlen(argv[1])<5) return 0;  // strlen() for filter empty line in test_cases
 
-	Plan p(argv[1], atoi(argv[2]));
+	int search_strategy = 2;  // bfs default
+	if (argv[2]) search_strategy = atoi(argv[2]);
+	else printf("Default: BFS searching\n");
+
+	Plan p(argv[1], search_strategy);
 	p.exec_plan();
-	p.show_statistic();
-
+	if (argv[3] && atoi(argv[3])==1) p.latex_statistic();
+	else p.show_statistic();
 	return 0;
 }

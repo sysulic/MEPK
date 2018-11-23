@@ -1,0 +1,657 @@
+/bin/sh -c "./start ../benchmarks/hexa/hexa_domain3.epddl 0"
+================================================================
+Preprocessing
+Planning
+Plan tree:
+ ask_white(a, b) +:
+ ask_white(a, b) -:
+
+Statistic:
+  search time:	  0.00s
+  total time:	  0.00s
+  solution depth: 1
+  solution size:  3
+  search size:	  3
+/bin/sh -c "./start ../benchmarks/hexa/hexa_domain4.epddl 0"
+================================================================
+Preprocessing
+Planning
+Plan tree:
+ ask_white(a, b) +:
+  ask_blue(a, c) +:
+  ask_blue(a, c) -:
+ ask_white(a, b) -:
+  ask_blue(a, d) +:
+  ask_blue(a, d) -:
+   ask_blue(a, b) +:
+    ask_white(a, c) +:
+    ask_white(a, c) -:
+   ask_blue(a, b) -:
+
+Statistic:
+  search time:	  0.01s
+  total time:	  0.01s
+  solution depth: 4
+  solution size:  11
+  search size:	  39
+/bin/sh -c "./start ../benchmarks/hexa/hexa_domain5.epddl 0"
+================================================================
+Preprocessing
+Planning
+Timeout after 300 seconds
+/bin/sh -c "./start ../benchmarks/hexa/hexa_domain6.epddl 0"
+================================================================
+Preprocessing
+Planning
+Timeout after 300 seconds
+/bin/sh -c "./start ../benchmarks/Collaboration_through_Communication/CC-2_4.epddl 0"
+================================================================
+Preprocessing
+Planning
+Plan tree:
+ left(a)
+  find_room1(a)
+   tell(a, b, p1)
+
+Statistic:
+  search time:	  0.01s
+  total time:	  0.01s
+  solution depth: 3
+  solution size:  4
+  search size:	  9
+/bin/sh -c "./start ../benchmarks/Collaboration_through_Communication/CC-3_4.epddl 0"
+================================================================
+Preprocessing
+Planning
+Plan tree:
+ left(a)
+  find_room1(a)
+   tell(a, b, p1)
+
+Statistic:
+  search time:	  0.39s
+  total time:	  0.40s
+  solution depth: 3
+  solution size:  4
+  search size:	  13
+/bin/sh -c "./start ../benchmarks/Collaboration_through_Communication/CC-4_4.epddl 0"
+================================================================
+Preprocessing
+Planning
+Plan tree:
+ left(a)
+  find_room1(a)
+   tell(a, b, p1)
+
+Statistic:
+  search time:	  17.39s
+  total time:	  17.39s
+  solution depth: 3
+  solution size:  4
+  search size:	  13
+/bin/sh -c "./start ../benchmarks/Collaboration_through_Communication/SCC-2_3.epddl 0"
+================================================================
+Preprocessing
+Planning
+Timeout after 300 seconds
+/bin/sh -c "./start ../benchmarks/Collaboration_through_Communication/SCC-2_3_3.epddl 0"
+================================================================
+Preprocessing
+Planning
+Timeout after 300 seconds
+/bin/sh -c "./start ../benchmarks/Collaboration_through_Communication/SCC-2_4.epddl 0"
+================================================================
+Preprocessing
+Planning
+Timeout after 300 seconds
+/bin/sh -c "./start ../benchmarks/Collaboration_through_Communication/SCC-2_5.epddl 0"
+================================================================
+Preprocessing
+Planning
+Timeout after 300 seconds
+/bin/sh -c "./start ../benchmarks/Collaboration_through_Communication/SCC-3_3.epddl 0"
+================================================================
+Preprocessing
+Planning
+Timeout after 300 seconds
+/bin/sh -c "./start ../benchmarks/Collaboration_through_Communication/SCC-3_4.epddl 0"
+================================================================
+Preprocessing
+Planning
+Timeout after 300 seconds
+/bin/sh -c "./start ../benchmarks/gossip/gossip3.epddl 0"
+================================================================
+Preprocessing
+Planning
+Plan tree:
+ call(a, b, c)
+  call(a, c, b)
+   call(a, b, c)
+
+Statistic:
+  search time:	  0.00s
+  total time:	  0.00s
+  solution depth: 3
+  solution size:  4
+  search size:	  7
+/bin/sh -c "./start ../benchmarks/gossip/gossip4.epddl 0"
+================================================================
+Preprocessing
+Planning
+Plan tree:
+ call(a, b, c, d)
+  call(a, d, b, c)
+   call(a, c, b, d)
+    call(a, b, c, d)
+     call(a, d, b, c)
+
+Statistic:
+  search time:	  0.09s
+  total time:	  0.09s
+  solution depth: 5
+  solution size:  6
+  search size:	  29
+/bin/sh -c "./start ../benchmarks/gossip/gossip5.epddl 0"
+================================================================
+Preprocessing
+Planning
+Plan tree:
+ call(a, b, c, d, e)
+  call(d, e, a, b, c)
+   call(c, e, a, b, d)
+    call(a, c, b, d, e)
+     call(a, b, c, d, e)
+      call(a, d, b, c, e)
+       call(a, e, b, c, d)
+
+Statistic:
+  search time:	  4.56s
+  total time:	  4.57s
+  solution depth: 7
+  solution size:  8
+  search size:	  115
+/bin/sh -c "./start ../benchmarks/gossip/gossip6.epddl 0"
+================================================================
+Preprocessing
+Planning
+Plan tree:
+ call(a, b, c, d, e, f)
+  call(a, c, b, d, e, f)
+   call(e, f, a, b, c, d)
+    call(d, f, a, b, c, e)
+     call(a, d, b, c, e, f)
+      call(a, b, c, d, e, f)
+       call(a, c, b, d, e, f)
+        call(a, e, b, c, d, f)
+         call(a, f, b, c, d, e)
+
+Statistic:
+  search time:	  152.33s
+  total time:	  152.46s
+  solution depth: 9
+  solution size:  10
+  search size:	  284
+/bin/sh -c "./start 0"
+Default: BFS searching
+================================================================
+Preprocessing
+cannot open 0
+Planning
+init neg_entails goal!
+
+Statistic:
+  search time:	  0.00s
+  total time:	  0.00s
+  solution depth: 0
+  solution size:  0
+  search size:	  0
+/bin/sh -c "./start ../benchmarks/grapevine/grapevine-2_3_2.epddl 0"
+================================================================
+Preprocessing
+Planning
+Plan tree:
+ share(b, p2, p1, a, c)
+  share(c, p2, p1, a, b)
+   right(c)
+    share(a, p2, p1, b, c)
+
+Statistic:
+  search time:	  0.09s
+  total time:	  0.09s
+  solution depth: 4
+  solution size:  5
+  search size:	  173
+/bin/sh -c "./start ../benchmarks/grapevine/grapevine-2_4_1.epddl 0"
+================================================================
+Preprocessing
+Planning
+Plan tree:
+ right(c)
+  share(a, p2, p1, b, d, c)
+
+Statistic:
+  search time:	  216.63s
+  total time:	  216.63s
+  solution depth: 2
+  solution size:  3
+  search size:	  8204
+/bin/sh -c "./start ../benchmarks/grapevine/grapevine-2_4_2.epddl 0"
+================================================================
+Preprocessing
+Planning
+Timeout after 300 seconds
+/bin/sh -c "./start ../benchmarks/grapevine/grapevine-2_4_3.epddl 0"
+================================================================
+Preprocessing
+Planning
+Timeout after 300 seconds
+/bin/sh -c "./start ../benchmarks/grapevine/grapevine-2_4_4.epddl 0"
+================================================================
+Preprocessing
+Planning
+Timeout after 300 seconds
+/bin/sh -c "./start ../benchmarks/grapevine/grapevine-3_4_1.epddl 0"
+================================================================
+Preprocessing
+Planning
+Timeout after 300 seconds
+/bin/sh -c "./start ../benchmarks/selective_communication/SC-4_3_1.epddl 0"
+================================================================
+Preprocessing
+Planning
+Plan tree:
+ right
+  sense +:
+   right
+    right
+     tell
+  sense -:
+   right
+    right
+     tell
+
+Statistic:
+  search time:	  0.01s
+  total time:	  0.01s
+  solution depth: 5
+  solution size:  10
+  search size:	  40
+/bin/sh -c "./start ../benchmarks/selective_communication/SC-4_7_1.epddl 0"
+================================================================
+Preprocessing
+Planning
+Plan tree:
+ right
+  sense +:
+   right
+    right
+     tell
+  sense -:
+   right
+    right
+     tell
+
+Statistic:
+  search time:	  0.02s
+  total time:	  0.02s
+  solution depth: 5
+  solution size:  10
+  search size:	  40
+/bin/sh -c "./start ../benchmarks/selective_communication/SC-4_8_1.epddl 0"
+================================================================
+Preprocessing
+Planning
+Plan tree:
+ right
+  sense +:
+   right
+    right
+     tell
+  sense -:
+   right
+    right
+     tell
+
+Statistic:
+  search time:	  0.04s
+  total time:	  0.05s
+  solution depth: 5
+  solution size:  10
+  search size:	  63
+/bin/sh -c "./start ../benchmarks/selective_communication/SC-4_8_1_2.epddl 0"
+================================================================
+Preprocessing
+Planning
+Plan tree:
+ right
+  sense +:
+   tell
+  sense -:
+   tell
+
+Statistic:
+  search time:	  0.01s
+  total time:	  0.01s
+  solution depth: 3
+  solution size:  6
+  search size:	  12
+/bin/sh -c "./start ../benchmarks/selective_communication/SC-4_3_3.epddl 0"
+================================================================
+Preprocessing
+Planning
+Plan tree:
+ right
+  sense +:
+   right
+    right
+     tell
+  sense -:
+   right
+    right
+     tell
+
+Statistic:
+  search time:	  0.02s
+  total time:	  0.02s
+  solution depth: 5
+  solution size:  10
+  search size:	  40
+/bin/sh -c "./start ../benchmarks/selective_communication/SC-4_3_4.epddl 0"
+================================================================
+Preprocessing
+Planning
+Plan tree:
+ right
+  sense +:
+   right
+    right
+     tell
+  sense -:
+   right
+    right
+     tell
+
+Statistic:
+  search time:	  0.03s
+  total time:	  0.03s
+  solution depth: 5
+  solution size:  10
+  search size:	  40
+/bin/sh -c "./start ../benchmarks/selective_communication/SC-8_3_1.epddl 0"
+================================================================
+Preprocessing
+Planning
+Plan tree:
+ left
+  left
+   sense +:
+    right
+     right
+      right
+       right
+        right
+         right
+          tell
+   sense -:
+    right
+     right
+      right
+       right
+        right
+         right
+          tell
+
+Statistic:
+  search time:	  0.07s
+  total time:	  0.07s
+  solution depth: 10
+  solution size:  19
+  search size:	  100
+/bin/sh -c "./start ../benchmarks/assemble_line/assemble_line2.epddl 0"
+================================================================
+Preprocessing
+Planning
+Plan tree:
+ processA +:
+  tellBeta
+   processB +:
+    tellAlpha
+     assemble
+   processB -:
+    tellAlpha
+     restart
+ processA -:
+  processB +:
+   tellBeta
+    restart
+  processB -:
+   tellBeta
+    restart
+
+Statistic:
+  search time:	  0.00s
+  total time:	  0.00s
+  solution depth: 5
+  solution size:  16
+  search size:	  37
+/bin/sh -c "./start ../benchmarks/assemble_line/assemble_line3.epddl 0"
+================================================================
+Preprocessing
+Planning
+Plan tree:
+ processA +:
+  processB +:
+   tellAlpha
+    tellBeta
+     assemble
+  processB -:
+   tellBeta
+    tellAlpha
+     restart
+ processA -:
+  processB +:
+   tellBeta
+    restart
+  processB -:
+   tellBeta
+    restart
+
+Statistic:
+  search time:	  0.01s
+  total time:	  0.01s
+  solution depth: 5
+  solution size:  17
+  search size:	  45
+/bin/sh -c "./start ../benchmarks/assemble_line/assemble_line4.epddl 0"
+================================================================
+Preprocessing
+Planning
+Plan tree:
+ processA +:
+  processB +:
+   tellAlpha
+    tellBeta
+     assemble
+  processB -:
+   tellBeta
+    tellAlpha
+     restart
+ processA -:
+  processB +:
+   tellBeta
+    restart
+  processB -:
+   tellBeta
+    restart
+
+Statistic:
+  search time:	  0.01s
+  total time:	  0.02s
+  solution depth: 5
+  solution size:  17
+  search size:	  45
+/bin/sh -c "./start ../benchmarks/assemble_line/assemble_line5.epddl 0"
+================================================================
+Preprocessing
+Planning
+Plan tree:
+ processA +:
+  processB +:
+   tellAlpha
+    tellBeta
+     assemble
+  processB -:
+   tellBeta
+    tellAlpha
+     restart
+ processA -:
+  processB +:
+   tellBeta
+    restart
+  processB -:
+   tellBeta
+    restart
+
+Statistic:
+  search time:	  0.02s
+  total time:	  0.03s
+  solution depth: 5
+  solution size:  17
+  search size:	  45
+/bin/sh -c "./start ../benchmarks/assemble_line/assemble_line7.epddl 0"
+================================================================
+Preprocessing
+Planning
+Plan tree:
+ processA +:
+  processB +:
+   tellAlpha
+    tellBeta
+     assemble
+  processB -:
+   tellBeta
+    tellAlpha
+     restart
+ processA -:
+  processB +:
+   tellBeta
+    restart
+  processB -:
+   tellBeta
+    restart
+
+Statistic:
+  search time:	  0.10s
+  total time:	  0.10s
+  solution depth: 5
+  solution size:  17
+  search size:	  45
+/bin/sh -c "./start ../benchmarks/assemble_line/assemble_line10.epddl 0"
+================================================================
+Preprocessing
+Planning
+Plan tree:
+ processA +:
+  processB +:
+   tellAlpha
+    tellBeta
+     assemble
+  processB -:
+   tellBeta
+    tellAlpha
+     restart
+ processA -:
+  processB +:
+   tellBeta
+    restart
+  processB -:
+   tellBeta
+    restart
+
+Statistic:
+  search time:	  1.09s
+  total time:	  1.09s
+  solution depth: 5
+  solution size:  17
+  search size:	  45
+/bin/sh -c "./start ../benchmarks/SimpleMuddyChildren/SMC-3.epddl 0"
+================================================================
+Preprocessing
+Planning
+Plan tree:
+ sense(a, b) +:
+  ask(a, b, c) +:
+  ask(a, b, c) -:
+   sense(a, c) +:
+   sense(a, c) -:
+ sense(a, b) -:
+  sense(a, c) +:
+   ask(a, b, c) +:
+   ask(a, b, c) -:
+  sense(a, c) -:
+
+Statistic:
+  search time:	  25.19s
+  total time:	  25.19s
+  solution depth: 3
+  solution size:  11
+  search size:	  5342
+/bin/sh -c "./start ../benchmarks/SimpleMuddyChildren/SMC-4.epddl 0"
+================================================================
+Preprocessing
+Planning
+Timeout after 300 seconds
+/bin/sh -c "./start ../benchmarks/SimpleMuddyChildren/SMC-5.epddl 0"
+================================================================
+Preprocessing
+Planning
+Timeout after 300 seconds
+/bin/sh -c "./start ../benchmarks/SimpleMuddyChildren/SMC-6.epddl 0"
+================================================================
+Preprocessing
+Planning
+Timeout after 300 seconds
+/bin/sh -c "./start ../benchmarks/coin_in_the_box/coin_in_the_box-2.epddl 0"
+================================================================
+Preprocessing...
+Plan tree:
+ open_a
+  peek(a, b, c)
+
+Statistic:
+  search time:    0.00s
+  total time:   0.01s
+  solution depth: 2
+  solution size:  3
+  search size:    9
+/bin/sh -c "./start ../benchmarks/coin_in_the_box/coin_in_the_box-3.epddl 0"
+================================================================
+Preprocessing...
+Plan tree:
+ open_a
+  peek(a, b, c)
+   shout(a, b, c)
+
+Statistic:
+  search time:    0.00s
+  total time:   0.01s
+  solution depth: 3
+  solution size:  4
+  search size:    22
+/bin/sh -c "./start ../benchmarks/coin_in_the_box/coin_in_the_box-5.epddl 0"
+================================================================
+Preprocessing...
+Plan tree:
+ open_a
+  peek(a, b, c)
+   signal(a, b)
+    signal(a, c)
+     shout(a, b, c)
+      peek(a, b, c)
+
+Statistic:
+  search time:    0.00s
+  total time:   0.01s
+  solution depth: 6
+  solution size:  7
+  search size:    25

@@ -4,6 +4,9 @@
 #include "initial.h"
 #include "parse.h"
 
+extern map<int, string> findAtomsByIndex;
+extern vector<string> agents;
+
 // 启发式所用的优先队列存放的元素
 class PlanHelper {
 public:
@@ -42,6 +45,7 @@ public:
     void BuildPlan();
     int show_build_result(int, const vector<Transition> &, int , set<int>, int );
     void show_statistic() const;
+    void latex_statistic() const;
     void add_node(const Node& node);
     int calculate_node_heuristic_value(const Node& node);
     
@@ -58,8 +62,8 @@ private:
     int plan_tree_depth;//树的深度
     int plan_tree_node_num;//树的节点数
     float preprocess_time;//预处理时间
-    float epis_progression_time;
-    float ontic_progression_time;
+    // float epis_progression_time;
+    // float ontic_progression_time;
     float search_time;//搜索时间
     // 优先队列，启发式使用
     priority_queue<PlanHelper, vector<PlanHelper>, PlanHelperComp> heuristic_que_;
