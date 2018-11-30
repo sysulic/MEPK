@@ -43,43 +43,17 @@
   
   (:action share
    :category (communication)
-   :parameters (?ag - agent ?x - agent ?y - agent ?z - agent ?rk - room ?rj - room)
-   :precondition (and (K_?ag (at ?ag ?rk)) (K_?ag (the ?ag))
+   :parameters (?ag - agent ?s - secret ?rk - room)
+   :precondition (and (K_?ag (at ?ag ?rk)) (K_?ag (the ?s))
                  )
-   :effect (<{(and (at ?x ?rk)
-                  (not (at ?x ?rj))
-                  (at ?y ?rk)
-                  (not (at ?y ?rj))
-                  (at ?z ?rk)
-                  (not (at ?z ?rj)))}
-             {(and (K_?x (the ?ag))
-                  (K_?y (the ?ag))
-                  (K_?z (the ?ag)))} >
-            
-            <{(and (at ?x ?rk)
-                  (not (at ?x ?rj))
-                  (at ?y ?rk)
-                  (not (at ?y ?rj))
-                  (not (at ?z ?rk))
-                  (at ?z ?rj))}
-             {(and (K_?x (the ?ag))
-                  (K_?y (the ?ag)))} >
-            
-            <{(and (at ?x ?rk)
-                  (not (at ?x ?rj))
-                  (not (at ?y ?rk))
-                  (at ?y ?rj)
-                  (not (at ?z ?rk))
-                  (at ?z ?rj))}
-             {(K_?x (the ?ag))} >
-            
-            <{(and (not (at ?x ?rk))
-                  (at ?x ?rj)
-                  (not (at ?y ?rk))
-                  (at ?y ?rj)
-                  (not (at ?z ?rk))
-                  (at ?z ?rj))}
-             {(K_?ag (the ?ag))} >
+   :effect (<{(at a ?rk)}
+             {(K_a (the ?s))} >
+            <{(at b ?rk)}
+             {(K_b (the ?s))} >
+            <{(at c ?rk)}
+             {(K_c (the ?s))} >
+            <{(at d ?rk)}
+             {(K_d (the ?s))} >
           )
   )
 

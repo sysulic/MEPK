@@ -119,14 +119,10 @@
   )
 
   (:goal (and  (K_b (the a))
-                       (K_a(K_b (the a)))
-                     
-                                   (not(K_c (the a)))
-                                   (K_d (the a))
-                                   (K_a(K_d (the a)))
-                            
+               (K_a(K_b (the a)))
+               (not(K_c (the a)))
+               (K_d (the a))
+               (K_a(K_d (the a)))             
          )
-    
   )
-
 )

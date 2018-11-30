@@ -41,6 +41,7 @@ public:
     bool objective() const;
     void mergeCover();
     ACDFTerm& minimal(const PropDNF &);
+    int kb_size() const;
 };
 
 
@@ -70,6 +71,7 @@ public:
     bool obj_consistent(const ACDF &, const PropDNF &) const;
     ACDF negation_as_acdf(const PropDNF & cstt) const;
     ACDF& minimal(const PropDNF &);
+    int kb_size() const;
 };
 
 
@@ -87,6 +89,7 @@ public:
     ACDFList disjunction(const ACDFList &) const; // disjunct two ACDFList
     ACDFList involve(const PropDNF &) const;
     bool empty() const { return acdfs.empty(); }
+    int kb_size() const;
 };
 
 

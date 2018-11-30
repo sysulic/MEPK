@@ -63,9 +63,25 @@ Comparision results.
 
 ## Compile and Run
 
-change to the directory `MEPK/src`
+Change to the directory `MEPK/src`
 
+* Compile:
 ```
 $ make
-$ ./run.sh
+```
+
+* Run with BFS:
+```
+$ ./start ../benchmarks/hexa/hexa_domain3.epddl 2
+
+```
+
+* Run with Heuristic:
+```
+$ ./start ../benchmarks/hexa/hexa_domain3.epddl 0
+```
+
+* Debug:
+```
+$ ./test ../benchmarks/hexa/hexa_domain3.epddl
 ```

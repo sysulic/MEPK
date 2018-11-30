@@ -71,24 +71,22 @@
   )
 
   (:init (and (at a p1)
-        (not (at a p2))
-        (at b p1)
-        (not (at b p2))
-        (at c p1)
-        (not (at c p2))
-        
-        (K_a (and (at a p1)
-              (not (at a p2))) )
-        (K_b (and (at b p1)
-              (not (at b p2))) )
-        (K_c (and (at c p1)
-              (not (at c p2))) )      
-        (K_a (the a))
-        (K_b (the b))
-        (K_c (the c))   
-        (not (K_b (the a)))
-        (not (K_c (the a)))
-      
+              (not (at a p2))
+              (at b p1)
+              (not (at b p2))
+              (at c p1)
+              (not (at c p2))
+              (K_a (and (at a p1)
+                    (not (at a p2))) )
+              (K_b (and (at b p1)
+                    (not (at b p2))) )
+              (K_c (and (at c p1)
+                    (not (at c p2))) )      
+              (K_a (the a))
+              (K_b (the b))
+              (K_c (the c))   
+              (not (K_b (the a)))
+              (not (K_c (the a)))
        )
   )
 
@@ -96,13 +94,8 @@
   )
 
   (:goal (and  (K_b (the a))
-                       (K_a(K_b (the a)))
-                     
-                                   (not(K_c (the a)))
-                           
-                            
-                        )
-  
+               (K_a (K_b (the a)))
+               (not (K_c (the a)))
+        )
   )
-
 )

@@ -906,3 +906,16 @@ ACDFList ACDFList::involve(const PropDNF & prop_dnf) const {
     }
     return new_acdflist;
 }
+
+int ACDFTerm::kb_size() const {
+    int s = propDNF.size(); for (auto& a: covers) s+= a.second.kb_size(); return s;
+}
+
+int ACDF::kb_size() const {
+    int s = 0; for (auto& a: acdf_terms) s+= a.kb_size(); return s;
+}
+
+int ACDFList::kb_size() const {
+    int s = 0; for (auto& a: acdfs) s+= a.kb_size(); return s;
+}
+

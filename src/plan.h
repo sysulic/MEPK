@@ -44,8 +44,8 @@ public:
     bool check_zero_dead(ACDF);
     void BuildPlan();
     int show_build_result(int, const vector<Transition> &, int , set<int>, int );
-    void show_statistic() const;
-    void latex_statistic() const;
+    void show_statistic();
+    void latex_statistic();
     void add_node(const Node& node);
     int calculate_node_heuristic_value(const Node& node);
     

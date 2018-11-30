@@ -467,7 +467,8 @@ void Plan::BuildPlan() {
     plan_tree_depth = show_build_result(0, goal_edges, 0, nodes, -1);
 }
 
-void Plan::show_statistic() const {
+void Plan::show_statistic() {
+    if (search_time < 0.01) search_time = 0.01;
     printf("\nStatistic:\n");
     // printf("  preprocess time: %.4fs\n", preprocess_time);
     // printf("  epis progression time: %.4fs\n", epis_progression_time);
@@ -479,7 +480,8 @@ void Plan::show_statistic() const {
     printf("  search size:\t  %lu\n", all_nodes.size());
 }
 
-void Plan::latex_statistic() const {
+void Plan::latex_statistic() {
+    if (search_time < 0.01) search_time = 0.01;
     printf(" & %lu & %lu+%lu & %lu & 1 & %.2f-%.2f(%d/%d/%lu) \\\\\n", agents.size(), in.mine_epis_actions.size(), \
         in.mine_ontic_actions.size(), findAtomsByIndex.size(), preprocess_time+search_time, \
         search_time, plan_tree_depth, plan_tree_node_num, all_nodes.size());
@@ -529,26 +531,26 @@ void Plan::add_node(const Node& node) {
 
 int Plan::calculate_node_heuristic_value(const Node& node) {
     // assert(!in.mine_goal.acdf_terms.empty());
-    if (search_time > 20.0 && !reset_key_) {
-        // reset heuristic queue
-        cout << "runout of time" << endl;
-        vector<PlanHelper> phv; 
-        while (! heuristic_que_.empty()) {
-            PlanHelper ph = heuristic_que_.top();
-            ph.heuristic_value_ = 0;
-            phv.push_back(ph);
-        }
-        for (size_t i = 0; i < phv.size(); ++ i) {
-            heuristic_que_.push(phv[i]);
-        }
-        reset_key_ = true;
-        return 0;
-    }
+    // if (search_time > 20.0 && !reset_key_) {
+    //     // reset heuristic queue
+    //     cout << "runout of time" << endl;
+    //     vector<PlanHelper> phv; 
+    //     while (! heuristic_que_.empty()) {
+    //         PlanHelper ph = heuristic_que_.top();
+    //         ph.heuristic_value_ = 0;
+    //         phv.push_back(ph);
+    //     }
+    //     for (size_t i = 0; i < phv.size(); ++ i) {
+    //         heuristic_que_.push(phv[i]);
+    //     }
+    //     reset_key_ = true;
+    //     return 0;
+    // }
     int node_value = 0;
     node.kb.neg_entails(in.mine_goal, in.mine_constraint, true, &node_value);
     // node_value = node.value;//a -- *search_difficulty/10;
     // node_value = node.value;//b -- *search_difficulty/10;
     // cout << node_value << endl;
     // if(node.depth>6) value -= 100;
-    return node_value;
+    return node_value;//-node.kb.kb_size();
 }
