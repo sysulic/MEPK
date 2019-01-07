@@ -3,6 +3,7 @@
 
 void Initial::exec() {
 // cout << "start : ------------" << endl;
+
     mine_constraint = constraint;
     mine_init = kldnf_to_acdf(init, mine_constraint);
     mine_goal = kldnf_to_acdf(goal, mine_constraint);

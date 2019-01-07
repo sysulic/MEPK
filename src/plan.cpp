@@ -2,8 +2,8 @@
 #include <algorithm>
 
 Plan::Plan(const char *domain, int type) {
-    // printf("================================================================\n");
-    // printf("domain_file(%s)\n     p_file(%s)\n", domain, p);
+    printf("================================================================\n");
+    printf("domain+problem(%s)\n", domain);
     // if (type == 0)
     //     cout << "search_type(Heur first)\n" << endl;
     // if (type == 1)
@@ -18,7 +18,10 @@ Plan::Plan(const char *domain, int type) {
     plan_tree_node_num = 0;
     clock_t t_start = clock();
     printf("Preprocessing...\n");
-    if (!parser.exec(domain, false)) return;
+    if (!parser.exec(domain, false)) {
+        parsing_succeed = false;
+        return;
+    }
     in.exec();
 
     // //print actions
@@ -43,13 +46,14 @@ Plan::Plan(const char *domain, int type) {
 // Algorithm 6
 void Plan::exec_plan() {
     printf("Planning...\n");
+    Node init_node;
     if (in.mine_init.neg_entails(in.mine_goal, in.mine_constraint)) {
         printf("init neg_entails goal!\n");
         return;
     }
 
     clock_t t_start = clock();
-    Node init_node;
+    init_node.ancestor_node_id = 0;
     init_node.flag = TOBEEXPLORED;
     init_node.isolated = false;
     init_node.kb = in.mine_init;
@@ -99,7 +103,7 @@ void Plan::explore(int node_pos) {
             if (res_pos == node_pos) continue;
             bool new_node = false;
             if (res_pos == -1) {
-                Node newNode(TOBEEXPLORED, false, res[0], all_nodes[node_pos].depth+1);
+                Node newNode(TOBEEXPLORED, false, res[0], all_nodes[node_pos].depth+1, node_pos);
                 add_node(newNode);
                 res_pos = all_nodes.size()-1;
                 new_node = true;
@@ -125,7 +129,7 @@ void Plan::explore(int node_pos) {
             if (res_pos1 == node_pos) continue;
             new_node = false;
             if (res_pos1 == -1) {
-                Node newNode(TOBEEXPLORED, false, res[1], all_nodes[node_pos].depth+1);
+                Node newNode(TOBEEXPLORED, false, res[1], all_nodes[node_pos].depth+1, node_pos);
                 add_node(newNode);
                 res_pos1 = all_nodes.size()-1;
                 new_node = true;
@@ -174,7 +178,7 @@ void Plan::explore(int node_pos) {
             if (res_pos == node_pos) continue;
             bool new_node = false;
             if (res_pos == -1) {
-                Node newNode(TOBEEXPLORED, false, res, all_nodes[node_pos].depth+1);
+                Node newNode(TOBEEXPLORED, false, res, all_nodes[node_pos].depth+1, node_pos);
                 add_node(newNode);
                 // cout << all_nodes.size() << endl;
                 res_pos = all_nodes.size()-1;
@@ -246,7 +250,7 @@ void Plan::expand(Transition ts, bool epis, bool new_node) {
         reconnection_propagation(ts.next_state);
     } else {
         all_nodes[ts.next_state].isolated = false;
-        if (all_nodes[ts.next_state].kb.neg_entails(in.mine_goal, in.mine_constraint, true, &(all_nodes[ts.next_state].value))) {
+        if (all_nodes[ts.next_state].kb.neg_entails(in.mine_goal, in.mine_constraint)) {
         // impossible case:: || (epis && !all_nodes[ts.next_state].kb.obj_consistent(all_nodes[ts.front_state].kb, in.mine_constraint)) )
             all_nodes[ts.next_state].flag = FINAL_GOAL;
         } else {
@@ -546,11 +550,15 @@ int Plan::calculate_node_heuristic_value(const Node& node) {
     //     reset_key_ = true;
     //     return 0;
     // }
+
     int node_value = 0;
+    int ance_node_value = 0;
     node.kb.neg_entails(in.mine_goal, in.mine_constraint, true, &node_value);
+    all_nodes[node.ancestor_node_id].kb.neg_entails(in.mine_goal, in.mine_constraint, true, &ance_node_value);
+    // cout << node_value-ance_node_value << endl;
     // node_value = node.value;//a -- *search_difficulty/10;
     // node_value = node.value;//b -- *search_difficulty/10;
     // cout << node_value << endl;
     // if(node.depth>6) value -= 100;
-    return node_value;//-node.kb.kb_size();
+    return node_value-ance_node_value;//-node.kb.kb_size();
 }

@@ -87,6 +87,23 @@ vector<PropTerm> PropTerm::negation() const {
 	return ans;
 }
 
+PropDNF PropTerm::negation_as_dnf() const {
+	PropDNF ans;
+	if (!isSatisfiable()) {
+		ans.dnf.push_back(PropTerm(len));
+	}
+	else {
+		for (int i = 0; i < len; i++) {
+			if (literal[i] == UNDEFINED) continue;
+			PropTerm tpt(len);
+			tpt.literal[i] = (literal[i] == TRUE) ? FALSE : TRUE;
+			ans.dnf.push_back(tpt);
+		}
+	}
+	return ans;
+
+}
+
 set<string> PropTerm::getTotalLiterals() const {
 	set<string> ans;
 	for (int i = 0; i < len; i++) {
@@ -95,6 +112,10 @@ set<string> PropTerm::getTotalLiterals() const {
 		}
 	}
 	return ans;
+}
+
+bool PropTerm::operator==(const PropTerm& rhs) const {
+	return literal==rhs.literal;
 }
 
 void PropTerm::print() const {
@@ -165,6 +186,19 @@ bool PropDNF::isEqual(const PropDNF& pd) const {
 
 bool PropDNF::isEmpty() const {
 	return dnf.empty();
+}
+
+PropDNF PropDNF::conjunction(const PropTerm& pt) const {
+	if (dnf.empty()) {
+		PropDNF res;
+		res.dnf.push_back(pt);
+		return res;
+	}
+	PropDNF res;
+	for (auto ite1 = dnf.begin(); ite1 != dnf.end(); ite1++) {
+		res.dnf.push_back(ite1->conjunction(pt));
+	}
+	return res.minimal();
 }
 
 PropDNF PropDNF::conjunction(const PropDNF& pd) const {
@@ -246,12 +280,77 @@ PropDNF PropDNF::negation() const {
 }
 
 PropDNF PropDNF::revision(const PropDNF& pd) {
+// cout << "DNF 1:--------------------------------------" << endl;
+// print();
+// cout << "revised by DNF 2:--------------------------------------" << endl;
+// pd.print();
+	map<set<int>, PropDNF> min_wrt_revised;
+	PropDNF result;
+	bool exist_empty_min = false;
+	for (auto ite1 = dnf.begin(); ite1 != dnf.end(); ite1++) {
+		for (auto ite2 = pd.dnf.begin(); ite2 != pd.dnf.end(); ite2++) {
+			PropTerm tpt(ite1->len);
+			set<int> cur_diff = cover(*ite1, *ite2, tpt);
+			if (*ite1 == *ite2) {
+				exist_empty_min = true;
+				result.dnf.push_back(tpt);
+				continue;
+			}
+			if (min_wrt_revised.empty()) {
+				PropDNF first_min_diff; first_min_diff.dnf.push_back(tpt);
+				min_wrt_revised[cur_diff] = first_min_diff;
+				continue;
+			}
+			bool new_min_added = true;  // new and update old
+			bool new_diff_min = true;  // different new minimal
+			int old_size = min_wrt_revised.size(), i = 0;
+			for (map<set<int>, PropDNF>::iterator it = min_wrt_revised.begin(); i < old_size; i++) {
+				set<int> min_diff = it->first;
+				if (cur_diff == min_diff) {
+					new_diff_min = false;
+					min_wrt_revised[cur_diff].dnf.push_back(tpt);
+					break;
+				} else if (includes(min_diff.begin(), min_diff.end(), cur_diff.begin(), cur_diff.end())) {
+					new_diff_min = false;
+					// removing all supersets
+					it = min_wrt_revised.erase(it);
+					if (new_min_added) {	
+						min_wrt_revised[cur_diff].dnf.clear();
+						min_wrt_revised[cur_diff].dnf.push_back(tpt);
+						new_min_added = false;
+					}
+				} else if (includes(cur_diff.begin(), cur_diff.end(), min_diff.begin(), min_diff.end())) {
+					new_diff_min = false;
+					break;
+				} else {
+					it++;
+				}
+			}
+			if (new_diff_min) {
+				PropDNF new_min_diff; new_min_diff.dnf.push_back(tpt);
+				min_wrt_revised[cur_diff] = new_min_diff;
+			}
+		}
+	}
+	if (exist_empty_min) {
+		return result;
+	}
+	// merge all min_wrt_revised
+	for (auto & model : min_wrt_revised)
+		result = result.disjunction(model.second);
+
+// cout << "DNF result:--------------------------------------" << endl;
+// result.print();
+	return result.minimal();
+}
+
+PropDNF PropDNF::revision_cardinality(const PropDNF& pd) {
 	int minDiff = INT_MAX;
 	PropDNF ans;
 	for (auto ite1 = dnf.begin(); ite1 != dnf.end(); ite1++) {
 		for (auto ite2 = pd.dnf.begin(); ite2 != pd.dnf.end(); ite2++) {
 			PropTerm tpt(ite1->len);
-			int curDiff = diff(*ite1, *ite2, tpt);
+			int curDiff = cover(*ite1, *ite2, tpt).size();
 			if (curDiff < minDiff) {
 				minDiff = curDiff;
 				ans.dnf.clear();
@@ -263,41 +362,94 @@ PropDNF PropDNF::revision(const PropDNF& pd) {
 }
 
 PropDNF PropDNF::update(const PropDNF& pd) {
-	PropDNF ans;
+// cout << "DNF 1:--------------------------------------" << endl;
+// print();
+// cout << "update by DNF 2:--------------------------------------" << endl;
+// pd.print();
+	PropDNF result;
+	for (auto phi_i = dnf.begin(); phi_i != dnf.end(); phi_i++) {
+		for (auto mu_j = pd.dnf.begin(); mu_j != pd.dnf.end(); mu_j++) {
+			PropTerm tpt(phi_i->len);
+			cover(*phi_i, *mu_j, tpt);
+			PropDNF patch;
+			PropTerm tmp_term(phi_i->len);
+			int tmp_term_size = 1;
+			for (auto mu_k = pd.dnf.begin(); mu_k != pd.dnf.end(); mu_k++) {
+				if (mu_k->canEntail(diff(*mu_j, *phi_i))) continue;
+				tmp_term_size = minus(*mu_k, *phi_i, *mu_j, tmp_term);
+				if (tmp_term_size == 0) {
+					// cout << "haha "<< endl;
+					break;
+				}
+				patch = patch.conjunction(tmp_term.negation_as_dnf());
+			}
+			if (tmp_term_size != 0)
+				result = result.disjunction(patch.conjunction(tpt));
+		}
+	}
+
+// cout << "DNF result:--------------------------------------" << endl;
+// result.print();
+	return result.minimal();
+}
+
+PropDNF PropDNF::update_cardinality(const PropDNF& pd) {
+	PropDNF updated_partial_models;
 	for (auto ite1 = dnf.begin(); ite1 != dnf.end(); ite1++) {
-		int minDiff = INT_MAX;
+		int min_diff = INT_MAX;
 		list<PropTerm> tptl;
 		for (auto ite2 = pd.dnf.begin(); ite2 != pd.dnf.end(); ite2++) {
 			PropTerm tpt(ite1->len);
-			int curDiff = diff(*ite1, *ite2, tpt);
-			if (curDiff < minDiff) {
-				minDiff = curDiff;
+			int cur_diff = cover(*ite1, *ite2, tpt).size();
+			if (cur_diff < min_diff) {
+				min_diff = cur_diff;
 				tptl.clear();
 			}
-			if (curDiff == minDiff) tptl.push_back(tpt);
+			if (cur_diff == min_diff) tptl.push_back(tpt);
 		}
-		ans.dnf.insert(ans.dnf.end(), tptl.begin(), tptl.end());
+		updated_partial_models.dnf.insert(updated_partial_models.dnf.end(), tptl.begin(), tptl.end());
 	}
-	return ans.minimal();
+	return updated_partial_models.minimal();
 }
 
-int PropDNF::diff(const PropTerm& lpt, const PropTerm& rpt, PropTerm& apt) {
-	int ans = 0;
-	assert(lpt.len == rpt.len);
+set<int> PropDNF::cover(const PropTerm& lpt, const PropTerm& rpt, PropTerm& apt) {
+	set<int> prop_diff;  // return prop(Diff), apt is : rpt cover lpt
 	for (int i = 0; i < lpt.len; i++) {
 		if (lpt.literal[i] == UNDEFINED && rpt.literal[i] == UNDEFINED) continue;
 		else if (lpt.literal[i] == UNDEFINED) {
 			apt.literal[i] = rpt.literal[i];
-		}
-		else if (rpt.literal[i] == UNDEFINED) {
+		} else if (rpt.literal[i] == UNDEFINED) {
 			apt.literal[i] = lpt.literal[i];
-		}
-		else {
-			if (lpt.literal[i] != rpt.literal[i]) ans++;
+		} else {
+			if (lpt.literal[i] != rpt.literal[i]) prop_diff.insert(i);
 			apt.literal[i] = rpt.literal[i];
 		}
 	}
-	return ans;
+	return prop_diff;
+}
+
+PropTerm PropDNF::diff(const PropTerm& lpt, const PropTerm& rpt) {
+	PropTerm diff(lpt.len);
+	for (int i = 0; i < lpt.len; i++)
+		if (lpt.literal[i] != UNDEFINED && rpt.literal[i] != UNDEFINED \
+			&& lpt.literal[i] != rpt.literal[i])
+			diff.literal[i] = lpt.literal[i];
+	return diff;
+}
+
+int PropDNF::minus(const PropTerm& lpt, const PropTerm& rpt1, const PropTerm& rpt2, PropTerm& res) {
+	// res = mu_k - (phi_i Union mu_j)
+	res = lpt;
+	int res_size = 0;
+	for (int i = 0; i < lpt.len; i++)
+		if (res.literal[i] != UNDEFINED) {
+			if (lpt.literal[i] == rpt1.literal[i] || lpt.literal[i] == rpt2.literal[i] ) {
+				res.literal[i] = UNDEFINED;
+			} else {
+				res_size++;
+			}
+		}
+	return res_size;
 }
 
 void PropDNF::print(size_t indent) const {
@@ -309,6 +461,7 @@ void PropDNF::print(size_t indent) const {
 		flag = false;
 	}
 	if(!flag) cout << ")";
+	cout << endl;
 }
 
 void PropDNF::show(ofstream& os) const {
@@ -319,6 +472,7 @@ void PropDNF::show(ofstream& os) const {
 		flag = false;
 	}
 	if(!flag) os << ")";
+	os << endl;
 }
 
 set<string> PropDNF::get_total_literals() const {

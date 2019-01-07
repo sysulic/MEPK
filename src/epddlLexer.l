@@ -12,7 +12,6 @@ k				K_[a-zA-Z0-9\?]+
 dk				DK_[a-zA-Z0-9]+
 
 %%
-
 "and"				{ return AND; }
 "or"				{ return OR; }
 "not"				{ return NOT; }
@@ -53,6 +52,8 @@ dk				DK_[a-zA-Z0-9]+
 {dk}				{ yylval.str = new string(yytext); return DK; }
 {name}				{ yylval.str = new string(yytext); return NAME; }
 \n 					{ yylineno++; }
+
+[ \t\r\n]      ;
 
 %%
 

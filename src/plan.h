@@ -6,6 +6,7 @@
 
 extern map<int, string> findAtomsByIndex;
 extern vector<string> agents;
+extern bool parsing_succeed;
 
 // 启发式所用的优先队列存放的元素
 class PlanHelper {

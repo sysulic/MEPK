@@ -8,10 +8,12 @@
 using namespace std;
 
 class KLDNF;
+class PropDNF;
 
 extern map<int, string> findAtomsByIndex;
 extern map<string, int> findAtomsByName;
 extern int atomNum;
+extern set<int> full_atom;
 
 class PropTerm {   // Propositional Term
 public:
@@ -27,8 +29,10 @@ public:
 	PropTerm conjunction(const PropTerm& pt) const;
 	PropTerm minimal();
 	vector<PropTerm> negation() const;
+	PropDNF negation_as_dnf() const;
 	set<string> getTotalLiterals() const;
-
+	bool operator==(const PropTerm&) const;
+	
 	void print() const;
 	void show(ofstream& os) const;
 };
@@ -45,14 +49,20 @@ public:
 	bool canEntail(const PropDNF& pd) const;
 	bool isEqual(const PropDNF& pd) const;
 	bool isEmpty() const;
+	PropDNF conjunction(const PropTerm& pd) const;
 	PropDNF conjunction(const PropDNF& pd) const;
 	PropDNF disjunction(const PropDNF& pd) const;
 	PropDNF minimal();
 	PropDNF negation() const;
 	PropDNF revision(const PropDNF& pd);
+	PropDNF revision_cardinality(const PropDNF& pd);
 	PropDNF update(const PropDNF& pd);
+	PropDNF update_cardinality(const PropDNF& pd);
 	
-	int diff(const PropTerm& lpt, const PropTerm& rpt, PropTerm& apt);
+	set<int> cover(const PropTerm& lpt, const PropTerm& rpt, PropTerm& apt);
+	PropTerm diff(const PropTerm& lpt, const PropTerm& rpt);
+	int minus(const PropTerm& lpt, const PropTerm& rpt1, const PropTerm& rpt2, PropTerm& res);
+
 	void print(size_t indent=0) const;
 	void show(ofstream& os) const;
 
