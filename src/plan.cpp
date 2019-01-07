@@ -17,7 +17,7 @@ Plan::Plan(const char *domain, int type) {
     plan_tree_depth = 0;
     plan_tree_node_num = 0;
     clock_t t_start = clock();
-    printf("Preprocessing...\n");
+    printf("\nPreprocessing...\n");
     if (!parser.exec(domain, false)) {
         parsing_succeed = false;
         return;
@@ -82,19 +82,12 @@ void Plan::exec_plan() {
 // Algorithm 7
 void Plan::explore(int node_pos) {
 // cout << "@explore: " << node_pos << endl;
-// if (node_pos == 802)
-//     all_nodes[802].kb.print();
     bool execed = false;  // deep search find new node
     // 进行感知演进
     for (size_t i = 0; i < in.mine_epis_actions.size(); ++i) {
-// cout << "node " << node_pos << " to test epis action: " << in.mine_epis_actions[i].name << endl;
         if (all_nodes[node_pos].kb.neg_entails(in.mine_epis_actions[i].pre_con, in.mine_constraint)) {
-// if (node_pos == 802)
-//     cout <<  "node " << node_pos << "doing... epis action: " << in.mine_epis_actions[i].name << endl;
-            // clock_t epis_start = clock();
+
             vector<ACDF> res = all_nodes[node_pos].kb.epistemic_prog(in.mine_epis_actions[i], in.mine_constraint);
-            // clock_t epis_end = clock();
-            // epis_progression_time += difftime(epis_end, epis_start) / 1000000.0;
 
             if (check_zero_dead(res[0]) || check_zero_dead(res[1]))
                 continue;
@@ -117,14 +110,6 @@ void Plan::explore(int node_pos) {
             tbs.is_true = true;
             expand(tbs, true, new_node);
            
-            // cout << "from node:" << node_pos << "epis action pos done: " << in.mine_epis_actions[i].name << " ================= " << endl;
-            // for (size_t xx = 0; xx < all_nodes.size(); ++xx)
-            // {
-            //     cout <<"node " << xx << ": " << all_nodes[xx].flag << " " << (all_nodes[xx].isolated ? " isolated" : " connected") << endl;
-            // }
-            // cout << " ================================================================= " << endl;
-
-            // cout <<  node_pos << " after action : " << in.mine_epis_actions[i].name << " neg :" << endl;
             int res_pos1 = checknode(res[1]);
             if (res_pos1 == node_pos) continue;
             new_node = false;
@@ -151,36 +136,22 @@ void Plan::explore(int node_pos) {
                 hert_nodes = res_pos;
                 execed = true;
             }
-
-            // cout << "from node:" << node_pos << "epis action neg done: " << in.mine_epis_actions[i].name << " ================= " << endl;
-            // for (size_t xx = 0; xx < all_nodes.size(); ++xx)
-            // {
-            //     cout <<"node " << xx << ": " << all_nodes[xx].flag << " " << (all_nodes[xx].isolated ? " isolated" : " connected") << endl;
-            // }
-            // cout << " ================================================================= " << endl;
         }
     }
     // 进行物理演进
     for (size_t i = 0; i < in.mine_ontic_actions.size(); ++i) {
-// cout << "node " << node_pos << " to test ontic action: " << in.mine_ontic_actions[i].name << endl;
         if (all_nodes[node_pos].kb.neg_entails(in.mine_ontic_actions[i].pre_con, in.mine_constraint)) {
-// if (node_pos == 802)
-//     cout << "node " << node_pos << " doing... ontic action: " << in.mine_ontic_actions[i].name << endl;
-            // clock_t ontic_start = clock();
             ACDF res = all_nodes[node_pos].kb.ontic_prog(in.mine_ontic_actions[i], in.mine_constraint);
-            // clock_t ontic_end = clock();
-            // ontic_progression_time += difftime(ontic_end, ontic_start) / 1000000.0;
+
             if (check_zero_dead(res)) continue;
             
             int res_pos = checknode(res);
-// if (node_pos == 802)
-//     cout << "res pos: " << res_pos << endl;
+
             if (res_pos == node_pos) continue;
             bool new_node = false;
             if (res_pos == -1) {
                 Node newNode(TOBEEXPLORED, false, res, all_nodes[node_pos].depth+1, node_pos);
                 add_node(newNode);
-                // cout << all_nodes.size() << endl;
                 res_pos = all_nodes.size()-1;
                 new_node = true;
             }
@@ -193,8 +164,6 @@ void Plan::explore(int node_pos) {
             expand(tbs, false, new_node);
 
             if (all_nodes[res_pos].flag == FINAL_GOAL) {
-// if (node_pos == 802)
-//     cout << "goal" << endl;
                 goal_propagation(node_pos, false, i);
                 return;
             }
@@ -203,13 +172,6 @@ void Plan::explore(int node_pos) {
                 hert_nodes = res_pos;
                 execed = true;
             }
-
-            // cout <<  "from node:" << node_pos << "ontic action done: " << in.mine_ontic_actions[i].name << " ================= " << endl;
-            // for (size_t xx = 0; xx < all_nodes.size(); ++xx)
-            // {
-            //     cout <<"node " << xx << ": " << all_nodes[i].flag << " " << (all_nodes[xx].isolated ? " isolated" : " connected") << endl;
-            // }
-            // cout << " ================================================================= " << endl;
         }
     }
 
@@ -220,25 +182,10 @@ void Plan::explore(int node_pos) {
         dead_propagation(node_pos);
     }
 
-    // cout << " ------------------------------- " << endl;
-    // for (vector<Transition>::const_iterator e = all_edges.begin();
-    // e != all_edges.end(); ++e) {
-    //     cout << e->front_state << " - "
-    //         << (e->is_observe_action ? in.mine_epis_actions[e->action_number].name : in.mine_ontic_actions[e->action_number].name)
-    //         << " - " << e->next_state << endl;
-    //     // all_nodes[e->next_state].kb.print();
-    // }
-
 }
 
 // Algorithm 8
 void Plan::expand(Transition ts, bool epis, bool new_node) {
-// if (ts.front_state == 802) {
-// cout << "expand..." << endl;
-// cout << ts.front_state << " - "
-//     << (ts.is_observe_action ? in.mine_epis_actions[ts.action_number].name : in.mine_ontic_actions[ts.action_number].name)
-//     << " - " << ts.next_state << endl;
-// }
     bool edge_exist = false;
     for (size_t i = 0; i < all_edges.size(); ++i)
         if (all_edges[i].front_state == ts.front_state && all_edges[i].next_state == ts.next_state)
@@ -257,11 +204,6 @@ void Plan::expand(Transition ts, bool epis, bool new_node) {
             all_nodes[ts.next_state].flag = TOBEEXPLORED;
         }
     }
-    // cout << "---------------------------" << endl;
-    // cout << ts.front_state << " - "
-    //     << (ts.is_observe_action ? in.mine_epis_actions[ts.action_number].name : in.mine_ontic_actions[ts.action_number].name)
-    //     << " - " << ts.next_state << endl;
-    // cout << "-------------------------------------------------------" << endl << endl;
 }
 
 // Algorithm 12

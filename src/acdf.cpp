@@ -163,14 +163,11 @@ bool ACDFTerm::strong_entails(const ACDFTerm & acdf_term, const PropDNF & cstt) 
             if (!found) return false;
         }
     }
-    // cout << "success =====================================" << endl;
     return true;
 }
 
 // ¬ACDFTerm -> ACDF
 ACDF ACDFTerm::negation_as_acdf(const PropDNF & cstt) const {
-    // cout << "negation acdf ############################" << endl;
-    // print();
     ACDF new_acdf;
     ACDFTerm dnf_term;
     dnf_term.propDNF = propDNF.negation();
@@ -195,9 +192,6 @@ ACDF ACDFTerm::negation_as_acdf(const PropDNF & cstt) const {
             new_acdf.acdf_terms.push_back(tmp_term);  // add i
         }
     }
-    // cout << "after negation ############################" << endl;
-    // new_acdf.print();
-    // cout << "###########################################" << endl;
     return new_acdf.minimal(cstt);
 }
 
@@ -208,10 +202,6 @@ ACDF ACDFTerm::revision(const ACDF & acdf, const PropDNF & cstt) const {
 }
 
 ACDFTerm ACDFTerm::revision(const ACDFTerm & acdf_term, const PropDNF & cstt) const {
-// cout << "Term ```````````````````" << endl;
-// print();
-// cout << "revision with ````````````" << endl;
-// acdf_term.print();
     if (valid()) return acdf_term;
     if (acdf_term.valid()) return *this;
     ACDFTerm new_term;
@@ -225,10 +215,7 @@ ACDFTerm ACDFTerm::revision(const ACDFTerm & acdf_term, const PropDNF & cstt) co
             new_term.covers[cover->first] = cover->second;
         } else {
             if (two_consis) {
-    // cout << "two term consistent ? ```````````````````" << endl;
-    // conjunction(acdf_term).minimal(cstt).print();
                 // case 3:
-    // cout << "inconsistent" << endl;
                 // calculate \Phi^*
                 ACDFList acdflist1, acdflist2;  // 1: consistent revision; 2: all
                 bool found_consis = false;
@@ -257,9 +244,6 @@ ACDFTerm ACDFTerm::revision(const ACDFTerm & acdf_term, const PropDNF & cstt) co
                     new_term.covers[cover->first] = acdflist2;
                 
                 ACDFList tmp_acdflist = new_term.covers[cover->first];
-// cout << "_+_+_+_+_+_++_+_++__++ ```````````````````" << endl;
-// tmp_acdflist.print();
-// cout << "_+_+_+_+_+_++_+_++__++ ```````````````````" << endl;
                 ACDFList tmp_acdflist2;
                 for (list<ACDF>::const_iterator post_acdf = acdf_term.covers.at(cover->first).acdfs.begin();
                 post_acdf != acdf_term.covers.at(cover->first).acdfs.end(); ++post_acdf) {
@@ -269,13 +253,9 @@ ACDFTerm ACDFTerm::revision(const ACDFTerm & acdf_term, const PropDNF & cstt) co
                             tmp_acdflist2.acdfs.push_back(*post_acdf);
                     }
                 }
-// cout << "_+_+_+_+_+_++_+_++__++ ```````````````````" << endl;
-// tmp_acdflist2.print();
-// cout << "_+_+_+_+_+_++_+_++__++ ```````````````````" << endl;
                 new_term.covers[cover->first] = tmp_acdflist.disjunction(tmp_acdflist2);
             } else {
                 // case 2:
-        // cout << "consistent" << endl;
                 for (list<ACDF>::const_iterator acdf = cover->second.acdfs.begin();
                 acdf != cover->second.acdfs.end(); ++acdf) {
                     new_term.covers[cover->first].acdfs.push_back(acdf->revision(acdf_term.covers.at(cover->first).all_in_one(), cstt));
@@ -294,16 +274,10 @@ ACDFTerm ACDFTerm::revision(const ACDFTerm & acdf_term, const PropDNF & cstt) co
             new_term.covers[cover->first] = cover->second;
         }
     new_term = new_term.minimal(cstt);
-// cout << "get ````````````````````" << endl;
-// new_term.print();
     return new_term;
 }
 
 ACDF ACDFTerm::update(const ACDF & acdf, const PropDNF & cstt) const {
-    // cout << "Half Term ``````````````" << endl;
-    // print();
-    // cout << "update with ````````````" << endl;
-    // acdf.print();
     bool exist = false;
     ACDF new_acdf1, new_acdf2;
     for (list<ACDFTerm>::const_iterator term = acdf.acdf_terms.begin(); \
@@ -324,17 +298,10 @@ ACDF ACDFTerm::update(const ACDF & acdf, const PropDNF & cstt) const {
                 new_acdf1.acdf_terms.push_back(update(*term, cstt));
         }
     }
-
-    // cout << "get ````````````````````" << endl;
-    // exist ? new_acdf1.print() : new_acdf2.print();
     return exist ? new_acdf1 : new_acdf2;
 }
 
 ACDFTerm ACDFTerm::update(const ACDFTerm & acdf_term, const PropDNF & cstt) const {
-// cout << "Term ```````````````````" << endl;
-// print();
-// cout << "update with ````````````" << endl;
-// acdf_term.print();
     if (valid()) return acdf_term;
     if (acdf_term.valid()) return *this;
     ACDFTerm new_term;
@@ -347,13 +314,6 @@ ACDFTerm ACDFTerm::update(const ACDFTerm & acdf_term, const PropDNF & cstt) cons
         if (acdf_term.covers.find(cover->first) == acdf_term.covers.end()) {
             new_term.covers[cover->first] = cover->second;
         } else {
-    // cout << "_+_+_+_+_+_++_+_++__++ ```````````````````" << endl;
-    // cover->second.print();
-    // cout << "_+_+_+_+_+_++_+_++__++ ```````````````````" << endl;
-    // acdf_term.covers.at(cover->first).print();
-    // cout << "_+_+_+_+_+_++_+_++__++ ```````````````````" << endl;
-    // cover->second.update(acdf_term.covers.at(cover->first), cstt).print();
-    // cout << "_+_+_+_+_+_++_+_++__++ ```````````````````" << endl;
             // calculate \Phi^*
             ACDFList acdflist;
             for (list<ACDF>::const_iterator acdf1 = cover->second.acdfs.begin();
@@ -361,9 +321,6 @@ ACDFTerm ACDFTerm::update(const ACDFTerm & acdf_term, const PropDNF & cstt) cons
                 acdflist.acdfs.push_back(acdf1->update(acdf_term.covers.at(cover->first).all_in_one(), cstt));
             }
 
-// cout << "_+_+_+_+_+_++_+_++__++ ```````````````````" << endl;
-// acdflist.print();
-// cout << "_+_+_+_+_+_++_+_++__++ ```````````````````" << endl;
             ACDFList acdflist2;
             for (list<ACDF>::const_iterator post_acdf = acdf_term.covers.at(cover->first).acdfs.begin();
             post_acdf != acdf_term.covers.at(cover->first).acdfs.end(); ++post_acdf) {
@@ -373,9 +330,6 @@ ACDFTerm ACDFTerm::update(const ACDFTerm & acdf_term, const PropDNF & cstt) cons
                         acdflist2.acdfs.push_back(*post_acdf);
                 }
             }
-// cout << "_+_+_+_+_+_++_+_++__++ ```````````````````" << endl;
-// acdflist2.print();
-// cout << "_+_+_+_+_+_++_+_++__++ ```````````````````" << endl;
             new_term.covers[cover->first] = acdflist.disjunction(acdflist2);
         }
     }
@@ -387,17 +341,12 @@ ACDFTerm ACDFTerm::update(const ACDFTerm & acdf_term, const PropDNF & cstt) cons
         }
     }
     new_term = new_term.minimal(cstt);
-// cout << "get ````````````````````" << endl;
-// new_term.print();
     return new_term;
 }
 
 
 ACDFTerm ACDFTerm::conjunction(const ACDFTerm & acdf_term) const {
-// cout << "Term ```````````````````" << endl;
-// print();
-// cout << "group with ````````````" << endl;
-// acdf_term.print();
+
     if (valid()) return acdf_term;
     if (acdf_term.valid()) return *this;
     ACDFTerm new_term = *this;
@@ -409,8 +358,7 @@ ACDFTerm ACDFTerm::conjunction(const ACDFTerm & acdf_term) const {
         else
             new_term.covers[cover->first] =
                 new_term.covers[cover->first].conjunction(cover->second);
-// cout << "get new term ````````````" << endl;
-// new_term.print();
+
     return new_term;
 }
 
@@ -434,8 +382,6 @@ ACDFTerm ACDFTerm::involve(const PropDNF & prop_dnf) const {
 }
 
 bool ACDFTerm::unsatisfiable() const {
-    // cout << "check satisfiable =-=-=-=-=-=-=-=-=-=-=-=-=" << endl;
-    // print();
     if (!propDNF.isEmpty() && !propDNF.isSatisfiable()) return true;
     ACDF tmp;
     for (map<string, ACDFList>::const_iterator cover = covers.begin();
@@ -445,7 +391,6 @@ bool ACDFTerm::unsatisfiable() const {
             return true;
         }
     }
-    // cout << "this is consistent =-=-=-=-=-=-=-=-=-=-=-=-=" << endl;
     return false;
 }
 
@@ -456,8 +401,6 @@ bool ACDFTerm::objective() const {
 }
 
 ACDFTerm& ACDFTerm::minimal(const PropDNF & cstt) {
-    // cout << "before minimal =====================================" << endl;
-    // print();
     // 1. minimal DNF
     propDNF = propDNF.minimal();
     for (map<string, ACDFList>::iterator cover = covers.begin();
@@ -465,8 +408,6 @@ ACDFTerm& ACDFTerm::minimal(const PropDNF & cstt) {
         // 2. minimal cover
         cover->second = cover->second.minimal(cstt);
     }
-    // cout << "after minimal =====================================" << endl;
-    // print();
     return *this;
 }
 
@@ -511,10 +452,7 @@ bool ACDF::neg_entails(const ACDF & acdf, const PropDNF & cstt, bool try_goal, i
 }
 
 bool ACDF::strong_entails(const ACDF & acdf, const PropDNF & cstt) const {
-    // cout << "ACDF strong entails  ```````````````````" << endl;
-    // print();
-    // cout << "try entail  ````````````" << endl;
-    // acdf.print();
+
     for (list<ACDFTerm>::const_iterator acdf_term1 = acdf_terms.begin();
     acdf_term1 != acdf_terms.end(); ++acdf_term1) {
         bool found = false;
@@ -525,7 +463,6 @@ bool ACDF::strong_entails(const ACDF & acdf, const PropDNF & cstt) const {
         }
         if (!found) return false;
     }
-    // cout << "strong entail success  ````````````" << endl;
     return true;
 }
 
@@ -539,36 +476,17 @@ bool ACDF::valid() const {
     PropDNF p;
     ACDF tmp_acdf = *this;
     tmp_acdf = tmp_acdf.minimal(p);
-// cout << "This ACDF is valid ?????????" << endl;
-// tmp_acdf.print();
-    bool exist_cover = false;
     set<string> all_atoms;
     for (list<ACDFTerm>::const_iterator term1 = tmp_acdf.acdf_terms.begin();
     term1 != tmp_acdf.acdf_terms.end(); ++term1) {
         if (term1->valid()) return true;
         if (!term1->covers.empty()) {
-            exist_cover = true;
             break;
         }
         set<string> one_term_atoms = term1->propDNF.get_total_literals();
         all_atoms.insert(one_term_atoms.begin(), one_term_atoms.end());
     }
-
-return false;
-
-// cout << "second ?????????" << endl;
-    PropDNF modals;
-    for (list<ACDFTerm>::const_iterator term1 = tmp_acdf.acdf_terms.begin();
-    term1 != tmp_acdf.acdf_terms.end(); ++term1) {
-        PropDNF p; p.dnf = term1->propDNF.get_modals(all_atoms);
-        modals = modals.disjunction(p);
-    }
-    modals = modals.minimal();
-    // modals.print();
-    // cout << pow(2.0, (double)all_atoms.size()) << endl;
-    bool valid = modals.size() == pow(2.0, (double)all_atoms.size());
-// if (valid) cout << "valid!!!" << endl;
-    return valid;
+    return false;
 }
 
 vector<ACDF> ACDF::epistemic_prog(const EpisAction & epis_action, const PropDNF & cstt) const {
@@ -739,8 +657,6 @@ ACDF ACDF::negation_as_acdf(const PropDNF & cstt) const {
  */
 ACDF& ACDF::minimal(const PropDNF & cstt) {
     PropDNF empty_dnf;
-    // cout << "before minimal =====================================" << endl;
-    // print();
     // 1. remove inconsistent terms and minimal others
     for (list<ACDFTerm>::iterator term = acdf_terms.begin();
     term != acdf_terms.end(); ) {
@@ -752,8 +668,6 @@ ACDF& ACDF::minimal(const PropDNF & cstt) {
             ++term;
         }
     }
-    // cout << "middle minimal =====================================" << endl;
-    // print();
     // 2. remove terms that can be entailed by other terms
     for (list<ACDFTerm>::iterator term1 = acdf_terms.begin();
     term1 != acdf_terms.end(); ) {
@@ -763,22 +677,14 @@ ACDF& ACDF::minimal(const PropDNF & cstt) {
             if (term1 != term2 && ((term1->objective() && term2->objective() &&
             term1->strong_entails(*term2, empty_dnf)) || (term2->strong_entails(*term1, empty_dnf)
             && term1->strong_entails(*term2, empty_dnf))) ) {
-                // cout << " ------------ term 2 can strong entails term1 ******************" << endl;
-
                 is_delete = true;
-                // cout << "bad term =====================================" << endl;
-                // term1->print();
                 term1 = acdf_terms.erase(term1);
                 break;
             }
-                // cout << " ------------ term 2 can't' strong entails term1 ******************" << endl;
-                // cout << "**********************************" << endl;
         }
         if (!is_delete)
             ++term1;
     }
-    // cout << "aafter minimal =====================================" << endl;
-    // print();
     return *this;
 }
 
@@ -812,8 +718,6 @@ ACDF ACDFList::all_in_one() const {
 }
 
 ACDFList& ACDFList::minimal(const PropDNF & cstt) {
-// cout << "before minimal =====================================" << endl;
-// print();
     // 1. remove inconsistent acdfs and minimal others
     for (list<ACDF>::iterator acdf = acdfs.begin();
     acdf != acdfs.end(); ) {
@@ -833,23 +737,14 @@ ACDFList& ACDFList::minimal(const PropDNF & cstt) {
         acdf2 != acdfs.end(); ++acdf2) {
             if (acdf1 != acdf2 && (acdf2->strong_entails(*acdf1, cstt) &&
                 acdf1->strong_entails(*acdf2, cstt)) ) {
-                // cout << " ------------ acdf 2 can strong entails acdf1 ******************" << endl;
-
                 is_delete = true;
-                // cout << "bad term =====================================" << endl;
-                // acdf1->print();
                 acdf1 = acdfs.erase(acdf1);
                 break;
             }
-                // cout << " ------------ acdf 2 can't' strong entails acdf1 ******************" << endl;
-                // cout << "**********************************" << endl;
         }
         if (!is_delete)
             ++acdf1;
     }
-// cout << "aafter minimal =====================================" << endl;
-// print();
-// cout << "====================================================" << endl;
     return *this;
 }
 
@@ -857,10 +752,6 @@ ACDFList& ACDFList::minimal(const PropDNF & cstt) {
  * Cover Merge Algo
  */
 ACDFList ACDFList::conjunction(const ACDFList & acdflist) const {
-// cout << "ACDFList ```````````````````" << endl;
-// print();
-// cout << "group another ACDFList ```````````````````" << endl;
-// acdflist.print();
     ACDFList new_acdflist;
     if (empty()) return acdflist;
     if (acdflist.empty()) return *this;
@@ -873,19 +764,14 @@ ACDFList ACDFList::conjunction(const ACDFList & acdflist) const {
             new_acdflist.acdfs.push_back(acdf->conjunction(acdflist.all_in_one()));
         }
     }
-// cout << "half get ````````````````````" << endl;
-// new_acdflist.print();
     if (all_in_one().valid()) new_acdflist = new_acdflist.disjunction(acdflist);
     else {
         // Set 2
-// cout << "set 2 ````````````````````" << endl;
         for (list<ACDF>::const_iterator acdf = acdflist.acdfs.begin();
         acdf != acdflist.acdfs.end(); ++acdf) {
             new_acdflist.acdfs.push_back(acdf->conjunction(all_in_one()));
         }
     }
-// cout << "get new ACDFList ````````````````````" << endl;
-// new_acdflist.print();
     return new_acdflist;
 }
 
