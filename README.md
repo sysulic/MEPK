@@ -1,4 +1,4 @@
-# Multi-agent Epistemic Planner Kit
+# Multi-agent Epistemic Planner with Knowledge
 This is a planner for multi-agent epistemic planning. This code is continuously updated. We are planning to release a brand new version of MEPK and more details about it will be presented. You are welcome to follow this work.
 
 ###### Original code of IJCAI2017: [A General Multi-agent Epistemic Planner Based on Higher-order Belief Change](https://www.ijcai.org/proceedings/2017/0152.pdf) can be accessed [here](https://github.com/sysulic/MEPK/tree/f778be373903ee0edc47274b0b0757d412359265).
