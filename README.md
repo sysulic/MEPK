@@ -29,7 +29,7 @@ $ make
 * Run with breadth first search:
   * Run one test case
   ```shell
-  $ ./start ../benchmarks/hexa/hexa_domain3.epddl 2
+  $ ./mepk ../benchmarks/hexa/hexa_domain3.epddl 2
   ```
   * Run all test cases
   ```shell
@@ -39,7 +39,7 @@ $ make
 * Run with heuristic strategy:
   * Run one test case
   ```shell
-  $ ./start ../benchmarks/hexa/hexa_domain3.epddl 0
+  $ ./mepk ../benchmarks/hexa/hexa_domain3.epddl 0
   ```
   * Run all test cases
   ```shell

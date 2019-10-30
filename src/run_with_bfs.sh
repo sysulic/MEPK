@@ -17,12 +17,12 @@ timeout() {
 }
 
 test_cases_set="../benchmarks/test_cases"
-program="./start"
+program="./mepk"
 cat $test_cases_set | while read one_test
 do
 	[ -z "$one_test" ] && continue
 	echo "========================================================================================"
-    timeout 100 "$program $one_test 2"
+    timeout 1800 "$program $one_test 2 1"
 done
 
 exit 0

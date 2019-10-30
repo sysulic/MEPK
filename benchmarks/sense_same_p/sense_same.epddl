@@ -1,0 +1,33 @@
+(define (domain sense_same)
+
+  (:objects
+  )
+
+  (:agents
+    a b
+  )
+
+  (:predicates (P)
+  )
+
+  (:action sense
+   :category (sensing)
+   :parameters (?ag - agent)
+   :precondition (True)
+   :observe_pos (and (P) (K_?ag(P)) )
+   :observe_neg (and (not (P)) (K_?ag(not (P))))
+  )
+  
+
+  (:init (True)
+  )
+
+  (:constraint (True)
+  )
+
+  (:goal (or (and (K_a(P)) (K_b(P)))
+             (and (K_a(not (P))) (K_b(not (P))))
+         )
+  )
+
+)

@@ -31,6 +31,8 @@ public:
     Plan(const char *domain, int type = 2);
     void exec_plan();
     
+    void update_heu_value(int, int);
+
     void explore(int);
     void expand(Transition, bool epis, bool new_node);
     void dead_propagation(int);
@@ -51,12 +53,14 @@ public:
     int calculate_node_heuristic_value(const Node& node);
     
     vector<Node> all_nodes;
+    vector<Transition> all_edges;
+
+    bool trivial_plan = false;
 private:
     Parse parser;
     
     Initial in;
     int explored_num;
-    vector<Transition> all_edges;
     int hert_nodes;
     SearchType searchtype;
     // 统计信息，搜索的节点数就是all_nodes.size()

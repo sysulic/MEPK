@@ -46,6 +46,7 @@ dk				DK_[a-zA-Z0-9]+
 "constraint"		{ return CONSTRAINT; }
 "goal"				{ return GOAL; }
 
+";".*  				/* ignore comments */
 
 
 {k}					{ yylval.str = new string(yytext); return K; }
@@ -54,6 +55,7 @@ dk				DK_[a-zA-Z0-9]+
 \n 					{ yylineno++; }
 
 [ \t\r\n]      ;
+
 
 %%
 

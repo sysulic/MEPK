@@ -26,8 +26,7 @@ public:
     void print(size_t indent = 2) const;
     bool empty() const;
     bool valid() const { return is_true; }
-    bool neg_entails(const ACDFTerm &, const PropDNF &, bool try_goal = false, int* value = NULL) const;
-    bool neg_entails(const ACDF &, const PropDNF &, bool try_goal = false, int* value = NULL) const;
+    bool neg_entails(const ACDFTerm &, const PropDNF &, int depth=0, bool try_goal = false, float* value = NULL) const;
     bool strong_entails(const ACDFTerm &, const PropDNF &) const;
     ACDF negation_as_acdf(const PropDNF &) const;
     ACDF revision(const ACDF &, const PropDNF &) const;
@@ -54,7 +53,7 @@ public:
     size_t get_size() const { return acdf_terms.size(); }
     void show(ofstream &, size_t) const;
     void print(size_t indent = 2) const;
-    bool neg_entails(const ACDF &, const PropDNF &, bool try_goal = false, int* value = NULL) const;
+    bool neg_entails(const ACDF &, const PropDNF &, int depth=0, bool try_goal = false, float* value = NULL) const;
     bool strong_entails(const ACDF &, const PropDNF &) const;
     bool equals(const ACDF &, const PropDNF &) const;
     bool empty() const { return acdf_terms.empty(); }
@@ -83,6 +82,7 @@ public:
     void show(ofstream &, size_t) const;
     void print(size_t indent = 2) const;
     ACDF all_in_one() const;
+    ACDF conjunct_as_one() const;
     ACDFList& minimal(const PropDNF &);  // the argu determines minimal manipulation
                                         // for outmost layer or not
     ACDFList conjunction(const ACDFList &) const; // conjunct two ACDFList

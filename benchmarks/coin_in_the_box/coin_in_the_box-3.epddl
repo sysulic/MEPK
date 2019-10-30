@@ -1,11 +1,9 @@
-(define (domain coin_in_the_box5)
+(define (domain coin_in_the_box3)
     (:objects
     )
     
     (:agents
-        a
-        b
-        c
+        a b c
     )
     
   (:predicates  (tail) (opened)
@@ -22,8 +20,8 @@
                       (K_a (not (opened)))
                   )
    :effect (<{(True)} {(and (opened) (K_a (opened)))}>
-            <{(looking b)} {(and (opened) (K_a (opened)))}>
-            <{(looking c)} {(and (opened) (K_a (opened)))}>
+            <{(looking b)} {(K_b (opened))}>
+            <{(looking c)} {(K_c (opened))}>
     )
   )
 

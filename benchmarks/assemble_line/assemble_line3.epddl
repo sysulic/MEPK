@@ -4,8 +4,7 @@
   )
 
   (:agents
-    a
-    b
+    a b
   )
 
   (:predicates (assemble) (restart) (qulifiedA) (qulifiedB)
@@ -34,7 +33,7 @@
    :effect (<{(K_b (qulifiedB))}
              {(and (K_a(K_b(qulifiedB))) (K_b(K_a(K_b(qulifiedB)))))}>
             <{(K_b (not (qulifiedB)))}
-             {(and (K_a(K_b(not (qulifiedB)))) (K_b(K_a(K_b(not(qulifiedB))))))}>
+             {(and (K_a(K_b(K_a(not (qulifiedB))))) (K_b(K_a(K_b(not(qulifiedB))))))}>
            )
   )
   

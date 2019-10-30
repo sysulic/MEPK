@@ -113,13 +113,13 @@ struct Node
     ACDF kb; //结点的知识库
     int depth = 0;
     int ancestor_node_id = -1;
-    int value = 0;  // for heuristic searching
+    float heu_value = 0;  // for heuristic searching
     //下面两个变量分别是在搜索过程中所需要的两中标记
     STATE_TYPE flag;
     bool isolated;
-    Node(){};
+    Node() {};
     Node(STATE_TYPE s, bool b, ACDF ed, int d, int an_id = 0) { flag = s; isolated = b; kb = ed; depth = d; ancestor_node_id = an_id; };
-    ~Node(){};
+    ~Node() {};
 };
 
 struct Transition

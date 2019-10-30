@@ -1,0 +1,17 @@
+../benchmarks/Collaboration_through_Communication/CC-2_4_2-L7.epddl
+../benchmarks/Collaboration_through_Communication/CC-2_3_3-L6.epddl
+../benchmarks/Collaboration_through_Communication/CC-3_3_3-L6.epddl
+
+../benchmarks/selective_communication/SC-4_3_1-L5.epddl
+../benchmarks/selective_communication/SC-6_5_1-L6.epddl
+../benchmarks/selective_communication/SC-8_7_1-L9.epddl
+
+../benchmarks/grapevine/grapevine-2_3_2.epddl
+../benchmarks/grapevine/grapevine-2_4_1.epddl
+../benchmarks/grapevine/grapevine-2_4_2.epddl
+
+../benchmarks/coin_in_the_box/coin_in_the_box-2.epddl
+../benchmarks/coin_in_the_box/coin_in_the_box-3.epddl
+../benchmarks/coin_in_the_box/coin_in_the_box-5.epddl
+
+../benchmarks/assemble_line/assemble_line2.epddl

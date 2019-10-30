@@ -1,0 +1,65 @@
+fluent q, at_1, at_2, at_3, at_4;
+
+action right, left, sense, shout_1, shout_2, shout_3, shout_4;
+
+agent a,b,c;
+
+executable right if -at_4;
+right causes at_2 if at_1;
+right causes -at_1 if at_1;
+right causes at_3 if at_2;
+right causes -at_2 if at_2;
+right causes at_4 if at_3;
+right causes -at_3 if at_3;
+
+a observes right;
+b observes right;
+c observes right;
+
+executable left if -at_1;
+left causes at_3 if at_4;
+left causes -at_4 if at_4;
+left causes at_2 if at_3;
+left causes -at_3 if at_3;
+left causes at_1 if at_2;
+left causes -at_2 if at_2;
+
+a observes left;
+b observes left;
+c observes left;
+
+
+executable sense if at_2;
+sense determines q;
+a observes sense;
+
+executable shout_1 if B(a, q), at_1;
+shout_1 announces q;
+a observes shout_1;
+b observes shout_1;
+
+executable shout_2 if B(a, q), at_2;
+shout_2 announces q;
+a observes shout_2;
+b observes shout_2;
+c observes shout_2;
+
+executable shout_3 if B(a, q), at_3;
+shout_3 announces q;
+a observes shout_2;
+b observes shout_3;
+c observes shout_3;
+
+executable shout_4 if B(a, q), at_4;
+shout_4 announces q;
+a observes shout_4;
+c observes shout_4;
+
+initially at_1, -at_2, -at_3, -at_4, q;
+initially C([a,b,c],at_1);
+initially C([a,b,c],-at_2);
+initially C([a,b,c],-at_3);
+initially C([a,b,c],-at_4);
+
+goal B(c,q);
+goal (-B(b,q));

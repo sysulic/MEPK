@@ -4,8 +4,7 @@
   )
 
   (:agents
-    a
-    b
+    a b
   )
 
   (:predicates (assemble) (restart) (qulifiedA) (qulifiedB)

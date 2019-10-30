@@ -95,7 +95,7 @@
                                (own b pink) (not (own b white)) (not (own b blue)) (not(own b yellow))
           )
 
-           (and (own a red) (own b yellow)  (not (own b white)) (not (own b blue)) (not (own b pink))
+          (and (own a red) (own b yellow)  (not (own b white)) (not (own b blue)) (not (own b pink))
                                     (own e white)  (not (own e blue)) (not (own e pink))  (not(own e yellow))
                             (own d blue) (not (own d white)) (not (own d pink)) (not(own d yellow))
                                 (own c pink) (not (own c white)) (not (own c blue)) (not(own c yellow))

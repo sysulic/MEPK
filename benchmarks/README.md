@@ -7,7 +7,7 @@ Benchmarks description:
 assemble_line(i): i agents.
 
 ### Collaboration through Communication
-CC-(i,j,k): i boxes, j rooms, and k agents (k=2 by default).
+CC-(i,j,k): i boxes, j rooms, and k agents (k=2 when k is omitted).
 
 ### Gossip
 gossip(i): i agents.
@@ -23,6 +23,3 @@ SC-(i,j,k,l): i rooms, j agents, k is the largest depth of belief, and l is a ta
 
 ### Simple Muddy Children
 SMC-(i): i agents.
-
-### Coin in the box
-coin_in_the_box-(i): 3 agents, depth 2 of belief, and the shortest length of plan is i.

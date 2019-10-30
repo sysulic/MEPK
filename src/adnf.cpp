@@ -122,8 +122,9 @@ void PropTerm::print() const {
 	if (!isSatisfiable()) cout << "False";
 	else {
 		bool flag = true;
-		for (int i = 0; i < len; i++) {
+		for (int i = 0; i < len; ++i) {
 			if (literal[i] == UNDEFINED) continue;
+			// if (literal[i] == UNDEFINED || literal[i] == FALSE) continue;
 			cout << ((flag) ? "" : logicAnd)
 				<< ((literal[i] == TRUE) ? "" : logicNot) << findAtomsByIndex[i];
 			flag = false;
@@ -164,6 +165,10 @@ bool PropDNF::isSatisfiable() const {
 }
 
 bool PropDNF::canEntail(const PropDNF& pd) const {
+// cout << "------"<<endl;
+// print();
+// cout << "------"<<endl;
+// pd.print();
 	if(dnf.empty() && pd.dnf.empty()) return true;
 	if(dnf.empty()) return false;
 	if(pd.dnf.empty()) return true;
@@ -366,6 +371,7 @@ PropDNF PropDNF::update(const PropDNF& pd) {
 // print();
 // cout << "update by DNF 2:--------------------------------------" << endl;
 // pd.print();
+	if (isEmpty()) return pd;
 	PropDNF result;
 	for (auto phi_i = dnf.begin(); phi_i != dnf.end(); phi_i++) {
 		for (auto mu_j = pd.dnf.begin(); mu_j != pd.dnf.end(); mu_j++) {
@@ -456,7 +462,8 @@ void PropDNF::print(size_t indent) const {
     for (size_t i = 0; i < indent; ++i) cout << ' ';  // indent
 	bool flag = true;
 	for (auto ite = dnf.begin(); ite != dnf.end(); ite++) {
-		cout << ((flag) ? "(" : logicOr);
+		cout << ((flag) ? "(" : logicOr+"\n");
+    	if (!flag) for (size_t i = 0; i < indent+1; ++i) cout << ' ';  // indent
 		ite->print();
 		flag = false;
 	}
@@ -467,7 +474,8 @@ void PropDNF::print(size_t indent) const {
 void PropDNF::show(ofstream& os) const {
 	bool flag = true;
 	for (auto ite = dnf.begin(); ite != dnf.end(); ite++) {
-		os << ((flag) ? "(" : logicOr);
+		os << ((flag) ? "(" : logicOr+"\n");
+    	//if (!flag) for (size_t i = 0; i < indent+1; ++i) os << ' ';  // indent
 		ite->show(os);
 		flag = false;
 	}

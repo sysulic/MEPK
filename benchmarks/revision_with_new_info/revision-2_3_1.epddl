@@ -1,0 +1,75 @@
+(define (domain revision-2)
+
+  (:objects
+    b1 b2 - block
+
+    p1 p2 p3 - room
+  )
+    
+  (:agents
+    a
+  )
+
+  (:predicates  (at ?ag - agent ?p - room)
+                (in ?b - block ?p - room)
+  )
+   
+  (:action left
+   :category (ontic)
+   :parameters (?ag - agent)
+   :precondition (K_?ag (not(at ?ag p1)) )
+   :effect (<{(K_?ag (at ?ag p2)) }
+             {(K_?ag (and (at ?ag p1) (not (at ?ag p2)) (not (at ?ag p3))))} >
+            <{(K_?ag (at ?ag p3)) }
+             {(K_?ag (and (at ?ag p2) (not (at ?ag p1)) (not (at ?ag p3))))} >
+           )
+  )
+  
+  (:action right
+   :category (ontic)
+   :parameters (?ag - agent)
+   :precondition (K_?ag (not(at ?ag p3)) )
+   :effect (<{(K_?ag (at ?ag p1)) }
+             {(K_?ag (and (at ?ag p2) (not (at ?ag p1)) (not (at ?ag p3))))} >
+            <{(K_?ag (at ?ag p2)) }
+             {(K_?ag (and (at ?ag p3) (not (at ?ag p1)) (not (at ?ag p2))))} >
+           )
+  )
+
+  (:action check
+   :category (ontic)
+   :parameters (?ag - agent ?b - block ?r - room)
+   :precondition (K_?ag (at ?ag ?r)
+                 )
+   :effect (<{(in ?b ?r)} {(K_?ag (in ?b ?r))}>
+           )
+  )
+
+  (:init (and (in b1 p1)
+              (in b2 p3)
+              (K_a (and (at a p2)
+                        (not (at a p1))
+                        (not (at a p3))
+                        (in b1 p2)
+                        (in b2 p2)
+                   )
+              )
+         )
+  )
+
+  (:constraint (and (or (and (in b1 p1) (not (in b1 p2)) (not (in b1 p3)) )
+                        (and (not (in b1 p1)) (in b1 p2) (not (in b1 p3)) )
+                        (and (not (in b1 p1)) (in b1 p3) (not (in b1 p2)) )
+                    )
+                    (or (and (in b2 p1) (not (in b2 p2)) (not (in b2 p3)) )
+                        (and (not (in b2 p1)) (in b2 p2) (not (in b2 p3)) )
+                        (and (not (in b2 p1)) (in b2 p3) (not (in b2 p2)) )
+                    )
+               )
+  )
+  
+  (:goal (and (K_a (in b1 p1))
+              (K_a (in b2 p3))
+         )
+  )
+)

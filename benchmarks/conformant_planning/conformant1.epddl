@@ -1,0 +1,32 @@
+(define (domain conformant1s)
+
+  (:objects
+  )
+
+  (:agents
+    a
+  )
+
+  (:predicates (P) (Q)
+  )
+
+  (:action make_p_true
+   :category (ontic)
+   :parameters ()
+   :precondition (True)
+   :effect (<{(Q)} {(P)}>
+            <{(not (Q))} {(P)}>
+    )
+  )
+  
+
+  (:init (True)
+  )
+
+  (:constraint (True)
+  )
+
+  (:goal (P)
+  )
+
+)

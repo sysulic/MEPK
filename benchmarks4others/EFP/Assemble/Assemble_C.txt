@@ -1,0 +1,38 @@
+fluent qualify_a, qualify_b, assemble, restart;
+
+action sense_a, sense_b, tell_b, tell_a, act_assemble, act_res;
+
+agent a, b;
+
+executable sense_a if (-B(a, qualify_a)) , (-B(a, -qualify_a));
+sense_a determines qualify_a;
+a observes sense_a;
+
+executable sense_b if (-B(b,qualify_b)), (-B(b, -qualify_b));
+sense_b determines qualify_b;
+b observes sense_b;
+
+executable tell_b if B(a, qualify_a);
+tell_b announces qualify_a;
+a observes tell_b;
+b observes tell_b;
+
+executable tell_a if B(b, qualify_b);
+tell_a announces qualify_b;
+a observes tell_a;
+b observes tell_a;
+
+executable act_assemble if C([a,b],qualify_a), C([a,b],qualify_b);
+act_assemble causes assemble;
+a observes act_assemble;
+b observes act_assemble;
+
+executable act_res if C([a,b], -qualify_a) | C([a,b], -qualify_b);
+act_res causes restart;
+a observes act_res;
+b observes act_res;
+
+initially qualify_a, qualify_b, -assemble, -restart;
+
+goal B(a, assemble);
+goal B(b, assemble);

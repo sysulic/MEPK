@@ -195,16 +195,27 @@ void Tester::print_actions(bool print_entailed_action) const {
     	cout << "All epistemic actions: -----------------------------------------------------" << endl;
     size_t epis_no = 0;
     bool epis_none = true;
+    vector<string> executable_epis;
+    vector<size_t> executable_epis_no;
+    vector<string> inexecutable_epis;
+    vector<size_t> inexecutable_epis_no;
     for (vector<EpisAction>::const_iterator epis_action = epis_actions.begin();
         epis_action != epis_actions.end(); ++epis_action) {
     	if (kb.neg_entails(epis_action->pre_con, constraint)) {
     		epis_none = false;
-	        cout << "  " << epis_no << "\t==>\t" << epis_action->name << endl;
+            executable_epis_no.push_back(epis_no);
+            executable_epis.push_back(epis_action->name);
 	    } else if (!print_entailed_action) {
-            cout << "  " << epis_no << "\t-/-\t" << epis_action->name << endl;
+            inexecutable_epis_no.push_back(epis_no);
+            inexecutable_epis.push_back(epis_action->name);
         }
 		epis_no++;
     }
+    for (size_t i = 0; i < executable_epis_no.size(); ++i)
+        cout << "  " << executable_epis_no[i] << "\t==>\t" << executable_epis[i] << endl;
+    for (size_t i = 0; i < inexecutable_epis_no.size(); ++i)
+        cout << "  " << inexecutable_epis_no[i] << "\t-/-\t" << inexecutable_epis[i] << endl;
+
     if (epis_none) cout << "**** No avaliable epistemic actions ****" << endl;
 
     if (print_entailed_action)
@@ -213,17 +224,27 @@ void Tester::print_actions(bool print_entailed_action) const {
     	cout << "All ontic actions: ---------------------------------------------------------" << endl;
     size_t ontic_no = 0;
     bool ontic_none = true;
+    vector<string> executable_ontic;
+    vector<size_t> executable_ontic_no;
+    vector<string> inexecutable_ontic;
+    vector<size_t> inexecutable_ontic_no;
     for (vector<OntiAction>::const_iterator ontic_action = ontic_actions.begin();
         ontic_action != ontic_actions.end(); ++ontic_action) {
     	if (kb.neg_entails(ontic_action->pre_con, constraint)) {
     		ontic_none = false;
-        	cout << "  " << ontic_no << "\t==>\t" << ontic_action->name << endl;
+            executable_ontic_no.push_back(ontic_no);
+            executable_ontic.push_back(ontic_action->name);
+        } else if (!print_entailed_action) {
+            inexecutable_ontic_no.push_back(ontic_no);
+            inexecutable_ontic.push_back(ontic_action->name);
         }
-	    else
-	    	if (!print_entailed_action)
-	        	cout << "  " << ontic_no << "\t-/-\t" << ontic_action->name << endl;
     	ontic_no++;
     }
+    for (size_t i = 0; i < executable_ontic_no.size(); ++i)
+        cout << "  " << executable_ontic_no[i] << "\t==>\t" << executable_ontic[i] << endl;
+    for (size_t i = 0; i < inexecutable_ontic_no.size(); ++i)
+        cout << "  " << inexecutable_ontic_no[i] << "\t-/-\t" << inexecutable_ontic[i] << endl;
+
     if (ontic_none) cout << "**** No avaliable ontic actions ****" << endl;
     cout << "----------------------------------------------------------------------------" << endl;
 }

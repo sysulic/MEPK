@@ -1,0 +1,216 @@
+(define (domain sel)
+
+  (:objects
+      1
+      2
+      3
+      4 
+      5
+      6
+      7
+      8 - room
+  )
+
+  (:agents
+    a
+    b
+    c
+    d
+    e
+    f
+    g
+  )
+
+  (:predicates (q) (at ?ag - agent ?r - room) )
+   
+  (:action left
+   :category (ontic)
+   :parameters ()
+   :precondition (K_a (not(at a 1)) )
+   :effect (<{(at a 6)} {(and (at a 5) (K_a (at a 5)))}>
+            <{(at a 5)} {(and (at a 4) (K_a (at a 4)))}>
+            <{(at a 8)} {(and (at a 7) (K_a (at a 7)))}>
+            <{(at a 7)} {(and (at a 6) (K_a (at a 6)))}>
+            <{(and (at a 4)
+                  (not (at a 3))
+                  (not (at a 2)))} {(and (at a 3) (K_a (at a 3)))} >
+            <{(and (not (at a 4))
+                  (at a 3)
+                  (not (at a 2)))} {(and (at a 2) (K_a (at a 2)))} >
+            <{(and (not (at a 4))
+                  (not (at a 3))
+                  (at a 2))} {(and (at a 1) (K_a (at a 1)))} >
+    )
+  )
+
+  (:action right
+   :category (ontic)
+   :parameters ()
+   :precondition (K_a (not(at a 8)) )
+   :effect (<{(and (at a 1)
+                  (not (at a 3))
+                  (not (at a 2)))} {(and (at a 2) (K_a (at a 2)))}
+            >
+            <{(and (not (at a 1))
+                  (at a 3)
+                  (not (at a 2)))} {(and (at a 4) (K_a (at a 4)))}
+            >
+            <{(and (not (at a 1))
+                  (not (at a 3))
+                  (at a 2))} {(and (at a 3) (K_a (at a 3)))}
+            >
+            <{(at a 4)} {(and (at a 5) (K_a (at a 5)))}>
+            <{(at a 5)} {(and (at a 6) (K_a (at a 6)))}>
+            <{(at a 6)} {(and (at a 7) (K_a (at a 7)))}>
+            <{(at a 7)} {(and (at a 8) (K_a (at a 8)))}>
+    )
+  )
+  
+  (:action sense
+   :category (sensing)
+   :parameters ()
+   :precondition (K_a(at a 2) )
+   :observe_pos (and (q) (K_a (q)) )
+   :observe_neg (and (not(q)) (K_a (not(q))) )
+  )
+  
+  (:action tell
+   :category (communication)
+   :parameters ()
+   :precondition (or (K_a (q)) (K_a (not(q))) )
+   :effect (<{(and (at a 1)
+                  (not (at a 2))
+                  (not (at a 3))
+                  (not (at a 4))
+                  (K_a (q)))}        {(K_b (q))}>
+            <{(and (at a 2)
+                  (not (at a 1))
+                  (not (at a 3))
+                  (not (at a 4))
+                  (K_a (q)))}        {(and (K_c (q)) (K_b (q)))}>
+            <{(and (at a 3)
+                  (not (at a 2))
+                  (not (at a 1))
+                  (not (at a 4))
+                  (K_a (q)))}        {(and (K_c (q)) (K_b (q)) (K_d (q)))}>
+            <{(and (at a 4)
+                  (not (at a 2))
+                  (not (at a 3))
+                  (not (at a 1))
+                  (K_a (q)))}        {(and (K_c (q)) (K_e (q)) (K_d (q)))}>
+            <{(and (at a 5) (K_a (q)))}        {(and (K_f (q)) (K_d (q)) (K_e (q)) )}>
+            <{(and (at a 6) (K_a (q)))}        {(and (K_f (q)) (K_g (q)) (K_e (q)) )}>
+            <{(and (at a 7) (K_a (q)))}        {(and (K_f (q)) (K_g (q)) )}>
+            <{(and (at a 8) (K_a (q)))}        {(K_g (q))}>
+            <{(and (at a 1)
+                  (not (at a 2))
+                  (not (at a 3))
+                  (not (at a 4))
+                  (K_a (not(q))))}   {(K_b (not(q)))}>
+            <{(and (at a 2)
+                  (not (at a 1))
+                  (not (at a 3))
+                  (not (at a 4))
+                  (K_a (not(q))))}   {(and (K_c (not(q))) (K_b (not(q))))}>
+            <{(and (at a 3)
+                  (not (at a 2))
+                  (not (at a 1))
+                  (not (at a 4))
+                  (K_a (not(q))))}   {(and (K_c (not(q))) (K_b (not(q))) (K_d (not(q))))}>
+            <{(and (at a 4)
+                  (not (at a 2))
+                  (not (at a 3))
+                  (not (at a 1))
+                  (K_a (not(q))))}   {(and (K_c (not(q))) (K_e (not(q))) (K_d (not(q))))}>
+            <{(and (at a 5) (K_a (not(q))))}        {(and (K_f (not(q))) (K_d (not(q))) (K_e (not(q))) )}>
+            <{(and (at a 6) (K_a (not(q))))}        {(and (K_f (not(q))) (K_g (not(q))) (K_e (not(q))) )}>
+            <{(and (at a 7) (K_a (not(q))))}        {(and (K_f (not(q))) (K_g (not(q))) )}>
+            <{(and (at a 8) (K_a (not(q))))}        {(K_g (not(q)))}>
+          )
+  )
+
+  (:init (and (at a 1)
+              (or (q) (not (q)) )  
+              (K_a (at a 1))
+              ( not(K_f(q)) )
+              ( not(K_f( not(q))) )
+    )
+  )
+
+  (:constraint (or (and (at a 1)
+                        (not (at a 2))
+                        (not (at a 3))
+                        (not (at a 4))
+                        (not (at a 5))
+                        (not (at a 6)) 
+                        (not (at a 7)) 
+                        (not (at a 8)) )
+                   (and (at a 2)
+                        (not (at a 1))
+                        (not (at a 3))
+                        (not (at a 4))
+                        (not (at a 5))
+                        (not (at a 6))
+                        (not (at a 7)) 
+                        (not (at a 8))  )
+                   (and (at a 3)
+                        (not (at a 2))
+                        (not (at a 1))
+                        (not (at a 4))
+                        (not (at a 5))
+                        (not (at a 6))
+                        (not (at a 7)) 
+                        (not (at a 8))  )
+                   (and (at a 4)
+                        (not (at a 2))
+                        (not (at a 3))
+                        (not (at a 1))
+                        (not (at a 5))
+                        (not (at a 6))
+                        (not (at a 7)) 
+                        (not (at a 8))  )
+                   (and (at a 5)
+                        (not (at a 2))
+                        (not (at a 3))
+                        (not (at a 1))
+                        (not (at a 4))
+                        (not (at a 6))
+                        (not (at a 7))
+                        (not (at a 8)) )
+                   (and (at a 6)
+                        (not (at a 2))
+                        (not (at a 3))
+                        (not (at a 1))
+                        (not (at a 5))
+                        (not (at a 4))
+                        (not (at a 7))
+                        (not (at a 8)) )
+                   (and (at a 7)
+                        (not (at a 2))
+                        (not (at a 3))
+                        (not (at a 1))
+                        (not (at a 5))
+                        (not (at a 4))
+                        (not (at a 6))
+                        (not (at a 8)) )
+                   (and (at a 8)
+                        (not (at a 2))
+                        (not (at a 3))
+                        (not (at a 1))
+                        (not (at a 5))
+                        (not (at a 4))
+                        (not (at a 7))
+                        (not (at a 6)) )
+         )
+  )
+
+
+  (:goal (and (or ( K_a(q) )
+                  ( K_a( not(q) ) ) )
+              (or ( K_g(q) )
+                  ( K_g( not(q) ) ) )
+              ( not(K_f(q)) )
+              ( not(K_f( not(q))) )
+         )
+  )
+)

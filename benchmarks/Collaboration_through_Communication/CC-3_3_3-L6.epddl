@@ -1,0 +1,178 @@
+(define (domain ctc3b)
+  
+  (:objects
+        b1
+        b2
+        b3 - block
+
+        p1
+        p2
+        p3 - room
+    )
+    
+    (:agents
+        a
+        b
+        c
+    )
+
+  (:predicates  (at ?ag - agent ?p - room)
+                (in ?b - block p - room)
+  )
+   
+  (:action left
+   :category (ontic)
+   :parameters (?ag - agent)
+   :precondition (K_?ag (not(at ?ag p1)) )
+   :effect (<{(at ?ag p2)   }
+             {(and (at ?ag p1) (not (at ?ag p2)) (not (at ?ag p3))
+                  (K_?ag (and (at ?ag p1) (not (at ?ag p2)) (not (at ?ag p3)) )))} >
+            <{(at ?ag p3) }
+             {(and (at ?ag p2) (not (at ?ag p1)) (not (at ?ag p3))
+                  (K_?ag (and (at ?ag p2) (not (at ?ag p1)) (not (at ?ag p3)) )))} >
+    )
+  )
+  
+  (:action right
+   :category (ontic)
+   :parameters (?ag - agent)
+   :precondition (K_?ag (not(at ?ag p3)) )
+   :effect (<{(at ?ag p1) }
+             {(and (at ?ag p2) (not (at ?ag p1)) (not (at ?ag p3))
+                  (K_?ag (and (at ?ag p2) (not (at ?ag p1)) (not (at ?ag p3)))))} >
+            <{(at ?ag p2) }
+             {(and (at ?ag p3) (not (at ?ag p1)) (not (at ?ag p2))
+                  (K_?ag (and (at ?ag p3) (not (at ?ag p1)) (not (at ?ag p2)))))} >
+    )
+  )
+
+  (:action find_room1
+   :category (ontic)
+   :parameters (?ag - agent )
+   :precondition (K_?ag (at ?ag p1)
+                 )
+   :effect (< { (True) }   {  (or      (K_?ag ( and (not(in b1 p1))    (not(in b2 p1))  (not(in b3 p1))   ) )       
+                                                 (K_?ag ( and (in b1 p1)    (not(in b2 p1))  (not(in b3 p1))   ) )    
+                                                 (K_?ag ( and (in b2 p1)    (not(in b1 p1))  (not(in b3 p1))   ) )      
+                                                 (K_?ag ( and (in b1 p1)    (in b2 p1)  (not(in b3 p1))   ) )    
+                                                 (K_?ag ( and (not(in b1 p1))    (not(in b2 p1))  (in b3 p1)   ) )       
+                                                 (K_?ag ( and (in b1 p1)    (not(in b2 p1))  (in b3 p1)   ) )    
+                                                 (K_?ag ( and (in b2 p1)    (not(in b1 p1))  (in b3 p1)   ) )      
+                                                 (K_?ag ( and (in b1 p1)    (in b2 p1)  (in b3 p1)  ) )    )
+                                    } >
+               )        
+  )
+
+  (:action find_room3
+   :category (ontic)
+   :parameters (?ag - agent  )
+   :precondition (K_?ag (at ?ag p3)
+                 )
+   :effect (< {( True) }   {  (or      (K_?ag ( and (not(in b1 p3))    (not(in b2 p3))  (not(in b3 p3))  ) )       
+                                                 (K_?ag ( and (in b1 p3)    (not(in b2 p3))  (not(in b3 p3))   ) )    
+                                                 (K_?ag ( and (in b2 p3)    (not(in b1 p3))  (not(in b3 p3))    ) )      
+                                                 (K_?ag ( and (in b1 p3)    (in b2 p3)  (not(in b3 p3))   ) )    
+                                                 (K_?ag ( and (not(in b1 p3))    (not(in b2 p3))  (in b3 p3)  ) )       
+                                                 (K_?ag ( and (in b1 p3)    (not(in b2 p3))  (in b3 p3)   ) )    
+                                                 (K_?ag ( and (in b2 p3)    (not(in b1 p3))  (in b3 p3)    ) )      
+                                                 (K_?ag ( and (in b1 p3)    (in b2 p3)  (in b3 p3)   ) )    )
+                                    } >
+               )        
+  )
+
+
+  (:action tell
+   :category (communication)
+   :parameters (?ag1 - agent ?ag2 - agent  ?r - room)
+   :precondition (or (K_?ag1 (in b1 ?r))
+                                 (K_?ag1 (not(in b1 ?r)))
+                                 (K_?ag1 (in b2 ?r))
+                                 (K_?ag1 (not(in b2 ?r)))
+                                 (K_?ag1 (in b3 ?r))
+                                 (K_?ag1 (not(in b3 ?r)))
+                           )
+   :effect (<{ (or (K_?ag1 (in b1 ?r)) (K_?ag1 (not(in b1 ?r)))) } { (or (K_?ag2 (in b1 ?r)) (K_?ag2 (not(in b1 ?r)))) }>
+                <{( or (K_?ag1 (in b2 ?r)) (K_?ag1 (not(in b2 ?r)))) } { (or (K_?ag2 (in b2 ?r)) (K_?ag2 (not(in b2 ?r)))) }>
+                <{ (or (K_?ag1 (in b3 ?r)) (K_?ag1 (not(in b3 ?r)))) } { (or (K_?ag2 (in b3 ?r)) (K_?ag2 (not(in b3 ?r)))) }>
+           ) 
+  )
+
+   (:init (and 
+                (at a p2)
+                (not (at a p1))
+                (not (at a p3))
+                (at b p2)   
+                (not (at b p1))
+                (not (at b p3))
+                (at c p2)  
+                (not (at c p1))
+                (not (at c p3))
+                (K_a (and (not (at a p1))
+                          (at a p2)
+                          (not (at a p3))
+                     )
+                )
+                (K_b (and (not (at b p1))
+                          (at b p2)
+                          (not (at b p3))
+                     )
+                )
+                (K_c (and (not (at c p1))
+                          (at c p2)
+                          (not (at c p3))
+                     )
+                )
+           )
+    )
+
+   (:constraint (and (or (and (in b1 p1) (not (in b1 p3)) )
+                          (and (not (in b1 p1)) (in b1 p3) )
+                      )
+                      (or (and (in b2 p1) (not (in b2 p3)) )
+                          (and (not (in b2 p1)) (in b2 p3) )
+                      )
+                      (or (and (in b3 p1) (not (in b3 p3)) )
+                          (and (not (in b3 p1)) (in b3 p3) )
+                      )
+                 )
+    )
+    
+    (:goal (and
+             (or (K_a (in b1 p1))
+                 (K_a (in b1 p3))
+                 (K_a (not(in b1 p1)))
+                 (K_a (not(in b1 p3)))
+             )
+             (or (K_b (in b1 p1))
+                 (K_b (in b1 p3))
+                 (K_b (not(in b1 p1)))
+                 (K_b (not(in b1 p3)))
+             )
+             (or (K_c (in b1 p1))
+                 (K_c (in b1 p3))
+                 (K_c (not(in b1 p1)))
+                 (K_c (not(in b1 p3)))
+             )
+             (or (K_a (in b2 p1))
+                 (K_a (in b2 p3))
+                 (K_a (not(in b2 p1)))
+                 (K_a (not(in b2 p3)))
+             )
+             (or (K_b (in b2 p1))
+                 (K_b (in b2 p3))
+                 (K_b (not(in b2 p1)))
+                 (K_b (not(in b2 p3)))
+             )
+             (or (K_c (in b2 p1))
+                 (K_c (in b2 p3))
+                 (K_c (not(in b2 p1)))
+                 (K_c (not(in b2 p3)))
+             )
+             (or (K_c (in b3 p1))
+                 (K_c (in b3 p3))
+                 (K_c (not(in b3 p1)))
+                 (K_c (not(in b3 p3)))
+             )
+          )
+    )
+)

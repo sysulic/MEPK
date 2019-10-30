@@ -2,27 +2,28 @@
 #include <algorithm>
 
 Plan::Plan(const char *domain, int type) {
-    printf("================================================================\n");
-    printf("domain+problem(%s)\n", domain);
-    // if (type == 0)
-    //     cout << "search_type(Heur first)\n" << endl;
-    // if (type == 1)
-    //     cout << "search_type(Deap first)\n" << endl;
-    // if (type == 2)
-    //     cout << "search_type(Bread first)\n" << endl;
+    printf("----------------------------------------------------------------\n");
+    printf("domain+problem_file(%s)\n", domain);
+    if (type == 0)
+        cout << "Search strategy: Heuristic search" << endl;
+    if (type == 1)
+        cout << "Search strategy: DFS search" << endl;
+    if (type == 2)
+        cout << "Search strategy: BFS search" << endl;
     all_nodes.clear();
     all_edges.clear();
     explored_num = -1;
-    searchtype = type == 0 ? kHeuristic : (type == 1 ? kDepthFirst : kWidthFirst);
     plan_tree_depth = 0;
     plan_tree_node_num = 0;
     clock_t t_start = clock();
-    printf("\nPreprocessing...\n");
+    printf("Preprocessing...\n");
     if (!parser.exec(domain, false)) {
         parsing_succeed = false;
         return;
     }
     in.exec();
+    searchtype = (type == 0 ? (kHeuristic) \
+               : (type == 1 ? kDepthFirst : kWidthFirst));
 
     // //print actions
     // int i = 0;
@@ -47,8 +48,9 @@ Plan::Plan(const char *domain, int type) {
 void Plan::exec_plan() {
     printf("Planning...\n");
     Node init_node;
-    if (in.mine_init.neg_entails(in.mine_goal, in.mine_constraint)) {
-        printf("init neg_entails goal!\n");
+    if (in.mine_init.neg_entails(in.mine_goal, in.mine_constraint, 0, true, &(init_node.heu_value))) {
+        printf("\nInitial knowledge base entails the goal!\n");
+        trivial_plan = true;
         return;
     }
 
@@ -59,9 +61,10 @@ void Plan::exec_plan() {
     init_node.kb = in.mine_init;
     init_node.depth = 0;
     add_node(init_node);
+    update_heu_value(0, 0);
     hert_nodes = 0; //for deep search
     while(true) {
-        int node_pos = get_tobeexplored_node();//heuristic
+        int node_pos = get_tobeexplored_node(); // search strategy
         if (node_pos == -1) {
             return ;
         }
@@ -82,12 +85,75 @@ void Plan::exec_plan() {
 // Algorithm 7
 void Plan::explore(int node_pos) {
 // cout << "@explore: " << node_pos << endl;
+// if (node_pos == 802)
+//     all_nodes[802].kb.print();
     bool execed = false;  // deep search find new node
-    // 进行感知演进
-    for (size_t i = 0; i < in.mine_epis_actions.size(); ++i) {
-        if (all_nodes[node_pos].kb.neg_entails(in.mine_epis_actions[i].pre_con, in.mine_constraint)) {
 
+    // ontic progression....
+    for (size_t i = 0; i < in.mine_ontic_actions.size(); ++i) {
+// cout << "node " << node_pos << " to test ontic action: " << in.mine_ontic_actions[i].name << endl;
+        if (all_nodes[node_pos].kb.neg_entails(in.mine_ontic_actions[i].pre_con, in.mine_constraint)) {
+// if (node_pos == 802)
+//     cout << "node " << node_pos << " doing... ontic action: " << in.mine_ontic_actions[i].name << endl;
+            // clock_t ontic_start = clock();
+            ACDF res = all_nodes[node_pos].kb.ontic_prog(in.mine_ontic_actions[i], in.mine_constraint);
+            // clock_t ontic_end = clock();
+            // ontic_progression_time += difftime(ontic_end, ontic_start) / 1000000.0;
+            if (check_zero_dead(res)) continue;
+            
+            int res_pos = checknode(res);
+// if (node_pos == 802)
+//     cout << "res pos: " << res_pos << endl;
+            if (res_pos == node_pos) continue;
+            bool new_node = false;
+            if (res_pos == -1) {
+                Node newNode(TOBEEXPLORED, false, res, all_nodes[node_pos].depth+1, node_pos);
+                add_node(newNode);
+                // cout << all_nodes.size() << endl;
+                res_pos = all_nodes.size()-1;
+                new_node = true;
+            }
+            all_nodes[res_pos].depth = min(all_nodes[res_pos].depth, all_nodes[node_pos].depth+1);
+            Transition tbs;
+            tbs.front_state = node_pos;
+            tbs.next_state = res_pos;
+            tbs.is_observe_action = false;
+            tbs.action_number = i;
+// cout << all_nodes[res_pos].heu_value << " before" << endl;
+            expand(tbs, false, new_node);
+// cout << (all_nodes[res_pos].heu_value==0 ? 0 : all_nodes[res_pos].heu_value-all_nodes[res_pos].heu_value) << " after" << endl;
+
+            if (all_nodes[res_pos].flag == FINAL_GOAL) {
+// if (node_pos == 802)
+//     cout << "goal" << endl;
+                goal_propagation(node_pos, false, i);
+                return;
+            }
+
+            if (searchtype == 1 && !execed) {
+                hert_nodes = res_pos;
+                execed = true;
+            }
+
+            // cout <<  "from node:" << node_pos << "ontic action done: " << in.mine_ontic_actions[i].name << " ================= " << endl;
+            // for (size_t xx = 0; xx < all_nodes.size(); ++xx)
+            // {
+            //     cout <<"node " << xx << ": " << all_nodes[i].flag << " " << (all_nodes[xx].isolated ? " isolated" : " connected") << endl;
+            // }
+            // cout << " ================================================================= " << endl;
+        }
+    }
+
+    // epistemic progression
+    for (size_t i = 0; i < in.mine_epis_actions.size(); ++i) {
+// cout << "node " << node_pos << " to test epis action: " << in.mine_epis_actions[i].name << endl;
+        if (all_nodes[node_pos].kb.neg_entails(in.mine_epis_actions[i].pre_con, in.mine_constraint)) {
+// if (node_pos == 802)
+//     cout <<  "node " << node_pos << "doing... epis action: " << in.mine_epis_actions[i].name << endl;
+            // clock_t epis_start = clock();
             vector<ACDF> res = all_nodes[node_pos].kb.epistemic_prog(in.mine_epis_actions[i], in.mine_constraint);
+            // clock_t epis_end = clock();
+            // epis_progression_time += difftime(epis_end, epis_start) / 1000000.0;
 
             if (check_zero_dead(res[0]) || check_zero_dead(res[1]))
                 continue;
@@ -110,6 +176,14 @@ void Plan::explore(int node_pos) {
             tbs.is_true = true;
             expand(tbs, true, new_node);
            
+            // cout << "from node:" << node_pos << "epis action pos done: " << in.mine_epis_actions[i].name << " ================= " << endl;
+            // for (size_t xx = 0; xx < all_nodes.size(); ++xx)
+            // {
+            //     cout <<"node " << xx << ": " << all_nodes[xx].flag << " " << (all_nodes[xx].isolated ? " isolated" : " connected") << endl;
+            // }
+            // cout << " ================================================================= " << endl;
+
+            // cout <<  node_pos << " after action : " << in.mine_epis_actions[i].name << " neg :" << endl;
             int res_pos1 = checknode(res[1]);
             if (res_pos1 == node_pos) continue;
             new_node = false;
@@ -136,42 +210,13 @@ void Plan::explore(int node_pos) {
                 hert_nodes = res_pos;
                 execed = true;
             }
-        }
-    }
-    // 进行物理演进
-    for (size_t i = 0; i < in.mine_ontic_actions.size(); ++i) {
-        if (all_nodes[node_pos].kb.neg_entails(in.mine_ontic_actions[i].pre_con, in.mine_constraint)) {
-            ACDF res = all_nodes[node_pos].kb.ontic_prog(in.mine_ontic_actions[i], in.mine_constraint);
 
-            if (check_zero_dead(res)) continue;
-            
-            int res_pos = checknode(res);
-
-            if (res_pos == node_pos) continue;
-            bool new_node = false;
-            if (res_pos == -1) {
-                Node newNode(TOBEEXPLORED, false, res, all_nodes[node_pos].depth+1, node_pos);
-                add_node(newNode);
-                res_pos = all_nodes.size()-1;
-                new_node = true;
-            }
-            all_nodes[res_pos].depth = min(all_nodes[res_pos].depth, all_nodes[node_pos].depth+1);
-            Transition tbs;
-            tbs.front_state = node_pos;
-            tbs.next_state = res_pos;
-            tbs.is_observe_action = false;
-            tbs.action_number = i;
-            expand(tbs, false, new_node);
-
-            if (all_nodes[res_pos].flag == FINAL_GOAL) {
-                goal_propagation(node_pos, false, i);
-                return;
-            }
-
-            if (searchtype == 1 && !execed) {
-                hert_nodes = res_pos;
-                execed = true;
-            }
+            // cout << "from node:" << node_pos << "epis action neg done: " << in.mine_epis_actions[i].name << " ================= " << endl;
+            // for (size_t xx = 0; xx < all_nodes.size(); ++xx)
+            // {
+            //     cout <<"node " << xx << ": " << all_nodes[xx].flag << " " << (all_nodes[xx].isolated ? " isolated" : " connected") << endl;
+            // }
+            // cout << " ================================================================= " << endl;
         }
     }
 
@@ -182,10 +227,25 @@ void Plan::explore(int node_pos) {
         dead_propagation(node_pos);
     }
 
+    // cout << " ------------------------------- " << endl;
+    // for (vector<Transition>::const_iterator e = all_edges.begin();
+    // e != all_edges.end(); ++e) {
+    //     cout << e->front_state << " - "
+    //         << (e->is_observe_action ? in.mine_epis_actions[e->action_number].name : in.mine_ontic_actions[e->action_number].name)
+    //         << " - " << e->next_state << endl;
+    //     // all_nodes[e->next_state].kb.print();
+    // }
+
 }
 
 // Algorithm 8
 void Plan::expand(Transition ts, bool epis, bool new_node) {
+// if (ts.front_state == 802) {
+// cout << "expand..." << endl;
+// cout << ts.front_state << " - "
+//     << (ts.is_observe_action ? in.mine_epis_actions[ts.action_number].name : in.mine_ontic_actions[ts.action_number].name)
+//     << " - " << ts.next_state << endl;
+// }
     bool edge_exist = false;
     for (size_t i = 0; i < all_edges.size(); ++i)
         if (all_edges[i].front_state == ts.front_state && all_edges[i].next_state == ts.next_state)
@@ -197,13 +257,21 @@ void Plan::expand(Transition ts, bool epis, bool new_node) {
         reconnection_propagation(ts.next_state);
     } else {
         all_nodes[ts.next_state].isolated = false;
-        if (all_nodes[ts.next_state].kb.neg_entails(in.mine_goal, in.mine_constraint)) {
+        // if (all_nodes[ts.next_state].kb.neg_entails(in.mine_goal, in.mine_constraint, 0, true, &(all_nodes[ts.next_state].heu_value))) {
+        if (all_nodes[ts.next_state].kb.neg_entails(in.mine_goal, in.mine_constraint, 0, true, &(all_nodes[ts.next_state].heu_value)) \
+            || (epis && !all_nodes[ts.next_state].kb.obj_consistent(all_nodes[ts.front_state].kb, in.mine_constraint)))  {
         // impossible case:: || (epis && !all_nodes[ts.next_state].kb.obj_consistent(all_nodes[ts.front_state].kb, in.mine_constraint)) )
             all_nodes[ts.next_state].flag = FINAL_GOAL;
         } else {
             all_nodes[ts.next_state].flag = TOBEEXPLORED;
         }
+        update_heu_value(ts.front_state, ts.next_state);
     }
+    // cout << "---------------------------" << endl;
+    // cout << ts.front_state << " - "
+    //     << (ts.is_observe_action ? in.mine_epis_actions[ts.action_number].name : in.mine_ontic_actions[ts.action_number].name)
+    //     << " - " << ts.next_state << endl;
+    // cout << "-------------------------------------------------------" << endl << endl;
 }
 
 // Algorithm 12
@@ -302,7 +370,7 @@ int Plan::get_tobeexplored_node() {
                 //*/
             }
         }
-        for (size_t i = explored_num + 1; i < all_nodes.size(); ++i) {
+        for (size_t i = 0; i < all_nodes.size(); ++i) {
             if (all_nodes[i].flag == TOBEEXPLORED && !all_nodes[i].isolated) {
                 return i;
             }
@@ -414,7 +482,17 @@ void Plan::BuildPlan() {
 }
 
 void Plan::show_statistic() {
+    if (plan_tree_depth==0 && !trivial_plan) {
+        cout << endl << "No solution!" << endl;
+    }
+
     if (search_time < 0.01) search_time = 0.01;
+
+// for (auto n : all_nodes) {
+//     cout << n.heu_value << " ";
+// }
+// cout << endl;
+
     printf("\nStatistic:\n");
     // printf("  preprocess time: %.4fs\n", preprocess_time);
     // printf("  epis progression time: %.4fs\n", epis_progression_time);
@@ -428,7 +506,7 @@ void Plan::show_statistic() {
 
 void Plan::latex_statistic() {
     if (search_time < 0.01) search_time = 0.01;
-    printf(" & %lu & %lu+%lu & %lu & 1 & %.2f-%.2f(%d/%d/%lu) \\\\\n", agents.size(), in.mine_epis_actions.size(), \
+    printf(" & %lu & 1 & %lu+%lu & %lu & %.2f-%.2f (%d/%d/%lu) \\\\\n", agents.size(), in.mine_epis_actions.size(), \
         in.mine_ontic_actions.size(), findAtomsByIndex.size(), preprocess_time+search_time, \
         search_time, plan_tree_depth, plan_tree_node_num, all_nodes.size());
 }
@@ -470,9 +548,17 @@ int Plan::show_build_result(int node_num, const vector<Transition> &goal_edges, 
 
 void Plan::add_node(const Node& node) {
     all_nodes.push_back(node);
-    int node_id = all_nodes.size() - 1;
-    int heuristic_value = calculate_node_heuristic_value(node);
-    heuristic_que_.push(PlanHelper(node_id, heuristic_value));
+    // int node_id = all_nodes.size() - 1;
+    // int heuristic_value = calculate_node_heuristic_value(node);
+// cout << heuristic_value << " ";
+    // heuristic_que_.push(PlanHelper(node_id, heuristic_value));
+}
+
+void Plan::update_heu_value(int start, int end) {
+    // float new_heu = (all_nodes[end].heu_value*(in.mine_ontic_actions.size()/4%2 ? 2 : 1)
+    float new_heu = (all_nodes[end].heu_value \
+        -all_nodes[start].heu_value);
+    heuristic_que_.push(PlanHelper(end, new_heu));
 }
 
 int Plan::calculate_node_heuristic_value(const Node& node) {
@@ -492,15 +578,6 @@ int Plan::calculate_node_heuristic_value(const Node& node) {
     //     reset_key_ = true;
     //     return 0;
     // }
-
-    int node_value = 0;
-    int ance_node_value = 0;
-    node.kb.neg_entails(in.mine_goal, in.mine_constraint, true, &node_value);
-    all_nodes[node.ancestor_node_id].kb.neg_entails(in.mine_goal, in.mine_constraint, true, &ance_node_value);
-    // cout << node_value-ance_node_value << endl;
-    // node_value = node.value;//a -- *search_difficulty/10;
-    // node_value = node.value;//b -- *search_difficulty/10;
-    // cout << node_value << endl;
-    // if(node.depth>6) value -= 100;
-    return node_value-ance_node_value;//-node.kb.kb_size();
+// cout << node.heu_value-node.depth*10 << endl;
+    return node.heu_value-node.depth*10;
 }

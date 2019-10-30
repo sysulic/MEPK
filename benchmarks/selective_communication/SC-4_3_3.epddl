@@ -154,7 +154,7 @@
   )
 
   (:goal (and (or ( K_c(K_a(K_c (q)))) 
-                  (K_c(K_a(K_c (not(q))))) 
+                  ( K_c(K_a(K_c (not(q))))) 
               )
               (and ( not(K_b(q)) )
                    ( not(K_b(not(q))) )

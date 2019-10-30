@@ -1,29 +1,18 @@
-../benchmarks/hexa/hexa_domain3.epddl
-../benchmarks/hexa/hexa_domain4.epddl
-../benchmarks/hexa/hexa_domain5.epddl
-
 ../benchmarks/Collaboration_through_Communication/CC-2_4.epddl
 ../benchmarks/Collaboration_through_Communication/CC-3_4.epddl
 ../benchmarks/Collaboration_through_Communication/CC-4_4.epddl
-../benchmarks/Collaboration_through_Communication/CC-5_5.epddl
-../benchmarks/Collaboration_through_Communication/SCC-2_3.epddl
+../benchmarks/Collaboration_through_Communication/SCC-2_3_2.epddl
+../benchmarks/Collaboration_through_Communication/SCC-2_3_2_cheat.epddl
 ../benchmarks/Collaboration_through_Communication/SCC-2_3_3.epddl
-../benchmarks/Collaboration_through_Communication/SCC-2_4.epddl
-../benchmarks/Collaboration_through_Communication/SCC-2_5.epddl
-../benchmarks/Collaboration_through_Communication/SCC-3_3.epddl
-../benchmarks/Collaboration_through_Communication/SCC-3_4.epddl
+../benchmarks/Collaboration_through_Communication/SCC-2_3_3_cheat.epddl
+../benchmarks/Collaboration_through_Communication/SCC-2_4_2.epddl
+../benchmarks/Collaboration_through_Communication/SCC-2_4_2_cheat.epddl
+../benchmarks/Collaboration_through_Communication/SCC-3_3_3.epddl
+../benchmarks/Collaboration_through_Communication/SCC-3_3_3_cheat.epddl
 
-../benchmarks/gossip/gossip3.epddl
-../benchmarks/gossip/gossip4.epddl
-../benchmarks/gossip/gossip5.epddl
-../benchmarks/gossip/gossip6.epddl
-
-../benchmarks/grapevine/grapevine-2_3_2.epddl
-../benchmarks/grapevine/grapevine-2_4_1.epddl
-../benchmarks/grapevine/grapevine-2_4_2.epddl
-../benchmarks/grapevine/grapevine-2_4_3.epddl
-../benchmarks/grapevine/grapevine-2_4_4.epddl
-../benchmarks/grapevine/grapevine-3_4_1.epddl
+../benchmarks/revision_with_new_info/revision-1_2_1.epddl
+../benchmarks/revision_with_new_info/revision-2_3_1.epddl
+../benchmarks/revision_with_new_info/revision-2_3_2.epddl
 
 ../benchmarks/selective_communication/SC-4_3_1.epddl
 ../benchmarks/selective_communication/SC-4_7_1.epddl
@@ -32,6 +21,21 @@
 ../benchmarks/selective_communication/SC-4_3_4.epddl
 ../benchmarks/selective_communication/SC-8_3_1.epddl
 
+../benchmarks/coin_in_the_box/coin_in_the_box-2.epddl
+../benchmarks/coin_in_the_box/coin_in_the_box-3.epddl
+../benchmarks/coin_in_the_box/coin_in_the_box-5.epddl
+
+../benchmarks/grapevine/grapevine-2_3_2.epddl
+../benchmarks/grapevine/grapevine-2_4_1.epddl
+../benchmarks/grapevine/grapevine-2_4_2.epddl
+../benchmarks/grapevine/grapevine-2_4_3.epddl
+../benchmarks/grapevine/grapevine-2_4_4.epddl
+../benchmarks/grapevine/grapevine-3_4_1.epddl
+
+../benchmarks/hexa/hexa_domain3.epddl
+../benchmarks/hexa/hexa_domain4.epddl
+../benchmarks/hexa/hexa_domain5.epddl
+
 ../benchmarks/assemble_line/assemble_line2.epddl
 ../benchmarks/assemble_line/assemble_line3.epddl
 ../benchmarks/assemble_line/assemble_line4.epddl
@@ -39,6 +43,6 @@
 ../benchmarks/assemble_line/assemble_line7.epddl
 ../benchmarks/assemble_line/assemble_line10.epddl
 
-../benchmarks/coin_in_the_box/coin_in_the_box-2.epddl
-../benchmarks/coin_in_the_box/coin_in_the_box-3.epddl
-../benchmarks/coin_in_the_box/coin_in_the_box-5.epddl
+../benchmarks/gossip/gossip3.epddl
+../benchmarks/gossip/gossip4.epddl
+../benchmarks/gossip/gossip5.epddl

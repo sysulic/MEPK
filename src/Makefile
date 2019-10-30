@@ -8,8 +8,8 @@ PARSER = bison
 COMPILER = g++
 CFLAGS = -g -Wall -std=c++11
 
-start: ${OBJECTS} test
-	   ${COMPILER} ${CFLAGS} ${OBJECTS} -o start -O2
+mepk: ${OBJECTS} test
+	   ${COMPILER} ${CFLAGS} ${OBJECTS} -o mepk -O2
 
 test: $(OBJS_TEST)
 	  $(COMPILER) $(CFLAGS) $(OBJS_TEST) -o test -O2
@@ -53,4 +53,4 @@ epddlParser.tab.c: epddlParser.y
 .PHONY: clean
 
 clean:
-	rm -r *.o *c epddlParser.h start test
+	rm -r *.o *c epddlParser.h mepk test
