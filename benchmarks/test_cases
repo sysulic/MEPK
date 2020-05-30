@@ -10,9 +10,9 @@
 ../benchmarks/Collaboration_through_Communication/SCC-3_3_3.epddl
 ../benchmarks/Collaboration_through_Communication/SCC-3_3_3_cheat.epddl
 
-../benchmarks/revision_with_new_info/revision-1_2_1.epddl
-../benchmarks/revision_with_new_info/revision-2_3_1.epddl
-../benchmarks/revision_with_new_info/revision-2_3_2.epddl
+../benchmarks/finding_the_truth/FT-1_2_1.epddl
+../benchmarks/finding_the_truth/FT-2_3_1.epddl
+../benchmarks/finding_the_truth/FT-2_3_2.epddl
 
 ../benchmarks/selective_communication/SC-4_3_1.epddl
 ../benchmarks/selective_communication/SC-4_7_1.epddl

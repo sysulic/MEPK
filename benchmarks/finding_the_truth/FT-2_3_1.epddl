@@ -37,12 +37,12 @@
   )
 
   (:action check
-   :category (ontic)
+   :category (sensing)
    :parameters (?ag - agent ?b - block ?r - room)
    :precondition (K_?ag (at ?ag ?r)
                  )
-   :effect (<{(in ?b ?r)} {(K_?ag (in ?b ?r))}>
-           )
+   :observe_pos (and (in ?b ?r) (K_?ag (in ?b ?r)))
+   :observe_neg (and (not (in ?b ?r)) (K_?ag (not (in ?b ?r))))
   )
 
   (:init (and (in b1 p1)

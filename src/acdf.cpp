@@ -271,13 +271,15 @@ ACDFTerm ACDFTerm::revision(const ACDFTerm & acdf_term, const PropDNF & cstt) co
         new_term.propDNF = propDNF.conjunction(empty_dnf).minimal().revision(acdf_term.propDNF.conjunction(cstt).minimal());
     }
     // revision all agent-covers of those agents in left
-    bool two_consis = !(conjunction(acdf_term).minimal(cstt).unsatisfiable());
+    bool in_consis = conjunction(acdf_term).minimal(cstt).unsatisfiable();
     for (map<string, ACDFList>::const_iterator cover = covers.begin(); \
         cover != covers.end(); ++cover) {
         if (acdf_term.covers.find(cover->first) == acdf_term.covers.end()) {
             new_term.covers[cover->first] = cover->second;
         } else {
-            if (two_consis) {
+// cout << "two term consistent ? ```````````````````" << endl;
+// cout << in_consis << endl;
+            if (in_consis) {
     // cout << "two term consistent ? ```````````````````" << endl;
     // conjunction(acdf_term).minimal(cstt).print();
                 // case 3:
@@ -554,7 +556,7 @@ void ACDF::print(size_t indent) const {
 bool ACDF::neg_entails(const ACDF & acdf, const PropDNF & cstt, int depth, bool try_goal, float* value) const {
     for (list<ACDFTerm>::const_iterator acdf_term1 = acdf_terms.begin();
     acdf_term1 != acdf_terms.end(); ++acdf_term1) {
-        float tmp_heu_value = 0.0;
+        // float tmp_heu_value = 0.0;
         for (list<ACDFTerm>::const_iterator acdf_term2 = acdf.acdf_terms.begin();
         acdf_term2 != acdf.acdf_terms.end(); ++acdf_term2) {
             if (!acdf_term1->neg_entails(*acdf_term2, cstt, depth, try_goal, value)) {
@@ -607,13 +609,13 @@ bool ACDF::valid() const {
     tmp_acdf = tmp_acdf.minimal(p);
 // cout << "This ACDF is valid ?????????" << endl;
 // tmp_acdf.print();
-    bool exist_cover = false;
+    // bool exist_cover = false;
     set<string> all_atoms;
     for (list<ACDFTerm>::const_iterator term1 = tmp_acdf.acdf_terms.begin();
     term1 != tmp_acdf.acdf_terms.end(); ++term1) {
         if (term1->valid()) return true;
         if (!term1->covers.empty()) {
-            exist_cover = true;
+            // exist_cover = true;
             break;
         }
         set<string> one_term_atoms = term1->propDNF.get_total_literals();
@@ -717,10 +719,10 @@ ACDF ACDF::ontic_prog(const OntiAction & ontic_action, const PropDNF & cstt) con
     for (size_t i = 0; i < other_conditions.size(); ++i) {
         size_t ext_no = extensions.size();
         for (size_t i = 0; i < ext_no; ++i) {
-            ACDF new_ext = extensions[i].conjunction(other_conditions[i].negation_as_acdf(cstt));
+            ACDF new_ext = extensions[i].conjunction(other_conditions[i]);
             if (!new_ext.unsatisfiable())
                 extensions.push_back(new_ext);
-            extensions[i] = extensions[i].conjunction(other_conditions[i]);
+            extensions[i] = extensions[i].conjunction(other_conditions[i].negation_as_acdf(cstt));
         }
     }
 // cout<<"extensions: ---------------------" << endl;
@@ -745,7 +747,6 @@ ACDF ACDF::ontic_prog(const OntiAction & ontic_action, const PropDNF & cstt) con
         if (collect_effs.get_size()==0) continue;
         switch (ontic_action.category) {
             case ONTIC:
-            case COMMUNICATION:
 
 // cout<<"as one: ---------------------" << endl;
 // collect_effs.conjunct_as_one().print();
@@ -757,6 +758,7 @@ ACDF ACDF::ontic_prog(const OntiAction & ontic_action, const PropDNF & cstt) con
                 cout << "[error] Please remove observation action!" << endl;
                 break;
             case SENSING:
+            case COMMUNICATION:
                 new_exts.push_back(revision(collect_effs.conjunct_as_one(), cstt));
                 break;
             default:

@@ -18,12 +18,12 @@
    :category (ontic)
    :parameters (?ag - agent)
    :precondition (K_?ag (not(at ?ag p1)) )
-   :effect (<{(and (at ?ag p2) (not (at ?ag p1)) (not (at ?ag p3)))}
+   :effect (<{(at ?ag p2)}
              {(and (at ?ag p1) (not (at ?ag p2)) (not (at ?ag p3))
-                  (K_?ag (and (at ?ag p1) (not (at ?ag p2)) (not (at ?ag p3)))))} >
-            <{(and (at ?ag p3) (not (at ?ag p1)) (not (at ?ag p2))) }
-             {(and (at ?ag p2) (not (at ?ag p1)) (not (at ?ag p3)) 
-                  (K_?ag (and (at ?ag p2) (not (at ?ag p1)) (not (at ?ag p3)) )))} >
+                  (K_?ag (at ?ag p1)))} >
+            <{ (at ?ag p3) }
+             {(and (at ?ag p2) 
+                  (K_?ag (at ?ag p2)))} >
     )
   )
   
@@ -31,12 +31,12 @@
    :category (ontic)
    :parameters (?ag - agent)
    :precondition (K_?ag (not(at ?ag p3)) )
-   :effect (<{(and (at ?ag p1) (not (at ?ag p2)) (not (at ?ag p3))) }
-             {(and (at ?ag p2) (not (at ?ag p1)) (not (at ?ag p3))
+   :effect (<{ (at ?ag p1) }
+             {(and (at ?ag p2)
                   (K_?ag (and (at ?ag p2) (not (at ?ag p1)) (not (at ?ag p3)) )))} >
-            <{(and (at ?ag p2) (not (at ?ag p1)) (not (at ?ag p3)))}
-             {(and (at ?ag p3) (not (at ?ag p1)) (not (at ?ag p2))
-                  (K_?ag (and (at ?ag p3) (not (at ?ag p1)) (not (at ?ag p2)) )))} >
+            <{ (at ?ag p2)}
+             {(and (at ?ag p3)
+                  (K_?ag (at ?ag p3) ))} >
     )
   )
 

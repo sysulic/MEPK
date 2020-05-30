@@ -34,14 +34,14 @@
    :parameters (?ag - agent)
    :precondition (K_?ag (not(at ?ag p4)) )
    :effect (<{(at ?ag p1) }
-             {           (and (at ?ag p2) (not (at ?ag p1)) (not (at ?ag p3)) (not (at ?ag p4))
+             {(and (at ?ag p2) (not (at ?ag p1)) (not (at ?ag p3)) (not (at ?ag p4))
                   (K_?ag (and (at ?ag p2) (not (at ?ag p1)) (not (at ?ag p3)) (not (at ?ag p4))) ))} >
             <{(at ?ag p2)}
-             {           (and (at ?ag p3) (not (at ?ag p1)) (not (at ?ag p2)) (not (at ?ag p4))
+             {(and (at ?ag p3) (not (at ?ag p1)) (not (at ?ag p2)) (not (at ?ag p4))
                   (K_?ag (and (at ?ag p3) (not (at ?ag p1)) (not (at ?ag p2)) (not (at ?ag p4))) ))} >
 
             <{(at ?ag p3) }
-             {           (and (at ?ag p4) (not (at ?ag p1)) (not (at ?ag p2)) (not (at ?ag p3))
+             {(and (at ?ag p4) (not (at ?ag p1)) (not (at ?ag p2)) (not (at ?ag p3))
                   (K_?ag (and (at ?ag p4) (not (at ?ag p1)) (not (at ?ag p2)) (not (at ?ag p3))) ))} >
     )
   )
@@ -49,7 +49,7 @@
   (:action find_room1
    :category (sensing)
    :parameters (?ag - agent ?b1 - block)
-   :precondition (   K_?ag (at ?ag p1)   )
+   :precondition (K_?ag (at ?ag p1)   )
    :observe_pos (and (in ?b1 p1) (K_?ag (in ?b1 p1)) )
    :observe_neg (and (not (in ?b1 p1)) (K_?ag (not(in ?b1 p1))) )
   )
@@ -83,8 +83,8 @@
            ) 
   )
 
-  (:init (and (not (at a p1))
-                (at a p2)
+  (:init (and (not (at a p2))
+                (at a p1)
                 (not (at a p3))
                 (not (at a p4))
               
@@ -93,8 +93,8 @@
                 (not (at b p3))
                 (not (at b p4))
                
-                (K_a (and (not (at a p1))
-                          (at a p2)
+                (K_a (and (not (at a p2))
+                          (at a p1)
                           (not (at a p3))
                           (not (at a p4))
                      )
@@ -108,22 +108,28 @@
            )
   )
 
-  (:constraint (and (or (and (in b1 p1) (not (in b1 p3)) (not (in b1 p4)) )
-                          (and (not (in b1 p1)) (in b1 p3)  (not (in b1 p4)) )    
-                          (and (not (in b1 p1)) (in b1 p4)  (not (in b1 p3)) )                    
+  (:constraint (and (or 
+                          ; (and (in b1 p1) (not (in b1 p2)) (not (in b1 p3)) (not (in b1 p4)) )
+                          (and (not (in b1 p1)) (not (in b1 p3)) (in b1 p2)  (not (in b1 p4)) )    
+                          (and (not (in b1 p1)) (not (in b1 p2)) (in b1 p3)  (not (in b1 p4)) )    
+                          ; (and (not (in b1 p1)) (not (in b1 p2)) (in b1 p4)  (not (in b1 p3)) )                    
                   )
-                    (or (and (in b2 p1) (not (in b2 p3)) (not (in b2 p4)) )
-                          (and (not (in b2 p1)) (in b2 p3) (not (in b2 p4)) )
-                          (and (not (in b2 p1)) (in b2 p4) (not (in b2 p3)) )
+                    (or
+                          (and (in b2 p1) (not (in b2 p2)) (not (in b2 p3)) (not (in b2 p4)) )
+                          (and (not (in b2 p1)) (not (in b2 p3)) (in b2 p2) (not (in b2 p4)) )
+                          ; (and (not (in b2 p1)) (not (in b2 p2)) (in b2 p3) (not (in b2 p4)) )
+                          (and (not (in b2 p1)) (not (in b2 p2)) (in b2 p4) (not (in b2 p3)) )
                   )
                )
   )
   
   (:goal (and (or (K_a (in b1 p1))
+                  (K_a (in b1 p2))
                   (K_a (in b1 p3))
                   (K_a (in b1 p4))
               )            
               (or (K_b (in b2 p1))
+                  (K_b (in b2 p2))
                   (K_b (in b2 p3))
                   (K_b (in b2 p4))     
               )

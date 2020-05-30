@@ -2,93 +2,115 @@
   (:objects
    a b c d e - secret
   )
+
   (:agents
    a b c d e
   )
+
   (:predicates (the ?se - secret))
   (:action call
    :category (communication)
-   :parameters (?ag1 - agent ?ag2 - agent ?ag3 - agent ?ag4 - agent ?ag5 - agent)
-   :precondition (
-                    K_?ag1(and (the ?ag1) (not (K_?ag2 (the ?ag1))))
+   :parameters (?ag1 - agent ?ag2 - agent)
+   :precondition (K_?ag1 (the ?ag1)
                  )
-   :effect (<{(True)} {(and (K_?ag1 (the ?ag2)) (K_?ag2 (the ?ag1)))}>
-            <{(K_?ag1 (the ?ag3))} {(K_?ag2 (the ?ag3))}>
-            <{(K_?ag2 (the ?ag3))} {(K_?ag1 (the ?ag3))}>
-            <{(K_?ag1 (the ?ag4))} {(K_?ag2 (the ?ag4))}>
-            <{(K_?ag2 (the ?ag4))} {(K_?ag1 (the ?ag4))}>
-            <{(K_?ag1 (the ?ag5))} {(K_?ag2 (the ?ag5))}>
-            <{(K_?ag2 (the ?ag5))} {(K_?ag1 (the ?ag5))}>
+   :effect (<{(K_?ag1 (the a))} {(K_?ag2 (the a))}>
+            <{(K_?ag2 (the a))} {(K_?ag1 (the a))}>
+            <{(K_?ag1 (the b))} {(K_?ag2 (the b))}>
+            <{(K_?ag2 (the b))} {(K_?ag1 (the b))}>
+            <{(K_?ag1 (the c))} {(K_?ag2 (the c))}>
+            <{(K_?ag2 (the c))} {(K_?ag1 (the c))}>
+            <{(K_?ag1 (the d))} {(K_?ag2 (the d))}>
+            <{(K_?ag2 (the d))} {(K_?ag1 (the d))}>
+            <{(K_?ag1 (the e))} {(K_?ag2 (the e))}>
+            <{(K_?ag2 (the e))} {(K_?ag1 (the e))}>
            )
   )
+
   (:init (and 
             (the a)
             (the b)
             (the c)
             (the d)
             (the e)
+
             (K_a (the a))
             (K_b (the b))
             (K_c (the c))
             (K_d (the d))
             (K_e (the e))
+
             (not (K_a (the b)))
             (not (K_a (the c)))
             (not (K_a (the d)))
             (not (K_a (the e)))
+
             (not (K_b (the a)))
             (not (K_b (the c)))
             (not (K_b (the d)))
             (not (K_b (the e)))
+
             (not (K_c (the a)))
             (not (K_c (the b)))
             (not (K_c (the d)))
             (not (K_c (the e)))
+
             (not (K_d (the a)))
             (not (K_d (the b)))
             (not (K_d (the c)))
             (not (K_d (the e)))
+
             (not (K_e (the a)))
             (not (K_e (the b)))
             (not (K_e (the c)))
             (not (K_e (the d)))
+
             (K_a (and 
-                (not (K_b (the a)))
-                (not (K_c (the a)))
-                (not (K_d (the a)))
-                (not (K_e (the a)))
-            ))
+                  (not (K_b (the a)))
+                  (not (K_c (the a)))
+                  (not (K_d (the a)))
+                  (not (K_e (the a)))
+                )
+            )
             (K_b (and 
-                (not (K_a (the b)))
-                (not (K_c (the b)))
-                (not (K_d (the b)))
-                (not (K_e (the b)))
-            ))
+                  (not (K_a (the b)))
+                  (not (K_c (the b)))
+                  (not (K_d (the b)))
+                  (not (K_e (the b)))
+                )
+            )
             (K_c (and 
-                (not (K_a (the c)))
-                (not (K_b (the c)))
-                (not (K_d (the c)))
-                (not (K_e (the c)))
-            ))
+                  (not (K_a (the c)))
+                  (not (K_b (the c)))
+                  (not (K_d (the c)))
+                  (not (K_e (the c)))
+                )
+            )
             (K_d (and 
-                (not (K_a (the d)))
-                (not (K_b (the d)))
-                (not (K_c (the d)))
-                (not (K_e (the d)))
-            ))
+                  (not (K_a (the d)))
+                  (not (K_b (the d)))
+                  (not (K_c (the d)))
+                  (not (K_e (the d)))
+                )
+            )
             (K_e (and 
-                (not (K_a (the e)))
-                (not (K_b (the e)))
-                (not (K_c (the e)))
-                (not (K_d (the e)))
-            ))
-  ))
+                  (not (K_a (the e)))
+                  (not (K_b (the e)))
+                  (not (K_c (the e)))
+                  (not (K_d (the e)))
+                )
+            )
+        )
+  )
+
   (:constraint (True))
+
   (:goal (and
             (K_a (and (the a) (the b) (the c) (the d) (the e) ))
             (K_b (and (the a) (the b) (the c) (the d) (the e) ))
             (K_c (and (the a) (the b) (the c) (the d) (the e) ))
             (K_d (and (the a) (the b) (the c) (the d) (the e) ))
             (K_e (and (the a) (the b) (the c) (the d) (the e) ))
-  ))
+          )
+  )
+
 )
