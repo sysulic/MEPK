@@ -1,0 +1,39 @@
+(define (domain uncertain-firing)
+
+  (:objects
+  )
+
+  (:agents
+    a
+  )
+
+  (:predicates (p) (q) (r)
+  )
+
+  (:action apply
+   :category (ontic)
+   :parameters ()
+   :precondition (True)
+   :effect (<{(p)} {(and (q) (K_a (q)))}>
+; I add "K_a (q)" to approximate your ":derive-condition always", is this correct?
+    )
+  )
+  
+  (:action check
+   :category (ontic)
+   :parameters ()
+   :precondition (DK_a (q))
+   :effect (<{(True)} {(r)}>
+    )
+  )
+  
+  (:init (K_a (not (q)))
+  )
+
+  (:constraint (True)
+  )
+
+  (:goal (r)
+  )
+
+)

@@ -685,6 +685,7 @@ ACDF ACDF::ontic_prog(const OntiAction & ontic_action, const PropDNF & cstt) con
 // cout<<"need branching ---------------------" << endl;
 // effect->condition.print();
             other_conditions.push_back(effect->condition);
+// effect->effect.print();
             other_effs.push_back(effect->effect);
         }
     }
@@ -720,11 +721,21 @@ ACDF ACDF::ontic_prog(const OntiAction & ontic_action, const PropDNF & cstt) con
         size_t ext_no = extensions.size();
         for (size_t i = 0; i < ext_no; ++i) {
             ACDF new_ext = extensions[i].conjunction(other_conditions[i]);
-            if (!new_ext.unsatisfiable())
+// cout << "conjunct condition: " << endl;
+// extensions[i].print();
+// cout << "-- " << endl;
+// other_conditions[i].print();
+// cout << "--- " << endl;
+// new_ext.print();
+            // if (!new_ext.unsatisfiable())  // must not be unsatisfiable
                 extensions.push_back(new_ext);
-            extensions[i] = extensions[i].conjunction(other_conditions[i].negation_as_acdf(cstt));
+            ACDF new_ext_with_neg_con = other_conditions[i].negation_as_acdf(cstt);
+            extensions[i] = extensions[i].conjunction(new_ext_with_neg_con);
+// cout << "conjunct neg condition: " << endl;
+// extensions[i].print();
         }
     }
+
 // cout<<"extensions: ---------------------" << endl;
 // for (auto one_ext : extensions) {
 //     one_ext.print();
@@ -732,6 +743,7 @@ ACDF ACDF::ontic_prog(const OntiAction & ontic_action, const PropDNF & cstt) con
 // }
     // ... progress
     vector<ACDF> new_exts;
+    ACDF entail_nothing_extention;
     for (auto ext : extensions) {
 // cout<<"loop: ---------------------" << endl;
         ACDFList collect_effs;
@@ -744,10 +756,12 @@ ACDF ACDF::ontic_prog(const OntiAction & ontic_action, const PropDNF & cstt) con
 //     one_ext.print();
 //     cout << "---" << endl;
 // }
-        if (collect_effs.get_size()==0) continue;
+        if (collect_effs.get_size()==0) {
+            entail_nothing_extention = ext;
+            continue;
+        }
         switch (ontic_action.category) {
             case ONTIC:
-
 // cout<<"as one: ---------------------" << endl;
 // collect_effs.conjunct_as_one().print();
                 new_exts.push_back(ext.update(collect_effs.conjunct_as_one(), cstt));
@@ -776,6 +790,7 @@ ACDF ACDF::ontic_prog(const OntiAction & ontic_action, const PropDNF & cstt) con
     for (size_t i = 1; i < new_exts.size(); ++i) {
         updated_kb = updated_kb.disjunction(new_exts[i]);
     }
+    updated_kb = updated_kb.disjunction(entail_nothing_extention);
 // cout<<"extended KB ---------------------" << endl;
 // updated_kb.print();
     return updated_kb;
@@ -861,7 +876,9 @@ ACDF ACDF::conjunction(const ACDF & acdf) const {
     term1 != acdf_terms.end(); ++term1) {
         for (list<ACDFTerm>::const_iterator term2 = acdf.acdf_terms.begin();
         term2 != acdf.acdf_terms.end(); ++term2) {
-            new_acdf.acdf_terms.push_back(term1->conjunction(*term2));
+            ACDFTerm new_term = term1->conjunction(*term2);
+            if (!new_term.unsatisfiable())
+                new_acdf.acdf_terms.push_back(new_term);
         }
     }
     return new_acdf;

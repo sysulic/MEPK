@@ -1,0 +1,62 @@
+(define (domain envelope)
+
+  (:objects
+  )
+
+  (:agents
+    bob alice
+  )
+
+  (:predicates (secret)
+  )
+
+  (:action check
+   :category (ontic)
+   :parameters (?ag1 - agent ?ag2 - agent)
+   :precondition (True)
+   :effect (<{(secret)} {(K_?ag1 (secret))}>
+
+            <{(not (secret))} {(K_?ag1 (not (secret)))}>
+
+            <{(K_?ag2 (secret))} {(K_?ag2 (K_?ag1 (secret)))}>
+
+            <{(K_?ag2 (not (secret)))} {(K_?ag2 (K_?ag1 (not (secret))))}>
+
+            <{(True)} {(or (K_?ag2 (K_?ag1 (secret)))
+                           (K_?ag2 (K_?ag1 (not (secret)))))}>
+    )
+  )
+
+  (:action reasoning
+   :category (ontic)
+   :parameters (?ag1 - agent ?ag2 - agent)
+   :precondition (or (K_?ag1 (K_?ag2 (secret)))
+                     (K_?ag1 (K_?ag2 (not (secret)))))
+   :effect (<{(K_?ag1 (secret))} {(K_?ag1 (K_?ag2 (secret)))}>
+            <{(K_?ag1 (not (secret)))} {(K_?ag1 (K_?ag2 (not (secret))))}>
+    )
+  )
+  
+
+  (:init (and (secret)
+  			      (DK_bob (secret))
+              (DK_bob (not (secret)))
+              (DK_alice (secret))
+              (DK_alice (not (secret)))
+
+              (K_bob (DK_alice (secret)))
+              (K_bob (DK_alice (not (secret))))
+              (K_alice (DK_bob (secret)))
+              (K_alice (DK_bob (not (secret))))
+          )
+  )
+
+  (:constraint (True)
+  )
+
+  (:goal (K_bob (K_alice (secret)))
+  )
+
+  ; a workable plan: check(alice, bob) check(bob, alice) reasoning(bob, alice)
+
+)
