@@ -15,13 +15,9 @@
    :parameters (?ag1 - agent ?ag2 - agent)
    :precondition (True)
    :effect (<{(secret)} {(K_?ag1 (secret))}>
-
             <{(not (secret))} {(K_?ag1 (not (secret)))}>
-
             <{(K_?ag2 (secret))} {(K_?ag2 (K_?ag1 (secret)))}>
-
             <{(K_?ag2 (not (secret)))} {(K_?ag2 (K_?ag1 (not (secret))))}>
-
             <{(True)} {(or (K_?ag2 (K_?ag1 (secret)))
                            (K_?ag2 (K_?ag1 (not (secret)))))}>
     )

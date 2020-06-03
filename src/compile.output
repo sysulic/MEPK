@@ -1,0 +1,168 @@
+================================= envelope =================================
+agent : bob alice 
+================================= atoms =================================
+0    (secret)    0
+================================= init: =================================
+((((secret)))
+ & K_alice((
+ & L_bob(((((secret)))
+)) & L_bob((((~(secret)))
+)))) & K_bob((
+ & L_alice(((((secret)))
+)) & L_alice((((~(secret)))
+)))) & L_alice(((((secret)))
+)) & L_alice((((~(secret)))
+)) & L_bob(((((secret)))
+)) & L_bob((((~(secret)))
+)))
+================================= constraint:  =================================
+((True))
+
+================================= goal:  =================================
+(
+ & L_bob((
+ & L_alice((((~(secret)))
+)))))
+================================= posGoal:  =================================
+(
+ & K_bob((
+ & K_alice(((((secret)))
+)))))
+
+
+=================================sensing=================================
+=================================ontic=================================
+Action Name : check(bob, alice)
+preCon : (((False))
+)
+Result List : 
+   (((~(secret)))
+)
+   (
+ & K_bob(((((secret)))
+)))
+
+   ((((secret)))
+)
+   (
+ & K_bob((((~(secret)))
+)))
+
+   (
+ & L_alice((((~(secret)))
+)))
+   (
+ & K_alice((
+ & K_bob(((((secret)))
+)))))
+
+   (
+ & L_alice(((((secret)))
+)))
+   (
+ & K_alice((
+ & K_bob((((~(secret)))
+)))))
+
+   (((False))
+)
+   (
+ & K_alice((
+ & K_bob(((((secret)))
+))))) | (
+ & K_alice((
+ & K_bob((((~(secret)))
+)))))
+
+Action Name : check(alice, bob)
+preCon : (((False))
+)
+Result List : 
+   (((~(secret)))
+)
+   (
+ & K_alice(((((secret)))
+)))
+
+   ((((secret)))
+)
+   (
+ & K_alice((((~(secret)))
+)))
+
+   (
+ & L_bob((((~(secret)))
+)))
+   (
+ & K_bob((
+ & K_alice(((((secret)))
+)))))
+
+   (
+ & L_bob(((((secret)))
+)))
+   (
+ & K_bob((
+ & K_alice((((~(secret)))
+)))))
+
+   (((False))
+)
+   (
+ & K_bob((
+ & K_alice(((((secret)))
+))))) | (
+ & K_bob((
+ & K_alice((((~(secret)))
+)))))
+
+Action Name : reasoning(bob, alice)
+preCon : (
+ & L_bob((
+ & L_alice((((~(secret)))
+)))) & L_bob((
+ & L_alice(((((secret)))
+)))))
+Result List : 
+   (
+ & L_bob((((~(secret)))
+)))
+   (
+ & K_bob((
+ & K_alice(((((secret)))
+)))))
+
+   (
+ & L_bob(((((secret)))
+)))
+   (
+ & K_bob((
+ & K_alice((((~(secret)))
+)))))
+
+Action Name : reasoning(alice, bob)
+preCon : (
+ & L_alice((
+ & L_bob((((~(secret)))
+)))) & L_alice((
+ & L_bob(((((secret)))
+)))))
+Result List : 
+   (
+ & L_alice((((~(secret)))
+)))
+   (
+ & K_alice((
+ & K_bob(((((secret)))
+)))))
+
+   (
+ & L_alice(((((secret)))
+)))
+   (
+ & K_alice((
+ & K_bob((((~(secret)))
+)))))
+
+sensing action number : 0
+ontic action number : 4

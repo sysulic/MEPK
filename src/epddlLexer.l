@@ -15,6 +15,7 @@ dk				DK_[a-zA-Z0-9]+
 "and"				{ return AND; }
 "or"				{ return OR; }
 "not"				{ return NOT; }
+"!"					{ return NOT; }
 "imply"				{ return IMPLY; }
 "oneof"				{ return ONEOF; }
 
