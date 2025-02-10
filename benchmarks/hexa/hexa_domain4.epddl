@@ -1,17 +1,11 @@
 (define (domain hexa4)
 
   (:objects
-    red
-    blue
-    pink
-    white - card
+    red blue pink white - card
   )
 
   (:agents
-    a
-    b
-    c
-    d
+    a b c d
   )
 
   (:predicates (own ?ag - agent ?c - card)

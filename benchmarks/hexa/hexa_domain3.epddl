@@ -1,15 +1,11 @@
 (define (domain hexa3)
 
   (:objects
-    red
-    blue
-    white - card
+    red blue white - card
   )
 
   (:agents
-    a
-    b
-    c
+    a b c
   )
   
   (:predicates (own ?ag - agent ?c - card)

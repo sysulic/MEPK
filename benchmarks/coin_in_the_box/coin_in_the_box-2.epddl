@@ -3,9 +3,7 @@
     )
     
     (:agents
-        a
-        b
-        c
+        a b c
     )
     
   (:predicates  (tail) (opened)

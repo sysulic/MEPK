@@ -1,19 +1,11 @@
 (define (domain hexa5)
 
   (:objects
-    red
-    blue
-    pink
-    yellow
-    white - card
+    red blue pink yellow white - card
   )
 
   (:agents
-    a
-    b
-    c
-    d
-    e
+    a b c d e
   )
 
   (:predicates (own ?ag - agent ?c - card)

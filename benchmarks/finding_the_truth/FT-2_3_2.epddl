@@ -2,7 +2,6 @@
 
   (:objects
     b1 b2 - block
-
     p1 p2 p3 - room
   )
     

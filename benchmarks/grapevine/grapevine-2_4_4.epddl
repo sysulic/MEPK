@@ -1,20 +1,12 @@
 (define (domain grapevine_d4)
   (:objects
-    a
-    b
-    c
-    d - secret
-
-    p1
-    p2 - room
+    a b c d - secret
+    p1 p2 - room
 
   )
 
   (:agents
-    a
-    b
-    c
-    d
+    a b c d
   )
 
   (:predicates  (at ?ag - agent ?r - room)

@@ -1,18 +1,12 @@
 (define (domain ctc2)
   
   (:objects
-        b1
-        b2 - block
-
-        p1
-        p2
-        p3
-        p4 - room
+        b1 b2 - block
+        p1 p2 p3 p4 - room
     )
     
     (:agents
-        a
-        b
+        a b
     )
 
   (:predicates  (at ?ag - agent ?p - room)

@@ -1,13 +1,8 @@
 (define (domain ctc2)
 
   (:objects
-        b1
-        b2
-        b3 - block
-
-        p1
-        p2
-        p3 - room
+        b1 b2 b3 - block
+        p1 p2 p3 - room
     )
     
     (:agents

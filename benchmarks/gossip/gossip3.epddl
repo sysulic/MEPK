@@ -1,13 +1,9 @@
 (define (domain gossip3)
   (:objects
-   a
-   b
-   c - secret
+   a b c - secret
   )
   (:agents
-   a
-   b
-   c
+   a b c
   )
   (:predicates (the ?se - secret))
   (:action call
