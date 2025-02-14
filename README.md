@@ -6,7 +6,7 @@ A planner for multi-agent epistemic planning based on higher-order belief change
 
 If you use this work in your research, please cite:
 
-```shell
+```bibtex
 @article{wan2021general,
   title={A general multi-agent epistemic planner based on higher-order belief change},
   author={Wan, Hai and Fang, Biqing and Liu, Yongmei},
