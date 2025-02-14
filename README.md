@@ -1,7 +1,10 @@
-# Multi-agent Epistemic Planner with Knowledge
-This is a planner for multi-agent epistemic planning.
+# Multi-agent Epistemic Planner with Knowledge (MEPK)
 
-To reference this paper, please use:
+A planner for multi-agent epistemic planning based on higher-order belief change.
+
+## Citation
+
+If you use this work in your research, please cite:
 
 ```shell
 @article{wan2021general,
@@ -16,27 +19,28 @@ To reference this paper, please use:
 
 ```
 
-###### Original code of IJCAI2017: [A General Multi-agent Epistemic Planner Based on Higher-order Belief Change](https://www.ijcai.org/proceedings/2017/0152.pdf) can be accessed [here](https://github.com/sysulic/MEPK/tree/f778be373903ee0edc47274b0b0757d412359265).
+> The original code from IJCAI 2017 paper ["A General Multi-agent Epistemic Planner Based on Higher-order Belief Change"](https://www.ijcai.org/proceedings/2017/0152.pdf) can be found [here](https://github.com/sysulic/MEPK/tree/f778be373903ee0edc47274b0b0757d412359265).
 
 
 ## Introduction
-MEPK is implemented in C/C++. It's a knowledge-base based planner which means it treats a knowledge-base as a state in the searching progress. (More details can be found in above paper and a comprehensive introduction will be proposed later)
 
+MEPK is a knowledge-based planner implemented in C/C++. It treats a knowledge-base as a state in the search progress, enabling reasoning about multi-agent epistemic states. The planner supports both breadth-first search and heuristic search strategies.
 
-## Platform
-Tested on Ubuntu 18.04 and macOS Mojave.
+## System Requirements
 
+### Supported Platforms
+- Ubuntu
+- macOS
 
-## Dependencies
-[flex/bison](https://www.gnu.org/software/bison/) - for parsing epddl
+### Dependencies
+- [flex/bison](https://www.gnu.org/software/bison/) - For parsing EPDDL files
+- [expect](http://manpages.ubuntu.com/manpages/trusty/man1/expect.1.html) - For timeout management
 
-[expect](http://manpages.ubuntu.com/manpages/trusty/man1/expect.1.html) - for setting timeout
+## Getting Started
 
+### Compilation
+Navigate to the `MEPK/src` directory and run:
 
-## Compile and Run
-Change to the directory `MEPK/src`
-
-* Compile:
 ```shell
 $ make
 ```
