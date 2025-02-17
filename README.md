@@ -20,6 +20,23 @@ If you use this work in your research, please cite:
 ```
 
 > The original code from IJCAI 2017 paper ["A General Multi-agent Epistemic Planner Based on Higher-order Belief Change"](https://www.ijcai.org/proceedings/2017/0152.pdf) can be found [here](https://github.com/sysulic/MEPK/tree/f778be373903ee0edc47274b0b0757d412359265).
+>
+
+Recently, we proposed two new algorithms for MEPK [code](https://github.com/sysulic/MEPK/releases/tag/new-algos).
+
+If you use these two new algorithms, please cite:
+
+```bibtex
+@inproceedings{fang2024heuristic,
+  title={Heuristic strategies for accelerating multi-agent epistemic planning},
+  author={Fang, Biqing and Lin, Fangzhen},
+  booktitle={Proceedings of the International Conference on Principles of Knowledge Representation and Reasoning},
+  volume={21},
+  number={1},
+  pages={339--349},
+  year={2024}
+}
+```
 
 
 ## Introduction
