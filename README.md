@@ -43,6 +43,8 @@ If you use these two new algorithms, please cite:
 
 MEPK is a knowledge-based planner implemented in C/C++. It treats a knowledge-base as a state in the search progress, enabling reasoning about multi-agent epistemic states. The planner supports both breadth-first search and heuristic search strategies.
 
+We are developing [MEP Online (Ipv6)](http://[2409:8a55:c4d:f8b0:bd90:8649:dbb6:54a5]:3000/), an interactive platform designed to make MEPK more accessible and easier to understand.
+
 ## System Requirements
 
 ### Supported Platforms
